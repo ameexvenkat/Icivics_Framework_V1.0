@@ -1,0 +1,1180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="10" total="65" passed="55" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-16T11:41:40 IST" name="Suite" finished-at="2022-05-16T12:06:52 IST" duration-ms="1512108">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2022-05-16T11:41:40 IST" name="Test" finished-at="2022-05-16T12:06:52 IST" duration-ms="1512108">
+      <class name="icivics_testcases.Icivics_EducatorRegistration1_Test">
+        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:41:40 IST" name="setValues" finished-at="2022-05-16T11:41:40 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setValues -->
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:46:32 IST" name="setUpClass" finished-at="2022-05-16T11:46:32 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:46:32 IST" name="report" finished-at="2022-05-16T11:46:32 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:46:32 IST" name="beforeMethod" finished-at="2022-05-16T11:46:33 IST" duration-ms="1303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C327_verifybreadcrumbspage1(java.lang.String)[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:46:33 IST" name="C327_verifybreadcrumbspage1" data-provider="fetchData" finished-at="2022-05-16T11:46:36 IST" duration-ms="2306" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C327_verifybreadcrumbspage1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:46:36 IST" name="afterMethod" finished-at="2022-05-16T11:46:40 IST" duration-ms="4169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:46:40 IST" name="beforeMethod" finished-at="2022-05-16T11:46:41 IST" duration-ms="1244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C328_verifytextfields(java.lang.String)[pri:1, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:46:41 IST" name="C328_verifytextfields" data-provider="fetchData" finished-at="2022-05-16T11:46:46 IST" duration-ms="4470" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C328_verifytextfields -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:46:46 IST" name="afterMethod" finished-at="2022-05-16T11:46:50 IST" duration-ms="4195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:46:50 IST" name="beforeMethod" finished-at="2022-05-16T11:46:51 IST" duration-ms="1317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C329_verifyusernamepregenerated(java.lang.String)[pri:2, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:46:51 IST" name="C329_verifyusernamepregenerated" data-provider="fetchData" finished-at="2022-05-16T11:46:59 IST" duration-ms="8252" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C329_verifyusernamepregenerated -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:46:59 IST" name="afterMethod" finished-at="2022-05-16T11:47:04 IST" duration-ms="4194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:47:04 IST" name="beforeMethod" finished-at="2022-05-16T11:47:05 IST" duration-ms="1228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C330_verifyusernamepregeneratedrandomly(java.lang.String)[pri:3, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:47:05 IST" name="C330_verifyusernamepregeneratedrandomly" data-provider="fetchData" finished-at="2022-05-16T11:47:20 IST" duration-ms="14775" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C330_verifyusernamepregeneratedrandomly -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:47:20 IST" name="afterMethod" finished-at="2022-05-16T11:47:24 IST" duration-ms="4187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:47:24 IST" name="beforeMethod" finished-at="2022-05-16T11:47:25 IST" duration-ms="1199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C331_verifyentertextinallfields(java.lang.String)[pri:4, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:47:25 IST" name="C331_verifyentertextinallfields" data-provider="fetchData" finished-at="2022-05-16T11:47:29 IST" duration-ms="3570" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C331_verifyentertextinallfields -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:47:29 IST" name="afterMethod" finished-at="2022-05-16T11:47:33 IST" duration-ms="4206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:47:33 IST" name="beforeMethod" finished-at="2022-05-16T11:47:34 IST" duration-ms="1237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C332_verifyfieldsmarkedwithanasterisk(java.lang.String)[pri:5, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:47:34 IST" name="C332_verifyfieldsmarkedwithanasterisk" data-provider="fetchData" finished-at="2022-05-16T11:47:37 IST" duration-ms="2756" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C332_verifyfieldsmarkedwithanasterisk -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:47:37 IST" name="afterMethod" finished-at="2022-05-16T11:47:41 IST" duration-ms="4187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:47:41 IST" name="beforeMethod" finished-at="2022-05-16T11:47:42 IST" duration-ms="1112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C333_verifyemailtooltips(java.lang.String)[pri:6, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:47:42 IST" name="C333_verifyemailtooltips" data-provider="fetchData" finished-at="2022-05-16T11:47:46 IST" duration-ms="3165" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C333_verifyemailtooltips -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:47:46 IST" name="afterMethod" finished-at="2022-05-16T11:47:50 IST" duration-ms="4187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:47:50 IST" name="beforeMethod" finished-at="2022-05-16T11:47:51 IST" duration-ms="1136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C334_verifyemailerrormsg(java.lang.String)[pri:7, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:47:51 IST" name="C334_verifyemailerrormsg" data-provider="fetchData" finished-at="2022-05-16T11:48:01 IST" duration-ms="9639" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C334_verifyemailerrormsg -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:48:01 IST" name="afterMethod" finished-at="2022-05-16T11:48:05 IST" duration-ms="4197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:48:05 IST" name="beforeMethod" finished-at="2022-05-16T11:48:06 IST" duration-ms="1208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C335_verifyblankerrormsg(java.lang.String)[pri:8, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:48:06 IST" name="C335_verifyblankerrormsg" data-provider="fetchData" finished-at="2022-05-16T11:48:37 IST" duration-ms="30482" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C335_verifyblankerrormsg -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:48:37 IST" name="afterMethod" finished-at="2022-05-16T11:48:41 IST" duration-ms="4192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:48:41 IST" name="beforeMethod" finished-at="2022-05-16T11:48:42 IST" duration-ms="1317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C336_verifyinvaliderrormsg(java.lang.String)[pri:9, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:48:42 IST" name="C336_verifyinvaliderrormsg" data-provider="fetchData" finished-at="2022-05-16T11:48:50 IST" duration-ms="7693" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C336_verifyinvaliderrormsg -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:48:50 IST" name="afterMethod" finished-at="2022-05-16T11:48:54 IST" duration-ms="4188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:48:54 IST" name="beforeMethod" finished-at="2022-05-16T11:48:55 IST" duration-ms="1116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C337_verifyvalidregistration(java.lang.String)[pri:10, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:48:55 IST" name="C337_verifyvalidregistration" data-provider="fetchData" finished-at="2022-05-16T11:49:09 IST" duration-ms="14051" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C337_verifyvalidregistration -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:49:09 IST" name="afterMethod" finished-at="2022-05-16T11:49:14 IST" duration-ms="4193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration1_Test@72035809]" started-at="2022-05-16T11:49:14 IST" name="tearDownClass" finished-at="2022-05-16T11:49:14 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- icivics_testcases.Icivics_EducatorRegistration1_Test -->
+      <class name="icivics_testcases.Icivics_EducatorRegistration2_Test">
+        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:41:40 IST" name="setValues" finished-at="2022-05-16T11:41:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setValues -->
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:49:14 IST" name="setUpClass" finished-at="2022-05-16T11:49:14 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:49:14 IST" name="report" finished-at="2022-05-16T11:49:14 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:49:14 IST" name="beforeMethod" finished-at="2022-05-16T11:49:15 IST" duration-ms="1213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C338_verifybreadcrumbspage1(java.lang.String)[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:49:15 IST" name="C338_verifybreadcrumbspage1" data-provider="fetchData" finished-at="2022-05-16T11:49:22 IST" duration-ms="6760" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C338_verifybreadcrumbspage1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:49:22 IST" name="afterMethod" finished-at="2022-05-16T11:49:26 IST" duration-ms="4202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:49:26 IST" name="beforeMethod" finished-at="2022-05-16T11:49:27 IST" duration-ms="1201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C339_verifypreviouspage(java.lang.String)[pri:1, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:49:27 IST" name="C339_verifypreviouspage" data-provider="fetchData" finished-at="2022-05-16T11:49:37 IST" duration-ms="9550" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C339_verifypreviouspage -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:49:37 IST" name="afterMethod" finished-at="2022-05-16T11:49:41 IST" duration-ms="4160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:49:41 IST" name="beforeMethod" finished-at="2022-05-16T11:49:42 IST" duration-ms="1183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C340_verifyalldataremembered(java.lang.String)[pri:2, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:49:42 IST" name="C340_verifyalldataremembered" data-provider="fetchData" finished-at="2022-05-16T11:49:52 IST" duration-ms="10194" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C340_verifyalldataremembered -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:49:52 IST" name="afterMethod" finished-at="2022-05-16T11:49:53 IST" duration-ms="265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:49:53 IST" name="beforeMethod" finished-at="2022-05-16T11:49:54 IST" duration-ms="1219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C341_verifyRoleandGradeLevel(java.lang.String)[pri:3, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:49:54 IST" name="C341_verifyRoleandGradeLevel" data-provider="fetchData" finished-at="2022-05-16T11:50:10 IST" duration-ms="16250" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C341_verifyRoleandGradeLevel -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:50:10 IST" name="afterMethod" finished-at="2022-05-16T11:50:14 IST" duration-ms="4206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:50:14 IST" name="beforeMethod" finished-at="2022-05-16T11:50:16 IST" duration-ms="1082" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C342_verifymakeselection(java.lang.String)[pri:4, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:50:16 IST" name="C342_verifymakeselection" data-provider="fetchData" finished-at="2022-05-16T11:50:33 IST" duration-ms="17298" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C342_verifymakeselection -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:50:33 IST" name="afterMethod" finished-at="2022-05-16T11:50:37 IST" duration-ms="4231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:50:37 IST" name="beforeMethod" finished-at="2022-05-16T11:50:38 IST" duration-ms="1150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C343_verifyotheradditionalfield(java.lang.String)[pri:5, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:50:38 IST" name="C343_verifyotheradditionalfield" data-provider="fetchData" finished-at="2022-05-16T11:50:48 IST" duration-ms="9732" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C343_verifyotheradditionalfield -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:50:48 IST" name="afterMethod" finished-at="2022-05-16T11:50:52 IST" duration-ms="4196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:50:52 IST" name="beforeMethod" finished-at="2022-05-16T11:50:54 IST" duration-ms="1195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C344_verifyasterisk(java.lang.String)[pri:6, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:50:54 IST" name="C344_verifyasterisk" data-provider="fetchData" finished-at="2022-05-16T11:51:00 IST" duration-ms="6465" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C344_verifyasterisk -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:51:00 IST" name="afterMethod" finished-at="2022-05-16T11:51:04 IST" duration-ms="4182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:51:04 IST" name="beforeMethod" finished-at="2022-05-16T11:51:07 IST" duration-ms="2308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C345_verifyblankerrormsg(java.lang.String)[pri:7, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:51:07 IST" name="C345_verifyblankerrormsg" data-provider="fetchData" finished-at="2022-05-16T11:51:48 IST" duration-ms="41621" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C345_verifyblankerrormsg -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:51:48 IST" name="afterMethod" finished-at="2022-05-16T11:51:52 IST" duration-ms="4172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:51:52 IST" name="beforeMethod" finished-at="2022-05-16T11:51:54 IST" duration-ms="1298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C346_verifyerrormsgboxcolor(java.lang.String)[pri:8, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:51:54 IST" name="C346_verifyerrormsgboxcolor" data-provider="fetchData" finished-at="2022-05-16T11:52:02 IST" duration-ms="8676" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C346_verifyerrormsgboxcolor -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:52:02 IST" name="afterMethod" finished-at="2022-05-16T11:52:07 IST" duration-ms="4188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:52:07 IST" name="beforeMethod" finished-at="2022-05-16T11:52:08 IST" duration-ms="1116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C347_verifyvalidsubmission(java.lang.String)[pri:9, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:52:08 IST" name="C347_verifyvalidsubmission" data-provider="fetchData" finished-at="2022-05-16T11:52:28 IST" duration-ms="20076" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C347_verifyvalidsubmission -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:52:28 IST" name="afterMethod" finished-at="2022-05-16T11:52:32 IST" duration-ms="4192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration2_Test@909217e]" started-at="2022-05-16T11:52:32 IST" name="tearDownClass" finished-at="2022-05-16T11:52:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- icivics_testcases.Icivics_EducatorRegistration2_Test -->
+      <class name="icivics_testcases.Icivics_EducatorRegistration_Test">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:41:40 IST" name="startReport" finished-at="2022-05-16T11:41:40 IST" duration-ms="235" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:41:40 IST" name="setValues" finished-at="2022-05-16T11:41:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setValues -->
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:41:40 IST" name="setUpClass" finished-at="2022-05-16T11:41:40 IST" duration-ms="111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:41:40 IST" name="report" finished-at="2022-05-16T11:41:40 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:41:41 IST" name="beforeMethod" finished-at="2022-05-16T11:41:43 IST" duration-ms="2091" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C321_VerifyallpageElements(java.lang.String)[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:41:43 IST" name="C321_VerifyallpageElements" data-provider="fetchData" finished-at="2022-05-16T11:42:01 IST" duration-ms="17556" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C321_VerifyallpageElements -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:42:01 IST" name="afterMethod" finished-at="2022-05-16T11:42:05 IST" duration-ms="4204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:42:05 IST" name="beforeMethod" finished-at="2022-05-16T11:42:06 IST" duration-ms="1143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C322_ButtonHover(java.lang.String)[pri:1, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:42:06 IST" name="C322_ButtonHover" data-provider="fetchData" finished-at="2022-05-16T11:42:34 IST" duration-ms="27263" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C322_ButtonHover -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:42:34 IST" name="afterMethod" finished-at="2022-05-16T11:42:38 IST" duration-ms="4166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:42:38 IST" name="beforeMethod" finished-at="2022-05-16T11:42:39 IST" duration-ms="1221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C323_Verifyallbuttonlinks(java.lang.String)[pri:2, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:42:39 IST" name="C323_Verifyallbuttonlinks" data-provider="fetchData" finished-at="2022-05-16T11:45:47 IST" duration-ms="188261" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C323_Verifyallbuttonlinks -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:45:47 IST" name="afterMethod" finished-at="2022-05-16T11:45:52 IST" duration-ms="4207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:45:52 IST" name="beforeMethod" finished-at="2022-05-16T11:45:53 IST" duration-ms="1257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C324_WindowResize(java.lang.String)[pri:3, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:45:53 IST" name="C324_WindowResize" data-provider="fetchData" finished-at="2022-05-16T11:46:06 IST" duration-ms="12686" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C324_WindowResize -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:46:06 IST" name="afterMethod" finished-at="2022-05-16T11:46:10 IST" duration-ms="4199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:46:10 IST" name="beforeMethod" finished-at="2022-05-16T11:46:11 IST" duration-ms="1117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C325_Verifyerrormsg(java.lang.String)[pri:4, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:46:11 IST" name="C325_Verifyerrormsg" data-provider="fetchData" finished-at="2022-05-16T11:46:17 IST" duration-ms="5640" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C325_Verifyerrormsg -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:46:17 IST" name="afterMethod" finished-at="2022-05-16T11:46:21 IST" duration-ms="4180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:46:21 IST" name="beforeMethod" finished-at="2022-05-16T11:46:22 IST" duration-ms="1197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C326_Verifybreadcrumbs(java.lang.String)[pri:5, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:46:22 IST" name="C326_Verifybreadcrumbs" data-provider="fetchData" finished-at="2022-05-16T11:46:28 IST" duration-ms="5395" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C326_Verifybreadcrumbs -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:46:28 IST" name="afterMethod" finished-at="2022-05-16T11:46:32 IST" duration-ms="4203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T11:46:32 IST" name="tearDownClass" finished-at="2022-05-16T11:46:32 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method is-config="true" signature="stopReport()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration_Test@7f485fda]" started-at="2022-05-16T12:06:52 IST" name="stopReport" finished-at="2022-05-16T12:06:56 IST" duration-ms="3463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopReport -->
+      </class> <!-- icivics_testcases.Icivics_EducatorRegistration_Test -->
+      <class name="icivics_testcases.Icivics_EducatorRegistration3_Test">
+        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:41:40 IST" name="setValues" finished-at="2022-05-16T11:41:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setValues -->
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:52:32 IST" name="setUpClass" finished-at="2022-05-16T11:52:32 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:52:32 IST" name="report" finished-at="2022-05-16T11:52:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:52:32 IST" name="beforeMethod" finished-at="2022-05-16T11:52:33 IST" duration-ms="1207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C348_verifybreadcrumbspage3(java.lang.String)[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:52:33 IST" name="C348_verifybreadcrumbspage3" data-provider="fetchData" finished-at="2022-05-16T11:52:48 IST" duration-ms="14613" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C348_verifybreadcrumbspage3 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:52:48 IST" name="afterMethod" finished-at="2022-05-16T11:52:52 IST" duration-ms="4201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:52:52 IST" name="beforeMethod" finished-at="2022-05-16T11:52:54 IST" duration-ms="1267" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C349_verifypreviouspage(java.lang.String)[pri:1, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:52:54 IST" name="C349_verifypreviouspage" data-provider="fetchData" finished-at="2022-05-16T11:53:11 IST" duration-ms="17704" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C349_verifypreviouspage -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:53:11 IST" name="afterMethod" finished-at="2022-05-16T11:53:15 IST" duration-ms="4173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:53:16 IST" name="beforeMethod" finished-at="2022-05-16T11:53:17 IST" duration-ms="1176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C350_verifyalldataremembered(java.lang.String)[pri:2, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:53:17 IST" name="C350_verifyalldataremembered" data-provider="fetchData" finished-at="2022-05-16T11:53:33 IST" duration-ms="16542" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C350_verifyalldataremembered -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:53:33 IST" name="afterMethod" finished-at="2022-05-16T11:53:37 IST" duration-ms="4197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:53:37 IST" name="beforeMethod" finished-at="2022-05-16T11:53:39 IST" duration-ms="1061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C351_verifyallpage3fields(java.lang.String)[pri:3, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:53:39 IST" name="C351_verifyallpage3fields" data-provider="fetchData" finished-at="2022-05-16T11:54:09 IST" duration-ms="30698" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C351_verifyallpage3fields -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:54:09 IST" name="afterMethod" finished-at="2022-05-16T11:54:13 IST" duration-ms="4209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:54:14 IST" name="beforeMethod" finished-at="2022-05-16T11:54:15 IST" duration-ms="1173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C352_verifyallfieldsallowtoentertextandmakeselection(java.lang.String)[pri:4, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:54:15 IST" name="C352_verifyallfieldsallowtoentertextandmakeselection" data-provider="fetchData" finished-at="2022-05-16T11:54:58 IST" duration-ms="43184" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C352_verifyallfieldsallowtoentertextandmakeselection -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:54:58 IST" name="afterMethod" finished-at="2022-05-16T11:55:02 IST" duration-ms="4173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:55:02 IST" name="beforeMethod" finished-at="2022-05-16T11:55:03 IST" duration-ms="1291" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C354_verifyallfieldswithinvaliddata(java.lang.String)[pri:5, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:55:03 IST" name="C354_verifyallfieldswithinvaliddata" data-provider="fetchData" finished-at="2022-05-16T11:55:24 IST" duration-ms="20459" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C354_verifyallfieldswithinvaliddata -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:55:24 IST" name="afterMethod" finished-at="2022-05-16T11:55:28 IST" duration-ms="4191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:55:28 IST" name="beforeMethod" finished-at="2022-05-16T11:55:29 IST" duration-ms="1224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C355_verifyallfieldswithblankfield(java.lang.String)[pri:6, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:55:29 IST" name="C355_verifyallfieldswithblankfield" data-provider="fetchData" finished-at="2022-05-16T11:55:46 IST" duration-ms="16718" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C355_verifyallfieldswithblankfield -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:55:46 IST" name="afterMethod" finished-at="2022-05-16T11:55:50 IST" duration-ms="4201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:55:50 IST" name="beforeMethod" finished-at="2022-05-16T11:55:52 IST" duration-ms="1253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C357_verifyvalidsubmission(java.lang.String)[pri:7, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:55:52 IST" name="C357_verifyvalidsubmission" data-provider="fetchData" finished-at="2022-05-16T11:56:14 IST" duration-ms="22493" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C357_verifyvalidsubmission -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:56:14 IST" name="afterMethod" finished-at="2022-05-16T11:56:18 IST" duration-ms="4188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration3_Test@18271936]" started-at="2022-05-16T11:56:18 IST" name="tearDownClass" finished-at="2022-05-16T11:56:18 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- icivics_testcases.Icivics_EducatorRegistration3_Test -->
+      <class name="icivics_testcases.Icivics_EducatorRegistration5_Test">
+        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T11:41:40 IST" name="setValues" finished-at="2022-05-16T11:41:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setValues -->
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:03:22 IST" name="setUpClass" finished-at="2022-05-16T12:03:22 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:03:22 IST" name="report" finished-at="2022-05-16T12:03:22 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:03:22 IST" name="beforeMethod" finished-at="2022-05-16T12:03:23 IST" duration-ms="1111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C372_verifybreadcrumbspage5(java.lang.String)[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:03:23 IST" name="C372_verifybreadcrumbspage5" data-provider="fetchData" finished-at="2022-05-16T12:03:53 IST" duration-ms="29874" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C372_verifybreadcrumbspage5 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:03:53 IST" name="afterMethod" finished-at="2022-05-16T12:03:57 IST" duration-ms="4179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:03:57 IST" name="beforeMethod" finished-at="2022-05-16T12:03:58 IST" duration-ms="1122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C373_verifywelcomemessage(java.lang.String)[pri:1, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:03:58 IST" name="C373_verifywelcomemessage" data-provider="fetchData" finished-at="2022-05-16T12:04:26 IST" duration-ms="28185" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C373_verifywelcomemessage -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:04:26 IST" name="afterMethod" finished-at="2022-05-16T12:04:31 IST" duration-ms="4185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:04:31 IST" name="beforeMethod" finished-at="2022-05-16T12:04:32 IST" duration-ms="997" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C374_verifyconfirmationemail(java.lang.String)[pri:2, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:04:32 IST" name="C374_verifyconfirmationemail" data-provider="fetchData" finished-at="2022-05-16T12:05:00 IST" duration-ms="28515" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C374_verifyconfirmationemail -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:05:00 IST" name="afterMethod" finished-at="2022-05-16T12:05:00 IST" duration-ms="163" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:05:00 IST" name="beforeMethod" finished-at="2022-05-16T12:05:01 IST" duration-ms="1078" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C375_verifyconfirmationemail(java.lang.String)[pri:3, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:05:01 IST" name="C375_verifyconfirmationemail" data-provider="fetchData" finished-at="2022-05-16T12:05:30 IST" duration-ms="28841" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C375_verifyconfirmationemail -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:05:30 IST" name="afterMethod" finished-at="2022-05-16T12:05:34 IST" duration-ms="4184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:05:35 IST" name="beforeMethod" finished-at="2022-05-16T12:05:36 IST" duration-ms="1188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C376_verifyresendbutton(java.lang.String)[pri:4, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:05:36 IST" name="C376_verifyresendbutton" data-provider="fetchData" finished-at="2022-05-16T12:06:09 IST" duration-ms="33620" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C376_verifyresendbutton -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:06:09 IST" name="afterMethod" finished-at="2022-05-16T12:06:14 IST" duration-ms="4226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:06:14 IST" name="beforeMethod" finished-at="2022-05-16T12:06:15 IST" duration-ms="1240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C377_verifynotification(java.lang.String)[pri:5, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:06:15 IST" name="C377_verifynotification" data-provider="fetchData" finished-at="2022-05-16T12:06:48 IST" duration-ms="33328" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C377_verifynotification -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:06:48 IST" name="afterMethod" finished-at="2022-05-16T12:06:52 IST" duration-ms="4179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration5_Test@48075da3]" started-at="2022-05-16T12:06:52 IST" name="tearDownClass" finished-at="2022-05-16T12:06:52 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- icivics_testcases.Icivics_EducatorRegistration5_Test -->
+      <class name="icivics_testcases.Icivics_EducatorRegistration4_Test">
+        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:41:40 IST" name="setValues" finished-at="2022-05-16T11:41:40 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setValues -->
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:56:18 IST" name="setUpClass" finished-at="2022-05-16T11:56:18 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:56:18 IST" name="report" finished-at="2022-05-16T11:56:18 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:56:18 IST" name="beforeMethod" finished-at="2022-05-16T11:56:19 IST" duration-ms="1073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C358_verifybreadcrumbspage4(java.lang.String)[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:56:19 IST" name="C358_verifybreadcrumbspage4" data-provider="fetchData" finished-at="2022-05-16T11:56:42 IST" duration-ms="22837" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C358_verifybreadcrumbspage4 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:56:42 IST" name="afterMethod" finished-at="2022-05-16T11:56:46 IST" duration-ms="4170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:56:47 IST" name="beforeMethod" finished-at="2022-05-16T11:56:48 IST" duration-ms="1103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C359_verifypreviouspage(java.lang.String)[pri:1, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:56:48 IST" name="C359_verifypreviouspage" data-provider="fetchData" finished-at="2022-05-16T11:57:14 IST" duration-ms="26062" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C359_verifypreviouspage -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:57:14 IST" name="afterMethod" finished-at="2022-05-16T11:57:18 IST" duration-ms="4197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:57:18 IST" name="beforeMethod" finished-at="2022-05-16T11:57:19 IST" duration-ms="1254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C360_verifyalldataremembered(java.lang.String)[pri:2, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:57:19 IST" name="C360_verifyalldataremembered" data-provider="fetchData" finished-at="2022-05-16T11:57:44 IST" duration-ms="24725" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C360_verifyalldataremembered -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:57:44 IST" name="afterMethod" finished-at="2022-05-16T11:57:48 IST" duration-ms="4189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:57:48 IST" name="beforeMethod" finished-at="2022-05-16T11:57:49 IST" duration-ms="1185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C361_verifyallpage3fields(java.lang.String)[pri:3, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:57:49 IST" name="C361_verifyallpage3fields" data-provider="fetchData" finished-at="2022-05-16T11:58:13 IST" duration-ms="23739" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C361_verifyallpage3fields -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:58:13 IST" name="afterMethod" finished-at="2022-05-16T11:58:17 IST" duration-ms="4200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:58:17 IST" name="beforeMethod" finished-at="2022-05-16T11:58:19 IST" duration-ms="1205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C362_verifySignUpischecked(java.lang.String)[pri:4, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:58:19 IST" name="C362_verifySignUpischecked" data-provider="fetchData" finished-at="2022-05-16T11:58:42 IST" duration-ms="23672" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C362_verifySignUpischecked -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:58:42 IST" name="afterMethod" finished-at="2022-05-16T11:58:47 IST" duration-ms="4168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:58:47 IST" name="beforeMethod" finished-at="2022-05-16T11:58:48 IST" duration-ms="1307" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C363_verifyallpage4fields(java.lang.String)[pri:5, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:58:48 IST" name="C363_verifyallpage4fields" data-provider="fetchData" finished-at="2022-05-16T11:59:24 IST" duration-ms="36518" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C363_verifyallpage4fields -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:59:24 IST" name="afterMethod" finished-at="2022-05-16T11:59:25 IST" duration-ms="219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:59:25 IST" name="beforeMethod" finished-at="2022-05-16T11:59:26 IST" duration-ms="1292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C364_verifyallfieldasterisk(java.lang.String)[pri:6, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:59:26 IST" name="C364_verifyallfieldasterisk" data-provider="fetchData" finished-at="2022-05-16T11:59:49 IST" duration-ms="23367" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C364_verifyallfieldasterisk -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:59:49 IST" name="afterMethod" finished-at="2022-05-16T11:59:54 IST" duration-ms="4212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:59:54 IST" name="beforeMethod" finished-at="2022-05-16T11:59:55 IST" duration-ms="1372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C365_verifypasswordtooltips(java.lang.String)[pri:7, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T11:59:55 IST" name="C365_verifypasswordtooltips" data-provider="fetchData" finished-at="2022-05-16T12:00:19 IST" duration-ms="23487" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C365_verifypasswordtooltips -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:00:19 IST" name="afterMethod" finished-at="2022-05-16T12:00:23 IST" duration-ms="4180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:00:23 IST" name="beforeMethod" finished-at="2022-05-16T12:00:24 IST" duration-ms="1028" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C366_verifypasswordstrengthIndicator(java.lang.String)[pri:8, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:00:24 IST" name="C366_verifypasswordstrengthIndicator" data-provider="fetchData" finished-at="2022-05-16T12:00:46 IST" duration-ms="22422" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C366_verifypasswordstrengthIndicator -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:00:46 IST" name="afterMethod" finished-at="2022-05-16T12:00:50 IST" duration-ms="4171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:00:50 IST" name="beforeMethod" finished-at="2022-05-16T12:00:52 IST" duration-ms="1218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C367_verifypasswordIndicatormatch(java.lang.String)[pri:9, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:00:52 IST" name="C367_verifypasswordIndicatormatch" data-provider="fetchData" finished-at="2022-05-16T12:01:16 IST" duration-ms="24186" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C367_verifypasswordIndicatormatch -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:01:16 IST" name="afterMethod" finished-at="2022-05-16T12:01:20 IST" duration-ms="4185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:01:20 IST" name="beforeMethod" finished-at="2022-05-16T12:01:21 IST" duration-ms="1091" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C368_verifyallfieldswithinvaliddata(java.lang.String)[pri:10, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:01:21 IST" name="C368_verifyallfieldswithinvaliddata" data-provider="fetchData" finished-at="2022-05-16T12:01:47 IST" duration-ms="25653" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C368_verifyallfieldswithinvaliddata -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:01:47 IST" name="afterMethod" finished-at="2022-05-16T12:01:51 IST" duration-ms="4161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:01:51 IST" name="beforeMethod" finished-at="2022-05-16T12:01:52 IST" duration-ms="1082" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C369_verifyallfieldswithblankdata(java.lang.String)[pri:11, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:01:52 IST" name="C369_verifyallfieldswithblankdata" data-provider="fetchData" finished-at="2022-05-16T12:02:16 IST" duration-ms="23848" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C369_verifyallfieldswithblankdata -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:02:16 IST" name="afterMethod" finished-at="2022-05-16T12:02:20 IST" duration-ms="4174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:02:20 IST" name="beforeMethod" finished-at="2022-05-16T12:02:22 IST" duration-ms="1409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C370_verifyallfieldswithblankandinvaliddata(java.lang.String)[pri:12, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:02:22 IST" name="C370_verifyallfieldswithblankandinvaliddata" data-provider="fetchData" finished-at="2022-05-16T12:02:48 IST" duration-ms="26157" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C370_verifyallfieldswithblankandinvaliddata -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:02:48 IST" name="afterMethod" finished-at="2022-05-16T12:02:48 IST" duration-ms="152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:02:48 IST" name="beforeMethod" finished-at="2022-05-16T12:02:49 IST" duration-ms="1155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C371_verifyvalidsubmission(java.lang.String)[pri:13, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:02:49 IST" name="C371_verifyvalidsubmission" data-provider="fetchData" finished-at="2022-05-16T12:03:18 IST" duration-ms="28305" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=teacher]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C371_verifyvalidsubmission -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:03:18 IST" name="afterMethod" finished-at="2022-05-16T12:03:22 IST" duration-ms="4175" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_EducatorRegistration4_Test@606e4010]" started-at="2022-05-16T12:03:22 IST" name="tearDownClass" finished-at="2022-05-16T12:03:22 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- icivics_testcases.Icivics_EducatorRegistration4_Test -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
