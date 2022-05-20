@@ -137,6 +137,7 @@ public class Icivics_EducatorReg1 extends ProjectSpecificMethods {
 	public Icivics_EducatorReg1 Verifyemailtextfields() throws IOException {
 
 		WebElement Emailaddresslabel = propElement(getPropfile(gpropname, "Emailaddresslabel"));
+		scrollToTheGivenWebElement(getPropfile(gpropname, "Emailaddresslabel"));
 		if (Emailaddresslabel.isDisplayed()) {
 			reportStep("Emailaddress label is displayed", "Pass");
 		} else {
@@ -213,10 +214,10 @@ public class Icivics_EducatorReg1 extends ProjectSpecificMethods {
 		String username2 = username.getText();
 		System.out.println(username2);
 		if (!username1.equals(username2)) {
-			reportStep(username1 + " is not equal to " + username2 + " new generated name is Verified successfully",
+			reportStep(username1 + " is not equal to " + username2 + " ,newly generated username is Verified successfully",
 					"Pass");
 		} else {
-			reportStep(username1 + " is same as " + username2 + "new generated name is not Verified successfully",
+			reportStep(username1 + " is same as " + username2 + " username is not generated",
 					"Fail");
 		}
 		return this;
@@ -305,6 +306,7 @@ public class Icivics_EducatorReg1 extends ProjectSpecificMethods {
 		
 	@And("Verify email is marked with an asterisk")
 	public Icivics_EducatorReg1 emailAsteriks() throws IOException {
+		scrollToTheGivenWebElement(getPropfile(gpropname, "Emailaddresslabel"));
 		cssgetafter(getPropfile(gpropname, "edureg.email*"), "content", "\"*\"");
 		reportStep("* is present in the email label", "Pass");
 		return this;
