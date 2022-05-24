@@ -5,9 +5,9 @@
     <classes>
       <class name="icivics_testcases.Icivics_StudentRegistration2Email_Test">
         <methods>
+          <include name="C412_verifyenterinvaliddata" invocation-numbers="0"/>
           <include name="afterMethod"/>
           <include name="setUpClass"/>
-          <include name="C403_clickontermsofuselink" invocation-numbers="0"/>
           <include name="stopReport"/>
           <include name="setValues"/>
           <include name="beforeMethod"/>
