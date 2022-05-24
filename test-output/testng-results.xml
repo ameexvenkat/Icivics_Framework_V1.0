@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="13" total="14" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-20T21:49:55 IST" name="Default suite" finished-at="2022-05-20T21:50:06 IST" duration-ms="11300">
+  <suite started-at="2022-05-24T18:59:44 IST" name="Default suite" finished-at="2022-05-24T19:00:08 IST" duration-ms="24346">
     <groups>
     </groups>
-    <test started-at="2022-05-20T21:49:55 IST" name="Default test" finished-at="2022-05-20T21:50:06 IST" duration-ms="11300">
-      <class name="icivics_testcases.Icivics_StudentRegistration1_Test">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1_Test@3e27ba32]" started-at="2022-05-20T21:49:54 IST" name="startReport" finished-at="2022-05-20T21:49:55 IST" duration-ms="768" status="PASS">
+    <test started-at="2022-05-24T18:59:44 IST" name="Default test" finished-at="2022-05-24T19:00:08 IST" duration-ms="24346">
+      <class name="icivics_testcases.Icivics_StudentRegistration2Email_Test">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@74ea2410]" started-at="2022-05-24T18:59:43 IST" name="startReport" finished-at="2022-05-24T18:59:44 IST" duration-ms="538" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1_Test@3e27ba32]" started-at="2022-05-20T21:49:55 IST" name="setValues" finished-at="2022-05-20T21:49:55 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@74ea2410]" started-at="2022-05-24T18:59:44 IST" name="setValues" finished-at="2022-05-24T18:59:44 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setValues -->
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1_Test@3e27ba32]" started-at="2022-05-20T21:49:55 IST" name="setUpClass" finished-at="2022-05-20T21:49:55 IST" duration-ms="133" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@74ea2410]" started-at="2022-05-24T18:59:44 IST" name="setUpClass" finished-at="2022-05-24T18:59:44 IST" duration-ms="121" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1_Test@3e27ba32]" started-at="2022-05-20T21:49:55 IST" name="report" finished-at="2022-05-20T21:49:55 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@74ea2410]" started-at="2022-05-24T18:59:44 IST" name="report" finished-at="2022-05-24T18:59:44 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- report -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1_Test@3e27ba32]" started-at="2022-05-20T21:49:56 IST" name="beforeMethod" finished-at="2022-05-20T21:49:58 IST" duration-ms="2154" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@74ea2410]" started-at="2022-05-24T18:59:45 IST" name="beforeMethod" finished-at="2022-05-24T18:59:47 IST" duration-ms="2336" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C397_Verifyclasscodelink(java.lang.String)[pri:12, instance:icivics_testcases.Icivics_StudentRegistration1_Test@3e27ba32]" started-at="2022-05-20T21:49:58 IST" name="C397_Verifyclasscodelink" data-provider="fetchData" finished-at="2022-05-20T21:50:06 IST" duration-ms="7645" status="PASS">
+        <test-method signature="C403_clickontermsofuselink(java.lang.String)[pri:3, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@74ea2410]" started-at="2022-05-24T18:59:47 IST" name="C403_clickontermsofuselink" data-provider="fetchData" finished-at="2022-05-24T19:00:07 IST" duration-ms="20576" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,20 +37,20 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C397_Verifyclasscodelink -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1_Test@3e27ba32]" started-at="2022-05-20T21:50:06 IST" name="afterMethod" finished-at="2022-05-20T21:50:06 IST" duration-ms="455" status="PASS">
+        </test-method> <!-- C403_clickontermsofuselink -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@74ea2410]" started-at="2022-05-24T19:00:07 IST" name="afterMethod" finished-at="2022-05-24T19:00:08 IST" duration-ms="463" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1_Test@3e27ba32]" started-at="2022-05-20T21:50:06 IST" name="tearDownClass" finished-at="2022-05-20T21:50:06 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@74ea2410]" started-at="2022-05-24T19:00:08 IST" name="tearDownClass" finished-at="2022-05-24T19:00:08 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="stopReport()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1_Test@3e27ba32]" started-at="2022-05-20T21:50:06 IST" name="stopReport" finished-at="2022-05-20T21:50:07 IST" duration-ms="559" status="PASS">
+        <test-method is-config="true" signature="stopReport()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@74ea2410]" started-at="2022-05-24T19:00:08 IST" name="stopReport" finished-at="2022-05-24T19:00:08 IST" duration-ms="383" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopReport -->
-      </class> <!-- icivics_testcases.Icivics_StudentRegistration1_Test -->
+      </class> <!-- icivics_testcases.Icivics_StudentRegistration2Email_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

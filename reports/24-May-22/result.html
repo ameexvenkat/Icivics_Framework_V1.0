@@ -1,0 +1,1712 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ICIVICS TEST REPORT</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>ICIVICS AUTOMATION DASHBOARD</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>May 24, 2022 06:59:43 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='47.619%'><span class='strong'>10</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='52.381%'>11</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='86.179%'><span class='strong'>106</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='13.821%'>17</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>May 24, 2022 02:00:18 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 02:00:18 PM</span>
+	<span class='label end-time'>May 24, 2022 02:01:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 44s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='2'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C433 -If you leave a required field blank and select Next, do you receive an appropriate error message?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:43 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 45s+969ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:01:02 PM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;//*[@id='edit-mail'] Not Found with value: //*[@id='edit-mail']<img data-featherlight="./../images/71448894.jpg" width="10%" src="./../images/71448894.jpg" data-src="./../images/71448894.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>May 24, 2022 02:18:50 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 02:18:50 PM</span>
+	<span class='label end-time'>May 24, 2022 02:19:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 58s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='4'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C433 -If you leave a required field blank and select Next, do you receive an appropriate error message?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:43 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 45s+979ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:19:12 PM</td>
+													<td class='step-details'>The element : //button[@id='edit-next'] is clicked.<img data-featherlight="./../images/552471836.jpg" width="10%" src="./../images/552471836.jpg" data-src="./../images/552471836.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:19:17 PM</td>
+													<td class='step-details'>The expected text contains the actual The classcode isn't linked to a class.<img data-featherlight="./../images/557836687.jpg" width="10%" src="./../images/557836687.jpg" data-src="./../images/557836687.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:19:18 PM</td>
+													<td class='step-details'>The expected text doesn't contain the actual 3 errors have been found:<img data-featherlight="./../images/250642110.jpg" width="10%" src="./../images/250642110.jpg" data-src="./../images/250642110.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:19:18 PM</td>
+													<td class='step-details'>The expected text contains the actual Class Code field is required.<img data-featherlight="./../images/25349529.jpg" width="10%" src="./../images/25349529.jpg" data-src="./../images/25349529.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:19:18 PM</td>
+													<td class='step-details'>The expected text doesn't contain the actual Email address field is required.<img data-featherlight="./../images/530976058.jpg" width="10%" src="./../images/530976058.jpg" data-src="./../images/530976058.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:19:48 PM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;(//div[@class='form-item--error-message alert alert-danger alert-sm'])[3] Not Found with value: (//div[@class='form-item--error-message alert alert-danger alert-sm'])[3]<img data-featherlight="./../images/775296090.jpg" width="10%" src="./../images/775296090.jpg" data-src="./../images/775296090.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>May 24, 2022 02:22:17 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 02:22:17 PM</span>
+	<span class='label end-time'>May 24, 2022 02:23:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 58s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='6'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C433 -If you leave a required field blank and select Next, do you receive an appropriate error message?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:43 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 45s+987ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:22:40 PM</td>
+													<td class='step-details'>The element : //button[@id='edit-next'] is clicked.<img data-featherlight="./../images/896465238.jpg" width="10%" src="./../images/896465238.jpg" data-src="./../images/896465238.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:22:45 PM</td>
+													<td class='step-details'>The expected text contains the actual The classcode isn't linked to a class.<img data-featherlight="./../images/237546128.jpg" width="10%" src="./../images/237546128.jpg" data-src="./../images/237546128.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:22:45 PM</td>
+													<td class='step-details'>The expected text doesn't contain the actual 3 errors have been found:<img data-featherlight="./../images/102165315.jpg" width="10%" src="./../images/102165315.jpg" data-src="./../images/102165315.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:22:45 PM</td>
+													<td class='step-details'>The expected text contains the actual Class Code field is required.<img data-featherlight="./../images/624065835.jpg" width="10%" src="./../images/624065835.jpg" data-src="./../images/624065835.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:23:15 PM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;(//div[@class='form-item--error-message alert alert-danger alert-sm'])[3] Not Found with value: (//div[@class='form-item--error-message alert alert-danger alert-sm'])[3]<img data-featherlight="./../images/339500854.jpg" width="10%" src="./../images/339500854.jpg" data-src="./../images/339500854.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>May 24, 2022 02:23:45 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 02:23:45 PM</span>
+	<span class='label end-time'>May 24, 2022 02:24:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 58s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='8'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C433 -If you leave a required field blank and select Next, do you receive an appropriate error message?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:43 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 45s+993ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:24:09 PM</td>
+													<td class='step-details'>The element : //button[@id='edit-next'] is clicked.<img data-featherlight="./../images/269588709.jpg" width="10%" src="./../images/269588709.jpg" data-src="./../images/269588709.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:24:12 PM</td>
+													<td class='step-details'>The expected text contains the actual The classcode isn't linked to a class.<img data-featherlight="./../images/452221674.jpg" width="10%" src="./../images/452221674.jpg" data-src="./../images/452221674.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:24:12 PM</td>
+													<td class='step-details'>The expected text contains the actual 2 errors have been found:<img data-featherlight="./../images/424902933.jpg" width="10%" src="./../images/424902933.jpg" data-src="./../images/424902933.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:24:13 PM</td>
+													<td class='step-details'>The expected text contains the actual Class Code field is required.<img data-featherlight="./../images/162358969.jpg" width="10%" src="./../images/162358969.jpg" data-src="./../images/162358969.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:24:43 PM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;(//div[@class='form-item--error-message alert alert-danger alert-sm'])[3] Not Found with value: (//div[@class='form-item--error-message alert alert-danger alert-sm'])[3]<img data-featherlight="./../images/637410947.jpg" width="10%" src="./../images/637410947.jpg" data-src="./../images/637410947.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>May 24, 2022 03:02:20 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 03:02:20 PM</span>
+	<span class='label end-time'>May 24, 2022 03:02:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='10'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C433 -If you leave a required field blank and select Next, do you receive an appropriate error message?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:43 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 45s+998ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:02:40 PM</td>
+													<td class='step-details'>User name is Mustard Researcher 5w2s<img data-featherlight="./../images/163110126.jpg" width="10%" src="./../images/163110126.jpg" data-src="./../images/163110126.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:02:40 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/449431895.jpg" width="10%" src="./../images/449431895.jpg" data-src="./../images/449431895.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:02:40 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/164657082.jpg" width="10%" src="./../images/164657082.jpg" data-src="./../images/164657082.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:02:41 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Email<img data-featherlight="./../images/394772430.jpg" width="10%" src="./../images/394772430.jpg" data-src="./../images/394772430.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:02:41 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Verify email<img data-featherlight="./../images/438615697.jpg" width="10%" src="./../images/438615697.jpg" data-src="./../images/438615697.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:02:41 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/438708096.jpg" width="10%" src="./../images/438708096.jpg" data-src="./../images/438708096.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:02:44 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/762456866.jpg" width="10%" src="./../images/762456866.jpg" data-src="./../images/762456866.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>May 24, 2022 03:03:57 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 03:03:57 PM</span>
+	<span class='label end-time'>May 24, 2022 03:04:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='12'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C433 -If you leave a required field blank and select Next, do you receive an appropriate error message?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 46s+7ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:04:16 PM</td>
+													<td class='step-details'>User name is Mustard Researcher 5w2s<img data-featherlight="./../images/844602853.jpg" width="10%" src="./../images/844602853.jpg" data-src="./../images/844602853.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:04:17 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/709721389.jpg" width="10%" src="./../images/709721389.jpg" data-src="./../images/709721389.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:04:17 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/413815961.jpg" width="10%" src="./../images/413815961.jpg" data-src="./../images/413815961.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:04:17 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Email<img data-featherlight="./../images/437332631.jpg" width="10%" src="./../images/437332631.jpg" data-src="./../images/437332631.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:04:17 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Verify email<img data-featherlight="./../images/700369086.jpg" width="10%" src="./../images/700369086.jpg" data-src="./../images/700369086.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:04:18 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/584521666.jpg" width="10%" src="./../images/584521666.jpg" data-src="./../images/584521666.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:04:21 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/779150390.jpg" width="10%" src="./../images/779150390.jpg" data-src="./../images/779150390.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:04:24 PM</td>
+													<td class='step-details'>Page 2 is displayed<img data-featherlight="./../images/463285965.jpg" width="10%" src="./../images/463285965.jpg" data-src="./../images/463285965.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode and Email id</span>
+						<span class='test-time'>May 24, 2022 03:56:17 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 03:56:17 PM</span>
+	<span class='label end-time'>May 24, 2022 03:56:46 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='14'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C400 - When you go Back, are your entries in all fields remembered?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 46s+14ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:56:36 PM</td>
+													<td class='step-details'>User name is Mustard Researcher 5w2s<img data-featherlight="./../images/632207097.jpg" width="10%" src="./../images/632207097.jpg" data-src="./../images/632207097.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:56:36 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/515605376.jpg" width="10%" src="./../images/515605376.jpg" data-src="./../images/515605376.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:56:36 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/674812960.jpg" width="10%" src="./../images/674812960.jpg" data-src="./../images/674812960.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:56:37 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Email<img data-featherlight="./../images/404947882.jpg" width="10%" src="./../images/404947882.jpg" data-src="./../images/404947882.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:56:37 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Verify email<img data-featherlight="./../images/505180931.jpg" width="10%" src="./../images/505180931.jpg" data-src="./../images/505180931.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:56:37 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/163527571.jpg" width="10%" src="./../images/163527571.jpg" data-src="./../images/163527571.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:56:40 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/40456323.jpg" width="10%" src="./../images/40456323.jpg" data-src="./../images/40456323.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:56:45 PM</td>
+													<td class='step-details'>Firstname value JOHN is remembered<img data-featherlight="./../images/823973411.jpg" width="10%" src="./../images/823973411.jpg" data-src="./../images/823973411.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:56:45 PM</td>
+													<td class='step-details'>lastname value RICHARD is remembered<img data-featherlight="./../images/483828608.jpg" width="10%" src="./../images/483828608.jpg" data-src="./../images/483828608.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:56:45 PM</td>
+													<td class='step-details'>email value john23@gmail.com is not remembered<img data-featherlight="./../images/74334846.jpg" width="10%" src="./../images/74334846.jpg" data-src="./../images/74334846.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:56:46 PM</td>
+													<td class='step-details'>verify email value john23@gmail.com is not remembered<img data-featherlight="./../images/816254147.jpg" width="10%" src="./../images/816254147.jpg" data-src="./../images/816254147.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode and Email id</span>
+						<span class='test-time'>May 24, 2022 04:01:55 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 04:01:55 PM</span>
+	<span class='label end-time'>May 24, 2022 04:03:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 10s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='16'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C425 - Do you see a set of 3 numbered page breadcrumbs?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 46s+25ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='17'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C399 - Can you select Back to proceed to the previous page?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 46s+26ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:02:38 PM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;//button[@id='edit-back'] Not Found with value: //button[@id='edit-back']<img data-featherlight="./../images/109270043.jpg" width="10%" src="./../images/109270043.jpg" data-src="./../images/109270043.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='18'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C400 - When you go Back, are your entries in all fields remembered?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 46s+28ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:02:54 PM</td>
+													<td class='step-details'>User name is Mustard Researcher 5w2s<img data-featherlight="./../images/365294341.jpg" width="10%" src="./../images/365294341.jpg" data-src="./../images/365294341.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:02:54 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/166434325.jpg" width="10%" src="./../images/166434325.jpg" data-src="./../images/166434325.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:02:55 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/821635850.jpg" width="10%" src="./../images/821635850.jpg" data-src="./../images/821635850.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:02:55 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Email<img data-featherlight="./../images/202734319.jpg" width="10%" src="./../images/202734319.jpg" data-src="./../images/202734319.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:02:55 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Verify email<img data-featherlight="./../images/302400778.jpg" width="10%" src="./../images/302400778.jpg" data-src="./../images/302400778.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:02:55 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/344666531.jpg" width="10%" src="./../images/344666531.jpg" data-src="./../images/344666531.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:02:58 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/336715945.jpg" width="10%" src="./../images/336715945.jpg" data-src="./../images/336715945.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:03:04 PM</td>
+													<td class='step-details'>Firstname value JOHN is remembered<img data-featherlight="./../images/758911338.jpg" width="10%" src="./../images/758911338.jpg" data-src="./../images/758911338.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:03:04 PM</td>
+													<td class='step-details'>lastname value RICHARD is remembered<img data-featherlight="./../images/327640024.jpg" width="10%" src="./../images/327640024.jpg" data-src="./../images/327640024.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:03:05 PM</td>
+													<td class='step-details'>email value john23@gmail.com is not remembered<img data-featherlight="./../images/296346776.jpg" width="10%" src="./../images/296346776.jpg" data-src="./../images/296346776.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:03:05 PM</td>
+													<td class='step-details'>verify email value john23@gmail.com is not remembered<img data-featherlight="./../images/307356442.jpg" width="10%" src="./../images/307356442.jpg" data-src="./../images/307356442.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode and Email id</span>
+						<span class='test-time'>May 24, 2022 04:03:42 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 04:03:42 PM</span>
+	<span class='label end-time'>May 24, 2022 04:04:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='20'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C400 - When you go Back, are your entries in all fields remembered?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 46s+38ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:03:58 PM</td>
+													<td class='step-details'>User name is Mustard Researcher 5w2s<img data-featherlight="./../images/857051631.jpg" width="10%" src="./../images/857051631.jpg" data-src="./../images/857051631.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:03:59 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/388279564.jpg" width="10%" src="./../images/388279564.jpg" data-src="./../images/388279564.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:03:59 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/838469021.jpg" width="10%" src="./../images/838469021.jpg" data-src="./../images/838469021.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:03:59 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Email<img data-featherlight="./../images/336117635.jpg" width="10%" src="./../images/336117635.jpg" data-src="./../images/336117635.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:03:59 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Verify email<img data-featherlight="./../images/639876919.jpg" width="10%" src="./../images/639876919.jpg" data-src="./../images/639876919.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:04:00 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/887309604.jpg" width="10%" src="./../images/887309604.jpg" data-src="./../images/887309604.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:04:00 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/465739795.jpg" width="10%" src="./../images/465739795.jpg" data-src="./../images/465739795.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:04:06 PM</td>
+													<td class='step-details'>Firstname value JOHN is remembered<img data-featherlight="./../images/776235938.jpg" width="10%" src="./../images/776235938.jpg" data-src="./../images/776235938.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:04:06 PM</td>
+													<td class='step-details'>lastname value RICHARD is remembered<img data-featherlight="./../images/127420420.jpg" width="10%" src="./../images/127420420.jpg" data-src="./../images/127420420.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:04:06 PM</td>
+													<td class='step-details'>email value john23@gmail.com is not remembered<img data-featherlight="./../images/648098555.jpg" width="10%" src="./../images/648098555.jpg" data-src="./../images/648098555.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:04:07 PM</td>
+													<td class='step-details'>verify email value john23@gmail.com is not remembered<img data-featherlight="./../images/242893607.jpg" width="10%" src="./../images/242893607.jpg" data-src="./../images/242893607.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode and Email id</span>
+						<span class='test-time'>May 24, 2022 04:07:36 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 04:07:36 PM</span>
+	<span class='label end-time'>May 24, 2022 04:08:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='22'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C400 - When you go Back, are your entries in all fields remembered?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 46s+47ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:07:53 PM</td>
+													<td class='step-details'>User name is Mustard Researcher 5w2s<img data-featherlight="./../images/436530425.jpg" width="10%" src="./../images/436530425.jpg" data-src="./../images/436530425.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:07:53 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/131078633.jpg" width="10%" src="./../images/131078633.jpg" data-src="./../images/131078633.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:07:53 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/531713521.jpg" width="10%" src="./../images/531713521.jpg" data-src="./../images/531713521.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:07:54 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Email<img data-featherlight="./../images/203641370.jpg" width="10%" src="./../images/203641370.jpg" data-src="./../images/203641370.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:07:54 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Verify email<img data-featherlight="./../images/624287919.jpg" width="10%" src="./../images/624287919.jpg" data-src="./../images/624287919.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:07:54 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/700832623.jpg" width="10%" src="./../images/700832623.jpg" data-src="./../images/700832623.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:07:57 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/620573123.jpg" width="10%" src="./../images/620573123.jpg" data-src="./../images/620573123.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:08:03 PM</td>
+													<td class='step-details'>Firstname value JOHN is remembered<img data-featherlight="./../images/151532147.jpg" width="10%" src="./../images/151532147.jpg" data-src="./../images/151532147.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:08:03 PM</td>
+													<td class='step-details'>lastname value RICHARD is remembered<img data-featherlight="./../images/899808312.jpg" width="10%" src="./../images/899808312.jpg" data-src="./../images/899808312.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:08:03 PM</td>
+													<td class='step-details'>email value john23@gmail.com is remembered<img data-featherlight="./../images/337436079.jpg" width="10%" src="./../images/337436079.jpg" data-src="./../images/337436079.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:08:03 PM</td>
+													<td class='step-details'>verify email value john23@gmail.com is remembered<img data-featherlight="./../images/731108914.jpg" width="10%" src="./../images/731108914.jpg" data-src="./../images/731108914.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode and Email id</span>
+						<span class='test-time'>May 24, 2022 04:24:41 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 04:24:41 PM</span>
+	<span class='label end-time'>May 24, 2022 04:25:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='24'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C403- If you select the 'Terms of Use' link, does the iCivics Terms of Use page open in a new tab</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 46s+53ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:24:58 PM</td>
+													<td class='step-details'>User name is Mustard Researcher 5w2s<img data-featherlight="./../images/446993130.jpg" width="10%" src="./../images/446993130.jpg" data-src="./../images/446993130.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:24:58 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/524221298.jpg" width="10%" src="./../images/524221298.jpg" data-src="./../images/524221298.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:24:58 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/281376233.jpg" width="10%" src="./../images/281376233.jpg" data-src="./../images/281376233.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:24:59 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Email<img data-featherlight="./../images/779789021.jpg" width="10%" src="./../images/779789021.jpg" data-src="./../images/779789021.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:24:59 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Verify email<img data-featherlight="./../images/85062477.jpg" width="10%" src="./../images/85062477.jpg" data-src="./../images/85062477.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:24:59 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/173588454.jpg" width="10%" src="./../images/173588454.jpg" data-src="./../images/173588454.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:25:01 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/383572586.jpg" width="10%" src="./../images/383572586.jpg" data-src="./../images/383572586.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode and Email id</span>
+						<span class='test-time'>May 24, 2022 04:25:35 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 04:25:35 PM</span>
+	<span class='label end-time'>May 24, 2022 04:26:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 43s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='26'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C403- If you select the 'Terms of Use' link, does the iCivics Terms of Use page open in a new tab</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 46s+57ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:26:13 PM</td>
+													<td class='step-details'>User name is Mustard Researcher 5w2s<img data-featherlight="./../images/868407212.jpg" width="10%" src="./../images/868407212.jpg" data-src="./../images/868407212.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:26:14 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/138729281.jpg" width="10%" src="./../images/138729281.jpg" data-src="./../images/138729281.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:26:14 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/33756025.jpg" width="10%" src="./../images/33756025.jpg" data-src="./../images/33756025.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:26:14 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Email<img data-featherlight="./../images/536224820.jpg" width="10%" src="./../images/536224820.jpg" data-src="./../images/536224820.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:26:15 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Verify email<img data-featherlight="./../images/533962096.jpg" width="10%" src="./../images/533962096.jpg" data-src="./../images/533962096.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:26:15 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/113532317.jpg" width="10%" src="./../images/113532317.jpg" data-src="./../images/113532317.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:26:18 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/97867113.jpg" width="10%" src="./../images/97867113.jpg" data-src="./../images/97867113.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode and Email id</span>
+						<span class='test-time'>May 24, 2022 04:32:23 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 04:32:23 PM</span>
+	<span class='label end-time'>May 24, 2022 04:32:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='28'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C403- If you select the 'Terms of Use' link, does the iCivics Terms of Use page open in a new tab</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 46s+67ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:32:41 PM</td>
+													<td class='step-details'>User name is Mustard Researcher 5w2s<img data-featherlight="./../images/166667923.jpg" width="10%" src="./../images/166667923.jpg" data-src="./../images/166667923.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:32:41 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/562057375.jpg" width="10%" src="./../images/562057375.jpg" data-src="./../images/562057375.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:32:41 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/855645301.jpg" width="10%" src="./../images/855645301.jpg" data-src="./../images/855645301.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:32:42 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Email<img data-featherlight="./../images/354500842.jpg" width="10%" src="./../images/354500842.jpg" data-src="./../images/354500842.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:32:42 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Verify email<img data-featherlight="./../images/90975896.jpg" width="10%" src="./../images/90975896.jpg" data-src="./../images/90975896.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:32:42 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/435078372.jpg" width="10%" src="./../images/435078372.jpg" data-src="./../images/435078372.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:32:45 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/216208802.jpg" width="10%" src="./../images/216208802.jpg" data-src="./../images/216208802.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>May 24, 2022 05:03:50 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 05:03:50 PM</span>
+	<span class='label end-time'>May 24, 2022 05:04:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='30'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C434 -Do all error messages display correctly?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 46s+72ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:04:02 PM</td>
+													<td class='step-details'>The expected text contains the actual The classcode isn't linked to a class.<img data-featherlight="./../images/707565174.jpg" width="10%" src="./../images/707565174.jpg" data-src="./../images/707565174.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:04:02 PM</td>
+													<td class='step-details'>Error alert message is displayed<img data-featherlight="./../images/515098607.jpg" width="10%" src="./../images/515098607.jpg" data-src="./../images/515098607.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:04:03 PM</td>
+													<td class='step-details'>The email address GHDGFH!#!#! is not valid. is displayed<img data-featherlight="./../images/246940441.jpg" width="10%" src="./../images/246940441.jpg" data-src="./../images/246940441.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:04:03 PM</td>
+													<td class='step-details'>Verify email address field is required. is displayed<img data-featherlight="./../images/543855826.jpg" width="10%" src="./../images/543855826.jpg" data-src="./../images/543855826.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>May 24, 2022 05:27:20 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 05:27:20 PM</span>
+	<span class='label end-time'>May 24, 2022 05:28:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 58s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='32'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C433 -If you leave a required field blank and select Next, do you receive an appropriate error message?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 46s+76ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:27:47 PM</td>
+													<td class='step-details'>The element : //button[@id='edit-next'] is clicked.<img data-featherlight="./../images/333452657.jpg" width="10%" src="./../images/333452657.jpg" data-src="./../images/333452657.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:27:47 PM</td>
+													<td class='step-details'>The expected text contains the actual The classcode isn't linked to a class.<img data-featherlight="./../images/640877161.jpg" width="10%" src="./../images/640877161.jpg" data-src="./../images/640877161.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:27:47 PM</td>
+													<td class='step-details'>Error alert message is displayed<img data-featherlight="./../images/652924827.jpg" width="10%" src="./../images/652924827.jpg" data-src="./../images/652924827.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:27:47 PM</td>
+													<td class='step-details'>The expected text contains the actual 2 errors have been found:<img data-featherlight="./../images/883521116.jpg" width="10%" src="./../images/883521116.jpg" data-src="./../images/883521116.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:27:48 PM</td>
+													<td class='step-details'>The expected text contains the actual Class Code field is required.<img data-featherlight="./../images/42553422.jpg" width="10%" src="./../images/42553422.jpg" data-src="./../images/42553422.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>5:28:18 PM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;(//div[@class='form-item--error-message alert alert-danger alert-sm'])[3] Not Found with value: (//div[@class='form-item--error-message alert alert-danger alert-sm'])[3]<img data-featherlight="./../images/108706966.jpg" width="10%" src="./../images/108706966.jpg" data-src="./../images/108706966.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>May 24, 2022 05:37:55 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 05:37:55 PM</span>
+	<span class='label end-time'>May 24, 2022 05:38:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='34'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C433 -If you leave a required field blank and select Next, do you receive an appropriate error message?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 46s+79ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:38:21 PM</td>
+													<td class='step-details'>The element : //button[@id='edit-next'] is clicked.<img data-featherlight="./../images/89696312.jpg" width="10%" src="./../images/89696312.jpg" data-src="./../images/89696312.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:38:23 PM</td>
+													<td class='step-details'>The expected text contains the actual The classcode isn't linked to a class.<img data-featherlight="./../images/788805770.jpg" width="10%" src="./../images/788805770.jpg" data-src="./../images/788805770.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:38:23 PM</td>
+													<td class='step-details'>Error alert message is displayed<img data-featherlight="./../images/508770608.jpg" width="10%" src="./../images/508770608.jpg" data-src="./../images/508770608.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:38:24 PM</td>
+													<td class='step-details'>The expected text contains the actual 2 errors have been found:<img data-featherlight="./../images/444225196.jpg" width="10%" src="./../images/444225196.jpg" data-src="./../images/444225196.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:38:24 PM</td>
+													<td class='step-details'>The expected text contains the actual Class Code field is required.<img data-featherlight="./../images/637519259.jpg" width="10%" src="./../images/637519259.jpg" data-src="./../images/637519259.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:38:24 PM</td>
+													<td class='step-details'>The expected text contains the actual Verify email address field is required.<img data-featherlight="./../images/747649275.jpg" width="10%" src="./../images/747649275.jpg" data-src="./../images/747649275.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode and Email id</span>
+						<span class='test-time'>May 24, 2022 06:53:23 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 06:53:23 PM</span>
+	<span class='label end-time'>May 24, 2022 06:54:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 44s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='36'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C403- If you select the 'Terms of Use' link, does the iCivics Terms of Use page open in a new tab</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 46s+87ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>6:54:07 PM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;//span[@class='switch-register-type-link']/a Not Found with value: //span[@class='switch-register-type-link']/a<img data-featherlight="./../images/51939929.jpg" width="10%" src="./../images/51939929.jpg" data-src="./../images/51939929.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode and Email id</span>
+						<span class='test-time'>May 24, 2022 06:57:58 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 06:57:58 PM</span>
+	<span class='label end-time'>May 24, 2022 06:58:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 44s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='38'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C403- If you select the 'Terms of Use' link, does the iCivics Terms of Use page open in a new tab</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 06:59:44 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 2s+88ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>6:58:42 PM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;//span[@class='switch-register-type-link']/a Not Found with value: //span[@class='switch-register-type-link']/a<img data-featherlight="./../images/854829105.jpg" width="10%" src="./../images/854829105.jpg" data-src="./../images/854829105.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='39'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode and Email id</span>
+						<span class='test-time'>May 24, 2022 06:59:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 24, 2022 06:59:44 PM</span>
+	<span class='label end-time'>May 24, 2022 07:00:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+291ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='40'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C403- If you select the 'Terms of Use' link, does the iCivics Terms of Use page open in a new tab</h5>
+						<span class="node-time label grey lighten-1 white-text">May 24, 2022 07:00:01 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 14s+127ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:59:56 PM</td>
+													<td class='step-details'>User name is Plum Professor 7f4b<img data-featherlight='./../images/408661476.jpg' width='10%' src='./../images/408661476.jpg' data-src='./../images/408661476.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:59:56 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight='./../images/74403845.jpg' width='10%' src='./../images/74403845.jpg' data-src='./../images/74403845.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:59:57 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight='./../images/821606226.jpg' width='10%' src='./../images/821606226.jpg' data-src='./../images/821606226.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:59:57 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Email<img data-featherlight='./../images/440391452.jpg' width='10%' src='./../images/440391452.jpg' data-src='./../images/440391452.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:59:57 PM</td>
+													<td class='step-details'>john23@gmail.com is entered as Verify email<img data-featherlight='./../images/797083817.jpg' width='10%' src='./../images/797083817.jpg' data-src='./../images/797083817.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:59:57 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight='./../images/795210937.jpg' width='10%' src='./../images/795210937.jpg' data-src='./../images/795210937.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>7:00:01 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight='./../images/854067779.jpg' width='10%' src='./../images/854067779.jpg' data-src='./../images/854067779.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>21</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>123</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>May 24, 2022 06:59:43 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>May 24, 2022 07:00:08 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 0m 24s+846ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 10,
+				failParent: 11,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 11,
+				
+				passChild: 106,
+				failChild: 17,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 17,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('#test-view-charts').addClass('hide');
+			});
+		</script>
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>
