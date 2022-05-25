@@ -448,8 +448,10 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 		link.click();
 		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
 		classcode.clear();
-		WebElement classcodelink = propElement(getPropfile(gpropname2, "classcodelink"));
-		classcodelink.click();
+		classcode.sendKeys(getPropfile(gpropname2, "ClassCode"));
+		reportStep(getPropfile(gpropname2, "ClassCode") + " is entered as ClassCode", "Pass");
+
+		
 		WebElement username = propElement(getPropfile(gpropname2, "username"));
 		String username1 = username.getText();
 		writePropfile("EducatorRegistration/username", "username", username1);

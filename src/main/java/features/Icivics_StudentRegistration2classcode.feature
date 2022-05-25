@@ -26,7 +26,7 @@ When Click privacy policy Privacy policy page opens in new tab
 
 
 Scenario: C405- As a student, are you NOT prompted to sign up for the newsletter?
-And User on Page 2, Verify Sign Up for Emails field is not displayed
+
 Scenario: C408- If you hover over the password field, do you see a hover tooltip with appropriate text?
 When Hover over password field Tooltip appears
 
