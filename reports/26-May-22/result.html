@@ -1,0 +1,2292 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ICIVICS TEST REPORT</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>ICIVICS AUTOMATION DASHBOARD</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>May 26, 2022 06:10:58 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='68.182%'><span class='strong'>15</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='31.818%'>7</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='96.018%'><span class='strong'>217</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='3.982%'>9</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 Email id</span>
+						<span class='test-time'>May 26, 2022 01:01:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 01:01:04 PM</span>
+	<span class='label end-time'>May 26, 2022 01:01:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 36s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C372 - Can you tell which page you are currently viewing in the breadcrumbs?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+160ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:01:35 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/644794170.jpg" width="10%" src="./../images/644794170.jpg" data-src="./../images/644794170.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:01:35 PM</td>
+													<td class='step-details'>User name is Granite Trainer 6w4c<img data-featherlight="./../images/680654264.jpg" width="10%" src="./../images/680654264.jpg" data-src="./../images/680654264.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:01:36 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/37640306.jpg" width="10%" src="./../images/37640306.jpg" data-src="./../images/37640306.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:01:36 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/619456785.jpg" width="10%" src="./../images/619456785.jpg" data-src="./../images/619456785.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:01:36 PM</td>
+													<td class='step-details'>john39@gmail.com is entered as Email<img data-featherlight="./../images/615559415.jpg" width="10%" src="./../images/615559415.jpg" data-src="./../images/615559415.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:01:36 PM</td>
+													<td class='step-details'>john39@gmail.com is entered as Verify email<img data-featherlight="./../images/703942107.jpg" width="10%" src="./../images/703942107.jpg" data-src="./../images/703942107.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:01:37 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/124556748.jpg" width="10%" src="./../images/124556748.jpg" data-src="./../images/124556748.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:01:40 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/806476479.jpg" width="10%" src="./../images/806476479.jpg" data-src="./../images/806476479.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 Email id</span>
+						<span class='test-time'>May 26, 2022 01:03:42 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 01:03:42 PM</span>
+	<span class='label end-time'>May 26, 2022 01:03:56 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='4'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C372 - Can you tell which page you are currently viewing in the breadcrumbs?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+169ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:03:52 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/371697546.jpg" width="10%" src="./../images/371697546.jpg" data-src="./../images/371697546.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:03:52 PM</td>
+													<td class='step-details'>User name is Granite Trainer 6w4c<img data-featherlight="./../images/277466569.jpg" width="10%" src="./../images/277466569.jpg" data-src="./../images/277466569.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:03:52 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/679283475.jpg" width="10%" src="./../images/679283475.jpg" data-src="./../images/679283475.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:03:52 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/598081928.jpg" width="10%" src="./../images/598081928.jpg" data-src="./../images/598081928.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:03:53 PM</td>
+													<td class='step-details'>john40@gmail.com is entered as Email<img data-featherlight="./../images/243376109.jpg" width="10%" src="./../images/243376109.jpg" data-src="./../images/243376109.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:03:53 PM</td>
+													<td class='step-details'>john40@gmail.com is entered as Verify email<img data-featherlight="./../images/539442699.jpg" width="10%" src="./../images/539442699.jpg" data-src="./../images/539442699.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:03:53 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/153596994.jpg" width="10%" src="./../images/153596994.jpg" data-src="./../images/153596994.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:03:56 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/194403792.jpg" width="10%" src="./../images/194403792.jpg" data-src="./../images/194403792.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 Email id</span>
+						<span class='test-time'>May 26, 2022 01:05:53 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 01:05:53 PM</span>
+	<span class='label end-time'>May 26, 2022 01:06:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='6'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C372 - Can you tell which page you are currently viewing in the breadcrumbs?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+176ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:06:06 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/580780164.jpg" width="10%" src="./../images/580780164.jpg" data-src="./../images/580780164.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:06:06 PM</td>
+													<td class='step-details'>User name is Maroon Professor y0q1<img data-featherlight="./../images/726780937.jpg" width="10%" src="./../images/726780937.jpg" data-src="./../images/726780937.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:06:06 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/801591529.jpg" width="10%" src="./../images/801591529.jpg" data-src="./../images/801591529.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:06:07 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/227389479.jpg" width="10%" src="./../images/227389479.jpg" data-src="./../images/227389479.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:06:07 PM</td>
+													<td class='step-details'>john40@gmail.com is entered as Email<img data-featherlight="./../images/578850900.jpg" width="10%" src="./../images/578850900.jpg" data-src="./../images/578850900.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:06:07 PM</td>
+													<td class='step-details'>john40@gmail.com is entered as Verify email<img data-featherlight="./../images/427590509.jpg" width="10%" src="./../images/427590509.jpg" data-src="./../images/427590509.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:06:07 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/585757892.jpg" width="10%" src="./../images/585757892.jpg" data-src="./../images/585757892.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:06:10 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/722064854.jpg" width="10%" src="./../images/722064854.jpg" data-src="./../images/722064854.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 Email id</span>
+						<span class='test-time'>May 26, 2022 01:08:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 01:08:51 PM</span>
+	<span class='label end-time'>May 26, 2022 01:09:06 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='8'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C372 - Can you tell which page you are currently viewing in the breadcrumbs?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+182ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:09:01 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/525843829.jpg" width="10%" src="./../images/525843829.jpg" data-src="./../images/525843829.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:09:01 PM</td>
+													<td class='step-details'>User name is Granite Trainer 6w4c<img data-featherlight="./../images/88784071.jpg" width="10%" src="./../images/88784071.jpg" data-src="./../images/88784071.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:09:01 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/808933555.jpg" width="10%" src="./../images/808933555.jpg" data-src="./../images/808933555.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:09:02 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/693992947.jpg" width="10%" src="./../images/693992947.jpg" data-src="./../images/693992947.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:09:02 PM</td>
+													<td class='step-details'>john41@gmail.com is entered as Email<img data-featherlight="./../images/405219812.jpg" width="10%" src="./../images/405219812.jpg" data-src="./../images/405219812.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:09:02 PM</td>
+													<td class='step-details'>john41@gmail.com is entered as Verify email<img data-featherlight="./../images/172706218.jpg" width="10%" src="./../images/172706218.jpg" data-src="./../images/172706218.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:09:02 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/606653018.jpg" width="10%" src="./../images/606653018.jpg" data-src="./../images/606653018.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:09:06 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/77201066.jpg" width="10%" src="./../images/77201066.jpg" data-src="./../images/77201066.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 01:50:52 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 01:50:52 PM</span>
+	<span class='label end-time'>May 26, 2022 01:51:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 48s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='10'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C455 -Do you see a notification that displays your generated username?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+188ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:51:02 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/631519899.jpg" width="10%" src="./../images/631519899.jpg" data-src="./../images/631519899.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:51:03 PM</td>
+													<td class='step-details'>User name is Crimson Executive 2n3d<img data-featherlight="./../images/863250919.jpg" width="10%" src="./../images/863250919.jpg" data-src="./../images/863250919.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:51:03 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/375015255.jpg" width="10%" src="./../images/375015255.jpg" data-src="./../images/375015255.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:51:03 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/849707771.jpg" width="10%" src="./../images/849707771.jpg" data-src="./../images/849707771.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:51:03 PM</td>
+													<td class='step-details'>john41@gmail.com is entered as Email<img data-featherlight="./../images/423391411.jpg" width="10%" src="./../images/423391411.jpg" data-src="./../images/423391411.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:51:04 PM</td>
+													<td class='step-details'>john41@gmail.com is entered as Verify email<img data-featherlight="./../images/341008060.jpg" width="10%" src="./../images/341008060.jpg" data-src="./../images/341008060.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:51:04 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/625788762.jpg" width="10%" src="./../images/625788762.jpg" data-src="./../images/625788762.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:51:06 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/161929744.jpg" width="10%" src="./../images/161929744.jpg" data-src="./../images/161929744.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>1:51:40 PM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;//div[@class='register-end-username-wrapper']//h2[1] Not Found with value: //div[@class='register-end-username-wrapper']//h2[1]<img data-featherlight="./../images/130821731.jpg" width="10%" src="./../images/130821731.jpg" data-src="./../images/130821731.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 01:57:55 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 01:57:55 PM</span>
+	<span class='label end-time'>May 26, 2022 01:58:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 31s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='12'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C455 -Do you see a notification that displays your generated username?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+194ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:58:04 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/719551909.jpg" width="10%" src="./../images/719551909.jpg" data-src="./../images/719551909.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:58:04 PM</td>
+													<td class='step-details'>User name is Quartz Trainer 1z7a<img data-featherlight="./../images/692664269.jpg" width="10%" src="./../images/692664269.jpg" data-src="./../images/692664269.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:58:05 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/381233820.jpg" width="10%" src="./../images/381233820.jpg" data-src="./../images/381233820.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:58:05 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/718518675.jpg" width="10%" src="./../images/718518675.jpg" data-src="./../images/718518675.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:58:05 PM</td>
+													<td class='step-details'>john41@gmail.com is entered as Email<img data-featherlight="./../images/367012448.jpg" width="10%" src="./../images/367012448.jpg" data-src="./../images/367012448.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:58:05 PM</td>
+													<td class='step-details'>john41@gmail.com is entered as Verify email<img data-featherlight="./../images/155933127.jpg" width="10%" src="./../images/155933127.jpg" data-src="./../images/155933127.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:58:06 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/123757318.jpg" width="10%" src="./../images/123757318.jpg" data-src="./../images/123757318.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:58:08 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/304488903.jpg" width="10%" src="./../images/304488903.jpg" data-src="./../images/304488903.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:58:11 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/493095893.jpg" width="10%" src="./../images/493095893.jpg" data-src="./../images/493095893.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:58:12 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/331990769.jpg" width="10%" src="./../images/331990769.jpg" data-src="./../images/331990769.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:58:12 PM</td>
+													<td class='step-details'>The Element clicked<img data-featherlight="./../images/789006237.jpg" width="10%" src="./../images/789006237.jpg" data-src="./../images/789006237.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:58:15 PM</td>
+													<td class='step-details'>The Element FINISH clicked<img data-featherlight="./../images/785922695.jpg" width="10%" src="./../images/785922695.jpg" data-src="./../images/785922695.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>1:58:26 PM</td>
+													<td class='step-details'>email label is not verified<img data-featherlight="./../images/278240267.jpg" width="10%" src="./../images/278240267.jpg" data-src="./../images/278240267.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 02:04:50 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 02:04:50 PM</span>
+	<span class='label end-time'>May 26, 2022 02:05:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 34s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='14'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C455 -Do you see a notification that displays your generated username?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+201ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:04:59 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/173419691.jpg" width="10%" src="./../images/173419691.jpg" data-src="./../images/173419691.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:04:59 PM</td>
+													<td class='step-details'>User name is Granite Trainer 6w4c<img data-featherlight="./../images/210481579.jpg" width="10%" src="./../images/210481579.jpg" data-src="./../images/210481579.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:04:59 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/27032588.jpg" width="10%" src="./../images/27032588.jpg" data-src="./../images/27032588.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:05:00 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/354823583.jpg" width="10%" src="./../images/354823583.jpg" data-src="./../images/354823583.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:05:00 PM</td>
+													<td class='step-details'>john42@gmail.com is entered as Email<img data-featherlight="./../images/855331105.jpg" width="10%" src="./../images/855331105.jpg" data-src="./../images/855331105.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:05:00 PM</td>
+													<td class='step-details'>john42@gmail.com is entered as Verify email<img data-featherlight="./../images/72613362.jpg" width="10%" src="./../images/72613362.jpg" data-src="./../images/72613362.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:05:00 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/359297562.jpg" width="10%" src="./../images/359297562.jpg" data-src="./../images/359297562.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:05:03 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/244490857.jpg" width="10%" src="./../images/244490857.jpg" data-src="./../images/244490857.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:05:06 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/640084643.jpg" width="10%" src="./../images/640084643.jpg" data-src="./../images/640084643.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:05:06 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/727474787.jpg" width="10%" src="./../images/727474787.jpg" data-src="./../images/727474787.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:05:07 PM</td>
+													<td class='step-details'>The Element clicked<img data-featherlight="./../images/323554377.jpg" width="10%" src="./../images/323554377.jpg" data-src="./../images/323554377.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:05:10 PM</td>
+													<td class='step-details'>The Element FINISH clicked<img data-featherlight="./../images/621999944.jpg" width="10%" src="./../images/621999944.jpg" data-src="./../images/621999944.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:05:24 PM</td>
+													<td class='step-details'>GeneratedUsername field is not empty,it is pregenerated with Your username is: Local Legislator 0y2u and Verified successfully<img data-featherlight="./../images/858993002.jpg" width="10%" src="./../images/858993002.jpg" data-src="./../images/858993002.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 02:12:41 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 02:12:41 PM</span>
+	<span class='label end-time'>May 26, 2022 02:13:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 37s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='16'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C454 - Can you tell which page you are currently viewing in the breadcrumbs?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+210ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:12:55 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/380762578.jpg" width="10%" src="./../images/380762578.jpg" data-src="./../images/380762578.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:12:55 PM</td>
+													<td class='step-details'>User name is Village Pilot k1r2<img data-featherlight="./../images/495240558.jpg" width="10%" src="./../images/495240558.jpg" data-src="./../images/495240558.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:12:55 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/61893164.jpg" width="10%" src="./../images/61893164.jpg" data-src="./../images/61893164.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:12:56 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/223385434.jpg" width="10%" src="./../images/223385434.jpg" data-src="./../images/223385434.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:12:56 PM</td>
+													<td class='step-details'>john43@gmail.com is entered as Email<img data-featherlight="./../images/339861409.jpg" width="10%" src="./../images/339861409.jpg" data-src="./../images/339861409.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:12:56 PM</td>
+													<td class='step-details'>john43@gmail.com is entered as Verify email<img data-featherlight="./../images/400506303.jpg" width="10%" src="./../images/400506303.jpg" data-src="./../images/400506303.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:12:56 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/885413014.jpg" width="10%" src="./../images/885413014.jpg" data-src="./../images/885413014.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:12:59 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/569749997.jpg" width="10%" src="./../images/569749997.jpg" data-src="./../images/569749997.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:13:02 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/182660475.jpg" width="10%" src="./../images/182660475.jpg" data-src="./../images/182660475.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:13:02 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/771543205.jpg" width="10%" src="./../images/771543205.jpg" data-src="./../images/771543205.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:13:03 PM</td>
+													<td class='step-details'>The Element clicked<img data-featherlight="./../images/738044146.jpg" width="10%" src="./../images/738044146.jpg" data-src="./../images/738044146.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:13:06 PM</td>
+													<td class='step-details'>The Element FINISH clicked<img data-featherlight="./../images/732818843.jpg" width="10%" src="./../images/732818843.jpg" data-src="./../images/732818843.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:13:18 PM</td>
+													<td class='step-details'>The backcolor is not rgb(0, 178, 124) :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=102.0.5005.61) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-457-W', ip: '10.10.7.245', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\TRIPTI~1.GUP\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:56436}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: dbf3d36a6e381ec38ed40aaa06e86449<img data-featherlight="./../images/849986517.jpg" width="10%" src="./../images/849986517.jpg" data-src="./../images/849986517.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:13:18 PM</td>
+													<td class='step-details'>The backcolor is not rgb(0, 178, 124) :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=102.0.5005.61) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-457-W', ip: '10.10.7.245', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\TRIPTI~1.GUP\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:56436}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: dbf3d36a6e381ec38ed40aaa06e86449<img data-featherlight="./../images/688709700.jpg" width="10%" src="./../images/688709700.jpg" data-src="./../images/688709700.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:13:18 PM</td>
+													<td class='step-details'>The backcolor is not rgb(0, 178, 124) :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=102.0.5005.61) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-457-W', ip: '10.10.7.245', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\TRIPTI~1.GUP\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:56436}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: dbf3d36a6e381ec38ed40aaa06e86449<img data-featherlight="./../images/564152963.jpg" width="10%" src="./../images/564152963.jpg" data-src="./../images/564152963.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:13:18 PM</td>
+													<td class='step-details'>you are currently viewing page 3 in the breadcrumbs<img data-featherlight="./../images/179476613.jpg" width="10%" src="./../images/179476613.jpg" data-src="./../images/179476613.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 02:44:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 02:44:21 PM</span>
+	<span class='label end-time'>May 26, 2022 02:44:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='18'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C456 -Do you see text that you will use your username and chosen password to log in?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+217ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 02:47:00 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 02:47:00 PM</span>
+	<span class='label end-time'>May 26, 2022 02:47:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 54s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='20'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C456 -Do you see text that you will use your username and chosen password to log in?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+220ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:47:06 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/899441970.jpg" width="10%" src="./../images/899441970.jpg" data-src="./../images/899441970.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:47:07 PM</td>
+													<td class='step-details'>User name is Mint Operator l7n2<img data-featherlight="./../images/625975025.jpg" width="10%" src="./../images/625975025.jpg" data-src="./../images/625975025.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:47:07 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/715479675.jpg" width="10%" src="./../images/715479675.jpg" data-src="./../images/715479675.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:47:07 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/900208926.jpg" width="10%" src="./../images/900208926.jpg" data-src="./../images/900208926.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:47:07 PM</td>
+													<td class='step-details'>john44@gmail.com is entered as Email<img data-featherlight="./../images/312543442.jpg" width="10%" src="./../images/312543442.jpg" data-src="./../images/312543442.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:47:08 PM</td>
+													<td class='step-details'>john44@gmail.com is entered as Verify email<img data-featherlight="./../images/18649356.jpg" width="10%" src="./../images/18649356.jpg" data-src="./../images/18649356.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:47:08 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/343095595.jpg" width="10%" src="./../images/343095595.jpg" data-src="./../images/343095595.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:47:11 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/827910548.jpg" width="10%" src="./../images/827910548.jpg" data-src="./../images/827910548.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:47:14 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/551374251.jpg" width="10%" src="./../images/551374251.jpg" data-src="./../images/551374251.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:47:14 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/158831523.jpg" width="10%" src="./../images/158831523.jpg" data-src="./../images/158831523.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:47:15 PM</td>
+													<td class='step-details'>The Element clicked<img data-featherlight="./../images/442131162.jpg" width="10%" src="./../images/442131162.jpg" data-src="./../images/442131162.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:47:48 PM</td>
+													<td class='step-details'>The Element FINISH clicked<img data-featherlight="./../images/351880460.jpg" width="10%" src="./../images/351880460.jpg" data-src="./../images/351880460.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:47:54 PM</td>
+													<td class='step-details'>email label is not verified<img data-featherlight="./../images/146196423.jpg" width="10%" src="./../images/146196423.jpg" data-src="./../images/146196423.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 02:54:51 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 02:54:51 PM</span>
+	<span class='label end-time'>May 26, 2022 02:55:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 50s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='22'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C456 -Do you see text that you will use your username and chosen password to log in?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+226ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:55:00 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/49422257.jpg" width="10%" src="./../images/49422257.jpg" data-src="./../images/49422257.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:55:00 PM</td>
+													<td class='step-details'>User name is Granite Trainer 6w4c<img data-featherlight="./../images/625899366.jpg" width="10%" src="./../images/625899366.jpg" data-src="./../images/625899366.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:55:00 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/801563238.jpg" width="10%" src="./../images/801563238.jpg" data-src="./../images/801563238.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:55:01 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/672123255.jpg" width="10%" src="./../images/672123255.jpg" data-src="./../images/672123255.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:55:01 PM</td>
+													<td class='step-details'>john45@gmail.com is entered as Email<img data-featherlight="./../images/59446004.jpg" width="10%" src="./../images/59446004.jpg" data-src="./../images/59446004.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:55:01 PM</td>
+													<td class='step-details'>john45@gmail.com is entered as Verify email<img data-featherlight="./../images/412746375.jpg" width="10%" src="./../images/412746375.jpg" data-src="./../images/412746375.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:55:02 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/509709774.jpg" width="10%" src="./../images/509709774.jpg" data-src="./../images/509709774.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:55:05 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/600847920.jpg" width="10%" src="./../images/600847920.jpg" data-src="./../images/600847920.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:55:09 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/150674505.jpg" width="10%" src="./../images/150674505.jpg" data-src="./../images/150674505.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:55:09 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/220289301.jpg" width="10%" src="./../images/220289301.jpg" data-src="./../images/220289301.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:55:09 PM</td>
+													<td class='step-details'>The Element clicked<img data-featherlight="./../images/816715196.jpg" width="10%" src="./../images/816715196.jpg" data-src="./../images/816715196.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:55:12 PM</td>
+													<td class='step-details'>The Element FINISH clicked<img data-featherlight="./../images/282648587.jpg" width="10%" src="./../images/282648587.jpg" data-src="./../images/282648587.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:55:41 PM</td>
+													<td class='step-details'>email label is not verified<img data-featherlight="./../images/171680195.jpg" width="10%" src="./../images/171680195.jpg" data-src="./../images/171680195.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 02:59:13 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 02:59:13 PM</span>
+	<span class='label end-time'>May 26, 2022 03:00:04 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 51s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='24'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C456 -Do you see text that you will use your username and chosen password to log in?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+233ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:59:52 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/881090662.jpg" width="10%" src="./../images/881090662.jpg" data-src="./../images/881090662.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:59:52 PM</td>
+													<td class='step-details'>User name is Granite Patriot 7w5s<img data-featherlight="./../images/333998540.jpg" width="10%" src="./../images/333998540.jpg" data-src="./../images/333998540.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:59:53 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/902745028.jpg" width="10%" src="./../images/902745028.jpg" data-src="./../images/902745028.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:59:53 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/748051298.jpg" width="10%" src="./../images/748051298.jpg" data-src="./../images/748051298.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:59:53 PM</td>
+													<td class='step-details'>john46@gmail.com is entered as Email<img data-featherlight="./../images/192500791.jpg" width="10%" src="./../images/192500791.jpg" data-src="./../images/192500791.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:59:54 PM</td>
+													<td class='step-details'>john46@gmail.com is entered as Verify email<img data-featherlight="./../images/814409090.jpg" width="10%" src="./../images/814409090.jpg" data-src="./../images/814409090.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:59:54 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/514362648.jpg" width="10%" src="./../images/514362648.jpg" data-src="./../images/514362648.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:59:57 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/673194303.jpg" width="10%" src="./../images/673194303.jpg" data-src="./../images/673194303.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:00:00 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/614870398.jpg" width="10%" src="./../images/614870398.jpg" data-src="./../images/614870398.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:00:00 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/14773516.jpg" width="10%" src="./../images/14773516.jpg" data-src="./../images/14773516.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:00:00 PM</td>
+													<td class='step-details'>The Element clicked<img data-featherlight="./../images/884162823.jpg" width="10%" src="./../images/884162823.jpg" data-src="./../images/884162823.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:00:04 PM</td>
+													<td class='step-details'>The Element FINISH clicked<img data-featherlight="./../images/889118127.jpg" width="10%" src="./../images/889118127.jpg" data-src="./../images/889118127.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 03:46:45 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 03:46:45 PM</span>
+	<span class='label end-time'>May 26, 2022 03:47:37 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 52s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='26'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C456 -Do you see text that you will use your username and chosen password to log in?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+238ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:46:59 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/372642915.jpg" width="10%" src="./../images/372642915.jpg" data-src="./../images/372642915.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:46:59 PM</td>
+													<td class='step-details'>User name is Garnet Organizer 6z5z<img data-featherlight="./../images/30202047.jpg" width="10%" src="./../images/30202047.jpg" data-src="./../images/30202047.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:46:59 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/18527068.jpg" width="10%" src="./../images/18527068.jpg" data-src="./../images/18527068.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:47:00 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/553589369.jpg" width="10%" src="./../images/553589369.jpg" data-src="./../images/553589369.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:47:00 PM</td>
+													<td class='step-details'>john46@gmail.com is entered as Email<img data-featherlight="./../images/156724413.jpg" width="10%" src="./../images/156724413.jpg" data-src="./../images/156724413.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:47:00 PM</td>
+													<td class='step-details'>john46@gmail.com is entered as Verify email<img data-featherlight="./../images/644317423.jpg" width="10%" src="./../images/644317423.jpg" data-src="./../images/644317423.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:47:01 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/819221180.jpg" width="10%" src="./../images/819221180.jpg" data-src="./../images/819221180.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:47:04 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/309197498.jpg" width="10%" src="./../images/309197498.jpg" data-src="./../images/309197498.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:47:37 PM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;//input[@class='password-field js-password-field form-text required form-control'] Not Found with value: //input[@class='password-field js-password-field form-text required form-control']<img data-featherlight="./../images/512946106.jpg" width="10%" src="./../images/512946106.jpg" data-src="./../images/512946106.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 03:48:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 03:48:21 PM</span>
+	<span class='label end-time'>May 26, 2022 03:48:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 31s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='28'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C456 -Do you see text that you will use your username and chosen password to log in?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+246ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:48:30 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/831433458.jpg" width="10%" src="./../images/831433458.jpg" data-src="./../images/831433458.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:48:31 PM</td>
+													<td class='step-details'>User name is Town Captain 1y0r<img data-featherlight="./../images/273971710.jpg" width="10%" src="./../images/273971710.jpg" data-src="./../images/273971710.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:48:31 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/276758110.jpg" width="10%" src="./../images/276758110.jpg" data-src="./../images/276758110.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:48:31 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/387758048.jpg" width="10%" src="./../images/387758048.jpg" data-src="./../images/387758048.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:48:32 PM</td>
+													<td class='step-details'>john47@gmail.com is entered as Email<img data-featherlight="./../images/248166391.jpg" width="10%" src="./../images/248166391.jpg" data-src="./../images/248166391.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:48:32 PM</td>
+													<td class='step-details'>john47@gmail.com is entered as Verify email<img data-featherlight="./../images/168020727.jpg" width="10%" src="./../images/168020727.jpg" data-src="./../images/168020727.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:48:32 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/72447322.jpg" width="10%" src="./../images/72447322.jpg" data-src="./../images/72447322.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:48:36 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/67176125.jpg" width="10%" src="./../images/67176125.jpg" data-src="./../images/67176125.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:48:40 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/41692254.jpg" width="10%" src="./../images/41692254.jpg" data-src="./../images/41692254.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:48:40 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/246417744.jpg" width="10%" src="./../images/246417744.jpg" data-src="./../images/246417744.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:48:40 PM</td>
+													<td class='step-details'>The Element clicked<img data-featherlight="./../images/479733474.jpg" width="10%" src="./../images/479733474.jpg" data-src="./../images/479733474.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:48:44 PM</td>
+													<td class='step-details'>The Element FINISH clicked<img data-featherlight="./../images/99320559.jpg" width="10%" src="./../images/99320559.jpg" data-src="./../images/99320559.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:48:52 PM</td>
+													<td class='step-details'>Usernametext field is not empty,it is pregenerated with Please make note of your username. You will use it and the password you entered to log in. and Verified successfully<img data-featherlight="./../images/435389791.jpg" width="10%" src="./../images/435389791.jpg" data-src="./../images/435389791.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 04:39:24 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 04:39:24 PM</span>
+	<span class='label end-time'>May 26, 2022 04:39:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='30'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C457 -If you entered an email address, do you see a notification that displays your entered email address?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+251ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 04:40:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 04:40:03 PM</span>
+	<span class='label end-time'>May 26, 2022 04:40:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 37s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='32'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C457 -If you entered an email address, do you see a notification that displays your entered email address?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+254ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:40:15 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/569019452.jpg" width="10%" src="./../images/569019452.jpg" data-src="./../images/569019452.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:40:15 PM</td>
+													<td class='step-details'>User name is Global Legislator 9f7u<img data-featherlight="./../images/683430229.jpg" width="10%" src="./../images/683430229.jpg" data-src="./../images/683430229.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:40:15 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/736431541.jpg" width="10%" src="./../images/736431541.jpg" data-src="./../images/736431541.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:40:16 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/581649319.jpg" width="10%" src="./../images/581649319.jpg" data-src="./../images/581649319.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:40:16 PM</td>
+													<td class='step-details'>john48@gmail.com is entered as Email<img data-featherlight="./../images/374978030.jpg" width="10%" src="./../images/374978030.jpg" data-src="./../images/374978030.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:40:16 PM</td>
+													<td class='step-details'>john48@gmail.com is entered as Verify email<img data-featherlight="./../images/880315978.jpg" width="10%" src="./../images/880315978.jpg" data-src="./../images/880315978.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:40:17 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/816472886.jpg" width="10%" src="./../images/816472886.jpg" data-src="./../images/816472886.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:40:19 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/231261189.jpg" width="10%" src="./../images/231261189.jpg" data-src="./../images/231261189.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:40:23 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/238752464.jpg" width="10%" src="./../images/238752464.jpg" data-src="./../images/238752464.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:40:23 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/509778425.jpg" width="10%" src="./../images/509778425.jpg" data-src="./../images/509778425.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:40:23 PM</td>
+													<td class='step-details'>The Element clicked<img data-featherlight="./../images/636331772.jpg" width="10%" src="./../images/636331772.jpg" data-src="./../images/636331772.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:40:27 PM</td>
+													<td class='step-details'>The Element FINISH clicked<img data-featherlight="./../images/109375980.jpg" width="10%" src="./../images/109375980.jpg" data-src="./../images/109375980.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:40:40 PM</td>
+													<td class='step-details'>Email field is not empty,it is pregenerated with Your email address is: john48@gmail.com and Verified successfully<img data-featherlight="./../images/204984843.jpg" width="10%" src="./../images/204984843.jpg" data-src="./../images/204984843.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 05:38:14 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 05:38:14 PM</span>
+	<span class='label end-time'>May 26, 2022 05:39:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 53s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='34'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C458 -If you entered an email address, do you see text that the email address can be used to log in?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+259ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:38:28 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/369908907.jpg" width="10%" src="./../images/369908907.jpg" data-src="./../images/369908907.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:38:28 PM</td>
+													<td class='step-details'>User name is Granite Trainer 6w4c<img data-featherlight="./../images/619123468.jpg" width="10%" src="./../images/619123468.jpg" data-src="./../images/619123468.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:38:29 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/85663090.jpg" width="10%" src="./../images/85663090.jpg" data-src="./../images/85663090.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:38:29 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/10211533.jpg" width="10%" src="./../images/10211533.jpg" data-src="./../images/10211533.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:38:30 PM</td>
+													<td class='step-details'>john48@gmail.com is entered as Email<img data-featherlight="./../images/27721952.jpg" width="10%" src="./../images/27721952.jpg" data-src="./../images/27721952.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:38:30 PM</td>
+													<td class='step-details'>john48@gmail.com is entered as Verify email<img data-featherlight="./../images/669426171.jpg" width="10%" src="./../images/669426171.jpg" data-src="./../images/669426171.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:38:30 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/12197934.jpg" width="10%" src="./../images/12197934.jpg" data-src="./../images/12197934.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:38:34 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/120152938.jpg" width="10%" src="./../images/120152938.jpg" data-src="./../images/120152938.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>5:39:07 PM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;//input[@class='password-field js-password-field form-text required form-control'] Not Found with value: //input[@class='password-field js-password-field form-text required form-control']<img data-featherlight="./../images/314389626.jpg" width="10%" src="./../images/314389626.jpg" data-src="./../images/314389626.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 05:39:22 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 05:39:22 PM</span>
+	<span class='label end-time'>May 26, 2022 05:40:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 51s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='36'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C458 -If you entered an email address, do you see text that the email address can be used to log in?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+263ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:39:32 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/782113192.jpg" width="10%" src="./../images/782113192.jpg" data-src="./../images/782113192.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:39:32 PM</td>
+													<td class='step-details'>User name is Gray Gamer 6o5f<img data-featherlight="./../images/770399495.jpg" width="10%" src="./../images/770399495.jpg" data-src="./../images/770399495.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:39:33 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/169901386.jpg" width="10%" src="./../images/169901386.jpg" data-src="./../images/169901386.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:39:33 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/94393610.jpg" width="10%" src="./../images/94393610.jpg" data-src="./../images/94393610.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:39:34 PM</td>
+													<td class='step-details'>john49@gmail.com is entered as Email<img data-featherlight="./../images/632993670.jpg" width="10%" src="./../images/632993670.jpg" data-src="./../images/632993670.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:39:34 PM</td>
+													<td class='step-details'>john49@gmail.com is entered as Verify email<img data-featherlight="./../images/248685986.jpg" width="10%" src="./../images/248685986.jpg" data-src="./../images/248685986.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:39:34 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/486005970.jpg" width="10%" src="./../images/486005970.jpg" data-src="./../images/486005970.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:39:39 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/760283739.jpg" width="10%" src="./../images/760283739.jpg" data-src="./../images/760283739.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:39:42 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/894192812.jpg" width="10%" src="./../images/894192812.jpg" data-src="./../images/894192812.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:39:42 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/668848852.jpg" width="10%" src="./../images/668848852.jpg" data-src="./../images/668848852.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:39:43 PM</td>
+													<td class='step-details'>The Element clicked<img data-featherlight="./../images/263547592.jpg" width="10%" src="./../images/263547592.jpg" data-src="./../images/263547592.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:39:46 PM</td>
+													<td class='step-details'>The Element FINISH clicked<img data-featherlight="./../images/580238414.jpg" width="10%" src="./../images/580238414.jpg" data-src="./../images/580238414.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:40:13 PM</td>
+													<td class='step-details'>Emailtext field is not empty,it is pregenerated with You may also use this email address along with the password you entered to log in. and Verified successfully<img data-featherlight="./../images/260075010.jpg" width="10%" src="./../images/260075010.jpg" data-src="./../images/260075010.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 06:00:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 06:00:03 PM</span>
+	<span class='label end-time'>May 26, 2022 06:00:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='38'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C459 -When you select 'Continue to my Assignments,' are you brought to your My iCivics page?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+268ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:00:15 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/321310766.jpg" width="10%" src="./../images/321310766.jpg" data-src="./../images/321310766.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:00:16 PM</td>
+													<td class='step-details'>User name is Regional Engineer 6o1p<img data-featherlight="./../images/550478457.jpg" width="10%" src="./../images/550478457.jpg" data-src="./../images/550478457.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:00:16 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/159920491.jpg" width="10%" src="./../images/159920491.jpg" data-src="./../images/159920491.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:00:16 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/408705689.jpg" width="10%" src="./../images/408705689.jpg" data-src="./../images/408705689.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:00:17 PM</td>
+													<td class='step-details'>john50@gmail.com is entered as Email<img data-featherlight="./../images/49025120.jpg" width="10%" src="./../images/49025120.jpg" data-src="./../images/49025120.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:00:17 PM</td>
+													<td class='step-details'>john50@gmail.com is entered as Verify email<img data-featherlight="./../images/753247025.jpg" width="10%" src="./../images/753247025.jpg" data-src="./../images/753247025.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:00:17 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/493469948.jpg" width="10%" src="./../images/493469948.jpg" data-src="./../images/493469948.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:00:20 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/778605287.jpg" width="10%" src="./../images/778605287.jpg" data-src="./../images/778605287.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:00:23 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/565623088.jpg" width="10%" src="./../images/565623088.jpg" data-src="./../images/565623088.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:00:23 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/17486395.jpg" width="10%" src="./../images/17486395.jpg" data-src="./../images/17486395.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:00:24 PM</td>
+													<td class='step-details'>The Element clicked<img data-featherlight="./../images/140562810.jpg" width="10%" src="./../images/140562810.jpg" data-src="./../images/140562810.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:00:27 PM</td>
+													<td class='step-details'>The Element FINISH clicked<img data-featherlight="./../images/720407050.jpg" width="10%" src="./../images/720407050.jpg" data-src="./../images/720407050.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='39'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 06:03:34 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 06:03:34 PM</span>
+	<span class='label end-time'>May 26, 2022 06:03:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='40'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C459 -When you select 'Continue to my Assignments,' are you brought to your My iCivics page?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 31s+273ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:03:43 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/721551460.jpg" width="10%" src="./../images/721551460.jpg" data-src="./../images/721551460.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:03:43 PM</td>
+													<td class='step-details'>User name is Gray Aviator 7b9x<img data-featherlight="./../images/777737161.jpg" width="10%" src="./../images/777737161.jpg" data-src="./../images/777737161.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:03:43 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/79899853.jpg" width="10%" src="./../images/79899853.jpg" data-src="./../images/79899853.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:03:43 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/837596686.jpg" width="10%" src="./../images/837596686.jpg" data-src="./../images/837596686.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:03:44 PM</td>
+													<td class='step-details'>john51@gmail.com is entered as Email<img data-featherlight="./../images/722641048.jpg" width="10%" src="./../images/722641048.jpg" data-src="./../images/722641048.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:03:44 PM</td>
+													<td class='step-details'>john51@gmail.com is entered as Verify email<img data-featherlight="./../images/270959568.jpg" width="10%" src="./../images/270959568.jpg" data-src="./../images/270959568.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:03:44 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/538237213.jpg" width="10%" src="./../images/538237213.jpg" data-src="./../images/538237213.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:03:48 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/395965312.jpg" width="10%" src="./../images/395965312.jpg" data-src="./../images/395965312.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:03:51 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/716592299.jpg" width="10%" src="./../images/716592299.jpg" data-src="./../images/716592299.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:03:51 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/190296058.jpg" width="10%" src="./../images/190296058.jpg" data-src="./../images/190296058.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:03:51 PM</td>
+													<td class='step-details'>The Element clicked<img data-featherlight="./../images/850109857.jpg" width="10%" src="./../images/850109857.jpg" data-src="./../images/850109857.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:03:55 PM</td>
+													<td class='step-details'>The Element FINISH clicked<img data-featherlight="./../images/346399356.jpg" width="10%" src="./../images/346399356.jpg" data-src="./../images/346399356.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='41'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 06:05:28 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 06:05:28 PM</span>
+	<span class='label end-time'>May 26, 2022 06:05:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 26s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='42'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C459 -When you select 'Continue to my Assignments,' are you brought to your My iCivics page?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:10:59 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 5m 5s+277ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:05:45 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight="./../images/868648440.jpg" width="10%" src="./../images/868648440.jpg" data-src="./../images/868648440.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:05:45 PM</td>
+													<td class='step-details'>User name is Granite Trainer 6w4c<img data-featherlight="./../images/490338016.jpg" width="10%" src="./../images/490338016.jpg" data-src="./../images/490338016.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:05:45 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight="./../images/777079890.jpg" width="10%" src="./../images/777079890.jpg" data-src="./../images/777079890.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:05:45 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight="./../images/738798172.jpg" width="10%" src="./../images/738798172.jpg" data-src="./../images/738798172.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:05:46 PM</td>
+													<td class='step-details'>john52@gmail.com is entered as Email<img data-featherlight="./../images/323593767.jpg" width="10%" src="./../images/323593767.jpg" data-src="./../images/323593767.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:05:46 PM</td>
+													<td class='step-details'>john52@gmail.com is entered as Verify email<img data-featherlight="./../images/372039498.jpg" width="10%" src="./../images/372039498.jpg" data-src="./../images/372039498.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:05:46 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight="./../images/513168600.jpg" width="10%" src="./../images/513168600.jpg" data-src="./../images/513168600.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:05:47 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight="./../images/356511774.jpg" width="10%" src="./../images/356511774.jpg" data-src="./../images/356511774.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:05:50 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/738652576.jpg" width="10%" src="./../images/738652576.jpg" data-src="./../images/738652576.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:05:50 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight="./../images/634571863.jpg" width="10%" src="./../images/634571863.jpg" data-src="./../images/634571863.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:05:50 PM</td>
+													<td class='step-details'>The Element clicked<img data-featherlight="./../images/550654422.jpg" width="10%" src="./../images/550654422.jpg" data-src="./../images/550654422.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:05:54 PM</td>
+													<td class='step-details'>The Element FINISH clicked<img data-featherlight="./../images/747961775.jpg" width="10%" src="./../images/747961775.jpg" data-src="./../images/747961775.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='43'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration3 classcode</span>
+						<span class='test-time'>May 26, 2022 06:10:59 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 26, 2022 06:10:59 PM</span>
+	<span class='label end-time'>May 26, 2022 06:11:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 36s+794ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='44'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C459 -When you select 'Continue to my Assignments,' are you brought to your My iCivics page?</h5>
+						<span class="node-time label grey lighten-1 white-text">May 26, 2022 06:11:36 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 34s+148ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:11:08 PM</td>
+													<td class='step-details'>Roberts67549 is entered as ClassCode<img data-featherlight='./../images/204433706.jpg' width='10%' src='./../images/204433706.jpg' data-src='./../images/204433706.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:11:08 PM</td>
+													<td class='step-details'>User name is Pine Executive 7y1j<img data-featherlight='./../images/570281711.jpg' width='10%' src='./../images/570281711.jpg' data-src='./../images/570281711.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:11:09 PM</td>
+													<td class='step-details'>JOHN is entered as Firstname<img data-featherlight='./../images/112282602.jpg' width='10%' src='./../images/112282602.jpg' data-src='./../images/112282602.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:11:09 PM</td>
+													<td class='step-details'>RICHARD is entered as Lastname<img data-featherlight='./../images/100306783.jpg' width='10%' src='./../images/100306783.jpg' data-src='./../images/100306783.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:11:09 PM</td>
+													<td class='step-details'>john53@gmail.com is entered as Email<img data-featherlight='./../images/862939730.jpg' width='10%' src='./../images/862939730.jpg' data-src='./../images/862939730.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:11:09 PM</td>
+													<td class='step-details'>john53@gmail.com is entered as Verify email<img data-featherlight='./../images/650262762.jpg' width='10%' src='./../images/650262762.jpg' data-src='./../images/650262762.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:11:10 PM</td>
+													<td class='step-details'>Next Button is clicked<img data-featherlight='./../images/117457349.jpg' width='10%' src='./../images/117457349.jpg' data-src='./../images/117457349.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:11:15 PM</td>
+													<td class='step-details'>The Element NEXT clicked<img data-featherlight='./../images/584118773.jpg' width='10%' src='./../images/584118773.jpg' data-src='./../images/584118773.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:11:18 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight='./../images/498264019.jpg' width='10%' src='./../images/498264019.jpg' data-src='./../images/498264019.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:11:18 PM</td>
+													<td class='step-details'>The Data :Test@12345 entered Successfully<img data-featherlight='./../images/843769586.jpg' width='10%' src='./../images/843769586.jpg' data-src='./../images/843769586.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:11:18 PM</td>
+													<td class='step-details'>The Element  clicked<img data-featherlight='./../images/723825061.jpg' width='10%' src='./../images/723825061.jpg' data-src='./../images/723825061.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:11:36 PM</td>
+													<td class='step-details'>The Element FINISH clicked<img data-featherlight='./../images/449663633.jpg' width='10%' src='./../images/449663633.jpg' data-src='./../images/449663633.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>22</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>226</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>May 26, 2022 06:10:58 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>May 26, 2022 06:11:56 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 0m 57s+473ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 15,
+				failParent: 7,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 7,
+				
+				passChild: 217,
+				failChild: 9,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 9,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('#test-view-charts').addClass('hide');
+			});
+		</script>
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>

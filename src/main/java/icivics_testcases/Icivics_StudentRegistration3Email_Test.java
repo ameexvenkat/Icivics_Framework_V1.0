@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import icivics_pages.Icivics_StudentReg2Email;
 import icivics_pages.Icivics_StudentReg3Email;
+import icivics_pages.Icivics_StudentReg3classcode;
 import projectSpecific.base.ProjectSpecificMethods;
 
 public class Icivics_StudentRegistration3Email_Test extends ProjectSpecificMethods {
