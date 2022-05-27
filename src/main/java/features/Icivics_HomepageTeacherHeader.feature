@@ -7,3 +7,9 @@ Then Verify Teach buttons should appear in the top/right
 Then Verify About buttons should appear in the top/right
 Then Verify Donate buttons should appear in the top/right
 Then Verify Shop buttons should appear in the top/right
+
+Scenario: C6-Do all buttons have hover/click states?
+Then Verify playbutton should have Hand cursor should appear over buttons Tooltip appears after hover.
+Then Verify teachbutton should have Hand cursor should appear over buttons Tooltip appears after hover.
+Then Verify aboutbutton should have Hand cursor should appear over buttons Tooltip appears after hover.
+Scenario: C6-Do all buttons have hover/click states?

@@ -9,6 +9,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import projectSpecific.base.ProjectSpecificMethods;
 
 public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
@@ -88,4 +89,62 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
+	@Then("Verify playbutton should have Hand cursor should appear over buttons Tooltip appears after hover.")
+	public Icivics_HomepageTeacherHeader verifyplaybuttonhover() {
+
+		String playbuttonhover = getPropfile(gpropname2, "Playbutton");
+		mouseOverAction(playbuttonhover);
+		waitTime(3000);
+		WebElement playbuttontooltip = propElement(playbuttonhover);
+		String ExpectedTooltip = getPropfile(gpropname2, "Playbuttontooltip");
+		String actualTooltip = playbuttontooltip.getAttribute("title");
+		if (actualTooltip.equals(ExpectedTooltip)) {
+			reportStep("Expected Tooltip and Actual Tooltip text matched successfully", "Pass");
+		} else {
+			reportStep("Expected Tooltip and Actual Tooltip text did not match", "Fail");
+		}
+
+		click(propElement(getPropfile(gpropname2, "Playbutton")));
+		waitTime(3000);
+		return this;
+	}
+
+	@Then("Verify teachbutton should have Hand cursor should appear over buttons Tooltip appears after hover.")
+	public Icivics_HomepageTeacherHeader verifyteachbuttonhover() {
+
+		String teachbuttonhover = getPropfile(gpropname2, "Teachbutton");
+		mouseOverAction(teachbuttonhover);
+		waitTime(3000);
+		WebElement teachbuttontooltip = propElement(teachbuttonhover);
+		String ExpectedTooltip = getPropfile(gpropname2, "Teachbuttontooltip");
+		String actualTooltip = teachbuttontooltip.getAttribute("title");
+		if (actualTooltip.equals(ExpectedTooltip)) {
+			reportStep("Expected Tooltip and Actual Tooltip text matched successfully", "Pass");
+		} else {
+			reportStep("Expected Tooltip and Actual Tooltip text did not match", "Fail");
+		}
+
+		click(propElement(getPropfile(gpropname2, "Teachbutton")));
+		waitTime(3000);
+		return this;
+	}
+	@Then("Verify aboutbutton should have Hand cursor should appear over buttons Tooltip appears after hover.")
+	public Icivics_HomepageTeacherHeader verifyaboutbuttonhover() {
+
+		String aboutbuttonhover = getPropfile(gpropname2, "Aboutbutton");
+		mouseOverAction(aboutbuttonhover);
+		waitTime(3000);
+		WebElement aboutbuttontooltip = propElement(aboutbuttonhover);
+		String ExpectedTooltip = getPropfile(gpropname2, "Aboutbuttontooltip");
+		String actualTooltip = aboutbuttontooltip.getAttribute("title");
+		if (actualTooltip.equals(ExpectedTooltip)) {
+			reportStep("Expected Tooltip and Actual Tooltip text matched successfully", "Pass");
+		} else {
+			reportStep("Expected Tooltip and Actual Tooltip text did not match", "Fail");
+		}
+
+		click(propElement(getPropfile(gpropname2, "Aboutbutton")));
+		waitTime(3000);
+		return this;
+	}
 }

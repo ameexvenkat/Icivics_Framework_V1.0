@@ -29,5 +29,28 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).playbutton().Teachbutton()
 				.aboutbutton().donatebutton().shopbutton();
 	}
+	// C6 - Do all buttons have hover/click states?
 
+	@Test(dataProvider = "fetchData", priority = 1)
+	public void C6_Verifyplaybuttonhover(String URL) throws IOException, InterruptedException {
+		node = test.createNode("C6 - Do all buttons have hover/click states?");
+		extent.attachReporter(reporter);
+		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifyplaybuttonhover();
+	}
+	// C6 - Do all buttons have hover/click states?
+
+	@Test(dataProvider = "fetchData", priority = 1)
+	public void C6_Verifyteachbuttonhover(String URL) throws IOException, InterruptedException {
+		node = test.createNode("C6 - Do all buttons have hover/click states?");
+		extent.attachReporter(reporter);
+		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifyteachbuttonhover();
+	}
+	// C6 - Do all buttons have hover/click states?
+
+	@Test(dataProvider = "fetchData", priority = 1)
+	public void C6_Verifyaboutbuttonhover(String URL) throws IOException, InterruptedException {
+		node = test.createNode("C6 - Do all buttons have hover/click states?");
+		extent.attachReporter(reporter);
+		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifyaboutbuttonhover();
+	}
 }
