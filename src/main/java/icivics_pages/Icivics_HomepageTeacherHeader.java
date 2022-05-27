@@ -2,6 +2,7 @@ package icivics_pages;
 
 import java.util.Properties;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -128,6 +129,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		waitTime(3000);
 		return this;
 	}
+
 	@Then("Verify aboutbutton should have Hand cursor should appear over buttons Tooltip appears after hover.")
 	public Icivics_HomepageTeacherHeader verifyaboutbuttonhover() {
 
@@ -146,5 +148,98 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		click(propElement(getPropfile(gpropname2, "Aboutbutton")));
 		waitTime(3000);
 		return this;
+	}
+
+	@Then("Verify donatebutton should have Hand cursor should appear over buttons Tooltip appears after hover.")
+	public Icivics_HomepageTeacherHeader verifydonatebuttonhover() {
+
+		String Donatebuttonhover = getPropfile(gpropname1, "Donatebutton");
+		mouseOverAction(Donatebuttonhover);
+		waitTime(3000);
+		WebElement donatebuttontooltip = propElement(Donatebuttonhover);
+		String ExpectedTooltip = getPropfile(gpropname2, "Donatebuttontooltip");
+		String actualTooltip = donatebuttontooltip.getAttribute("title");
+		if (actualTooltip.equals(ExpectedTooltip)) {
+			reportStep("Expected Tooltip and Actual Tooltip text matched successfully", "Pass");
+		} else {
+			reportStep("Expected Tooltip and Actual Tooltip text did not match", "Fail");
+		}
+
+		click(propElement(getPropfile(gpropname1, "Donatebutton")));
+		waitTime(3000);
+		return this;
+	}
+
+	@Then("Verify shopbutton should have Hand cursor should appear over buttons Tooltip appears after hover.")
+	public Icivics_HomepageTeacherHeader verifyshopbuttonhover() {
+
+		String Shopbuttonhover = getPropfile(gpropname1, "shopbutton");
+		mouseOverAction(Shopbuttonhover);
+		waitTime(3000);
+		WebElement shopbuttontooltip = propElement(Shopbuttonhover);
+		String ExpectedTooltip = getPropfile(gpropname2, "Shopbuttontooltip");
+		String actualTooltip = shopbuttontooltip.getAttribute("title");
+		if (actualTooltip.equals(ExpectedTooltip)) {
+			reportStep("Expected Tooltip and Actual Tooltip text matched successfully", "Pass");
+		} else {
+			reportStep("Expected Tooltip and Actual Tooltip text did not match", "Fail");
+		}
+
+		click(propElement(getPropfile(gpropname1, "shopbutton")));
+		waitTime(3000);
+		return this;
+	}
+	@Then("Verify myicivicsbutton should notpresent for anonymous user it should present only when we login")
+	public Icivics_HomepageTeacherHeader verifymyicvicsbuttonhover() {
+
+		String signinbuttonhover = getPropfile(gpropname1, "Signinbutton");
+		mouseOverAction(signinbuttonhover );
+		waitTime(3000);
+		WebElement Signinbuttontooltip = propElement(signinbuttonhover );
+		String ExpectedTooltip = getPropfile(gpropname2, "Myicivicstooltip");
+		String actualTooltip = Signinbuttontooltip.getAttribute("title");
+		if (actualTooltip.equals(ExpectedTooltip)) {
+			reportStep("Expected Tooltip and Actual Tooltip text matched successfully", "Pass");
+		} else {
+			reportStep("Expected Tooltip and Actual Tooltip text did not match", "Fail");
+		}
+
+		click(propElement(getPropfile(gpropname1, "Signinbutton")));
+		click(propElement(getPropfile(gpropname1, "Signinlink")));
+		WebElement username = propElement(getPropfile(gpropname1, "Username"));
+		username.sendKeys("Bronze Speaker 1r4e");
+		WebElement password = propElement(getPropfile(gpropname1, "Password"));
+		
+		
+		waitTime(3000);
+		return this;
+	}
+
+	@When("Header is resize it should should turn into hamburger menu when its small enough")
+	public Icivics_HomepageTeacherHeader resizeheader() {
+		Dimension d = new Dimension(768, 1024);
+		// Resize the current window to the given dimension
+		driver.manage().window().setSize(d);
+		takeSnap();
+		waitTime(3000);
+
+		reportStep("Ipad potrait resize is successfull", "Pass");
+		Dimension d1 = new Dimension(1024, 768);
+		driver.manage().window().setSize(d1);
+
+		waitTime(3000);
+
+		System.out.println(driver.manage().window().getSize());
+		takeSnap();
+		reportStep("Ipad landscape resize is successfull", "Pass");
+		Dimension d2 = new Dimension(375, 667);
+		driver.manage().window().setSize(d2);
+		waitTime(3000);
+
+		System.out.println(driver.manage().window().getSize());
+		takeSnap();
+		reportStep("Iphone potrait resize is successfull", "Pass");
+		return this;
+
 	}
 }

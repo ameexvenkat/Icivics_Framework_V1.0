@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="7" total="8" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-26T21:43:40 IST" name="Default suite" finished-at="2022-05-26T21:44:13 IST" duration-ms="32994">
+  <suite started-at="2022-05-27T21:33:53 IST" name="Default suite" finished-at="2022-05-27T21:34:35 IST" duration-ms="41766">
     <groups>
     </groups>
-    <test started-at="2022-05-26T21:43:40 IST" name="Default test" finished-at="2022-05-26T21:44:13 IST" duration-ms="32994">
+    <test started-at="2022-05-27T21:33:53 IST" name="Default test" finished-at="2022-05-27T21:34:35 IST" duration-ms="41766">
       <class name="icivics_testcases.Icivics_HomepageTeacherHeader_Test">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@7674f035]" started-at="2022-05-26T21:43:40 IST" name="startReport" finished-at="2022-05-26T21:43:40 IST" duration-ms="557" status="PASS">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@5d0bf09b]" started-at="2022-05-27T21:33:53 IST" name="startReport" finished-at="2022-05-27T21:33:53 IST" duration-ms="449" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@7674f035]" started-at="2022-05-26T21:43:40 IST" name="setValues" finished-at="2022-05-26T21:43:40 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@5d0bf09b]" started-at="2022-05-27T21:33:53 IST" name="setValues" finished-at="2022-05-27T21:33:53 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setValues -->
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@7674f035]" started-at="2022-05-26T21:43:40 IST" name="setUpClass" finished-at="2022-05-26T21:43:40 IST" duration-ms="99" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@5d0bf09b]" started-at="2022-05-27T21:33:53 IST" name="setUpClass" finished-at="2022-05-27T21:33:53 IST" duration-ms="87" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@7674f035]" started-at="2022-05-26T21:43:40 IST" name="report" finished-at="2022-05-26T21:43:40 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@5d0bf09b]" started-at="2022-05-27T21:33:53 IST" name="report" finished-at="2022-05-27T21:33:53 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- report -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@7674f035]" started-at="2022-05-26T21:43:41 IST" name="beforeMethod" finished-at="2022-05-26T21:43:43 IST" duration-ms="1983" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@5d0bf09b]" started-at="2022-05-27T21:33:54 IST" name="beforeMethod" finished-at="2022-05-27T21:33:56 IST" duration-ms="1903" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C3_Verifybuttons(java.lang.String)[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@7674f035]" started-at="2022-05-26T21:43:43 IST" name="C3_Verifybuttons" data-provider="fetchData" finished-at="2022-05-26T21:44:13 IST" duration-ms="29799" status="PASS">
+        <test-method signature="C7_verifyresizeheaderintohamburger(java.lang.String)[pri:3, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@5d0bf09b]" started-at="2022-05-27T21:33:56 IST" name="C7_verifyresizeheaderintohamburger" data-provider="fetchData" finished-at="2022-05-27T21:34:35 IST" duration-ms="38728" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,16 +37,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C3_Verifybuttons -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@7674f035]" started-at="2022-05-26T21:44:13 IST" name="afterMethod" finished-at="2022-05-26T21:44:13 IST" duration-ms="337" status="PASS">
+        </test-method> <!-- C7_verifyresizeheaderintohamburger -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@5d0bf09b]" started-at="2022-05-27T21:34:35 IST" name="afterMethod" finished-at="2022-05-27T21:34:35 IST" duration-ms="404" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@7674f035]" started-at="2022-05-26T21:44:13 IST" name="tearDownClass" finished-at="2022-05-26T21:44:13 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@5d0bf09b]" started-at="2022-05-27T21:34:35 IST" name="tearDownClass" finished-at="2022-05-27T21:34:35 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="stopReport()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@7674f035]" started-at="2022-05-26T21:44:13 IST" name="stopReport" finished-at="2022-05-26T21:44:13 IST" duration-ms="369" status="PASS">
+        <test-method is-config="true" signature="stopReport()[pri:0, instance:icivics_testcases.Icivics_HomepageTeacherHeader_Test@5d0bf09b]" started-at="2022-05-27T21:34:35 IST" name="stopReport" finished-at="2022-05-27T21:34:36 IST" duration-ms="360" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopReport -->

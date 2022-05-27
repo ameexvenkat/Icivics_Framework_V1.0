@@ -137,7 +137,7 @@ public class Icivics_StudentRegistration2Email_Test extends ProjectSpecificMetho
 	}
 	// C413- Do all error messages display correctly?
 
-	@Test(dataProvider = "fetchData", priority = 10)
+	@Test(dataProvider = "fetchData", priority = 11)
 	public void C413_verifyblankerrormsg(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C413- Do all error messages display correctly?");
 
@@ -148,7 +148,7 @@ public class Icivics_StudentRegistration2Email_Test extends ProjectSpecificMetho
 	// C414- If you fill out all required fields with valid information and select
 	// Finish, are you taken to Page 3?
 
-	@Test(dataProvider = "fetchData", priority = 10)
+	@Test(dataProvider = "fetchData", priority = 12)
 	public void C414_verifypage3loaded(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
 				"C414- If you fill out all required fields with valid information and select Finish, are you taken to Page 3?");

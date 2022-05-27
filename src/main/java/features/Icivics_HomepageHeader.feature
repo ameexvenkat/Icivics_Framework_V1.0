@@ -1,4 +1,5 @@
 Feature: Homepage Header Validation
+
 Scenario: C1 -Do you see the iCivics Logo in the upper left?
 Given Launch the icivis Studentregistration email URL
 When homepage is loaded successfully
@@ -9,4 +10,8 @@ Scenario: C2-While on the iCivics Home Page, do you see buttons for Donate, Shop
 Then Verify Donate buttons should appear in the top/right
 And Verify Shop buttons should appear in the top/right
 And Verify MyIcivics buttons should appear in the top/right
+
+Scenario: C1538-Does the donation popup NOT show?
+When Click on donation popup there should never be a popup asking for donation
+
 

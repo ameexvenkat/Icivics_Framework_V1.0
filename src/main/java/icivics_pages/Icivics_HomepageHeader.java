@@ -2,8 +2,12 @@ package icivics_pages;
 
 import java.util.Properties;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentTest;
 
@@ -60,6 +64,7 @@ public class Icivics_HomepageHeader extends ProjectSpecificMethods {
 
 		return this;
 	}
+
 	@And("Verify Shop buttons should appear in the top/right")
 	public Icivics_HomepageHeader Verifyshopbutton() {
 		WebElement shopbutton = propElement(getPropfile(gpropname1, "shopbutton"));
@@ -71,9 +76,25 @@ public class Icivics_HomepageHeader extends ProjectSpecificMethods {
 
 		return this;
 	}
-	//@And("Verify MyIcivics buttons should appear in the top/right")
+
+	@When("Click on donation popup there should never be a popup asking for donation")
+	public Icivics_HomepageHeader Verifydonationpopup() {
+		 //WebElement Donatebutton = propElement(getPropfile(gpropname1,
+		// "Donatebutton"));
+		click(propElement(getPropfile(gpropname1, "Donatebutton")));
+		//acceptAlert();
 	
-	
+		try{
+		    Alert alert = driver.switchTo().alert();
+		    System.out.println(alert.getText()+" Alert is Displayed"); 
+		    reportStep("Alert is present", "Fail");
+		    }
+		    catch(NoAlertPresentException ex){
+		    System.out.println("Alert is NOT Displayed");
+		    reportStep("Alert is not present", "Pass");
+		    }
+		    
+		return this;
 	}
 
-
+}
