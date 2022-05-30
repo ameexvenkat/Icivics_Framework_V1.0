@@ -69,8 +69,25 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 		extent.attachReporter(reporter);
 		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifyshopbuttonhover();
 	}
-	// C7 - Does the header resize responsively at different resolutions?
+	// C6 - Do all buttons have hover/click states?
 
+	@Test(dataProvider = "fetchData", priority = 3)
+	public void C6_verifymyicvicsbuttonhover(String URL) {
+		node = test.createNode("C6 - Do all buttons have hover/click states?");
+		extent.attachReporter(reporter);
+		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifymyicvicsbuttonhover();
+	}
+
+	// C6 - Do all buttons have hover/click states?
+
+	@Test(dataProvider = "fetchData", priority = 3)
+	public void C6_verifyallheaderbuttonhover(String URL) {
+		node = test.createNode("C6 - Do all buttons have hover/click states?");
+		extent.attachReporter(reporter);
+		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifyallheaderbuttonhover()
+				.verifydonatebuttonhover().verifyshopbuttonhover();
+	}
+	// C7 - Does the header resize responsively at different resolutions?
 
 	@Test(dataProvider = "fetchData", priority = 3)
 	public void C7_verifyresizeheaderintohamburger(String URL) throws IOException, InterruptedException {
