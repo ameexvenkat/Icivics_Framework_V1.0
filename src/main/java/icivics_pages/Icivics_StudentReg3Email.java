@@ -48,14 +48,25 @@ public class Icivics_StudentReg3Email extends ProjectSpecificMethods {
 		lastname.sendKeys(getPropfile(gpropname2, "LastName"));
 		reportStep(getPropfile(gpropname2, "LastName") + " is entered as Lastname", "Pass");
 
-		WebElement emailele = propElement(getPropfile(gpropname2, "Emailaddress"));
-		emailele.clear();
-		emailele.sendKeys(getPropfile(gpropname2, "EmailID"));
+		String EmailId = getPropfile(gpropname2, "EmailID");
+
+		long number = (long) Math.floor(Math.random() * 900000000L) + 10000000L;
+		String[] data = EmailId.split("@");
+		String name = data[0];
+		String host = data[1];
+		String emailId = name + number + "@" + host;
+
+		reportStep(emailId + " email is used for creating account", "Pass");
+		writePropfile("StudentRegistration/email3", "email3", emailId);
+		WebElement email = propElement(getPropfile(gpropname2, "Emailaddress"));
+		email.clear();
+		email.sendKeys(emailId);
+
 		reportStep(getPropfile(gpropname2, "EmailID") + " is entered as Email", "Pass");
 
 		WebElement verifyemailele = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
 		verifyemailele.clear();
-		verifyemailele.sendKeys(getPropfile(gpropname2, "VerifyEmailID"));
+		verifyemailele.sendKeys(emailId);
 		reportStep(getPropfile(gpropname2, "VerifyEmailID") + " is entered as Verify email", "Pass");
 
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));

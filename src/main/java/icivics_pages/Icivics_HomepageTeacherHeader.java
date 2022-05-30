@@ -191,7 +191,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 	}
 
 	@Then("Verify myicivicsbutton should not present for anonymous user it should present only when we login")
-	public Icivics_HomepageTeacherHeader verifymyicvicsbuttonhover() {
+	public Icivics_HomepageTeacherHeader verifysigninbuttonhover() {
 
 		String signinbuttonhover = getPropfile(gpropname1, "Signinbutton");
 		mouseOverAction(signinbuttonhover);
@@ -204,7 +204,12 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		} else {
 			reportStep("Expected Tooltip and Actual Tooltip text did not match", "Fail");
 		}
+		return this;
+	}
 
+	@Then("myicivicsbutton should have Hand cursor should appear over buttons Tooltip appears after hover.")
+		public Icivics_HomepageTeacherHeader verifymyicvicsbuttonhover() {
+		
 		click(propElement(getPropfile(gpropname1, "Signinbutton")));
 		click(propElement(getPropfile(gpropname1, "Signinlink")));
 		WebElement username = propElement(getPropfile(gpropname1, "Username"));
@@ -229,8 +234,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("Verify after login all the button should have Hand cursor should appear over buttons Tooltip appears after hover.")
-	public Icivics_HomepageTeacherHeader verifyallheaderbuttonhover() {
+	public Icivics_HomepageTeacherHeader signin() {
 		waitTime(3000);
 		click(propElement(getPropfile(gpropname1, "Signinbutton")));
 		click(propElement(getPropfile(gpropname1, "Signinlink")));
@@ -240,70 +244,27 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		password.sendKeys("i898qrCiPK9Hwgb");
 		click(propElement(getPropfile(gpropname2, "Loginbutton")));
 		waitTime(3000);
+		return this;
+	}
 
-		String playbuttonhover = getPropfile(gpropname2, "Playbutton");
-		mouseOverAction(playbuttonhover);
+	public Icivics_HomepageTeacherHeader verifyshopbuttonhover2() {
+
+		String Shopbuttonhover = getPropfile(gpropname1, "shopbutton2");
+		mouseOverAction(Shopbuttonhover);
 		waitTime(3000);
-		WebElement playbuttontooltip = propElement(playbuttonhover);
-		String ExpectedTooltip = getPropfile(gpropname2, "Playbuttontooltip");
-		String actualTooltip = playbuttontooltip.getAttribute("title");
+		WebElement shopbuttontooltip = propElement(Shopbuttonhover);
+		String ExpectedTooltip = getPropfile(gpropname2, "Shopbuttontooltip2");
+		String actualTooltip = shopbuttontooltip.getAttribute("title");
 		if (actualTooltip.equals(ExpectedTooltip)) {
 			reportStep("Expected Tooltip and Actual Tooltip text matched successfully", "Pass");
 		} else {
 			reportStep("Expected Tooltip and Actual Tooltip text did not match", "Fail");
 		}
 
-		click(propElement(getPropfile(gpropname2, "Playbutton")));
+		click(propElement(getPropfile(gpropname1, "shopbutton2")));
 		waitTime(3000);
-
-		String teachbuttonhover = getPropfile(gpropname2, "Teachbutton");
-		mouseOverAction(teachbuttonhover);
-		waitTime(3000);
-		WebElement teachbuttontooltip = propElement(teachbuttonhover);
-		String ExpectedTooltip1 = getPropfile(gpropname2, "Teachbuttontooltip");
-		String actualTooltip1 = teachbuttontooltip.getAttribute("title");
-		if (actualTooltip1.equals(ExpectedTooltip1)) {
-			reportStep("Expected Tooltip and Actual Tooltip text matched successfully", "Pass");
-		} else {
-			reportStep("Expected Tooltip and Actual Tooltip text did not match", "Fail");
-		}
-
-		click(propElement(getPropfile(gpropname2, "Teachbutton")));
-		waitTime(3000);
-	
-
-			String aboutbuttonhover = getPropfile(gpropname2, "Aboutbutton");
-			mouseOverAction(aboutbuttonhover);
-			waitTime(3000);
-			WebElement aboutbuttontooltip = propElement(aboutbuttonhover);
-			String ExpectedTooltip2 = getPropfile(gpropname2, "Aboutbuttontooltip");
-			String actualTooltip2 = aboutbuttontooltip.getAttribute("title");
-			if (actualTooltip2.equals(ExpectedTooltip2)) {
-				reportStep("Expected Tooltip and Actual Tooltip text matched successfully", "Pass");
-			} else {
-				reportStep("Expected Tooltip and Actual Tooltip text did not match", "Fail");
-			}
-
-			click(propElement(getPropfile(gpropname2, "Aboutbutton")));
-			waitTime(3000);
-			String Donatebuttonhover = getPropfile(gpropname1, "Donatebutton");
-			mouseOverAction(Donatebuttonhover);
-			waitTime(3000);
-			WebElement donatebuttontooltip = propElement(Donatebuttonhover);
-			String ExpectedTooltip3 = getPropfile(gpropname2, "Donatebuttontooltip");
-			String actualTooltip3 = donatebuttontooltip.getAttribute("title");
-			if (actualTooltip3.equals(ExpectedTooltip3)) {
-				reportStep("Expected Tooltip and Actual Tooltip text matched successfully", "Pass");
-			} else {
-				reportStep("Expected Tooltip and Actual Tooltip text did not match", "Fail");
-			}
-
-			
 		return this;
-		
-		
 	}
-	
 
 	@When("Header is resize it should should turn into hamburger menu when its small enough")
 	public Icivics_HomepageTeacherHeader resizeheader() {
