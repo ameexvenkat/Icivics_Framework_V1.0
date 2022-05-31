@@ -1,10 +1,10 @@
 Feature: Homepage HeaderPlay Validation
 
 Scenario: C8 - When you select Play, does a submenu open below the Play button?
+Given Launch the icivis educatorregistration URL
 Given On Clicking  play button at top Play menu should open
 
 Scenario: C9 - Do you see links to All Games, as well as each individual game in the submenu?
-
 Given  On Clicking play button at top Links for each iCivics game should appear Also All Games and Game Odyssey
 
 

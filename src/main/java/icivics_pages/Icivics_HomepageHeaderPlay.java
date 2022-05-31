@@ -1,6 +1,7 @@
 package icivics_pages;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -33,11 +34,18 @@ public class Icivics_HomepageHeaderPlay extends ProjectSpecificMethods {
 	}
 
 	@Given("On Clicking  play button at top Play menu should open")
-	public Icivics_HomepageHeaderPlay clickplaybutton() {
+	public Icivics_HomepageHeaderPlay verifyplaysubmenu() {
 
 		click(propElement(getPropfile(gpropname2, "Playbutton")));
 		waitTime(3000);
+		reportStep("playsubmenu display successfully", "Pass");
+		List<WebElement> dropdowns = driver.findElements(By.xpath("(//*[@class='dropdown-menu'])[5]"));
+
+		for (WebElement dropdown : dropdowns) {
+			System.out.println(dropdown.getText());
+		}
 		return this;
+
 	}
 
 	@Then("Click on each link on play menu and each should navigate to corresponding page ")
@@ -156,7 +164,7 @@ public class Icivics_HomepageHeaderPlay extends ProjectSpecificMethods {
 	}
 
 	public Icivics_HomepageHeaderPlay verifypageisunderlined() {
-		
+
 		click(propElement(getPropfile(gpropname2, "Playbutton")));
 		String cssValue = driver.findElement(By.xpath("//a[text()='Executive Command']"))
 				.getCssValue("text-decoration");

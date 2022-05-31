@@ -42,7 +42,8 @@ public class Icivics_EducatorRegistration_Test extends ProjectSpecificMethods {
 		node = test.createNode("C323 - Do all buttons/links navigate you to the appropriate page?");
 		extent.attachReporter(reporter);
 		new Icivics_EducatorReg(driver, node, prop).launchURL(URL).verifyeducatorpage(URL)
-				.Playbuttonelementsverification(URL).Teachbuttonelementsverification(URL).aboutbuttonelementsverification(URL);
+				.Playbuttonelementsverification(URL).Teachbuttonelementsverification(URL)
+				.aboutbuttonelementsverification(URL);
 	}
 
 	// C324 - Does the page resize responsively at different resolutions?

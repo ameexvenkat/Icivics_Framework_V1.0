@@ -23,10 +23,10 @@ public class Icivics_HomepageHeaderplay_Test extends ProjectSpecificMethods {
 	// C8 - When you select Play, does a submenu open below the Play button?
 
 	@Test(dataProvider = "fetchData", priority = 0)
-	public void C8_Verifyclickonplaybutton(String URL) throws IOException, InterruptedException {
+	public void C8_Verifyplaysubmenu(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C8 -  When you select Play, does a submenu open below the Play button?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderPlay(driver, node, prop).launchURL(URL).clickplaybutton();
+		new Icivics_HomepageHeaderPlay(driver, node, prop).launchURL(URL).verifyplaysubmenu();
 	}
 	// C9 - Do you see links to All Games, as well as each individual game in the
 	// submenu?
