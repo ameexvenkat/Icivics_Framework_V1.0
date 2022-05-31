@@ -31,12 +31,22 @@ public class Icivics_HomepageHeader_Test extends ProjectSpecificMethods {
 	// My iCivics in the navigation bar?
 
 	@Test(dataProvider = "fetchData", priority = 1)
-	public void C2_VerifyDonatebutton(String URL) throws IOException, InterruptedException {
+	public void C2_VerifyHeaderbuttonforanonymoususer(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
 				"C2 - While on the iCivics Home Page, do you see buttons for Donate, Shop,  and My iCivics in the navigation bar?");
 		extent.attachReporter(reporter);
 		new Icivics_HomepageHeader(driver, node, prop).launchURL(URL).verifyhomepage().VerifyDonatebutton()
-				.Verifyshopbutton();
+				.Verifyshopbutton().Verifymyicivicsbuttondisplayafterlogin();
+	}
+	// C2 - While on the iCivics Home Page, do you see buttons for Donate, Shop, and
+	// My iCivics in the navigation bar?
+
+	@Test(dataProvider = "fetchData", priority = 1)
+	public void C2_VerifyHeaderbuttonforauthenticateduser(String URL) throws IOException, InterruptedException {
+		node = test.createNode(
+				"C2 - While on the iCivics Home Page, do you see buttons for Donate, Shop,  and My iCivics in the navigation bar?");
+		extent.attachReporter(reporter);
+		new Icivics_HomepageHeader(driver, node, prop).launchURL(URL).signin().Verifyheaderbuttonsafterlogin();
 	}
 
 	// C1538 - Does the donation popup NOT show?

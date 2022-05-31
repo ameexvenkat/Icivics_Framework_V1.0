@@ -8,6 +8,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.aventstack.extentreports.ExtentTest;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -28,6 +29,17 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		navigateto(URL);
 		return this;
 
+	}
+	public Icivics_HomepageTeacherHeader signin2() {
+		click(propElement(getPropfile(gpropname1, "Signinbutton")));
+		click(propElement(getPropfile(gpropname1, "Signinlink")));
+		WebElement username = propElement(getPropfile(gpropname1, "Username"));
+		username.sendKeys("Bronze Speaker 1r4e");
+		WebElement password = propElement(getPropfile(gpropname1, "Password"));
+		password.sendKeys("i898qrCiPK9Hwgb");
+		click(propElement(getPropfile(gpropname2, "Loginbutton")));
+		waitTime(3000);
+		return this;
 	}
 
 	@Then("Verify Play buttons should appear in the top/right")
@@ -87,6 +99,74 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 			reportStep("Shopbutton is not Verified successfully", "Fail");
 		}
 
+		return this;
+	}
+	@And("Verify after login MyIcivics buttons should appear in the top/right")
+	public Icivics_HomepageTeacherHeader Verifymyicivicsbuttondisplayafterlogin() {
+		WebElement signinbutton = propElement(getPropfile(gpropname1, "Signinbutton"));
+		if (signinbutton.isDisplayed()) {
+			reportStep("Signin button Verified successfully", "Pass");
+		} else {
+			reportStep("Signin button is not Verified successfully", "Fail");
+		}
+		click(propElement(getPropfile(gpropname1, "Signinbutton")));
+		click(propElement(getPropfile(gpropname1, "Signinlink")));
+		WebElement username = propElement(getPropfile(gpropname1, "Username"));
+		username.sendKeys("Bronze Speaker 1r4e");
+		WebElement password = propElement(getPropfile(gpropname1, "Password"));
+		password.sendKeys("i898qrCiPK9Hwgb");
+		click(propElement(getPropfile(gpropname2, "Loginbutton")));
+		waitTime(3000);
+		WebElement myicivicsbutton2 = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
+		if (myicivicsbutton2.isDisplayed()) {
+			reportStep("Myicivicsbutton Verified successfully", "Pass");
+		} else {
+			reportStep("Myicivicsbutton is not Verified successfully", "Fail");
+		}
+		return this;
+
+	}
+
+	@Then("Verify header button after login")
+	public Icivics_HomepageTeacherHeader Verifyheaderbuttonsafterlogin() {
+		WebElement playbutton = propElement(getPropfile(gpropname2, "Playbutton"));
+		if (playbutton.isDisplayed()) {
+			reportStep("playbutton Verified successfully", "Pass");
+		} else {
+			reportStep("playbutton is not Verified successfully", "Fail");
+		}
+		WebElement teachbutton = propElement(getPropfile(gpropname2, "Teachbutton"));
+		if (teachbutton.isDisplayed()) {
+			reportStep("Teachbutton Verified successfully", "Pass");
+		} else {
+			reportStep("Teachbutton is not Verified successfully", "Fail");
+		}
+		WebElement aboutbutton = propElement(getPropfile(gpropname2, "Aboutbutton"));
+		if (aboutbutton.isDisplayed()) {
+			reportStep("aboutbutton Verified successfully", "Pass");
+		} else {
+			reportStep("aboutbutton is not Verified successfully", "Fail");
+		}
+		WebElement donatebutton = propElement(getPropfile(gpropname1, "Donatebutton"));
+		if (donatebutton.isDisplayed()) {
+			reportStep("Donatebutton Verified successfully", "Pass");
+		} else {
+			reportStep("Donatebutton is not Verified successfully", "Fail");
+		}
+
+		WebElement shopbutton = propElement(getPropfile(gpropname1, "shopbutton2"));
+		if (shopbutton.isDisplayed()) {
+			reportStep("Shopbutton Verified successfully", "Pass");
+		} else {
+			reportStep("Shopbutton is not Verified successfully", "Fail");
+		}
+
+		WebElement myicivicsbutton2 = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
+		if (myicivicsbutton2.isDisplayed()) {
+			reportStep("Myicivicsbutton Verified successfully", "Pass");
+		} else {
+			reportStep("Myicivicsbutton is not Verified successfully", "Fail");
+		}
 		return this;
 	}
 
@@ -207,8 +287,8 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("myicivicsbutton should have Hand cursor should appear over buttons Tooltip appears after hover.")
-		public Icivics_HomepageTeacherHeader verifymyicvicsbuttonhover() {
+	@Then("Verify afterlogin myicivicsbutton should have Hand cursor should appear over buttons Tooltip appears after hover.")
+		public Icivics_HomepageTeacherHeader verifymyicvicsbuttonhoverafterlogin() {
 		
 		click(propElement(getPropfile(gpropname1, "Signinbutton")));
 		click(propElement(getPropfile(gpropname1, "Signinlink")));
@@ -218,7 +298,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		password.sendKeys("i898qrCiPK9Hwgb");
 		click(propElement(getPropfile(gpropname2, "Loginbutton")));
 		waitTime(3000);
-		String myicivicsbuttonhover = getPropfile(gpropname2, "Myicivicsbutton");
+		String myicivicsbuttonhover = getPropfile(gpropname2, "Myicivicsbutton2");
 		mouseOverAction(myicivicsbuttonhover);
 		waitTime(3000);
 		WebElement myicivicstooltip = propElement(myicivicsbuttonhover);
@@ -233,20 +313,23 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		waitTime(3000);
 		return this;
 	}
-
-	public Icivics_HomepageTeacherHeader signin() {
+	public Icivics_HomepageTeacherHeader verifymyicvicsbuttonhover() {
+		String myicivicsbuttonhover = getPropfile(gpropname2, "Myicivicsbutton2");
+		mouseOverAction(myicivicsbuttonhover);
 		waitTime(3000);
-		click(propElement(getPropfile(gpropname1, "Signinbutton")));
-		click(propElement(getPropfile(gpropname1, "Signinlink")));
-		WebElement username = propElement(getPropfile(gpropname1, "Username"));
-		username.sendKeys("Bronze Speaker 1r4e");
-		WebElement password = propElement(getPropfile(gpropname1, "Password"));
-		password.sendKeys("i898qrCiPK9Hwgb");
-		click(propElement(getPropfile(gpropname2, "Loginbutton")));
+		WebElement myicivicstooltip = propElement(myicivicsbuttonhover);
+		String ExpectedTooltip1 = getPropfile(gpropname2, "Myicivicstooltip");
+		String actualTooltip1 = myicivicstooltip.getAttribute("title");
+		if (actualTooltip1.equals(ExpectedTooltip1)) {
+			reportStep("Expected Tooltip and Actual Tooltip text matched successfully", "Pass");
+		} else {
+			reportStep("Expected Tooltip and Actual Tooltip text did not match", "Fail");
+		}
+		click(propElement(getPropfile(gpropname2, "Myicivicsbutton")));
 		waitTime(3000);
 		return this;
 	}
-
+	
 	public Icivics_HomepageTeacherHeader verifyshopbuttonhover2() {
 
 		String Shopbuttonhover = getPropfile(gpropname1, "shopbutton2");

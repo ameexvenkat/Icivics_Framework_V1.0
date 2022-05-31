@@ -22,80 +22,46 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 	// Donate, Shop, and My iCivics in the navigation bar?
 
 	@Test(dataProvider = "fetchData", priority = 0)
-	public void C3_Verifybuttons(String URL) throws IOException, InterruptedException {
+	public void C3_Verifyheaderbuttonsforanonymoususer(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
 				"C3 - While on all other pages, do you see buttons for Play, Teach, About, Donate, Shop, and My iCivics in the navigation bar?");
 		extent.attachReporter(reporter);
 		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).playbutton().Teachbutton()
-				.aboutbutton().donatebutton().shopbutton();
+				.aboutbutton().donatebutton().shopbutton().Verifymyicivicsbuttondisplayafterlogin();
 	}
-	// C6 - Do all buttons have hover/click states?
+	// C3 - While on all other pages, do you see buttons for Play, Teach, About,
+	// Donate, Shop, and My iCivics in the navigation bar?
 
 	@Test(dataProvider = "fetchData", priority = 1)
-	public void C6_Verifyplaybuttonhover(String URL) throws IOException, InterruptedException {
-		node = test.createNode("C6 - Do all buttons have hover/click states?");
+	public void C3_Verifyheaderbuttonsforauthenticateduser(String URL) throws IOException, InterruptedException {
+		node = test.createNode(
+				"C3 - While on all other pages, do you see buttons for Play, Teach, About, Donate, Shop, and My iCivics in the navigation bar?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifyplaybuttonhover();
+		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).signin2()
+				.Verifyheaderbuttonsafterlogin();
 	}
 	// C6 - Do all buttons have hover/click states?
 
 	@Test(dataProvider = "fetchData", priority = 2)
-	public void C6_Verifyteachbuttonhover(String URL) throws IOException, InterruptedException {
+	public void C6_Verifyheaderbuttonhoverforanonymoususer(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C6 - Do all buttons have hover/click states?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifyteachbuttonhover();
+		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifyplaybuttonhover()
+				.verifyteachbuttonhover().verifyaboutbuttonhover().verifydonatebuttonhover().launchteacherpageURL(URL)
+				.verifyshopbuttonhover().launchteacherpageURL(URL).verifysigninbuttonhover()
+				.verifymyicvicsbuttonhover();
 	}
+
 	// C6 - Do all buttons have hover/click states?
 
 	@Test(dataProvider = "fetchData", priority = 3)
-	public void C6_Verifyaboutbuttonhover(String URL) throws IOException, InterruptedException {
+	public void C6_verifyaheaderbuttonhoverforauthenticateduser(String URL) {
 		node = test.createNode("C6 - Do all buttons have hover/click states?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifyaboutbuttonhover();
-	}
-	// C6 - Do all buttons have hover/click states?
-
-	@Test(dataProvider = "fetchData", priority = 4)
-	public void C6_Verifydonatebuttonhover(String URL) throws IOException, InterruptedException {
-		node = test.createNode("C6 - Do all buttons have hover/click states?");
-		extent.attachReporter(reporter);
-		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifydonatebuttonhover();
-	}
-	// C6 - Do all buttons have hover/click states?
-
-	@Test(dataProvider = "fetchData", priority = 5)
-	public void C6_Verifyshopbuttonhover(String URL) throws IOException, InterruptedException {
-		node = test.createNode("C6 - Do all buttons have hover/click states?");
-		extent.attachReporter(reporter);
-		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifyshopbuttonhover();
-	}
-	// C6 - Do all buttons have hover/click states?
-
-		@Test(dataProvider = "fetchData", priority = 6)
-		public void C6_verifysigninbuttonhover(String URL) {
-			node = test.createNode("C6 - Do all buttons have hover/click states?");
-			extent.attachReporter(reporter);
-			new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifysigninbuttonhover() ;
-		}
-
-	// C6 - Do all buttons have hover/click states?
-
-	@Test(dataProvider = "fetchData", priority = 7)
-	public void C6_verifymyicvicsbuttonhover(String URL) {
-		node = test.createNode("C6 - Do all buttons have hover/click states?");
-		extent.attachReporter(reporter);
-		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifymyicvicsbuttonhover();
-	}
-
-	// C6 - Do all buttons have hover/click states?
-
-	@Test(dataProvider = "fetchData", priority = 8)
-	public void C6_verifyallheaderbuttonhover(String URL) {
-		node = test.createNode("C6 - Do all buttons have hover/click states?");
-		extent.attachReporter(reporter);
-		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).signin().verifyplaybuttonhover()
-				.verifyteachbuttonhover().verifyaboutbuttonhover().verifydonatebuttonhover().launchteacherpageURL(URL)
-				.verifyshopbuttonhover2();
+		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).signin2()
+				.verifyplaybuttonhover().verifyteachbuttonhover().verifyaboutbuttonhover().verifydonatebuttonhover()
+				.launchteacherpageURL(URL).verifyshopbuttonhover2().launchteacherpageURL(URL)
+				.verifymyicvicsbuttonhover();
 	}
 	// C7 - Does the header resize responsively at different resolutions?
 
