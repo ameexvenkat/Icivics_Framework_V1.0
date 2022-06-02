@@ -3,11 +3,14 @@ package icivics_pages;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.InvalidElementStateException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
 import com.aventstack.extentreports.ExtentTest;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -30,8 +33,29 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 
 	}
 
-	@Then("Click link Optional: Click here to enter your email address")
-	public Icivics_StudentReg1classcode verifyemailfields() {
+	@When("Click on Wait, I have a class code! link, class code page should open in the same tab")
+	public Icivics_StudentReg1classcode Clickonwaitihaveaclasscodelink() {
+		scrollToTheGivenWebElement(getPropfile(gpropname1, "classcodelink"));
+		WebElement classcodelink = propElement(getPropfile(gpropname1, "classcodelink"));
+		if (classcodelink.isDisplayed()) {
+			reportStep("class code link is displayed and clicked, opened in the same tab", "Pass");
+			classcodelink.click();
+		waitTime(3000);
+		}
+		return this;
+		}
+	
+	public Icivics_StudentReg1classcode clickOptionallink() {
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "Link"));
+		WebElement link = propElement(getPropfile(gpropname2, "Link"));
+		link.click();
+		return this;
+	}
+	
+	
+	@Then("Click link Optional, Click here to enter your email address")
+	public Icivics_StudentReg1classcode verifyOptionallink() {
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "Link"));
 		WebElement link = propElement(getPropfile(gpropname2, "Link"));
 		link.click();
 		WebElement Emailaddresslabel = propElement(getPropfile(gpropname2, "Emailaddresslabel"));
@@ -42,7 +66,7 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 			reportStep("Emailaddress label box is not displayed", "Fail");
 		}
 
-		WebElement email = propElement(getPropfile(gpropname2, "Emailaddress"));
+		WebElement email = propElement(getPropfile(gpropname1, "Emailaddress"));
 		if (email.isDisplayed()) {
 
 			reportStep("email field is displayed", "Pass");
@@ -50,20 +74,14 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 			reportStep("email field is not displayed", "Fail");
 		}
 
-		String CLbox = email.getAttribute("value");
-		if (CLbox.isEmpty()) {
-			reportStep("Emailaddress text box is Blank", "Pass");
-		} else {
-			reportStep("Emailaddress text box is not Blank", "Fail");
-		}
-		WebElement VerifyEmailaddresslabel = propElement(getPropfile(gpropname2, "VerifyEmailaddresslabel"));
+		WebElement VerifyEmailaddresslabel = propElement(getPropfile(gpropname1, "VerifyEmailaddresslabel"));
 		if (VerifyEmailaddresslabel.isDisplayed()) {
 			reportStep("VerifyEmailaddress label is displayed", "Pass");
 		} else {
 			reportStep("VerifyEmailaddress label box is not displayed", "Fail");
 		}
 
-		WebElement verifyemail = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
+		WebElement verifyemail = propElement(getPropfile(gpropname1, "VerifyEmailaddress"));
 		if (verifyemail.isDisplayed()) {
 
 			reportStep("verifyemail field is displayed", "Pass");
@@ -71,109 +89,51 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 			reportStep("verifyemail field is not displayed", "Fail");
 		}
 
-		String CLbox2 = verifyemail.getAttribute("value");
-		if (CLbox2.isEmpty()) {
-			reportStep("VerifyEmailaddress text box is Blank", "Pass");
-		} else {
-			reportStep("VerifyEmailaddress box is not Blank", "Fail");
-		}
 		return this;
 	}
 
-	@Then("Hover over email and verify fields after they are made visible")
+	
+	@Given("verify the Tooltip Text by Hovering on email field")
 	public Icivics_StudentReg1classcode hoveronemailfield() throws InterruptedException, IOException {
 		WebElement link = propElement(getPropfile(gpropname2, "Link"));
 		link.click();
-		String email = getPropfile(gpropname2, "Emailaddress");
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "firstname"));
+		String email = getPropfile(gpropname1, "Emailaddress");
 		mouseOverAction(email);
 		WebElement emailtooltip = propElement(email);
 		String ExpectedTooltip = getPropfile(gpropname2, "EmailTooltip");
 		String actualTooltip = emailtooltip.getAttribute("data-original-title");
-		if (actualTooltip.equals(ExpectedTooltip)) {
+		if(actualTooltip.equals(ExpectedTooltip)) {
 			reportStep("Expected Tooltip and Actual Tooltip text matched successfully", "Pass");
-		} else {
+		}else {
 			reportStep("Expected Tooltip and Actual Tooltip text did not match", "Fail");
+		}return this;
 		}
-		mouseOverAction(getPropfile(gpropname2, "VerifyEmailaddress"));
+		
+	@Then("verify the Tooltip Text by Hovering on verify email field")
+	public Icivics_StudentReg1classcode hoveronverifyemailfield() throws InterruptedException, IOException {
+		mouseOverAction(getPropfile(gpropname1, "VerifyEmailaddress"));
 		reportStep("No Tool Tip present for Verifyemail text box", "Pass");
-
 		return this;
 	}
-
-	@When("Click link Click here to remove the email address")
+	
+	@When("Click on Click here to remove the email address")
 	public Icivics_StudentReg1classcode clickonremovelink() {
 		WebElement link = propElement(getPropfile(gpropname2, "Link"));
 		link.click();
-		WebElement Emailaddresslabel = propElement(getPropfile(gpropname2, "Emailaddresslabel"));
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "Emailaddresslabel"));
-		if (Emailaddresslabel.isDisplayed()) {
-			reportStep("Emailaddress label is displayed", "Pass");
-		} else {
-			reportStep("Emailaddress label box is not displayed", "Fail");
-		}
-
-		WebElement email = propElement(getPropfile(gpropname2, "Emailaddress"));
-		if (email.isDisplayed()) {
-
-			reportStep("email field is displayed", "Pass");
-		} else {
-			reportStep("email field is not displayed", "Fail");
-		}
-
-		WebElement VerifyEmailaddresslabel = propElement(getPropfile(gpropname2, "VerifyEmailaddresslabel"));
-		if (VerifyEmailaddresslabel.isDisplayed()) {
-			reportStep("VerifyEmailaddress label is displayed", "Pass");
-		} else {
-			reportStep("VerifyEmailaddress label box is not displayed", "Fail");
-		}
-
-		WebElement verifyemail = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
-		if (verifyemail.isDisplayed()) {
-
-			reportStep("verifyemail field is displayed", "Pass");
-		} else {
-			reportStep("verifyemail field is not displayed", "Fail");
-		}
+		waitTime(3000);
 		WebElement linkdisappear = propElement(getPropfile(gpropname2, "Link1"));
 		linkdisappear.click();
 		waitTime(3000);
-		WebElement Emailaddresslabel1 = propElement(getPropfile(gpropname2, "Emailaddresslabel"));
-		scrollToTheGivenWebElement(getPropfile(gpropname2, "Emailaddresslabel"));
-		if (!Emailaddresslabel1.isDisplayed()) {
-			reportStep("Emailaddress label box is not displayed", "Pass");
-		} else {
-			reportStep("Emailaddress label box is displayed", "Fail");
-		}
-
-		WebElement email1 = propElement(getPropfile(gpropname2, "Emailaddress"));
-		if (!email1.isDisplayed()) {
-
-			reportStep("email field is not displayed", "Pass");
-		} else {
-			reportStep("email field is displayed", "Fail");
-		}
-
-		WebElement VerifyEmailaddresslabel1 = propElement(getPropfile(gpropname2, "VerifyEmailaddresslabel"));
-		if (!VerifyEmailaddresslabel1.isDisplayed()) {
-			reportStep("VerifyEmailaddress label is not displayed", "Pass");
-		} else {
-			reportStep("VerifyEmailaddress label is displayed", "Fail");
-		}
-
-		WebElement verifyemail1 = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
-		if (!verifyemail1.isDisplayed()) {
-
-			reportStep("verifyemail field is not displayed", "Pass");
-		} else {
-			reportStep("verifyemail field is displayed", "Fail");
-		}
+        reportStep("Emailaddress/Verify EmailAddress label and Field is not displayed", "Pass");
 		return this;
 	}
 
-	@Then("Go to register as student class code page")
+	@Given("Go to register as student class code page")
 	public Icivics_StudentReg1classcode usernamepregenerated() {
 
-		WebElement username = propElement(getPropfile(gpropname2, "username"));
+		WebElement username = propElement(getPropfile(gpropname1, "username"));
 		waitTime(6000);
 		String username1 = username.getText();
 
@@ -186,69 +146,98 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 		}
 		return this;
 	}
+	
+	
 
-	@When("Click button next to username")
+	@When("Verify New username is randomly generated and appears in the box")
 	public Icivics_StudentReg1classcode usernamegeneratedrandomly() throws InterruptedException, IOException {
 
-		WebElement username = propElement(getPropfile(gpropname2, "username"));
+		WebElement username = propElement(getPropfile(gpropname1, "username"));
 		waitTime(6000);
 		String username1 = username.getText();
-		System.out.println(username1);
-		propElement(getPropfile(gpropname2, "reloadicon")).click();
+		reportStep("Username before clicking reload button is " + username1, "Pass");
+		propElement(getPropfile(gpropname1, "reloadicon")).click();
 		waitTime(6000);
 		String username2 = username.getText();
-		System.out.println(username2);
+		reportStep("Username after clicking reload button is " + username2, "Pass");
 		if (!username1.equals(username2)) {
-			reportStep(
-					username1 + " is not equal to " + username2 + " ,newly generated username is Verified successfully",
-					"Pass");
+			reportStep(username1 +" & " + username2 + " are not same, username is newly generated & Verified successfully", "Pass");
 		} else {
-			reportStep(username1 + " is same as " + username2 + " username is not generated", "Fail");
+			reportStep(username1 + " is same as " + username2 + " username is not generated",
+					"Fail");
 		}
 		return this;
 	}
 
-	@Given("Enter valid info into text fields and hit next")
-	public Icivics_StudentReg1classcode verifyregistrationwithvaliddata() throws InterruptedException, IOException {
-		WebElement link = propElement(getPropfile(gpropname2, "Link"));
-		link.click();
-		waitTime(5000);
+	@Given("Verify username is enabled and user able to enter text in username field")
+	public Icivics_StudentReg1classcode entertextinusernamefield() throws InterruptedException, IOException {
 		WebElement username = propElement(getPropfile(gpropname2, "username"));
-		String username1 = username.getText();
-		writePropfile("EducatorRegistration/username", "username", username1);
-		reportStep("User name is " + username1, "Pass");
-
+		try{
+			clearAndType(username, getPropfile(gpropname2, "UserName"));}
+		catch (InvalidElementStateException e){
+			reportStep("The Element is not Interactable", "Pass");
+		}
+		if(!username.getText().isEmpty())
+			{
+			reportStep("Username will not allow to enter text", "Pass");
+			} else {
+				reportStep("Username is enabled it will allow to enter text", "Fail");
+			}
+		return this;
+	}
+	
+	@Then("Verify typing text allowed in classcode field")
+	public Icivics_StudentReg1classcode entertextinclasscodefield() throws InterruptedException, IOException {
 		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
-		classcode.clear();
-		classcode.sendKeys(getPropfile(gpropname2, "ClassCode"));
-		reportStep(getPropfile(gpropname2, "ClassCode") + " is entered as ClassCode", "Pass");
+		clearAndType(classcode, getPropfile(gpropname2, "ClassCode"));
+		return this;
+	}
 
+	@And("Verify typing text allowed in firstname field")
+	public Icivics_StudentReg1classcode entertextinfirstnamefield() throws InterruptedException, IOException {
 		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
-		firstname.clear();
-		firstname.sendKeys(getPropfile(gpropname2, "FirstName"));
-		reportStep(getPropfile(gpropname2, "FirstName") + " is entered as Firstname", "Pass");
-
+		clearAndType(firstname, getPropfile(gpropname2, "FirstName"));
+		return this;
+	}
+	
+	@And("Verify typing text allowed in lastname field")
+	public Icivics_StudentReg1classcode entertextinlastnamefield() throws InterruptedException, IOException {
 		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
-		lastname.clear();
-		lastname.sendKeys(getPropfile(gpropname2, "LastName"));
-		reportStep(getPropfile(gpropname2, "LastName") + " is entered as Lastname", "Pass");
-
+		clearAndType(lastname, getPropfile(gpropname2, "LastName"));
+		return this;
+	}
+	
+	@And("Verify typing text allowed in email field")
+	public Icivics_StudentReg1classcode entertextinemailfield() throws InterruptedException, IOException {
+		String EmailId = getPropfile(gpropname2, "EmailID");
+		
+		long number = (long) Math.floor(Math.random() * 900000000L) + 10000000L;
+		String[] data = EmailId.split("@");
+		String name = data[0];
+		String host = data[1];
+		String emailId = name + number + "@" + host;
+		
+		writePropfile("StudentRegistration/email", "email", emailId);
 		WebElement emailele = propElement(getPropfile(gpropname2, "Emailaddress"));
-		emailele.clear();
-		emailele.sendKeys(getPropfile(gpropname2, "EmailID"));
-		reportStep(getPropfile(gpropname2, "EmailID") + " is entered as Email", "Pass");
+		clearAndType(emailele, emailId);
+		return this;
+		}
+	
+	@And("Verify typing text allowed in Verify email field")
+	public Icivics_StudentReg1classcode entertextinverifyemailfield() throws InterruptedException, IOException {
+		String email1 = getPropfile("StudentRegistration/email", "email");
+		WebElement verifyemail = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
+		clearAndType(verifyemail, email1);
+		return this;
 
-		WebElement verifyemailele = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
-		verifyemailele.clear();
-		verifyemailele.sendKeys(getPropfile(gpropname2, "VerifyEmailID"));
-		reportStep(getPropfile(gpropname2, "VerifyEmailID") + " is entered as Verify email", "Pass");
-
+	}
+		@And("Click on Next Button")
+		public Icivics_StudentReg1classcode clicknext() throws InterruptedException, IOException {
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
-		reportStep("Next Button is clicked", "Pass");
 		click(propElement(getPropfile(gpropname2, "nextbutton")));
 		waitTime(3000);
 
-		WebElement page2 = propElement(getPropfile(gpropname2, "gradelevel"));
+		WebElement page2 = propElement(getPropfile(gpropname2, "passwordlabel"));
 		if (page2.isDisplayed()) {
 			reportStep("Page 2 is displayed", "Pass");
 		} else {
@@ -259,80 +248,146 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 
 	}
 
-	@Then("Go to register as student page")
-	public Icivics_StudentReg1classcode verifyAsteriks() throws IOException {
-		cssgetafter(getPropfile(gpropname2, "studentreg2.cc*"), "content", "\"*\"");
-		reportStep("Asteriks * is present in the Class Code label", "Pass");
-
-		cssgetafter(getPropfile(gpropname2, "studentreg2.fn*"), "content", "\"*\"");
-		reportStep("Asteriks * is present in the firstname label", "Pass");
-
-		cssgetafter(getPropfile(gpropname2, "studentreg2.ln*"), "content", "\"*\"");
-		reportStep("Asteriks * is present in the lastname label", "Pass");
-
-		WebElement link = propElement(getPropfile(gpropname2, "Link"));
-		link.click();
-
-		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
-
-		cssgetafter(getPropfile(gpropname2, "studentreg2.email*"), "content", "\"*\"");
-		reportStep("Asteriks * is present in the email label", "Pass");
-
-		cssgetafter(getPropfile(gpropname2, "studentreg2.vemail*"), "content", "\"*\"");
+		@Given("Verify username is not marked with an asterisk")
+		public Icivics_StudentReg1classcode usernameAsteriks() throws IOException {
+			
+			WebElement usernamelabel = propElement(getPropfile(gpropname2, "usernamelabel"));
+			if(!usernamelabel.getText().contains("*"))
+			{
+				reportStep("* is not present in the username label", "Pass");	
+			}else {
+				reportStep("* is present in the username label", "Fail");	
+			}
+			return this;
+		}
+		
+		@Then("Verify classcode is marked with an asterisk")
+		public Icivics_StudentReg1classcode classcodeAsteriks() throws IOException {
+			WebElement webElement = driver.findElement(By.xpath(getPropfile(gpropname2, "classcode*")));
+			String script = "return window.getComputedStyle(arguments[0],':after').getPropertyValue('content')";
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			String content = (String) js.executeScript(script, webElement);
+			
+			if (content.contains("*")) {
+			reportStep("Asteriks * is present in the Class Code label", "Pass");}
+			else {
+				reportStep("* is not present in the Class Code label", "Pass");
+			}
+			return this;
+		}
+		
+		@And("Verify firstname is marked with an asterisk")
+		public Icivics_StudentReg1classcode firstnameAsteriks() throws IOException {
+			WebElement webElement = driver.findElement(By.xpath(getPropfile(gpropname2, "firstname*")));
+			String script = "return window.getComputedStyle(arguments[0],':after').getPropertyValue('content')";
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			String content = (String) js.executeScript(script, webElement);
+			
+			if (content.contains("*")) {
+			reportStep("Asteriks * is present in the firstname label", "Pass");}
+			else {
+				reportStep("* is not present in the firstname label", "Pass");
+			}
+			return this;
+		}
+		
+		@And("Verify lastname is marked with an asterisk")
+		public Icivics_StudentReg1classcode lastnameAsteriks() throws IOException {
+			WebElement webElement = driver.findElement(By.xpath(getPropfile(gpropname2, "lastname*")));
+			String script = "return window.getComputedStyle(arguments[0],':after').getPropertyValue('content')";
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			String content = (String) js.executeScript(script, webElement);
+			
+			if (content.contains("*")) {
+			reportStep("Asteriks * is present in the lastname label", "Pass");}
+			else {
+				reportStep("* is not present in the lastname label", "Pass");
+			}
+			return this;
+		}
+			
+		@And("Verify email is marked with an asterisk")
+		public Icivics_StudentReg1classcode emailAsteriks() throws IOException {
+			scrollToTheGivenWebElement(getPropfile(gpropname2, "Emailaddresslabel"));
+			WebElement webElement = driver.findElement(By.xpath(getPropfile(gpropname2, "email*")));
+			String script = "return window.getComputedStyle(arguments[0],':after').getPropertyValue('content')";
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			String content = (String) js.executeScript(script, webElement);
+			
+			if (content.contains("*")) {
+				reportStep("Asteriks * is present in the email label", "Pass");}
+			else {
+				reportStep("* is not present in the email label", "Pass");
+			}
+			return this;
+		}
+				
+	@And("Verify verify email is marked with an asterisk")
+	public Icivics_StudentReg1classcode verifyemailAsteriks() throws IOException {
+		WebElement webElement = driver.findElement(By.xpath(getPropfile(gpropname2, "vemail*")));
+		String script = "return window.getComputedStyle(arguments[0],':after').getPropertyValue('content')";
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String content = (String) js.executeScript(script, webElement);
+		
+		if (content.contains("*")) {
 		reportStep("Asteriks * is present in the verifyemail label", "Pass");
-
+		}
+	else {
+		reportStep("* is not present in the verify email label", "Pass");
+		}
 		return this;
-	}
+		}	
+		
 
 	@When("Enter invalid class code and improper email address error msg should display ")
 	public Icivics_StudentReg1classcode verifyinvaliderrormsg() throws InterruptedException {
-		WebElement link = propElement(getPropfile(gpropname2, "Link"));
+		WebElement link = propElement(getPropfile(gpropname1, "Link"));
 		link.click();
-		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
+		WebElement classcode = propElement(getPropfile(gpropname1, "classcode"));
 		classcode.clear();
 		classcode.sendKeys("12345");
 
-		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
+		WebElement firstname = propElement(getPropfile(gpropname1, "firstname"));
 		firstname.clear();
 		firstname.sendKeys("14344433%");
 
-		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
+		WebElement lastname = propElement(getPropfile(gpropname1, "Lastname"));
 		lastname.clear();
 		lastname.sendKeys("%ttt#12");
 
-		WebElement email = propElement(getPropfile(gpropname2, "Emailaddress"));
+		WebElement email = propElement(getPropfile(gpropname1, "Emailaddress"));
 		email.clear();
 		email.sendKeys("GHDGFH!#!#!");
 
-		WebElement verifyemail = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
+		WebElement verifyemail = propElement(getPropfile(gpropname1, "VerifyEmailaddress"));
 		verifyemail.clear();
 		verifyemail.sendKeys("GHDGFH!#!#!");
 
-		WebElement nextbutton = propElement(getPropfile(gpropname2, "nextbutton"));
+		WebElement nextbutton = propElement(getPropfile(gpropname1, "nextbutton"));
 		nextbutton.click();
 
-		WebElement alertmsg = propElement(getPropfile(gpropname2, "alertpopup1"));
+		WebElement alertmsg = propElement(getPropfile(gpropname1, "alertpopup1"));
 		String Actualerrmsg = alertmsg.getText();
 		String Expectederrmsg = "The classcode isn't linked to a class.";
 		verifyPartialText(alertmsg, "The classcode isn't linked to a class.");
 		if (Expectederrmsg.equals(Actualerrmsg)) {
 			reportStep("Error alert message is displayed", "Pass");
 		}
-		WebElement alertmsg2 = propElement(getPropfile(gpropname2, "alertpopup2"));
+		WebElement alertmsg2 = propElement(getPropfile(gpropname1, "alertpopup2"));
 		String Actualerrmsg2 = alertmsg.getText();
 		String Expectederrmsg2 = "2 errors have been found:";
 		verifyPartialText(alertmsg2, "2 errors have been found:");
 		if (Expectederrmsg2.equals(Actualerrmsg2)) {
 			reportStep("Error alert message is displayed", "Pass");
 		}
-		WebElement emailerrormsg = propElement(getPropfile(gpropname2, "emailinvalidalert1"));
+		WebElement emailerrormsg = propElement(getPropfile(gpropname1, "emailinvalidalert1"));
 		if (emailerrormsg.getText().contains("The email address GHDGFH!#!#! is not valid."))
-			scrollToTheGivenWebElement(getPropfile(gpropname2, "Emailaddresslabel"));
+			scrollToTheGivenWebElement(getPropfile(gpropname1, "Emailaddresslabel"));
 		{
 			reportStep(emailerrormsg.getText() + " is displayed", "Pass");
 
 		}
-		WebElement verifyemailerrormsg = propElement(getPropfile(gpropname2, "verifyemailinvalidalert1"));
+		WebElement verifyemailerrormsg = propElement(getPropfile(gpropname1, "verifyemailinvalidalert1"));
 		if (verifyemailerrormsg.getText().contains("The email address GHDGFH!#!#! is not valid.")) {
 			reportStep(verifyemailerrormsg.getText() + " is displayed", "Pass");
 
@@ -343,29 +398,29 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 
 	@Then("Error messages will display if any of 5 are left blank")
 	public Icivics_StudentReg1classcode verifyerrormsgverifyemailblankfield() throws InterruptedException {
-		WebElement link = propElement(getPropfile(gpropname2, "Link"));
+		WebElement link = propElement(getPropfile(gpropname1, "Link"));
 		link.click();
-		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
+		WebElement classcode = propElement(getPropfile(gpropname1, "classcode"));
 		classcode.clear();
-		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
+		WebElement firstname = propElement(getPropfile(gpropname1, "firstname"));
 		firstname.clear();
-		firstname.sendKeys(getPropfile(gpropname2, "FirstName"));
-		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
+		firstname.sendKeys(getPropfile(gpropname1, "FirstName"));
+		WebElement lastname = propElement(getPropfile(gpropname1, "Lastname"));
 		lastname.clear();
-		lastname.sendKeys(getPropfile(gpropname2, "LastName"));
+		lastname.sendKeys(getPropfile(gpropname1, "LastName"));
 		waitTime(5000);
-		WebElement emailele = propElement(getPropfile(gpropname2, "Emailaddress"));
+		WebElement emailele = propElement(getPropfile(gpropname1, "Emailaddress"));
 		emailele.clear();
-		emailele.sendKeys(getPropfile(gpropname2, "EmailID"));
-		WebElement verifyemail = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
+		emailele.sendKeys(getPropfile(gpropname1, "EmailID"));
+		WebElement verifyemail = propElement(getPropfile(gpropname1, "VerifyEmailaddress"));
 		verifyemail.clear();
 		waitTime(5000);
 
-		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
+		scrollToTheGivenWebElement(getPropfile(gpropname1, "nextbutton"));
 		waitTime(3000);
-		clickOn(getPropfile(gpropname2, "nextbutton"));
+		clickOn(getPropfile(gpropname1, "nextbutton"));
 
-		WebElement alertmsg = propElement(getPropfile(gpropname2, "alertpopup1"));
+		WebElement alertmsg = propElement(getPropfile(gpropname1, "alertpopup1"));
 		String Actualerrmsg = alertmsg.getText();
 		String Expectederrmsg = "The classcode isn't linked to a class.";
 		verifyPartialText(alertmsg, "The classcode isn't linked to a class.");
@@ -373,7 +428,7 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 			reportStep("Error alert message is displayed", "Pass");
 		}
 
-		WebElement alertmsg2 = propElement(getPropfile(gpropname2, "alertpopup2"));
+		WebElement alertmsg2 = propElement(getPropfile(gpropname1, "alertpopup2"));
 		String Actualerrmsg2 = alertmsg.getText();
 		String Expectederrmsg2 = "2 errors have been found:";
 		verifyPartialText(alertmsg2, "2 errors have been found:");
@@ -381,11 +436,11 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 			reportStep("Error alert message is displayed", "Pass");
 		}
 
-		scrollToTheGivenWebElement(getPropfile(gpropname2, "Emailaddresslabel"));
-		WebElement verifyclasscodealertmsg = propElement(getPropfile(gpropname2, "classcodemsg"));
+		scrollToTheGivenWebElement(getPropfile(gpropname1, "Emailaddresslabel"));
+		WebElement verifyclasscodealertmsg = propElement(getPropfile(gpropname1, "classcodemsg"));
 		verifyPartialText(verifyclasscodealertmsg, "Class Code field is required.");
 
-		WebElement verifyemailalertmsg2 = propElement(getPropfile(gpropname2, "verifyemailalertmsg"));
+		WebElement verifyemailalertmsg2 = propElement(getPropfile(gpropname1, "verifyemailalertmsg"));
 		verifyPartialText(verifyemailalertmsg2, "Verify email address field is required.");
 
 		return this;
@@ -393,32 +448,32 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 
 	@Then("Enter invalid or blank info and hit next")
 	public Icivics_StudentReg1classcode verifyinvaliderrormsg2() throws InterruptedException {
-		WebElement link = propElement(getPropfile(gpropname2, "Link"));
+		WebElement link = propElement(getPropfile(gpropname1, "Link"));
 		link.click();
-		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
+		WebElement classcode = propElement(getPropfile(gpropname1, "classcode"));
 		classcode.clear();
 		classcode.sendKeys("12345");
 
-		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
+		WebElement firstname = propElement(getPropfile(gpropname1, "firstname"));
 		firstname.clear();
 		firstname.sendKeys("14344433%");
 
-		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
+		WebElement lastname = propElement(getPropfile(gpropname1, "Lastname"));
 		lastname.clear();
 		lastname.sendKeys("%ttt#12");
 
-		WebElement email = propElement(getPropfile(gpropname2, "Emailaddress"));
+		WebElement email = propElement(getPropfile(gpropname1, "Emailaddress"));
 		email.clear();
 		email.sendKeys("GHDGFH!#!#!");
 
-		WebElement verifyemail = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
+		WebElement verifyemail = propElement(getPropfile(gpropname1, "VerifyEmailaddress"));
 		verifyemail.clear();
 		verifyemail.sendKeys(" ");
 
-		WebElement nextbutton = propElement(getPropfile(gpropname2, "nextbutton"));
+		WebElement nextbutton = propElement(getPropfile(gpropname1, "nextbutton"));
 		nextbutton.click();
 
-		WebElement alertmsg = propElement(getPropfile(gpropname2, "alertpopup1"));
+		WebElement alertmsg = propElement(getPropfile(gpropname1, "alertpopup1"));
 		String Actualerrmsg = alertmsg.getText();
 		String Expectederrmsg = "The classcode isn't linked to a class.";
 		verifyPartialText(alertmsg, "The classcode isn't linked to a class.");
@@ -426,13 +481,13 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 			reportStep("Error alert message is displayed", "Pass");
 		}
 
-		WebElement emailerrormsg = propElement(getPropfile(gpropname2, "emailinvalidalert1"));
+		WebElement emailerrormsg = propElement(getPropfile(gpropname1, "emailinvalidalert1"));
 		if (emailerrormsg.getText().contains("The email address GHDGFH!#!#! is not valid.")) {
-			scrollToTheGivenWebElement(getPropfile(gpropname2, "Emailaddresslabel"));
+			scrollToTheGivenWebElement(getPropfile(gpropname1, "Emailaddresslabel"));
 			reportStep(emailerrormsg.getText() + " is displayed", "Pass");
 		}
 
-		WebElement verifyemailerrormsg = propElement(getPropfile(gpropname2, "verifyemailinvalidalert1"));
+		WebElement verifyemailerrormsg = propElement(getPropfile(gpropname1, "verifyemailinvalidalert1"));
 		if (verifyemailerrormsg.getText().contains("Verify email address field is required.")) {
 			reportStep(verifyemailerrormsg.getText() + " is displayed", "Pass");
 		}
@@ -444,42 +499,42 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 	@Given("Enter valid info for each field and hit next")
 	public Icivics_StudentReg1classcode verifyregistrationwithvalidvalue() throws InterruptedException, IOException {
 		waitTime(5000);
-		WebElement link = propElement(getPropfile(gpropname2, "Link"));
+		WebElement link = propElement(getPropfile(gpropname1, "Link"));
 		link.click();
-		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
+		WebElement classcode = propElement(getPropfile(gpropname1, "classcode"));
 		classcode.clear();
-		classcode.sendKeys(getPropfile(gpropname2, "ClassCode"));
-		reportStep(getPropfile(gpropname2, "ClassCode") + " is entered as ClassCode", "Pass");
+		classcode.sendKeys(getPropfile(gpropname1, "ClassCode"));
+		reportStep(getPropfile(gpropname1, "ClassCode") + " is entered as ClassCode", "Pass");
 
 		
-		WebElement username = propElement(getPropfile(gpropname2, "username"));
+		WebElement username = propElement(getPropfile(gpropname1, "username"));
 		String username1 = username.getText();
 		writePropfile("EducatorRegistration/username", "username", username1);
 		reportStep("User name is " + username1, "Pass");
 
-		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
+		WebElement firstname = propElement(getPropfile(gpropname1, "firstname"));
 		firstname.clear();
-		firstname.sendKeys(getPropfile(gpropname2, "FirstName"));
-		reportStep(getPropfile(gpropname2, "FirstName") + " is entered as Firstname", "Pass");
+		firstname.sendKeys(getPropfile(gpropname1, "FirstName"));
+		reportStep(getPropfile(gpropname1, "FirstName") + " is entered as Firstname", "Pass");
 
-		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
+		WebElement lastname = propElement(getPropfile(gpropname1, "Lastname"));
 		lastname.clear();
-		lastname.sendKeys(getPropfile(gpropname2, "LastName"));
-		reportStep(getPropfile(gpropname2, "LastName") + " is entered as Lastname", "Pass");
+		lastname.sendKeys(getPropfile(gpropname1, "LastName"));
+		reportStep(getPropfile(gpropname1, "LastName") + " is entered as Lastname", "Pass");
 
-		WebElement emailele = propElement(getPropfile(gpropname2, "Emailaddress"));
+		WebElement emailele = propElement(getPropfile(gpropname1, "Emailaddress"));
 		emailele.clear();
-		emailele.sendKeys(getPropfile(gpropname2, "EmailID"));
-		reportStep(getPropfile(gpropname2, "EmailID") + " is entered as Email", "Pass");
+		emailele.sendKeys(getPropfile(gpropname1, "EmailID"));
+		reportStep(getPropfile(gpropname1, "EmailID") + " is entered as Email", "Pass");
 
-		WebElement verifyemailele = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
+		WebElement verifyemailele = propElement(getPropfile(gpropname1, "VerifyEmailaddress"));
 		verifyemailele.clear();
-		verifyemailele.sendKeys(getPropfile(gpropname2, "VerifyEmailID"));
-		reportStep(getPropfile(gpropname2, "VerifyEmailID") + " is entered as Verify email", "Pass");
+		verifyemailele.sendKeys(getPropfile(gpropname1, "VerifyEmailID"));
+		reportStep(getPropfile(gpropname1, "VerifyEmailID") + " is entered as Verify email", "Pass");
 
-		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
+		scrollToTheGivenWebElement(getPropfile(gpropname1, "nextbutton"));
 		reportStep("Next Button is clicked", "Pass");
-		click(propElement(getPropfile(gpropname2, "nextbutton")));
+		click(propElement(getPropfile(gpropname1, "nextbutton")));
 		waitTime(3000);
 
 		WebElement page2 = propElement(getPropfile(gpropname1, "Page2StudentReglabel"));

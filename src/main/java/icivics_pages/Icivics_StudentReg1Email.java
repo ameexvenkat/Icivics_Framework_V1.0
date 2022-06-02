@@ -3,7 +3,9 @@ package icivics_pages;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.InvalidElementStateException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -324,30 +326,63 @@ public class Icivics_StudentReg1Email extends ProjectSpecificMethods {
 	
 	@Then("Verify firstname is marked with an asterisk")
 	public Icivics_StudentReg1Email firstnameAsteriks() throws IOException {
-		cssgetafter(getPropfile(gpropname, "edureg.fn*"), "content", "\"*\"");
-		reportStep("* is present in the firstname label", "Pass");
+		WebElement webElement = driver.findElement(By.xpath(getPropfile(gpropname, "firstname*")));
+		String script = "return window.getComputedStyle(arguments[0],':after').getPropertyValue('content')";
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String content = (String) js.executeScript(script, webElement);
+		
+		if (content.contains("*")) {
+		reportStep("Asteriks * is present in the firstname label", "Pass");}
+		else {
+			reportStep("* is not present in the firstname label", "Pass");
+		}
 		return this;
 	}
 	
 	@And("Verify lastname is marked with an asterisk")
 	public Icivics_StudentReg1Email lastnameAsteriks() throws IOException {
-		cssgetafter(getPropfile(gpropname, "edureg.ln*"), "content", "\"*\"");
-		reportStep("* is present in the lastname label", "Pass");
+		WebElement webElement = driver.findElement(By.xpath(getPropfile(gpropname, "lastname*")));
+		String script = "return window.getComputedStyle(arguments[0],':after').getPropertyValue('content')";
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String content = (String) js.executeScript(script, webElement);
+		
+		if (content.contains("*")) {
+		reportStep("Asteriks * is present in the lastname label", "Pass");}
+		else {
+			reportStep("* is not present in the lastname label", "Pass");
+		}
 		return this;
 	}
 		
 	@And("Verify email is marked with an asterisk")
 	public Icivics_StudentReg1Email emailAsteriks() throws IOException {
 		scrollToTheGivenWebElement(getPropfile(gpropname, "Emailaddresslabel"));
-		cssgetafter(getPropfile(gpropname, "edureg.email*"), "content", "\"*\"");
-		reportStep("* is present in the email label", "Pass");
+		WebElement webElement = driver.findElement(By.xpath(getPropfile(gpropname, "email*")));
+		String script = "return window.getComputedStyle(arguments[0],':after').getPropertyValue('content')";
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String content = (String) js.executeScript(script, webElement);
+		
+		if (content.contains("*")) {
+			reportStep("Asteriks * is present in the email label", "Pass");}
+		else {
+			reportStep("* is not present in the email label", "Pass");
+		}
 		return this;
 	}
 			
 	@And("Verify verify email is marked with an asterisk")
 	public Icivics_StudentReg1Email verifyemailAsteriks() throws IOException {
-	cssgetafter(getPropfile(gpropname, "edureg.verifyemail*"), "content", "\"*\"");
-	reportStep("* is present in the verify email label", "Pass");
+		WebElement webElement = driver.findElement(By.xpath(getPropfile(gpropname, "vemail*")));
+		String script = "return window.getComputedStyle(arguments[0],':after').getPropertyValue('content')";
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String content = (String) js.executeScript(script, webElement);
+		
+		if (content.contains("*")) {
+		reportStep("Asteriks * is present in the verifyemail label", "Pass");
+		}
+	else {
+		reportStep("* is not present in the verify email label", "Pass");
+	}
 	return this;
 	}
 	

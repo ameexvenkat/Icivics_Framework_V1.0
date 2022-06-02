@@ -45,6 +45,7 @@ public class SeleniumBase extends Reporter implements Browser, Element {
 	public RemoteWebDriver driver;
 	public WebDriverWait wait;
 	public String browser;
+	public JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	int i = 1;
 
@@ -2006,6 +2007,7 @@ public class SeleniumBase extends Reporter implements Browser, Element {
 					+ "'),'::after').getPropertyValue('" + value + "')";
 			String backcolor = (String) js.executeScript(element);
 			Assert.assertEquals(backcolor, rgbvalue);
+			
 		} catch (Exception e) {
 			Log.fatal("Unable to find the given element " + value + " :" + e.toString());
 			reportStep("Unable to find the given element " + value + " :" + e.toString(), "FAIL");
@@ -2013,6 +2015,16 @@ public class SeleniumBase extends Reporter implements Browser, Element {
 		return value;
 
 	}
+	
+	public String cssgetaftertext(String cssvalue, String value, String textvalue) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			String element = "return window.getComputedStyle(document.querySelector('" + cssvalue
+					+ "'),'::after').getPropertyValue('" + value + "')";
+			String gettext = (String) js.executeScript(element);
+			Assert.assertEquals(gettext, textvalue);
+			return gettext;
+	}
+ 
 
 	@Override
 	public String writePropfile(String propname, String value) throws IOException {

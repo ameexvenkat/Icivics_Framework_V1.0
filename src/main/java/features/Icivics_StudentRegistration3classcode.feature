@@ -16,8 +16,6 @@ Then Email address should displayed
 Scenario: C458 - If you entered an email address, do you see text that the email address can be used to log in?
 When View verification page 3 Note about username or email and password is visible
 
-
-
 Scenario: C459 - When you select Continue to my Assignments are you brought to your My iCivics page?
 When Click continue to my assignments Page should goes to student My iCivics page
 
