@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="13" total="14" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-06-07T18:58:02 IST" name="Default suite" finished-at="2022-06-07T18:58:45 IST" duration-ms="42258">
+    <groups>
+    </groups>
+    <test started-at="2022-06-07T18:58:02 IST" name="Default test" finished-at="2022-06-07T18:58:45 IST" duration-ms="42258">
+      <class name="icivics_testcases.Icivics_StudentRegistration1Email_Test">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@7ef82753]" started-at="2022-06-07T18:58:02 IST" name="startReport" finished-at="2022-06-07T18:58:02 IST" duration-ms="793" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@7ef82753]" started-at="2022-06-07T18:58:02 IST" name="setValues" finished-at="2022-06-07T18:58:02 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setValues -->
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@7ef82753]" started-at="2022-06-07T18:58:02 IST" name="setUpClass" finished-at="2022-06-07T18:58:03 IST" duration-ms="117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@7ef82753]" started-at="2022-06-07T18:58:03 IST" name="report" finished-at="2022-06-07T18:58:03 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@7ef82753]" started-at="2022-06-07T18:58:03 IST" name="beforeMethod" finished-at="2022-06-07T18:58:05 IST" duration-ms="2192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="C394_verifyblankerrormsg(java.lang.String)[pri:10, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@7ef82753]" started-at="2022-06-07T18:58:05 IST" name="C394_verifyblankerrormsg" data-provider="fetchData" finished-at="2022-06-07T18:58:44 IST" duration-ms="38742" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://staging.d9.icivics.org/user/register?role=student&email=1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C394_verifyblankerrormsg -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@7ef82753]" started-at="2022-06-07T18:58:44 IST" name="afterMethod" finished-at="2022-06-07T18:58:45 IST" duration-ms="447" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@7ef82753]" started-at="2022-06-07T18:58:45 IST" name="tearDownClass" finished-at="2022-06-07T18:58:45 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method is-config="true" signature="stopReport()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@7ef82753]" started-at="2022-06-07T18:58:45 IST" name="stopReport" finished-at="2022-06-07T18:58:45 IST" duration-ms="508" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopReport -->
+      </class> <!-- icivics_testcases.Icivics_StudentRegistration1Email_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
