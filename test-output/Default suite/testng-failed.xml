@@ -3,19 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="icivics_testcases.Icivics_StudentRegistration1Email_Test">
+      <class name="icivics_testcases.Icivics_StudentRegistration1classcode_Test">
         <methods>
           <include name="afterMethod"/>
           <include name="setUpClass"/>
-          <include name="C394_verifyblankerrormsg" invocation-numbers="0"/>
           <include name="stopReport"/>
+          <include name="setValues"/>
+          <include name="C433_verifyerrormsgverifyemailblankfield" invocation-numbers="0"/>
           <include name="beforeMethod"/>
           <include name="report"/>
           <include name="tearDownClass"/>
           <include name="startReport"/>
-          <include name="setValues"/>
         </methods>
-      </class> <!-- icivics_testcases.Icivics_StudentRegistration1Email_Test -->
+      </class> <!-- icivics_testcases.Icivics_StudentRegistration1classcode_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

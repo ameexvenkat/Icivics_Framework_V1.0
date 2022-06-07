@@ -392,10 +392,11 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 
 	@Given("Verify Error messages will display if any of 5 are left blank")
 	public Icivics_StudentReg1classcode verifyerrormsgverifyemailblankfield() throws InterruptedException {
-		WebElement link = propElement(getPropfile(gpropname2, "Link"));
-		link.click();
+
+		click(propElement(getPropfile(gpropname2, "Link")));
 		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
 		classcode.clear();
+		classcode.sendKeys(getPropfile(gpropname2, "ClassCode"));
 		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
 		firstname.clear();
 		firstname.sendKeys(getPropfile(gpropname2, "FirstName"));
@@ -403,41 +404,22 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 		lastname.clear();
 		lastname.sendKeys(getPropfile(gpropname2, "LastName"));
 		waitTime(5000);
-		WebElement emailele = propElement(getPropfile(gpropname2, "Emailaddress"));
-		emailele.clear();
-		emailele.sendKeys(getPropfile(gpropname2, "EmailID"));
+		WebElement emailelement = propElement(getPropfile(gpropname2, "Emailaddress"));
+		emailelement.clear();
+		emailelement.sendKeys(getPropfile("StudentRegistration/email", "email"));
 		WebElement verifyemail = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
 		verifyemail.clear();
 		waitTime(5000);
-
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
 		waitTime(3000);
 		clickOn(getPropfile(gpropname2, "nextbutton"));
-
-		WebElement alertmsg = propElement(getPropfile(gpropname2, "alertpopup1"));
-		String Actualerrmsg = alertmsg.getText();
-		String Expectederrmsg = "The classcode isn't linked to a class.";
-		verifyPartialText(alertmsg, "The classcode isn't linked to a class.");
-		if (Expectederrmsg.equals(Actualerrmsg)) {
-			reportStep("Error alert message is displayed", "Pass");
-		}
-
-		WebElement alertmsg2 = propElement(getPropfile(gpropname2, "alertpopup2"));
-		String Actualerrmsg2 = alertmsg.getText();
-		String Expectederrmsg2 = "2 errors have been found:";
-		verifyPartialText(alertmsg2, "2 errors have been found:");
-		if (Expectederrmsg2.equals(Actualerrmsg2)) {
-			reportStep("Error alert message is displayed", "Pass");
-		}
-
-		scrollToTheGivenWebElement(getPropfile(gpropname2, "Emailaddresslabel"));
-		WebElement verifyclasscodealertmsg = propElement(getPropfile(gpropname2, "classcodemsg"));
-		verifyPartialText(verifyclasscodealertmsg, "Class Code field is required.");
-
-		WebElement verifyemailalertmsg2 = propElement(getPropfile(gpropname2, "verifyemailalertmsg"));
-		verifyPartialText(verifyemailalertmsg2, "Verify email address field is required.");
-
+		WebElement alertmsg = propElement(getPropfile(gpropname1, "alertpopup1"));
+		verifyPartialText(alertmsg, "1 error has been found:");
+		scrollToTheGivenWebElement(getPropfile(gpropname1, "Emailaddresslabel"));
+		WebElement verifyemailalertmsg = propElement(getPropfile(gpropname1, "emailalertmsg"));
+		verifyPartialText(verifyemailalertmsg, "Verify email address field is required.");
 		return this;
+
 	}
 
 	@Given("Verify on entering invalid or blank info and hit next")
