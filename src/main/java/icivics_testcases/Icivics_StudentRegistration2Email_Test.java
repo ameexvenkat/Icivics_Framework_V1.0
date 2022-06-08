@@ -123,7 +123,7 @@ public class Icivics_StudentRegistration2Email_Test extends ProjectSpecificMetho
 
 		extent.attachReporter(reporter);
 		new Icivics_StudentReg2Email(driver, node, prop).launchstudentURL(URL).verifywithvaliddata()
-				.verifyenterinvaliddata();
+				.verifyblankerrormsgforpwdandcpwd().verifyenterinvaliddataerror();
 	}
 	// C412- You must check terms of use and privacy
 

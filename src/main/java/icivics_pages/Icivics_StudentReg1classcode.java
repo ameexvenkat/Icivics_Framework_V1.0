@@ -391,33 +391,289 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Error messages will display if any of 5 are left blank")
-	public Icivics_StudentReg1classcode verifyerrormsgverifyemailblankfield() throws InterruptedException {
+	public Icivics_StudentReg1classcode verifyerrormsgblankfieldall() throws InterruptedException {
 
 		click(propElement(getPropfile(gpropname2, "Link")));
+
+		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
+
+		firstname.clear();
+
+		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
+
+		lastname.clear();
+
+		WebElement email = propElement(getPropfile(gpropname2, "Emailaddress"));
+
+		email.clear();
+
+		WebElement verifyemail = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
+
+		verifyemail.clear();
+
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
+
+		clickOn(getPropfile(gpropname2, "nextbutton"));
+		WebElement firstnamealertmsg1 = propElement(getPropfile(gpropname2, "firstnamealertmsg1"));
+
+		verifyExactText(firstnamealertmsg1, "The classcode isn't linked to a class.");
+
+		WebElement firstnamealertmsg = propElement(getPropfile(gpropname2, "firstnamealertmsg"));
+
+		verifyExactText(firstnamealertmsg, "Field First Name is required");
+
+		WebElement lastnamealertmsg = propElement(getPropfile(gpropname2, "lastnamealertmsg"));
+
+		verifyExactText(lastnamealertmsg, "Field Last Name is required");
+
+		WebElement alertmsg = propElement(getPropfile(gpropname2, "alertmsg1"));
+
+		verifyPartialText(alertmsg, "3 errors have been found:");
+
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "Emailaddresslabel"));
+
+		WebElement emailalertmsg = propElement(getPropfile(gpropname2, "emailalertmsg"));
+
+		verifyPartialText(emailalertmsg, "Email address field is required.");
+
+		WebElement verifyemailalertmsg = propElement(getPropfile(gpropname2, "verifyemailalertmsg"));
+
+		verifyPartialText(verifyemailalertmsg, "Verify email address field is required.");
+
+		return this;
+
+	}
+
+	@When("Verify error message by leaving the Classcode field blank and enter values in the remaining required fields and click on next button")
+	public Icivics_StudentReg1classcode verifyerrormsgclasscodeblankfield() throws InterruptedException {
+		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
+		classcode.clear();
+
+		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
+
+		firstname.clear();
+		firstname.sendKeys(getPropfile(gpropname2, "FirstName"));
+
+		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
+
+		lastname.clear();
+
+		lastname.sendKeys(getPropfile(gpropname2, "LastName"));
+
+		WebElement email = propElement(getPropfile(gpropname2, "Emailaddress"));
+
+		email.clear();
+
+		email.sendKeys(getPropfile("StudentRegistration/email", "email"));
+
+		WebElement verifyemailele = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
+
+		verifyemailele.clear();
+
+		verifyemailele.sendKeys(getPropfile("StudentRegistration/email", "email"));
+
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
+
+		clickOn(getPropfile(gpropname2, "nextbutton"));
+
+		WebElement codeclassalertmsg = propElement(getPropfile(gpropname2, "alertpopup1"));
+
+		verifyExactText(codeclassalertmsg, "The classcode isn't linked to a class.");
+		WebElement codeclassalertmsg1 = propElement(getPropfile(gpropname2, "classcodemsg"));
+
+		verifyExactText(codeclassalertmsg1, "Class Code field is required.");
+
+		return this;
+
+	}
+
+	@And("Verify error message by leaving the Firstname field blank and enter values in the remaining required fields and click on next button")
+	public Icivics_StudentReg1classcode verifyerrormsgfirstnameblankfield() throws InterruptedException {
+
+		waitTime(3000);
 		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
 		classcode.clear();
 		classcode.sendKeys(getPropfile(gpropname2, "ClassCode"));
+
 		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
+
 		firstname.clear();
-		firstname.sendKeys(getPropfile(gpropname2, "FirstName"));
+
 		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
+
 		lastname.clear();
+
 		lastname.sendKeys(getPropfile(gpropname2, "LastName"));
-		waitTime(5000);
-		WebElement emailelement = propElement(getPropfile(gpropname2, "Emailaddress"));
-		emailelement.clear();
-		emailelement.sendKeys(getPropfile("StudentRegistration/email", "email"));
-		WebElement verifyemail = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
-		verifyemail.clear();
-		waitTime(5000);
+
+		WebElement email = propElement(getPropfile(gpropname2, "Emailaddress"));
+
+		email.clear();
+
+		email.sendKeys(getPropfile("StudentRegistration/email", "email"));
+
+		WebElement verifyemailele = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
+
+		verifyemailele.clear();
+
+		verifyemailele.sendKeys(getPropfile("StudentRegistration/email", "email"));
+
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
-		waitTime(3000);
+
 		clickOn(getPropfile(gpropname2, "nextbutton"));
-		WebElement alertmsg = propElement(getPropfile(gpropname1, "alertpopup1"));
+
+		WebElement firstnamealertmsg = propElement(getPropfile(gpropname2, "alertpopup6"));
+
+		verifyExactText(firstnamealertmsg, "Field First Name is required");
+
+		return this;
+
+	}
+
+	@And("Verify error message by leaving the Lastname field blank and enter values in the remaining required fields and click on next button")
+
+	public Icivics_StudentReg1classcode verifyerrormsglastnameblankfield() throws InterruptedException {
+
+		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
+		classcode.clear();
+		classcode.sendKeys(getPropfile(gpropname2, "ClassCode"));
+
+		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
+
+		firstname.clear();
+
+		firstname.sendKeys(getPropfile(gpropname2, "FirstName"));
+
+		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
+
+		lastname.clear();
+
+		WebElement emailele = propElement(getPropfile(gpropname2, "Emailaddress"));
+
+		emailele.clear();
+
+		emailele.sendKeys(getPropfile("StudentRegistration/email", "email"));
+
+		WebElement verifyemailele = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
+
+		verifyemailele.clear();
+
+		verifyemailele.sendKeys(getPropfile("StudentRegistration/email", "email"));
+
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
+
+		clickOn(getPropfile(gpropname2, "nextbutton"));
+
+		WebElement lastnamealertmsg = propElement(getPropfile(gpropname2, "alertpopup7"));
+
+		verifyExactText(lastnamealertmsg, "Field Last Name is required");
+
+		return this;
+
+	}
+
+	@And("Verify error message by leaving the email field blank and enter values in the remaining required fields and click on next button")
+
+	public Icivics_StudentReg1classcode verifyerrormsgemailblankfield() throws InterruptedException {
+
+		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
+		classcode.clear();
+		classcode.sendKeys(getPropfile(gpropname2, "ClassCode"));
+
+		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
+
+		firstname.clear();
+
+		firstname.sendKeys(getPropfile(gpropname2, "FirstName"));
+
+		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
+
+		lastname.clear();
+
+		lastname.sendKeys(getPropfile(gpropname2, "LastName"));
+
+		WebElement email = propElement(getPropfile(gpropname2, "Emailaddress"));
+
+		email.clear();
+
+		WebElement verifyemailele = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
+
+		verifyemailele.clear();
+
+		verifyemailele.sendKeys(getPropfile("StudentRegistration/email", "email"));
+
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
+
+		clickOn(getPropfile(gpropname2, "nextbutton"));
+		waitTime(5000);
+
+		WebElement alertmsg = propElement(getPropfile(gpropname2, "verifyemailalerterrormsg"));
+
+		verifyPartialText(alertmsg, "2 errors have been found:");
+
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "Emailaddresslabel"));
+
+		WebElement emailalertmsg = propElement(getPropfile(gpropname2, "emailalertmsg"));
+
+		verifyPartialText(emailalertmsg, "Email address field is required.");
+
+		WebElement verifyemailalertmsg = propElement(getPropfile(gpropname2, "verifyemailalertmsg1"));
+
+		verifyPartialText(verifyemailalertmsg, "Your e-mail address and confirmed e-mail address must match.");
+
+		return this;
+
+	}
+
+	@And("Verify error message by leaving the verify email field blank and enter values in the remaining required fields and click on next button")
+
+	public Icivics_StudentReg1classcode verifyerrormsgverifyemailblankfield() throws InterruptedException {
+
+		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
+		classcode.clear();
+		classcode.sendKeys(getPropfile(gpropname2, "ClassCode"));
+
+		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
+
+		firstname.clear();
+
+		firstname.sendKeys(getPropfile(gpropname2, "FirstName"));
+
+		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
+
+		lastname.clear();
+
+		lastname.sendKeys(getPropfile(gpropname2, "LastName"));
+
+		waitTime(5000);
+
+		WebElement emailele = propElement(getPropfile(gpropname2, "Emailaddress"));
+
+		emailele.clear();
+
+		emailele.sendKeys(getPropfile("StudentRegistration/email", "email"));
+
+		WebElement verifyemail = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
+
+		verifyemail.clear();
+
+		waitTime(5000);
+
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
+
+		waitTime(3000);
+
+		clickOn(getPropfile(gpropname2, "nextbutton"));
+		waitTime(5000);
+
+		WebElement alertmsg = propElement(getPropfile(gpropname2, "verifyemailalerterrormsg1"));
+
 		verifyPartialText(alertmsg, "1 error has been found:");
-		scrollToTheGivenWebElement(getPropfile(gpropname1, "Emailaddresslabel"));
-		WebElement verifyemailalertmsg = propElement(getPropfile(gpropname1, "emailalertmsg"));
-		verifyPartialText(verifyemailalertmsg, "Verify email address field is required.");
+
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "Emailaddresslabel"));
+
+		WebElement verifyemailalertmsg2 = propElement(getPropfile(gpropname2, "verifyemailalertmsg2"));
+		verifyPartialText(verifyemailalertmsg2, "Verify email address field is required.");
+
 		return this;
 
 	}

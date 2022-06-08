@@ -39,7 +39,13 @@ Scenario: C432 - If you enter invalid information in a required field and select
 Given Verify on entering invalid class code and improper email address error msg should display 
 
 Scenario: C433 - If you leave a required field blank and select Next, do you receive an appropriate error message?
-Given Verify Error messages will display if any of 5 are left blank
+Given Verify error message for all required field by leaving the fields blank and click on next button
+When Verify error message by leaving the Classcode field blank and enter values in the remaining required fields and click on next button
+And Verify error message by leaving the Firstname field blank and enter values in the remaining required fields and click on next button
+And Verify error message by leaving the Lastname field blank and enter values in the remaining required fields and click on next button
+And Verify error message by leaving the email field blank and enter values in the remaining required fields and click on next button
+And Verify error message by leaving the verify email field blank and enter values in the remaining required fields and click on next button
+
 
 Scenario: C434 - Do all error messages display correctly?
 Given Verify on entering invalid or blank info and hit next

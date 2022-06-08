@@ -40,8 +40,8 @@ Scenario: C410- When you enter text in the Confirm Password field do you see tex
 Given Verify Password match indicator says yes or no depending on match with the confirm Password
 
 Scenario: C412- If you leave a required field blank and select Next, do you receive an appropriate error message?
-Given Enter invalid Password, Confirm Password and verify the error message and its displayed in red
-
+Given Click on next without entering any valid data and verify the error messages.
+Then Verify Error message is in pink box at the top
 Scenario: C412- You must check terms of use and privacy
 Given Verify on Leaving terms of use and privacy checkbox unckecked Errors is displayed in red
 

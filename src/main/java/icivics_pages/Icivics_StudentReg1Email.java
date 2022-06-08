@@ -605,6 +605,7 @@ public class Icivics_StudentReg1Email extends ProjectSpecificMethods {
 		scrollToTheGivenWebElement(getPropfile(gpropname, "nextbutton"));
 
 		clickOn(getPropfile(gpropname, "nextbutton"));
+		waitTime(3000);
 
 		WebElement lastnamealertmsg = propElement(getPropfile(gpropname, "alertpopup1"));
 
@@ -643,6 +644,7 @@ public class Icivics_StudentReg1Email extends ProjectSpecificMethods {
 		scrollToTheGivenWebElement(getPropfile(gpropname, "nextbutton"));
 
 		clickOn(getPropfile(gpropname, "nextbutton"));
+		waitTime(3000);
 
 		WebElement alertmsg = propElement(getPropfile(gpropname, "alertpopup1"));
 
@@ -698,13 +700,15 @@ public class Icivics_StudentReg1Email extends ProjectSpecificMethods {
 
 		clickOn(getPropfile(gpropname, "nextbutton"));
 
+		waitTime(3000);
+
 		WebElement alertmsg = propElement(getPropfile(gpropname, "alertpopup1"));
 
 		verifyPartialText(alertmsg, "1 error has been found:");
 
 		scrollToTheGivenWebElement(getPropfile(gpropname, "Emailaddresslabel"));
 
-		WebElement verifyemailalertmsg = propElement(getPropfile(gpropname, "emailalertmsg"));
+		WebElement verifyemailalertmsg = propElement(getPropfile(gpropname, "emailalertmsg1"));
 
 		verifyPartialText(verifyemailalertmsg, "Verify email address field is required.");
 

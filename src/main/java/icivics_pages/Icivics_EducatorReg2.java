@@ -127,6 +127,7 @@ public class Icivics_EducatorReg2 extends ProjectSpecificMethods {
 
 		WebElement username = propElement(getPropfile(gpropname, "username"));
 		String username2 = username.getText();
+		waitTime(3000);
 		String username1 = getPropfile("EducatorRegistration/username", "username");
 		if (!username1.equals(username2)) {
 			reportStep("Username is regenerated " + username1 + " & " + username2 + " are not same", "Pass");

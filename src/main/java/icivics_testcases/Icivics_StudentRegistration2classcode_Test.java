@@ -122,8 +122,8 @@ public class Icivics_StudentRegistration2classcode_Test extends ProjectSpecificM
 				"C412- If you leave a required field blank and select Next, do you receive an appropriate error message?");
 
 		extent.attachReporter(reporter);
-		new Icivics_StudentReg2classcode(driver, node, prop).launchstudentURL(URL).verifyregistrationwithvaliddata()
-				.verifyenterinvaliddata();
+		new Icivics_StudentReg2classcode(driver, node, prop).launchstudentURL(URL).verifyregistrationwithvaliddata().
+		verifyblankerrormsgforpwdandcpwd().verifyenterinvaliddataerror();
 	}
 	// C412- You must check terms of use and privacy
 

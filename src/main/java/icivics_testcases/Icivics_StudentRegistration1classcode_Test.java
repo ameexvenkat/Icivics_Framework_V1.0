@@ -108,7 +108,9 @@ public class Icivics_StudentRegistration1classcode_Test extends ProjectSpecificM
 		node = test.createNode(
 				"C433 -If you leave a required field blank and select Next, do you receive an appropriate error message?");
 		extent.attachReporter(reporter);
-		new Icivics_StudentReg1classcode(driver, node, prop).launchstudentURL(URL)
+		new Icivics_StudentReg1classcode(driver, node, prop).launchstudentURL(URL).verifyerrormsgblankfieldall()
+				.verifyerrormsgclasscodeblankfield().verifyerrormsgfirstnameblankfield()
+				.verifyerrormsglastnameblankfield().verifyerrormsgemailblankfield()
 				.verifyerrormsgverifyemailblankfield();
 	}
 	// C434 -Do all error messages display correctly?
