@@ -333,7 +333,7 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Given("Verify on entering invalid class code and improper email address error msg should display ")
+	@Given("Verify on entering invalid class code and improper email address error msg should display")
 	public Icivics_StudentReg1classcode verifyinvaliderrormsg() throws InterruptedException {
 		WebElement link = propElement(getPropfile(gpropname2, "Link"));
 		link.click();

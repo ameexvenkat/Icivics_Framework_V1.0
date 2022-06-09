@@ -10,7 +10,6 @@ import com.aventstack.extentreports.ExtentTest;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import projectSpecific.base.ProjectSpecificMethods;
 
 public class Icivics_StudentReg3Email extends ProjectSpecificMethods {

@@ -449,7 +449,7 @@ public class Icivics_StudentReg1Email extends ProjectSpecificMethods {
 		WebElement verifyemail = propElement(getPropfile(gpropname, "VerifyEmailaddress"));
 		if (verifyemail.isDisplayed()) {
 			verifyemail.clear();
-			Thread.sleep(3000);
+			waitTime(3000);
 			verifyemail.sendKeys("gdfsgadvjh");
 			reportStep("verify email field allows to type invalid data", "Pass");
 		} else {
@@ -586,6 +586,8 @@ public class Icivics_StudentReg1Email extends ProjectSpecificMethods {
 
 		firstname.sendKeys(getPropfile(gpropname, "FirstName"));
 
+		waitTime(3000);
+		
 		WebElement lastname = propElement(getPropfile(gpropname, "Lastname"));
 
 		lastname.clear();

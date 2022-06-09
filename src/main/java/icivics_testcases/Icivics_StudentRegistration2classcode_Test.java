@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import icivics_pages.Icivics_StudentReg2Email;
 import icivics_pages.Icivics_StudentReg2classcode;
 import projectSpecific.base.ProjectSpecificMethods;
 
