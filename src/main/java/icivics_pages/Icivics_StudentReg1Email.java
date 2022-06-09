@@ -798,9 +798,9 @@ public class Icivics_StudentReg1Email extends ProjectSpecificMethods {
 			WebElement classcodelabel = propElement(getPropfile(gpropname, "classcodelabel"));
 			waitTime(3000);
 			if (classcodelabel.isDisplayed()) {
-				reportStep("class code label link is Displayed", "Pass");
+				reportStep("class code page is displayed", "Pass");
 			} else {
-				reportStep("class code label is not displayed", "Fail");
+				reportStep("class code page is not displayed", "Fail");
 			}
 		}
 		return this;

@@ -35,17 +35,14 @@ public class Icivics_StudentReg3Email extends ProjectSpecificMethods {
 		WebElement username = propElement(getPropfile(gpropname2, "username"));
 		String username1 = username.getText();
 		writePropfile("StudentRegistration/username", "username", username1);
-		reportStep("User name is " + username1, "Pass");
 
 		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
 		firstname.clear();
 		firstname.sendKeys(getPropfile(gpropname2, "FirstName"));
-		reportStep(getPropfile(gpropname2, "FirstName") + " is entered as Firstname", "Pass");
 
 		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
 		lastname.clear();
 		lastname.sendKeys(getPropfile(gpropname2, "LastName"));
-		reportStep(getPropfile(gpropname2, "LastName") + " is entered as Lastname", "Pass");
 
 		String EmailId = getPropfile(gpropname2, "EmailID");
 
@@ -55,33 +52,35 @@ public class Icivics_StudentReg3Email extends ProjectSpecificMethods {
 		String host = data[1];
 		String emailId = name + number + "@" + host;
 
-		reportStep(emailId + " email is used for creating account", "Pass");
 		writePropfile("StudentRegistration/email3", "email3", emailId);
 		WebElement email = propElement(getPropfile(gpropname2, "Emailaddress"));
 		email.clear();
 		email.sendKeys(emailId);
 
-		reportStep(getPropfile(gpropname2, "EmailID") + " is entered as Email", "Pass");
-
 		WebElement verifyemailele = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
 		verifyemailele.clear();
 		verifyemailele.sendKeys(emailId);
-		reportStep(getPropfile(gpropname2, "VerifyEmailID") + " is entered as Verify email", "Pass");
+
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
-		reportStep("Next Button is clicked", "Pass");
-		click(propElement(getPropfile(gpropname2, "nextbutton")));
+
+		WebElement nextbuttonclick = propElement(getPropfile(gpropname2, "nextbutton"));
+		nextbuttonclick.click();
 		waitTime(3000);
 		String pwd = "Test@12345";
 		String cpwd = "Test@12345";
 		WebElement password = propElement(getPropfile(gpropname3, "password1"));
-		clearAndType(password, pwd);
+		password.clear();
+		password.sendKeys(pwd);
 
 		WebElement confirmpassword = propElement(getPropfile(gpropname3, "confirmpassword1"));
-		clearAndType(confirmpassword, cpwd);
+		confirmpassword.clear();
+		confirmpassword.sendKeys(cpwd);
 
-		click(propElement(getPropfile(gpropname3, "agreechkbox")));
+		WebElement agreechkbox = propElement(getPropfile(gpropname3, "agreechkbox"));
+		agreechkbox.click();
 		waitTime(3000);
-		click(propElement(getPropfile(gpropname3, "finishbutton")));
+		WebElement finishbuttonclick = propElement(getPropfile(gpropname3, "finishbutton"));
+		finishbuttonclick.click();
 		waitTime(5000);
 
 		return this;
@@ -108,11 +107,13 @@ public class Icivics_StudentReg3Email extends ProjectSpecificMethods {
 
 	@Given("verify Message says check your inbox")
 	public Icivics_StudentReg3Email verifycheckmsgdisplay() throws IOException {
-		WebElement emailmsg = propElement(getPropfile(gpropname5, "emailmsg"));
-		if (emailmsg.getText().equals("Check your inbox at:") && emailmsg.isDisplayed()) {
-			reportStep(emailmsg.getText() + " label is verified", "Pass");
+		WebElement emailmsg = propElement(getPropfile(gpropname5, "confirmationemailheadermsg"));
+		if (emailmsg.getText()
+				.equals("A welcome message with further instructions has been sent to your email address.")
+				&& emailmsg.isDisplayed()) {
+			reportStep("'A welcome message' is displayed as notification", "Pass");
 		} else {
-			reportStep("email label is not verified", "Fail");
+			reportStep("'A welcome message' is not displayed", "Fail");
 		}
 
 		return this;
@@ -135,17 +136,21 @@ public class Icivics_StudentReg3Email extends ProjectSpecificMethods {
 		String emailID = propElement(getPropfile(gpropname5, "emailID")).getText();
 		String email1 = getPropfile("StudentRegistration/email3", "email3");
 		if (email1.equals(emailID)) {
-			reportStep("Registered email Id is verified", "Pass");
+			reportStep("Message has correct email from what was registered is displayed", "Pass");
 		} else {
-			reportStep("Registered email Id is verified not are same", "Fail");
+			reportStep("Message has correct email from what was registered is not displayed", "Fail");
 		}
 		return this;
 	}
 
 	@Given("Verify resend button is clickable")
 	public Icivics_StudentReg3Email verifyresendbutton() {
-		scrollToTheGivenWebElement(getPropfile(gpropname5, "resendbutton"));
-		if (clickOn(getPropfile(gpropname5, "resendbutton"))) {
+		WebElement resendbutton = propElement(getPropfile(gpropname5, "resendbutton"));
+		if (resendbutton.isDisplayed()) {
+
+			resendbutton.click();
+			scrollToTheGivenWebElement(getPropfile(gpropname5, "resendbutton"));
+
 			reportStep("resend button is clicked successfully", "Pass");
 		} else {
 			reportStep("resend button is not clicked", "Fail");
@@ -158,7 +163,8 @@ public class Icivics_StudentReg3Email extends ProjectSpecificMethods {
 	@Given("Verify Screen shows confirmation email has been sent")
 	public Icivics_StudentReg3Email verifyconfirmationemail() {
 		scrollToTheGivenWebElement(getPropfile(gpropname5, "resendbutton"));
-		clickOn(getPropfile(gpropname5, "resendbutton"));
+		WebElement resendbutton = propElement(getPropfile(gpropname5, "resendbutton"));
+		resendbutton.click();
 		waitTime(3000);
 
 		WebElement confirmationemailheadermsg = propElement(getPropfile(gpropname5, "confirmationemailheadermsg"));

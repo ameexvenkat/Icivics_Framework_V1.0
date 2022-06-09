@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-09T11:55:19 IST" name="Default suite" finished-at="2022-06-09T11:59:14 IST" duration-ms="234358">
+  <suite started-at="2022-06-09T22:08:15 IST" name="Default suite" finished-at="2022-06-09T22:11:17 IST" duration-ms="181486">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-06-09T11:55:19 IST" name="Default test" finished-at="2022-06-09T11:59:14 IST" duration-ms="234358">
-      <class name="icivics_testcases.Icivics_StudentRegistration1Email_Test">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:55:18 IST" name="startReport" finished-at="2022-06-09T11:55:19 IST" duration-ms="822" status="PASS">
+    <test started-at="2022-06-09T22:08:15 IST" name="Default test" finished-at="2022-06-09T22:11:17 IST" duration-ms="181486">
+      <class name="icivics_testcases.Icivics_StudentRegistration2Email_Test">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:14 IST" name="startReport" finished-at="2022-06-09T22:08:15 IST" duration-ms="903" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:55:19 IST" name="setValues" finished-at="2022-06-09T11:55:19 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:15 IST" name="setValues" finished-at="2022-06-09T22:08:15 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setValues -->
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:55:19 IST" name="setUpClass" finished-at="2022-06-09T11:55:20 IST" duration-ms="233" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:15 IST" name="setUpClass" finished-at="2022-06-09T22:08:15 IST" duration-ms="98" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:55:20 IST" name="report" finished-at="2022-06-09T11:55:20 IST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:15 IST" name="report" finished-at="2022-06-09T22:08:15 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- report -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:55:21 IST" name="beforeMethod" finished-at="2022-06-09T11:55:25 IST" duration-ms="4241" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:16 IST" name="beforeMethod" finished-at="2022-06-09T22:08:18 IST" duration-ms="1857" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C383_Verifybreadcrumbs(java.lang.String)[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:55:25 IST" name="C383_Verifybreadcrumbs" data-provider="fetchData" finished-at="2022-06-09T11:55:29 IST" duration-ms="4190" status="PASS">
+        <test-method signature="C398_verifypagecount2(java.lang.String)[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:18 IST" name="C398_verifypagecount2" data-provider="fetchData" finished-at="2022-06-09T22:08:26 IST" duration-ms="8023" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -40,16 +40,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C383_Verifybreadcrumbs -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:55:29 IST" name="afterMethod" finished-at="2022-06-09T11:55:30 IST" duration-ms="752" status="PASS">
+        </test-method> <!-- C398_verifypagecount2 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:26 IST" name="afterMethod" finished-at="2022-06-09T22:08:26 IST" duration-ms="363" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:55:30 IST" name="beforeMethod" finished-at="2022-06-09T11:55:33 IST" duration-ms="2606" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:26 IST" name="beforeMethod" finished-at="2022-06-09T22:08:27 IST" duration-ms="1150" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C384_Verifybreadcrumbspage(java.lang.String)[pri:1, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:55:33 IST" name="C384_Verifybreadcrumbspage" data-provider="fetchData" finished-at="2022-06-09T11:55:36 IST" duration-ms="2853" status="PASS">
+        <test-method signature="C399_Clickbackbutton(java.lang.String)[pri:1, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:27 IST" name="C399_Clickbackbutton" data-provider="fetchData" finished-at="2022-06-09T22:08:41 IST" duration-ms="13348" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -59,16 +59,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C384_Verifybreadcrumbspage -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:55:36 IST" name="afterMethod" finished-at="2022-06-09T11:55:37 IST" duration-ms="771" status="PASS">
+        </test-method> <!-- C399_Clickbackbutton -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:41 IST" name="afterMethod" finished-at="2022-06-09T22:08:41 IST" duration-ms="324" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:55:37 IST" name="beforeMethod" finished-at="2022-06-09T11:55:39 IST" duration-ms="2584" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:41 IST" name="beforeMethod" finished-at="2022-06-09T22:08:42 IST" duration-ms="1117" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C385_Verifyvideolink(java.lang.String)[pri:2, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:55:39 IST" name="C385_Verifyvideolink" data-provider="fetchData" finished-at="2022-06-09T11:55:55 IST" duration-ms="16039" status="PASS">
+        <test-method signature="C400_verifyfieldsisremembered(java.lang.String)[pri:2, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:42 IST" name="C400_verifyfieldsisremembered" data-provider="fetchData" finished-at="2022-06-09T22:08:53 IST" duration-ms="10954" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -78,16 +78,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C385_Verifyvideolink -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:55:55 IST" name="afterMethod" finished-at="2022-06-09T11:55:57 IST" duration-ms="1738" status="PASS">
+        </test-method> <!-- C400_verifyfieldsisremembered -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:53 IST" name="afterMethod" finished-at="2022-06-09T22:08:54 IST" duration-ms="342" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:55:57 IST" name="beforeMethod" finished-at="2022-06-09T11:56:00 IST" duration-ms="2881" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:54 IST" name="beforeMethod" finished-at="2022-06-09T22:08:55 IST" duration-ms="1361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C387_verifytextfields(java.lang.String)[pri:3, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:56:00 IST" name="C387_verifytextfields" data-provider="fetchData" finished-at="2022-06-09T11:56:07 IST" duration-ms="6509" status="PASS">
+        <test-method signature="C403_clickontermsofuselink(java.lang.String)[pri:3, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:08:55 IST" name="C403_clickontermsofuselink" data-provider="fetchData" finished-at="2022-06-09T22:09:18 IST" duration-ms="23325" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -97,16 +97,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C387_verifytextfields -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:56:07 IST" name="afterMethod" finished-at="2022-06-09T11:56:08 IST" duration-ms="855" status="PASS">
+        </test-method> <!-- C403_clickontermsofuselink -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:09:18 IST" name="afterMethod" finished-at="2022-06-09T22:09:19 IST" duration-ms="363" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:56:08 IST" name="beforeMethod" finished-at="2022-06-09T11:56:10 IST" duration-ms="2807" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:09:19 IST" name="beforeMethod" finished-at="2022-06-09T22:09:20 IST" duration-ms="1112" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C388_verifyusernamepregenerated(java.lang.String)[pri:4, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:56:10 IST" name="C388_verifyusernamepregenerated" data-provider="fetchData" finished-at="2022-06-09T11:56:19 IST" duration-ms="8848" status="PASS">
+        <test-method signature="C404_clickprivacypolicy(java.lang.String)[pri:4, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:09:20 IST" name="C404_clickprivacypolicy" data-provider="fetchData" finished-at="2022-06-09T22:09:35 IST" duration-ms="14850" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -116,16 +116,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C388_verifyusernamepregenerated -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:56:19 IST" name="afterMethod" finished-at="2022-06-09T11:56:20 IST" duration-ms="754" status="PASS">
+        </test-method> <!-- C404_clickprivacypolicy -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:09:35 IST" name="afterMethod" finished-at="2022-06-09T22:09:35 IST" duration-ms="307" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:56:20 IST" name="beforeMethod" finished-at="2022-06-09T11:56:23 IST" duration-ms="2627" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:09:35 IST" name="beforeMethod" finished-at="2022-06-09T22:09:36 IST" duration-ms="1052" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C389_verifyusernamepregeneratedrandomly(java.lang.String)[pri:5, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:56:23 IST" name="C389_verifyusernamepregeneratedrandomly" data-provider="fetchData" finished-at="2022-06-09T11:56:39 IST" duration-ms="15977" status="PASS">
+        <test-method signature="C405_verifypage2SignUpforEmailsfield(java.lang.String)[pri:5, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:09:36 IST" name="C405_verifypage2SignUpforEmailsfield" data-provider="fetchData" finished-at="2022-06-09T22:09:44 IST" duration-ms="7647" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -135,16 +135,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C389_verifyusernamepregeneratedrandomly -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:56:39 IST" name="afterMethod" finished-at="2022-06-09T11:56:40 IST" duration-ms="952" status="PASS">
+        </test-method> <!-- C405_verifypage2SignUpforEmailsfield -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:09:44 IST" name="afterMethod" finished-at="2022-06-09T22:09:44 IST" duration-ms="289" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:56:40 IST" name="beforeMethod" finished-at="2022-06-09T11:56:43 IST" duration-ms="2832" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:09:44 IST" name="beforeMethod" finished-at="2022-06-09T22:09:45 IST" duration-ms="1115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C390_verifyentertextinallfields(java.lang.String)[pri:6, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:56:43 IST" name="C390_verifyentertextinallfields" data-provider="fetchData" finished-at="2022-06-09T11:57:14 IST" duration-ms="31707" status="PASS">
+        <test-method signature="C408_hoveronpwdfield(java.lang.String)[pri:6, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:09:45 IST" name="C408_hoveronpwdfield" data-provider="fetchData" finished-at="2022-06-09T22:09:53 IST" duration-ms="7437" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -154,16 +154,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C390_verifyentertextinallfields -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:57:14 IST" name="afterMethod" finished-at="2022-06-09T11:57:16 IST" duration-ms="1510" status="PASS">
+        </test-method> <!-- C408_hoveronpwdfield -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:09:53 IST" name="afterMethod" finished-at="2022-06-09T22:09:53 IST" duration-ms="296" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:57:16 IST" name="beforeMethod" finished-at="2022-06-09T11:57:19 IST" duration-ms="2826" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:09:53 IST" name="beforeMethod" finished-at="2022-06-09T22:09:54 IST" duration-ms="1029" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C391_verifyfieldsmarkedwithanasterisk(java.lang.String)[pri:7, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:57:19 IST" name="C391_verifyfieldsmarkedwithanasterisk" data-provider="fetchData" finished-at="2022-06-09T11:57:23 IST" duration-ms="4029" status="PASS">
+        <test-method signature="C409_VerifyPasswordstrengthmeter(java.lang.String)[pri:7, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:09:54 IST" name="C409_VerifyPasswordstrengthmeter" data-provider="fetchData" finished-at="2022-06-09T22:10:04 IST" duration-ms="10474" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -173,16 +173,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C391_verifyfieldsmarkedwithanasterisk -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:57:23 IST" name="afterMethod" finished-at="2022-06-09T11:57:24 IST" duration-ms="733" status="PASS">
+        </test-method> <!-- C409_VerifyPasswordstrengthmeter -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:04 IST" name="afterMethod" finished-at="2022-06-09T22:10:05 IST" duration-ms="686" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:57:24 IST" name="beforeMethod" finished-at="2022-06-09T11:57:26 IST" duration-ms="2487" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:05 IST" name="beforeMethod" finished-at="2022-06-09T22:10:06 IST" duration-ms="1166" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C392_verifyemailtooltips(java.lang.String)[pri:8, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:57:26 IST" name="C392_verifyemailtooltips" data-provider="fetchData" finished-at="2022-06-09T11:57:30 IST" duration-ms="3984" status="PASS">
+        <test-method signature="C410_VerifyPasswordindicatormatch(java.lang.String)[pri:8, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:06 IST" name="C410_VerifyPasswordindicatormatch" data-provider="fetchData" finished-at="2022-06-09T22:10:14 IST" duration-ms="7745" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -192,16 +192,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C392_verifyemailtooltips -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:57:30 IST" name="afterMethod" finished-at="2022-06-09T11:57:31 IST" duration-ms="715" status="PASS">
+        </test-method> <!-- C410_VerifyPasswordindicatormatch -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:14 IST" name="afterMethod" finished-at="2022-06-09T22:10:14 IST" duration-ms="313" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:57:31 IST" name="beforeMethod" finished-at="2022-06-09T11:57:34 IST" duration-ms="2581" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:14 IST" name="beforeMethod" finished-at="2022-06-09T22:10:16 IST" duration-ms="1138" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C393_verifyemailerrormsg(java.lang.String)[pri:9, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:57:34 IST" name="C393_verifyemailerrormsg" data-provider="fetchData" finished-at="2022-06-09T11:57:47 IST" duration-ms="12807" status="PASS">
+        <test-method signature="C412_verifyenterinvaliddata(java.lang.String)[pri:9, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:16 IST" name="C412_verifyenterinvaliddata" data-provider="fetchData" finished-at="2022-06-09T22:10:28 IST" duration-ms="12500" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -211,16 +211,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C393_verifyemailerrormsg -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:57:47 IST" name="afterMethod" finished-at="2022-06-09T11:57:48 IST" duration-ms="1548" status="PASS">
+        </test-method> <!-- C412_verifyenterinvaliddata -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:28 IST" name="afterMethod" finished-at="2022-06-09T22:10:29 IST" duration-ms="420" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:57:48 IST" name="beforeMethod" finished-at="2022-06-09T11:57:51 IST" duration-ms="2766" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:29 IST" name="beforeMethod" finished-at="2022-06-09T22:10:30 IST" duration-ms="1130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C394_verifyblankerrormsg(java.lang.String)[pri:10, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:57:51 IST" name="C394_verifyblankerrormsg" data-provider="fetchData" finished-at="2022-06-09T11:58:39 IST" duration-ms="47541" status="PASS">
+        <test-method signature="C412_verifytermsofuseandprivacycheckbox(java.lang.String)[pri:10, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:30 IST" name="C412_verifytermsofuseandprivacycheckbox" data-provider="fetchData" finished-at="2022-06-09T22:10:41 IST" duration-ms="11478" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -230,16 +230,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C394_verifyblankerrormsg -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:58:39 IST" name="afterMethod" finished-at="2022-06-09T11:58:39 IST" duration-ms="903" status="PASS">
+        </test-method> <!-- C412_verifytermsofuseandprivacycheckbox -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:41 IST" name="afterMethod" finished-at="2022-06-09T22:10:42 IST" duration-ms="336" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:58:40 IST" name="beforeMethod" finished-at="2022-06-09T11:58:42 IST" duration-ms="2751" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:42 IST" name="beforeMethod" finished-at="2022-06-09T22:10:43 IST" duration-ms="1285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C396_verifyvalidregistration(java.lang.String)[pri:11, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:58:42 IST" name="C396_verifyvalidregistration" data-provider="fetchData" finished-at="2022-06-09T11:59:00 IST" duration-ms="17859" status="PASS">
+        <test-method signature="C413_verifyblankerrormsg(java.lang.String)[pri:11, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:43 IST" name="C413_verifyblankerrormsg" data-provider="fetchData" finished-at="2022-06-09T22:10:58 IST" duration-ms="14590" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -249,16 +249,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C396_verifyvalidregistration -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:59:00 IST" name="afterMethod" finished-at="2022-06-09T11:59:01 IST" duration-ms="1074" status="PASS">
+        </test-method> <!-- C413_verifyblankerrormsg -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:58 IST" name="afterMethod" finished-at="2022-06-09T22:10:58 IST" duration-ms="369" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:59:01 IST" name="beforeMethod" finished-at="2022-06-09T11:59:04 IST" duration-ms="2485" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:58 IST" name="beforeMethod" finished-at="2022-06-09T22:10:59 IST" duration-ms="1071" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C397_Verifyclasscodelink(java.lang.String)[pri:12, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:59:04 IST" name="C397_Verifyclasscodelink" data-provider="fetchData" finished-at="2022-06-09T11:59:13 IST" duration-ms="8923" status="PASS">
+        <test-method signature="C414_verifypage3loaded(java.lang.String)[pri:12, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:10:59 IST" name="C414_verifypage3loaded" data-provider="fetchData" finished-at="2022-06-09T22:11:16 IST" duration-ms="17227" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -268,20 +268,20 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C397_Verifyclasscodelink -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:59:13 IST" name="afterMethod" finished-at="2022-06-09T11:59:14 IST" duration-ms="838" status="PASS">
+        </test-method> <!-- C414_verifypage3loaded -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:11:16 IST" name="afterMethod" finished-at="2022-06-09T22:11:17 IST" duration-ms="352" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:59:14 IST" name="tearDownClass" finished-at="2022-06-09T11:59:14 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:11:17 IST" name="tearDownClass" finished-at="2022-06-09T22:11:17 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="stopReport()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration1Email_Test@563f38c4]" started-at="2022-06-09T11:59:14 IST" name="stopReport" finished-at="2022-06-09T11:59:16 IST" duration-ms="2330" status="PASS">
+        <test-method is-config="true" signature="stopReport()[pri:0, instance:icivics_testcases.Icivics_StudentRegistration2Email_Test@543295b0]" started-at="2022-06-09T22:11:17 IST" name="stopReport" finished-at="2022-06-09T22:11:18 IST" duration-ms="1325" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopReport -->
-      </class> <!-- icivics_testcases.Icivics_StudentRegistration1Email_Test -->
+      </class> <!-- icivics_testcases.Icivics_StudentRegistration2Email_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -34,7 +34,7 @@ public class Icivics_StudentRegistration2classcode_Test extends ProjectSpecificM
 		node = test.createNode("C399 - Can you select Back to proceed to the previous page?");
 		extent.attachReporter(reporter);
 		new Icivics_StudentReg2classcode(driver, node, prop).launchstudentURL(URL).verifyregistrationwithvaliddata()
-				.Clickbackbutton();
+				.verifyClickbackbutton();
 	}
 	// C400 - When you go Back, are your entries in all fields remembered?
 

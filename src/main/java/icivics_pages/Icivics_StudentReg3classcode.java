@@ -39,22 +39,18 @@ public class Icivics_StudentReg3classcode extends ProjectSpecificMethods {
 		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
 		classcode.clear();
 		classcode.sendKeys(getPropfile(gpropname2, "ClassCode"));
-		reportStep(getPropfile(gpropname2, "ClassCode") + " is entered as ClassCode", "Pass");
 
 		WebElement username = propElement(getPropfile(gpropname2, "username"));
 		String username1 = username.getText();
 		writePropfile("EducatorRegistration/username", "username", username1);
-		reportStep("User name is " + username1, "Pass");
 
 		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
 		firstname.clear();
 		firstname.sendKeys(getPropfile(gpropname2, "FirstName"));
-		reportStep(getPropfile(gpropname2, "FirstName") + " is entered as Firstname", "Pass");
 
 		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
 		lastname.clear();
 		lastname.sendKeys(getPropfile(gpropname2, "LastName"));
-		reportStep(getPropfile(gpropname2, "LastName") + " is entered as Lastname", "Pass");
 
 		String EmailId = getPropfile(gpropname2, "EmailID");
 
@@ -64,34 +60,35 @@ public class Icivics_StudentReg3classcode extends ProjectSpecificMethods {
 		String host = data[1];
 		String emailId = name + number + "@" + host;
 
-		reportStep(emailId + " email is used for creating account", "Pass");
 		writePropfile("StudentRegistration/email3", "email3", emailId);
 		WebElement email = propElement(getPropfile(gpropname2, "Emailaddress"));
 		email.clear();
 		email.sendKeys(emailId);
 
-		reportStep(getPropfile(gpropname2, "EmailID") + " is entered as Email", "Pass");
-
 		WebElement verifyemailele = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
 		verifyemailele.clear();
 		verifyemailele.sendKeys(emailId);
-		reportStep(getPropfile(gpropname2, "VerifyEmailID") + " is entered as Verify email", "Pass");
 
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
-		reportStep("Next Button is clicked", "Pass");
-		click(propElement(getPropfile(gpropname2, "nextbutton")));
+
+		WebElement nextbutton = propElement(getPropfile(gpropname2, "nextbutton"));
+		nextbutton.click();
 		waitTime(3000);
 		String pwd = "Test@12345";
 		String cpwd = "Test@12345";
 		WebElement password = propElement(getPropfile(gpropname3, "password1"));
-		clearAndType(password, pwd);
+		password.clear();
+		password.sendKeys(pwd);
 
 		WebElement confirmpassword = propElement(getPropfile(gpropname3, "confirmpassword1"));
-		clearAndType(confirmpassword, cpwd);
+		confirmpassword.clear();
+		confirmpassword.sendKeys(cpwd);
 
-		click(propElement(getPropfile(gpropname3, "agreechkbox")));
+		WebElement agreechkbox = propElement(getPropfile(gpropname3, "agreechkbox"));
+		agreechkbox.click();
 		waitTime(3000);
-		click(propElement(getPropfile(gpropname3, "finishbutton")));
+		WebElement finishbuttonclick = propElement(getPropfile(gpropname3, "finishbutton"));
+		finishbuttonclick.click();
 		waitTime(5000);
 
 		return this;
@@ -122,10 +119,9 @@ public class Icivics_StudentReg3classcode extends ProjectSpecificMethods {
 		waitTime(3000);
 		String generatedusername1 = generatedusername.getText();
 		if (!generatedusername1.isEmpty()) {
-			reportStep("GeneratedUsername field is not empty,it is pregenerated with " + generatedusername1
-					+ " and Verified successfully", "Pass");
+			reportStep("Generated username is displayed correctly", "Pass");
 		} else {
-			reportStep("GeneratedUsername field is empty", "Fail");
+			reportStep("Generated username is not displayed correctly", "Fail");
 		}
 
 		return this;
@@ -136,10 +132,9 @@ public class Icivics_StudentReg3classcode extends ProjectSpecificMethods {
 		WebElement usernametext = propElement(getPropfile(gpropname6, "UsernameText"));
 		String usernametext1 = usernametext.getText();
 		if (usernametext1.contains(usernametext1)) {
-			reportStep("Usernametext field is not empty,it is pregenerated with " + usernametext1
-					+ " and Verified successfully", "Pass");
+			reportStep("Note about username and password is visible", "Pass");
 		} else {
-			reportStep("Usernametext field is empty", "Fail");
+			reportStep("Note about username and password is visible", "Fail");
 		}
 
 		System.out.println(usernametext1 + "username text display");
@@ -152,11 +147,9 @@ public class Icivics_StudentReg3classcode extends ProjectSpecificMethods {
 		waitTime(3000);
 		String emailaddress1 = emailaddress.getText();
 		if (!emailaddress1.isEmpty()) {
-			reportStep(
-					"Email field is not empty,it is pregenerated with " + emailaddress1 + " and Verified successfully",
-					"Pass");
+			reportStep("Email address is displayed", "Pass");
 		} else {
-			reportStep("Email field is empty", "Fail");
+			reportStep("Email address is not displayed", "Fail");
 		}
 		return this;
 
@@ -167,23 +160,35 @@ public class Icivics_StudentReg3classcode extends ProjectSpecificMethods {
 		WebElement emailtext = propElement(getPropfile(gpropname6, "EmailText"));
 		String emailtext1 = emailtext.getText();
 		if (emailtext1.contains("You may also use this email address along with the password you entered to log in.")) {
-			reportStep(
-					"Emailtext field is not empty,it is pregenerated with " + emailtext1 + " and Verified successfully",
-					"Pass");
+			scrollToTheGivenWebElement(getPropfile(gpropname6, "Continuetomyassignmentbutton"));
+			reportStep("Note about username or email and password is visible", "Pass");
 		} else {
-			reportStep("Emailtext field is empty", "Fail");
+			reportStep("Note about username or email and password is visible", "Fail");
 		}
 
 		return this;
 	}
+
 	@Given("Verify Page goes to student My iCivics page")
 	public Icivics_StudentReg3classcode clickcontinuetomyassignmentbutton() {
 		WebElement continuetomyassignmentbutton = propElement(getPropfile(gpropname6, "Continuetomyassignmentbutton"));
-		continuetomyassignmentbutton.click();
+		if (continuetomyassignmentbutton.isDisplayed()) {
+			scrollToTheGivenWebElement(getPropfile(gpropname6, "Continuetomyassignmentbutton"));
+			reportStep("Continue to my assignment button is clicked ", "Pass");
+			continuetomyassignmentbutton.click();
+
+		} else {
+			reportStep("Continue to my assignment button is not clicked ", "Fail");
+		}
 		waitTime(3000);
-		switchToWindow(getPropfile(gpropname6, "Continuetomyassignmentbutton"));
 		System.out.println(driver.getTitle());
-		defaultContent();
+		WebElement Icivicslogo = propElement(getPropfile(gpropname6, "MyIcivicsLogo"));
+		if (Icivicslogo.isDisplayed()) {
+			reportStep("Page redirect to student My ICivics page and MyIcivics Logo is display ", "Pass");
+		} else {
+			reportStep("Page not redirect to student My iCivics page", "Fail");
+		}
+
 		return this;
 
 	}

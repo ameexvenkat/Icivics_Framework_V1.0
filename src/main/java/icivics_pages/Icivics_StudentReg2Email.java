@@ -54,17 +54,14 @@ public class Icivics_StudentReg2Email extends ProjectSpecificMethods {
 		WebElement username = propElement(getPropfile(gpropname2, "username"));
 		String username1 = username.getText();
 		writePropfile("StudentRegistration/username", "username", username1);
-		reportStep("User name is " + username1, "Pass");
 
 		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
 		firstname.clear();
 		firstname.sendKeys(getPropfile(gpropname2, "FirstName"));
-		reportStep(getPropfile(gpropname2, "FirstName") + " is entered as Firstname", "Pass");
 
 		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
 		lastname.clear();
 		lastname.sendKeys(getPropfile(gpropname2, "LastName"));
-		reportStep(getPropfile(gpropname2, "LastName") + " is entered as Lastname", "Pass");
 
 		String EmailId = getPropfile(gpropname2, "EmailID");
 
@@ -74,28 +71,27 @@ public class Icivics_StudentReg2Email extends ProjectSpecificMethods {
 		String host = data[1];
 		String emailId = name + number + "@" + host;
 
-		reportStep(emailId + " email is used for creating account", "Pass");
 		writePropfile("StudentRegistration/email3", "email3", emailId);
 		WebElement email = propElement(getPropfile(gpropname2, "Emailaddress"));
 		email.clear();
 		email.sendKeys(emailId);
 
-		reportStep(getPropfile(gpropname2, "EmailID") + " is entered as Email", "Pass");
-
 		WebElement verifyemailele = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
 		verifyemailele.clear();
 		verifyemailele.sendKeys(emailId);
-		reportStep(getPropfile(gpropname2, "VerifyEmailID") + " is entered as Verify email", "Pass");
+
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
-		reportStep("Next Button is clicked", "Pass");
-		click(propElement(getPropfile(gpropname2, "nextbutton")));
+
+		WebElement nextbuttonclick = propElement(getPropfile(gpropname2, "nextbutton"));
+		nextbuttonclick.click();
 		waitTime(3000);
 
 		return this;
 	}
 
 	public Icivics_StudentReg2Email clickbackbutton() throws InterruptedException, IOException {
-		click(propElement(getPropfile(gpropname3, "backbutton")));
+		WebElement backbuttonclick = propElement(getPropfile(gpropname3, "backbutton"));
+		backbuttonclick.click();
 		return this;
 	}
 
@@ -232,9 +228,9 @@ public class Icivics_StudentReg2Email extends ProjectSpecificMethods {
 		WebElement AgreetotermsCheckbox = propElement(getPropfile(gpropname3, "Agreetotermschkbox"));
 		if (AgreetotermsCheckbox.isDisplayed()) {
 			click(propElement(getPropfile(gpropname3, "Agreetotermschkbox")));
-			reportStep("verify checkbox " + AgreetotermsCheckbox.getText() + " is checked successfully ", "Pass");
+			reportStep("No email subscription checkbox appears", "Pass");
 		} else {
-			reportStep("verify checkbox is not checked successfully ", "Fail");
+			reportStep("email subscription checkbox appears", "Fail");
 		}
 		return this;
 	}
@@ -322,37 +318,39 @@ public class Icivics_StudentReg2Email extends ProjectSpecificMethods {
 		scrollToTheGivenWebElement(getPropfile(gpropname3, "finishbutton"));
 		String pwd = "gfgh^d$fthf&";
 		WebElement password = propElement(getPropfile(gpropname3, "password1"));
-		
+
 		click(propElement(getPropfile(gpropname3, "finishbutton")));
 		reportStep("Error msg Is displayed for password field", "Pass");
-		
+
 		clearAndType(password, pwd);
 		click(propElement(getPropfile(gpropname3, "finishbutton")));
 		reportStep("Error msg Is displayed for confirm password field", "Pass");
-	
+
 		return this;
 	}
-	
+
 	@Then("Verify Error message is in pink box at the top")
 	public Icivics_StudentReg2Email verifyenterinvaliddataerror() {
-			
+
 		String pwd = "gfgh^d$fthf&";
 		String cpwd = "gfgh^d$fthf&123";
 		WebElement password = propElement(getPropfile(gpropname3, "password1"));
-		clearAndType(password, pwd);
-		
+		password.clear();
+		password.sendKeys(pwd);
+
 		WebElement confirmpassword = propElement(getPropfile(gpropname3, "confirmpassword1"));
-		clearAndType(confirmpassword, cpwd);
-		
+		confirmpassword.clear();
+		confirmpassword.sendKeys(cpwd);
+
 		WebElement agreechkbox1 = propElement(getPropfile(gpropname3, "agreechkbox"));
-		
+
 		if (agreechkbox1.isSelected()) {
 			agreechkbox1.click();
 			reportStep("Accept terms is unchecked", "Pass");
 		}
-		
+
 		click(propElement(getPropfile(gpropname3, "finishbutton")));
-	
+
 		String expectedcolor = "rgba(169, 68, 66, 1)";
 		String expectedbgcolor = "rgba(242, 222, 222, 1)";
 		WebElement Errormsgbox = propElement(getPropfile(gpropname3, "Errormsgbox"));
@@ -365,15 +363,17 @@ public class Icivics_StudentReg2Email extends ProjectSpecificMethods {
 		}
 		return this;
 	}
+
 	@Given("Verify on Leaving terms of use and privacy checkbox unckecked Errors displayed in red")
 	public Icivics_StudentReg2Email verifytermsofuseandprivacycheckbox() {
 		String pwd = "Test@1234";
 		String cpwd = "Test@1234";
 		WebElement password = propElement(getPropfile(gpropname3, "password1"));
-		clearAndType(password, pwd);
-
+		password.clear();
+		password.sendKeys(pwd);
 		WebElement confirmpassword = propElement(getPropfile(gpropname3, "confirmpassword1"));
-		clearAndType(confirmpassword, cpwd);
+		confirmpassword.clear();
+		confirmpassword.sendKeys(cpwd);
 
 		WebElement agreechkbox1 = propElement(getPropfile(gpropname3, "agreechkbox"));
 
