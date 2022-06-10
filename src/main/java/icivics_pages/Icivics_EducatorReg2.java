@@ -127,7 +127,6 @@ public class Icivics_EducatorReg2 extends ProjectSpecificMethods {
 
 		WebElement username = propElement(getPropfile(gpropname, "username"));
 		String username2 = username.getText();
-		writePropfile("EducatorRegistration/username", "username", username2);
 		waitTime(3000);
 		String username1 = getPropfile("EducatorRegistration/username", "username");
 		if (!username1.equals(username2)) {
