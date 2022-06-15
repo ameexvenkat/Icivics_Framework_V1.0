@@ -60,33 +60,7 @@ public class Icivics_HomepageHeaderSigninMisc_Test extends ProjectSpecificMethod
 		extent.attachReporter(reporter);
 		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).verifysigninbutton();
 	}
-	// C34 - If you are signed in, do you see a My iCivics button instead of Sign
-	// In?
 
-	@Test(dataProvider = "fetchData", priority = 5)
-	public void C34_Verifymyicivicsbuttonafterlogin(String URL) throws IOException, InterruptedException {
-		node = test.createNode("C34 - If you are signed in, do you see a My iCivics button instead of Sign In?");
-		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).verifymyicvicsbuttonafterlogin();
-	}
-	// C35 - If you are signed in, do you see a My iCivics button instead of Sign
-	// In?
-
-	@Test(dataProvider = "fetchData", priority = 6)
-	public void C34_Verifymyicivicsbuttonafterlogin11(String URL) throws IOException, InterruptedException {
-		node = test.createNode("C34 - If you are signed in, do you see a My iCivics button instead of Sign In?");
-		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).verifymyicvicsbuttonafterlogin();
-	}
-	// C36 - When you select Sign In/My iCivics, does a submenu open below the
-	// button?
-
-	@Test(dataProvider = "fetchData", priority = 7)
-	public void C36_Verifymyicivicsbuttonsubmenu(String URL) throws IOException, InterruptedException {
-		node = test.createNode("C36 - When you select Sign In/My iCivics, does a submenu open below the button?");
-		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).signin().verifymyicvicsbuttonsubmenu();
-	}
 	// C37 - When you select Sign In, do you see links to Sign In, Register As a
 	// Student, Register As A Teacher in the submenu?
 
@@ -107,4 +81,28 @@ public class Icivics_HomepageHeaderSigninMisc_Test extends ProjectSpecificMethod
 		extent.attachReporter(reporter);
 		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).Signinbuttonelementsverification(URL);
 	}
+	// C41 - If you are viewing one of the pages in the Sign In submenu, is that
+	// page underlined in the submenu?
+
+	@Test(dataProvider = "fetchData", priority = 9)
+	public void C41_Verifysubmenuoptionisunderlined(String URL) throws IOException, InterruptedException {
+		node = test.createNode(
+				"C41 - If you are viewing one of the pages in the Sign In/My iCivics submenu, is that page underlined in the submenu?");
+		extent.attachReporter(reporter);
+		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).verifysigninbutton()
+				.verifyselectedsigninunderlined().verifyselectedregasmystuunderlined()
+				.verifyselectedregasmyteacherunderlined().Clickonsigninbuttonagain();
+	}
+
+	// C42 - When you select Sign In / My iCivics again while the submenu is open,
+	// does the submenu close?
+
+	@Test(dataProvider = "fetchData", priority = 9)
+	public void C42_Verifysubmenuoptionisunderlined(String URL) throws IOException, InterruptedException {
+		node = test.createNode(
+				"C42 - When you select Sign In / My iCivics again while the submenu is open, does the submenu close?");
+		extent.attachReporter(reporter);
+		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).Clickonsigninbuttonagain();
+	}
+
 }

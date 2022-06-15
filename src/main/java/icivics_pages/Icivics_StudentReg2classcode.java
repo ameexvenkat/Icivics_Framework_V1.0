@@ -15,10 +15,10 @@ import cucumber.api.java.en.When;
 import projectSpecific.base.ProjectSpecificMethods;
 
 public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
-	public String gpropname1 = "StudentRegistration/studentregistration1Email";
-	public String gpropname2 = "StudentRegistration/studentregistration1classcode";
-	public String gpropname3 = "StudentRegistration/studentregistration2Email";
-	public String gpropname4 = "StudentRegistration/studentregistration2classcode";
+	public String gpropname = "StudentRegistration/studentregistration1Email";
+	public String gpropname1 = "StudentRegistration/studentregistration1classcode";
+	public String gpropname2 = "StudentRegistration/studentregistration2Email";
+	public String gpropname3 = "StudentRegistration/studentregistration2classcode";
 
 	public Icivics_StudentReg2classcode(RemoteWebDriver driver, ExtentTest node, Properties prop) {
 		this.driver = driver;
@@ -33,45 +33,56 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 	}
 
 	public Icivics_StudentReg2classcode verifyregistrationwithvaliddata() throws InterruptedException, IOException {
-		WebElement link = propElement(getPropfile(gpropname2, "Link"));
-		link.click();
+		
+			WebElement link = propElement(getPropfile(gpropname1, "Link"));
+			link.click();
 
-		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
-		classcode.clear();
-		classcode.sendKeys(getPropfile(gpropname2, "ClassCode"));
-		reportStep(getPropfile(gpropname2, "ClassCode") + " is entered as ClassCode", "Pass");
+			WebElement classcode = propElement(getPropfile(gpropname1, "classcode"));
+			classcode.clear();
+			classcode.sendKeys(getPropfile(gpropname1, "ClassCode"));
+			reportStep(getPropfile(gpropname1, "ClassCode") + " is entered as ClassCode", "Pass");
 
-		WebElement username = propElement(getPropfile(gpropname2, "username"));
-		String username1 = username.getText();
-		writePropfile("EducatorRegistration/username", "username", username1);
-		reportStep("User name is " + username1, "Pass");
+			WebElement username = propElement(getPropfile(gpropname1, "username"));
+			String username1 = username.getText();
+			writePropfile("EducatorRegistration/username", "username", username1);
+			reportStep("User name is " + username1, "Pass");
 
-		WebElement firstname = propElement(getPropfile(gpropname2, "firstname"));
-		firstname.clear();
-		firstname.sendKeys(getPropfile(gpropname2, "FirstName"));
-		reportStep(getPropfile(gpropname2, "FirstName") + " is entered as Firstname", "Pass");
+			WebElement firstname = propElement(getPropfile(gpropname1, "firstname"));
+			firstname.clear();
+			firstname.sendKeys(getPropfile(gpropname1, "FirstName"));
+			reportStep(getPropfile(gpropname1, "FirstName") + " is entered as Firstname", "Pass");
 
-		WebElement lastname = propElement(getPropfile(gpropname2, "Lastname"));
-		lastname.clear();
-		lastname.sendKeys(getPropfile(gpropname2, "LastName"));
-		reportStep(getPropfile(gpropname2, "LastName") + " is entered as Lastname", "Pass");
+			WebElement lastname = propElement(getPropfile(gpropname1, "Lastname"));
+			lastname.clear();
+			lastname.sendKeys(getPropfile(gpropname1, "LastName"));
+			reportStep(getPropfile(gpropname1, "LastName") + " is entered as Lastname", "Pass");
 
-		WebElement emailele = propElement(getPropfile(gpropname2, "Emailaddress"));
-		emailele.clear();
-		emailele.sendKeys(getPropfile(gpropname2, "EmailID"));
-		reportStep(getPropfile(gpropname2, "EmailID") + " is entered as Email", "Pass");
+			String EmailId = getPropfile(gpropname1, "EmailID");
 
-		WebElement verifyemailele = propElement(getPropfile(gpropname2, "VerifyEmailaddress"));
-		verifyemailele.clear();
-		verifyemailele.sendKeys(getPropfile(gpropname2, "VerifyEmailID"));
-		reportStep(getPropfile(gpropname2, "VerifyEmailID") + " is entered as Verify email", "Pass");
+			long number = (long) Math.floor(Math.random() * 900000000L) + 10000000L;
+			String[] data = EmailId.split("@");
+			String name = data[0];
+			String host = data[1];
+			String emailId = name + number + "@" + host;
 
-		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
-		reportStep("Next Button is clicked", "Pass");
-		click(propElement(getPropfile(gpropname2, "nextbutton")));
-		waitTime(3000);
+			reportStep(emailId + " email is used for creating account", "Pass");
+			writePropfile("StudentRegistration/email3", "email3", emailId);
+			WebElement email = propElement(getPropfile(gpropname1, "Emailaddress"));
+			email.clear();
+			email.sendKeys(emailId);
 
-		return this;
+			reportStep(getPropfile(gpropname1, "EmailID") + " is entered as Email", "Pass");
+
+			WebElement verifyemailele = propElement(getPropfile(gpropname1, "VerifyEmailaddress"));
+			verifyemailele.clear();
+			verifyemailele.sendKeys(emailId);
+			reportStep(getPropfile(gpropname1, "VerifyEmailID") + " is entered as Verify email", "Pass");
+
+			scrollToTheGivenWebElement(getPropfile(gpropname1, "nextbutton"));
+			reportStep("Next Button is clicked", "Pass");
+			click(propElement(getPropfile(gpropname1, "nextbutton")));
+			waitTime(3000);
+			return this;
 	}
 
 	@And("View page 2 of student registration")
@@ -81,9 +92,9 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 		String Greycolor = "rgb(88, 89, 91)";
 		String Greencolor = "rgb(0, 178, 124)";
 
-		String Step1 = cssgetbefore(getPropfile(gpropname1, "step1ele"), cssvalue, Greencolor);
-		String Step2 = cssgetbefore(getPropfile(gpropname1, "step2ele"), cssvalue, Greencolor);
-		String Step3 = cssgetbefore(getPropfile(gpropname1, "step3ele"), cssvalue, Greycolor);
+		String Step1 = cssgetbefore(getPropfile(gpropname, "step1ele"), cssvalue, Greencolor);
+		String Step2 = cssgetbefore(getPropfile(gpropname, "step2ele"), cssvalue, Greencolor);
+		String Step3 = cssgetbefore(getPropfile(gpropname, "step3ele"), cssvalue, Greycolor);
 
 		if (Step1.equals(Greencolor) && Step2.equals(Greencolor) && Step3.equals(Greycolor)) {
 			reportStep("you are currently viewing page 2 in the breadcrumbs", "Pass");
@@ -93,19 +104,19 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("Click back from page 2")
+	@Given("Verify clicking on back button will take to previous page 2")
 
 	public Icivics_StudentReg2classcode Clickbackbutton() throws InterruptedException, IOException {
-		WebElement backbutton = propElement(getPropfile(gpropname3, "backbutton"));
+		WebElement backbutton = propElement(getPropfile(gpropname2, "backbutton"));
 		backbutton.click();
 		waitTime(3000);
 		String cssvalue = "background-color";
 		String Greycolor = "rgb(88, 89, 91)";
 		String Greencolor = "rgb(0, 178, 124)";
 
-		String Step1 = cssgetbefore(getPropfile(gpropname1, "step1ele"), cssvalue, Greencolor);
-		String Step2 = cssgetbefore(getPropfile(gpropname1, "step2ele"), cssvalue, Greycolor);
-		String Step3 = cssgetbefore(getPropfile(gpropname1, "step3ele"), cssvalue, Greycolor);
+		String Step1 = cssgetbefore(getPropfile(gpropname, "step1ele"), cssvalue, Greencolor);
+		String Step2 = cssgetbefore(getPropfile(gpropname, "step2ele"), cssvalue, Greycolor);
+		String Step3 = cssgetbefore(getPropfile(gpropname, "step3ele"), cssvalue, Greycolor);
 
 		if (Step1.equals(Greencolor) && Step2.equals(Greycolor) && Step3.equals(Greycolor)) {
 			reportStep("you are currently viewing page 1 in the breadcrumbs", "Pass");
@@ -118,8 +129,8 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 	@Given("Verify classcode is remembered.")
 	public Icivics_StudentReg2classcode verifyclasscoderemembered() throws IOException {
 
-		String classcodevalue = propElement(getPropfile(gpropname2, "classcode")).getAttribute("value");
-		if (classcodevalue.equals(getPropfile(gpropname2, "ClassCode"))) {
+		String classcodevalue = propElement(getPropfile(gpropname, "classcode")).getAttribute("value");
+		if (classcodevalue.equals(getPropfile(gpropname1, "ClassCode"))) {
 			reportStep("Classcode value " + classcodevalue + " is remembered ", "Pass");
 		} else {
 			reportStep("Classcode value " + classcodevalue + " is not remembered ", "Fail");
@@ -127,11 +138,25 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Given("Verify firstname is remembered.")
+	@And("Verify Username is regenerated.")
+	public Icivics_StudentReg2classcode verifyusernameisnotremembered() throws IOException {
+
+		WebElement username = propElement(getPropfile(gpropname, "username"));
+		String username2 = username.getText();
+		String username1 = getPropfile("StudentRegistration/username", "username");
+		if (!username1.equals(username2)) {
+			reportStep("Username is regenerated " + username1 + " & " + username2 + " are not same", "Pass");
+		} else {
+			reportStep("Username is not regenerated" + username1 + " & " + username2 + " are same", "Fail");
+		}
+		return this;
+	}
+
+	@And("Verify firstname is remembered.")
 	public Icivics_StudentReg2classcode verifyfirstnameremembered() throws IOException {
 
-		String firstnamevalue = propElement(getPropfile(gpropname2, "firstname")).getAttribute("value");
-		if (firstnamevalue.equals(getPropfile(gpropname2, "FirstName"))) {
+		String firstnamevalue = propElement(getPropfile(gpropname1, "firstname")).getAttribute("value");
+		if (firstnamevalue.equals(getPropfile(gpropname1, "FirstName"))) {
 			reportStep("Firstname value " + firstnamevalue + " is remembered ", "Pass");
 		} else {
 			reportStep("Firstname value " + firstnamevalue + " is not remembered ", "Fail");
@@ -139,10 +164,10 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@When("Verify lastname is remembered.")
+	@And("Verify lastname is remembered.")
 	public Icivics_StudentReg2classcode verifylastnameremembered() {
-		String lastnamevalue = propElement(getPropfile(gpropname2, "Lastname")).getAttribute("value");
-		if (lastnamevalue.equals(getPropfile(gpropname2, "LastName"))) {
+		String lastnamevalue = propElement(getPropfile(gpropname1, "Lastname")).getAttribute("value");
+		if (lastnamevalue.equals(getPropfile(gpropname1, "LastName"))) {
 			reportStep("lastname value " + lastnamevalue + " is remembered ", "Pass");
 		} else {
 			reportStep("lastname value " + lastnamevalue + " is not remembered ", "Fail");
@@ -153,8 +178,8 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 	@And("Verify email is remembered.")
 	public Icivics_StudentReg2classcode verifyemailremembered() {
 		scrollToTheGivenWebElement(getPropfile(gpropname1, "Emailaddresslabel"));
-		String email = propElement(getPropfile(gpropname2, "Emailaddress")).getAttribute("value");
-		if (email.equals(getPropfile(gpropname2, "EmailID"))) {
+		String email = propElement(getPropfile(gpropname1, "Emailaddress")).getAttribute("value");
+		if (email.equals(getPropfile(gpropname1, "EmailID"))) {
 			reportStep("email value " + email + " is remembered ", "Pass");
 		} else {
 			reportStep("email value " + email + " is not remembered ", "Fail");
@@ -165,8 +190,8 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 	@And("Verifyemail is remembered.")
 	public Icivics_StudentReg2classcode verifyemailfieldremembered() {
 		scrollToTheGivenWebElement(getPropfile(gpropname1, "Emailaddresslabel"));
-		String verifyemail = propElement(getPropfile(gpropname2, "VerifyEmailaddress")).getAttribute("value");
-		if (verifyemail.equals(getPropfile(gpropname2, "VerifyEmailID"))) {
+		String verifyemail = propElement(getPropfile(gpropname1, "VerifyEmailaddress")).getAttribute("value");
+		if (verifyemail.equals(getPropfile(gpropname1, "VerifyEmailID"))) {
 			reportStep("verify email value " + verifyemail + " is remembered ", "Pass");
 		} else {
 			reportStep("verify email value " + verifyemail + " is not remembered ", "Fail");
@@ -175,7 +200,7 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@When("Click terms of use Terms of use page opens in new tab")
+	@Given("Verify Terms of use page opens in new tab")
 	public Icivics_StudentReg2classcode clickontermsofuselink() throws IOException {
 		waitTime(5000);
 
@@ -189,7 +214,7 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 
 	}
 
-	@When("Click privacy policy Privacy policy page opens in new tab")
+	@Given("Verify Privacy policy page opens in new tab")
 	public Icivics_StudentReg2classcode clickprivacypolicy() {
 		WebElement privacypolicy = propElement(getPropfile(gpropname3, "privacypolicylink"));
 		privacypolicy.click();
@@ -200,23 +225,21 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 		return this;
 
 	}
-	@And("User on Page 2, Verify Sign Up for Emails field is not displayed")
-	public Icivics_StudentReg2classcode  verifypage2SignUpforEmailsfield() {
-		scrollToTheGivenWebElement(getPropfile(gpropname3, "finishbutton"));
-		
-		WebElement SignUplabelcheckbox = propElement(getPropfile(gpropname3, "SignUplabelcheckbox"));
-		//WebElement SignUptext = propElement(getPropfile(gpropname3, "SignUptext"));
-		if (SignUplabelcheckbox.isDisplayed() )
-	 {
-			reportStep(SignUplabelcheckbox.getText() + " checkbox and label is displayed", "Pass");
-		
-		} else {
-			reportStep("signuplabelcheckbox and text is not displayed", "Fail");
-		}
+
+	@Given("Verify No email subscription checkbox appears")
+	public Icivics_StudentReg2classcode verifypage2noemailsubscriptioncheckbox() {
+
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "finishbutton"));
+		WebElement AgreetotermsCheckbox = propElement(getPropfile(gpropname2, "Agreetotermschkbox"));
+		verifyDisplayed(AgreetotermsCheckbox);
+
+		WebElement Signuptobefirsttoknowcheckbox = propElement(getPropfile(gpropname2, "Signuptobefirstchkbox"));
+		verifyDisplayed(Signuptobefirsttoknowcheckbox);
+
 		return this;
 	}
 
-	@When("Hover over password field Tooltip appears")
+	@Given("Verify Hover over password field")
 	public Icivics_StudentReg2classcode hoveronpwdfield() throws InterruptedException {
 		String pwd = getPropfile(gpropname3, "password");
 		mouseOverAction(pwd);
@@ -232,7 +255,7 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@When("Enter password Indicator for strength should change according to pwd strength")
+	@Given("Verify Indicator for strength should change according to pwd strength")
 	public Icivics_StudentReg2classcode VerifyPasswordstrengthmeter() {
 		String pwd = getPropfile(gpropname3, "Passwordvalueweak");
 
@@ -294,6 +317,7 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 
 		return this;
 	}
+
 	@Given("Enter invalid Password, Confirm Password and verify the error message and its displayed in red")
 	public Icivics_StudentReg2classcode verifyenterinvaliddata() {
 
@@ -337,7 +361,8 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 		}
 		return this;
 	}
-	@Then("Leave terms of use and privacy checkbox unckecked Errors should displayed in red")
+
+	@Given("Verify Leave terms of use and privacy checkbox unckecked Errors is displayed in red")
 	public Icivics_StudentReg2classcode verifytermsofuseandprivacycheckbox() {
 		String pwd = "Test@1234";
 		String cpwd = "Test@1234";
@@ -383,7 +408,7 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@When("Leave password or confirm password blank check error messages")
+	@Given("Verify Leave password or confirm password blank check error messages")
 	public Icivics_StudentReg2classcode verifyblankerrormsg() {
 		scrollToTheGivenWebElement(getPropfile(gpropname3, "finishbutton"));
 		String pwd = "gfgh^d$fthf&";
@@ -399,8 +424,9 @@ public class Icivics_StudentReg2classcode extends ProjectSpecificMethods {
 
 		return this;
 	}
-	@When("Fill out required fields, passwords match, terms of use is checked and it should Goes on to next page")
-	public Icivics_StudentReg2classcode  verifypage3loaded() throws InterruptedException, IOException {
+
+	@Given("Verify Fill out required fields, passwords match, terms of use is checked")
+	public Icivics_StudentReg2classcode verifypage3loaded() throws InterruptedException, IOException {
 		String pwd = "Test@12345";
 		String cpwd = "Test@12345";
 		WebElement password = propElement(getPropfile(gpropname3, "password1"));

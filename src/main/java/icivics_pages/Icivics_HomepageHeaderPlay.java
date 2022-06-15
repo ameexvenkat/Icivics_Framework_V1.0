@@ -33,19 +33,34 @@ public class Icivics_HomepageHeaderPlay extends ProjectSpecificMethods {
 
 	}
 
-	@Given("On Clicking  play button at top Play menu should open")
+	@Then("Verify Click on play button at top play menu should open")
 	public Icivics_HomepageHeaderPlay verifyplaysubmenu() {
 
-		click(propElement(getPropfile(gpropname2, "Playbutton")));
-		waitTime(3000);
-		reportStep("playsubmenu display successfully", "Pass");
-		List<WebElement> dropdowns = driver.findElements(By.xpath("(//*[@class='dropdown-menu'])[5]"));
+		WebElement playbutton = propElement(getPropfile(gpropname2, "Playbutton"));
+		if (playbutton.isDisplayed()) {
+			playbutton.click();
+			reportStep("playbutton submenu is display ", "Pass");
+		} else {
+			reportStep("playsubmenu  is not display ", "Pass");
+		}
 
-		for (WebElement dropdown : dropdowns) {
-			System.out.println(dropdown.getText());
+		return this;
+	}
+
+	@Then("Verify Click on play button at top play menu should open")
+	public Icivics_HomepageHeaderPlay verifyplaysubmenulist() {
+
+		List<WebElement> allOptions = driver.findElements(By.xpath("(//*[@class='dropdown-menu'])[5]/li"));
+
+		reportStep("playbutton submenu count is" + " " + allOptions.size(), "Pass");
+		for (int i = 0; i < allOptions.size(); i++) {
+			WebElement optionelement = allOptions.get(i);
+			String optionsText = optionelement.getText();
+
+			reportStep("Playbutton submenu is " + " " + optionsText, "Pass");
+
 		}
 		return this;
-
 	}
 
 	@Then("Click on each link on play menu and each should navigate to corresponding page ")
@@ -182,13 +197,39 @@ public class Icivics_HomepageHeaderPlay extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("Click the play menu,menu opens click play menu again play menu should close")
+	@Given("Verify selected page is underlined")
+	public Icivics_HomepageHeaderPlay verifyselectedoptionunderlined() {
+		click(propElement(getPropfile(gpropname2, "Playbutton")));
+		waitTime(3000);
+		WebElement ec = driver.findElement(By.xpath("(//a[text()='Executive Command'])[2]"));
+		ec.click();
+		waitTime(3000);
+		click(propElement(getPropfile(gpropname2, "Playbutton")));
+		waitTime(3000);
+		String cssValue = driver.findElement(By.xpath("(//a[text()='Executive Command'])[2]"))
+				.getCssValue("text-decoration");
+		System.out.println(cssValue);
+		if (cssValue.contains("underline")) {
+
+			reportStep("Selected page is underlined", "Pass");
+
+		} else {
+			reportStep("Selected page is not underlined", "Fail");
+		}
+		return this;
+	}
+
+	@Given("Click on the play menu again and verify submenu is close")
 
 	public Icivics_HomepageHeaderPlay clickplaybuttonagain() {
 
-		click(propElement(getPropfile(gpropname2, "Playbutton")));
-		waitTime(5000);
-		click(propElement(getPropfile(gpropname2, "Playbutton")));
+		WebElement playbutton = propElement(getPropfile(gpropname2, "Playbutton"));
+		if (playbutton.isDisplayed()) {
+			click(propElement(getPropfile(gpropname2, "Playbutton")));
+			reportStep("On clicking Playbutton again submenu is close", "Pass");
+		} else {
+			reportStep("Playbutton submenu is not close", "Pass");
+		}
 		return this;
 
 	}

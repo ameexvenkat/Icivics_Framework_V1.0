@@ -78,7 +78,7 @@ public class Icivics_StudentRegistration2classcode_Test extends ProjectSpecificM
 					"C405- As a student, are you NOT prompted to sign up for the newsletter?");
 			extent.attachReporter(reporter);
 			new Icivics_StudentReg2classcode(driver, node, prop).launchstudentURL(URL).verifyregistrationwithvaliddata()
-					.verifypage2SignUpforEmailsfield() ;
+					.verifypage2noemailsubscriptioncheckbox() ;
 		}
 	// C408- If you hover over the password field, do you see a hover tooltip with
 	// appropriate text?

@@ -27,7 +27,7 @@ Then Go to register as student page
 
 
 Scenario: C432 - If you enter invalid information in a required field and select Next, do you receive an appropriate error message?
-When Enter invalid class code and improper email address error msg should display 
+When Verify on entering invalid class code and improper email address error msg should display
 
 Scenario: C433 - If you leave a required field blank and select Next, do you receive an appropriate error message?
 Then Error messages will display if any of 5 are left blank

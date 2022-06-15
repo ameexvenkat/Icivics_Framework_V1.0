@@ -20,4 +20,5 @@ Then Verify myicivicsbutton should not present for anonymous user it should pres
 Then Verify afterlogin myicivicsbutton should have Hand cursor should appear over buttons Tooltip appears after hover.
 Scenario: C7-Does the header resize responsively at different resolutions?
 When Header is resize it should should turn into hamburger menu when its small enough
+Then Verify card is displaying in list pattern on resizing the window
 

@@ -328,7 +328,7 @@ public class Icivics_EducatorReg extends ProjectSpecificMethods {
 
 	}
 
-	@Then("On teach page, check all links of Play button")
+	@Then("On teach page, check all links of Teach button")
 	public Icivics_EducatorReg Playbuttonelementsverification(String URL) throws IOException {
 		String propname = "EducatorRegistration/playdropdown";
 		String PlayButton = getPropfile(propname, "PlayButtonElement");

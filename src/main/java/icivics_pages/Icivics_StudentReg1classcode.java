@@ -50,12 +50,7 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 			reportStep("email field is not displayed", "Fail");
 		}
 
-		String CLbox = email.getAttribute("value");
-		if (CLbox.isEmpty()) {
-			reportStep("Emailaddress text box is Blank", "Pass");
-		} else {
-			reportStep("Emailaddress text box is not Blank", "Fail");
-		}
+		
 		WebElement VerifyEmailaddresslabel = propElement(getPropfile(gpropname2, "VerifyEmailaddresslabel"));
 		if (VerifyEmailaddresslabel.isDisplayed()) {
 			reportStep("VerifyEmailaddress label is displayed", "Pass");
@@ -71,12 +66,7 @@ public class Icivics_StudentReg1classcode extends ProjectSpecificMethods {
 			reportStep("verifyemail field is not displayed", "Fail");
 		}
 
-		String CLbox2 = verifyemail.getAttribute("value");
-		if (CLbox2.isEmpty()) {
-			reportStep("VerifyEmailaddress text box is Blank", "Pass");
-		} else {
-			reportStep("VerifyEmailaddress box is not Blank", "Fail");
-		}
+		
 		return this;
 	}
 

@@ -25,7 +25,7 @@ public class Icivics_HomepageHeaderTeach_Test extends ProjectSpecificMethods {
 	public void C15_Verifyteachsubmenu(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C15 - When you select Teach, does a submenu open below the Teach button?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderTeach(driver, node, prop).launchURL(URL).verifyteachsubmenu();
+		new Icivics_HomepageHeaderTeach(driver, node, prop).launchURL(URL).verifyteachmenu() ;
 	}
 	// C16 - Do you see links to Search Our Library, Scope and Sequence,
 	// Professional Development, Get Started, Educatory Community, and FAQ in the
@@ -36,7 +36,7 @@ public class Icivics_HomepageHeaderTeach_Test extends ProjectSpecificMethods {
 		node = test.createNode(
 				"C16 - Do you see links to Search Our Library, Scope and Sequence, Professional Development, Get Started, Educatory Community, and FAQ in the submenu?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderTeach(driver, node, prop).launchURL(URL).verifymenuoptionscount();
+		new Icivics_HomepageHeaderTeach(driver, node, prop).launchURL(URL).verifyteachmenu().verifyteachmenulist();
 	}
 	// C17 - When you select a link in the submenu, are you navigated to the
 	// appropriate page?
@@ -48,15 +48,7 @@ public class Icivics_HomepageHeaderTeach_Test extends ProjectSpecificMethods {
 		extent.attachReporter(reporter);
 		new Icivics_HomepageHeaderTeach(driver, node, prop).launchURL(URL).Teachbuttonelementsverification(URL);
 	}
-	// C19 - If you are viewing one of the pages in the Teach submenu, is that page
-	// underlined in the submenu?
-
-	@Test(dataProvider = "fetchData", priority = 3)
-	public void C19_Verifyteachbuttonelements1(String URL) throws IOException, InterruptedException {
-		node = test.createNode("C19 - If you are viewing one of the pages in the Teach submenu, is that page underlined in the submenu?");
-		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderTeach(driver, node, prop).launchURL(URL).Teachbuttonelementsverification(URL);
-	}
+	
 
 	// C20 - When you select Teach again while the submenu is open, does the submenu
 	// close?
@@ -65,7 +57,7 @@ public class Icivics_HomepageHeaderTeach_Test extends ProjectSpecificMethods {
 	public void C20_verifyclickteachbuttonagain(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C20 - When you select Teach again while the submenu is open, does the submenu close?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderTeach(driver, node, prop).launchURL(URL).clickteachbuttonagain();
+		new Icivics_HomepageHeaderTeach(driver, node, prop).launchURL(URL).verifyteachmenu().clickteachbuttonagain();
 	}
 
 }

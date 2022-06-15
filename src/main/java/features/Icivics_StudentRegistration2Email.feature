@@ -2,37 +2,38 @@ Feature: Student Registration Class Code and Email Validation
 
 Scenario: C398 - Can you tell which page you are currently viewing in the breadcrumbs?
 Given Launch the icivis Studentregistration email URL
-And View page 2 of student registration
+Then verify Current page count is 2 and print
 
 Scenario: C399- Can you select Back to proceed to the previous page?
-Then Click back from page 2
+Given Verify clicking on back button will take to previous page 1
 
 
 Scenario: C400- When you go Back, are your entries in all fields remembered?
-Given Verify firstname is remembered.
-When Verify lastname is remembered.
+Given Verify Username is regenerated.
+When Verify firstname is remembered.
+And Verify lastname is remembered.
 And Verify email is remembered.
-And Verifyemail is remembered.
-
+And Verify verifyemail is remembered.
 
 
 Scenario: C403- If you select the Terms of Use link, does the iCivics Terms of Use page open in a new tab?
-When Click terms of use Terms of use page opens in new tab
-
-
+Given Click terms of use link Terms of use page should opens in new tab
 
 Scenario: C404- If you select the Privacy Policy link, does the iCivics Privacy Policy page open in a new tab?
-When Click privacy policy Privacy policy page opens in new tab
+Given Click privacy policy link Privacy policy page should opens in new tab
 
 
 Scenario: C405- As a student, are you NOT prompted to sign up for the newsletter?
-And User on Page 2, Verify Sign Up for Emails field is not displayed
+Given View page 2 of student registration no email subscription checkbox should appears
+
+
+
 Scenario: C408- If you hover over the password field, do you see a hover tooltip with appropriate text?
-When Hover over password field Tooltip appears
+Given verify the Tooltip Text by Hovering on password field
 
 
 Scenario: C409- When you enter text in the Password field, do you see text indicating the current password's strength?
-When  Enter password Indicator for strength should change according to pwd strength
+Given Verify the password strength Indicator is changing according to password strength
 
 
 Scenario: C410- When you enter text in the Confirm Password field do you see text indicating whether the two passwords match?

@@ -32,8 +32,18 @@ public class Icivics_HomepageHeaderplay_Test extends ProjectSpecificMethods {
 	// submenu?
 
 	@Test(dataProvider = "fetchData", priority = 1)
-	public void C9_Verifyplaybuttonelements(String URL) throws IOException, InterruptedException {
+	public void C9_Verifyplaybuttonlist(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C9- Do you see links to All Games, as well as each individual game in the submenu?");
+		extent.attachReporter(reporter);
+		new Icivics_HomepageHeaderPlay(driver, node, prop).launchURL(URL).verifyplaysubmenu().verifyplaysubmenulist();
+	}
+	// C10 - When you select a link in the submenu, are you navigated to the
+	// appropriate page?
+
+	@Test(dataProvider = "fetchData", priority = 1)
+	public void C10_Verifyplaybuttonelements(String URL) throws IOException, InterruptedException {
+		node = test
+				.createNode("C10- When you select a link in the submenu, are you navigated to the appropriate page?");
 		extent.attachReporter(reporter);
 		new Icivics_HomepageHeaderPlay(driver, node, prop).launchURL(URL).Playbuttonelementsverification(URL);
 	}
@@ -46,7 +56,7 @@ public class Icivics_HomepageHeaderplay_Test extends ProjectSpecificMethods {
 		node = test.createNode(
 				"C12- If you are viewing one of the pages in the Play submenu, is that page underlined in the submenu?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderPlay(driver, node, prop).launchURL(URL).verifypageisunderlined();
+		new Icivics_HomepageHeaderPlay(driver, node, prop).launchURL(URL).verifyselectedoptionunderlined();
 	}
 
 	// C13 - When you select Play again while the submenu is open, does the submenu
@@ -56,6 +66,6 @@ public class Icivics_HomepageHeaderplay_Test extends ProjectSpecificMethods {
 	public void C13_Verifyclickonplaybuttonagain(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C13- When you select Play again while the submenu is open, does the submenu close?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderPlay(driver, node, prop).launchURL(URL).clickplaybuttonagain();
+		new Icivics_HomepageHeaderPlay(driver, node, prop).launchURL(URL).verifyplaysubmenu().clickplaybuttonagain();
 	}
 }

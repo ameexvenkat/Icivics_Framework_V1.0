@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="10" total="11" passed="0" failed="1" skipped="0">
+<testng-results ignored="9" total="10" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-01T22:08:14 IST" name="Default suite" finished-at="2022-06-01T22:08:31 IST" duration-ms="17039">
+  <suite started-at="2022-06-15T21:19:17 IST" name="Default suite" finished-at="2022-06-15T21:20:05 IST" duration-ms="48089">
     <groups>
     </groups>
-    <test started-at="2022-06-01T22:08:14 IST" name="Default test" finished-at="2022-06-01T22:08:31 IST" duration-ms="17039">
+    <test started-at="2022-06-15T21:19:17 IST" name="Default test" finished-at="2022-06-15T21:20:05 IST" duration-ms="48089">
       <class name="icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@543295b0]" started-at="2022-06-01T22:08:14 IST" name="startReport" finished-at="2022-06-01T22:08:14 IST" duration-ms="526" status="PASS">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@563f38c4]" started-at="2022-06-15T21:19:16 IST" name="startReport" finished-at="2022-06-15T21:19:17 IST" duration-ms="622" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@543295b0]" started-at="2022-06-01T22:08:14 IST" name="setValues" finished-at="2022-06-01T22:08:14 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@563f38c4]" started-at="2022-06-15T21:19:17 IST" name="setValues" finished-at="2022-06-15T21:19:17 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setValues -->
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@543295b0]" started-at="2022-06-01T22:08:14 IST" name="setUpClass" finished-at="2022-06-01T22:08:14 IST" duration-ms="95" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@563f38c4]" started-at="2022-06-15T21:19:17 IST" name="setUpClass" finished-at="2022-06-15T21:19:17 IST" duration-ms="89" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@543295b0]" started-at="2022-06-01T22:08:14 IST" name="report" finished-at="2022-06-01T22:08:14 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@563f38c4]" started-at="2022-06-15T21:19:17 IST" name="report" finished-at="2022-06-15T21:19:17 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- report -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@543295b0]" started-at="2022-06-01T22:08:15 IST" name="beforeMethod" finished-at="2022-06-01T22:08:17 IST" duration-ms="1959" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@563f38c4]" started-at="2022-06-15T21:19:18 IST" name="beforeMethod" finished-at="2022-06-15T21:19:20 IST" duration-ms="1979" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C38_Verifysigninbuttonsubmenu(java.lang.String)[pri:9, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@543295b0]" started-at="2022-06-01T22:08:17 IST" name="C38_Verifysigninbuttonsubmenu" data-provider="fetchData" finished-at="2022-06-01T22:08:31 IST" duration-ms="13920" status="FAIL">
+        <test-method signature="C41_Verifysubmenuoptionisunderlined(java.lang.String)[pri:9, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@563f38c4]" started-at="2022-06-15T21:19:20 IST" name="C41_Verifysubmenuoptionisunderlined" data-provider="fetchData" finished-at="2022-06-15T21:20:05 IST" duration-ms="44908" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,60 +35,18 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[inStream parameter is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: inStream parameter is null
-at java.base/java.util.Objects.requireNonNull(Objects.java:233)
-at java.base/java.util.Properties.load(Properties.java:407)
-at selenium.base.SeleniumBase.getPropfile(SeleniumBase.java:1870)
-at icivics_pages.Icivics_HomepageHeaderSigninMisc.Signinbuttonelementsverification(Icivics_HomepageHeaderSigninMisc.java:171)
-at icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test.C38_Verifysigninbuttonsubmenu(Icivics_HomepageHeaderSigninMisc_Test.java:108)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C38_Verifysigninbuttonsubmenu -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@543295b0]" started-at="2022-06-01T22:08:31 IST" name="afterMethod" finished-at="2022-06-01T22:08:31 IST" duration-ms="362" status="PASS">
+        </test-method> <!-- C41_Verifysubmenuoptionisunderlined -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@563f38c4]" started-at="2022-06-15T21:20:05 IST" name="afterMethod" finished-at="2022-06-15T21:20:05 IST" duration-ms="416" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@543295b0]" started-at="2022-06-01T22:08:31 IST" name="tearDownClass" finished-at="2022-06-01T22:08:31 IST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@563f38c4]" started-at="2022-06-15T21:20:05 IST" name="tearDownClass" finished-at="2022-06-15T21:20:05 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="stopReport()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@543295b0]" started-at="2022-06-01T22:08:31 IST" name="stopReport" finished-at="2022-06-01T22:08:32 IST" duration-ms="391" status="PASS">
+        <test-method is-config="true" signature="stopReport()[pri:0, instance:icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test@563f38c4]" started-at="2022-06-15T21:20:05 IST" name="stopReport" finished-at="2022-06-15T21:20:06 IST" duration-ms="384" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopReport -->

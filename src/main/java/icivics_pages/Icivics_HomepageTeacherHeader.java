@@ -2,7 +2,9 @@ package icivics_pages;
 
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -30,6 +32,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		return this;
 
 	}
+
 	public Icivics_HomepageTeacherHeader signin2() {
 		click(propElement(getPropfile(gpropname1, "Signinbutton")));
 		click(propElement(getPropfile(gpropname1, "Signinlink")));
@@ -101,6 +104,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 
 		return this;
 	}
+
 	@And("Verify after login MyIcivics buttons should appear in the top/right")
 	public Icivics_HomepageTeacherHeader Verifymyicivicsbuttondisplayafterlogin() {
 		WebElement signinbutton = propElement(getPropfile(gpropname1, "Signinbutton"));
@@ -288,8 +292,8 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 	}
 
 	@Then("Verify afterlogin myicivicsbutton should have Hand cursor should appear over buttons Tooltip appears after hover.")
-		public Icivics_HomepageTeacherHeader verifymyicvicsbuttonhoverafterlogin() {
-		
+	public Icivics_HomepageTeacherHeader verifymyicvicsbuttonhoverafterlogin() {
+
 		click(propElement(getPropfile(gpropname1, "Signinbutton")));
 		click(propElement(getPropfile(gpropname1, "Signinlink")));
 		WebElement username = propElement(getPropfile(gpropname1, "Username"));
@@ -313,6 +317,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		waitTime(3000);
 		return this;
 	}
+
 	public Icivics_HomepageTeacherHeader verifymyicvicsbuttonhover() {
 		String myicivicsbuttonhover = getPropfile(gpropname2, "Myicivicsbutton2");
 		mouseOverAction(myicivicsbuttonhover);
@@ -329,7 +334,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		waitTime(3000);
 		return this;
 	}
-	
+
 	public Icivics_HomepageTeacherHeader verifyshopbuttonhover2() {
 
 		String Shopbuttonhover = getPropfile(gpropname1, "shopbutton2");
@@ -351,29 +356,188 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 
 	@When("Header is resize it should should turn into hamburger menu when its small enough")
 	public Icivics_HomepageTeacherHeader resizeheader() {
+
 		Dimension d = new Dimension(768, 1024);
 		// Resize the current window to the given dimension
 		driver.manage().window().setSize(d);
 		takeSnap();
 		waitTime(3000);
-
 		reportStep("Ipad potrait resize is successfull", "Pass");
+
+		WebElement hamburgericon1 = propElement(getPropfile(gpropname2, "Hamburgericon"));
+
+		if (hamburgericon1.isDisplayed()) {
+			reportStep("Hamburger Icon is displayed successfully", "Pass");
+		} else {
+			reportStep("Hamburger Icon is not displayed successfully", "Fail");
+
+		}
+		WebElement cardtitle = driver
+				.findElement(By.xpath("//h2[contains(text(),'Foundations of Government')and @class='field-content']"));
+		if (cardtitle.isDisplayed()) {
+			reportStep("cardtitle is displayed successfully", "Pass");
+		} else {
+			reportStep("cardtitle Icon is not displayed successfully", "Fail");
+
+		}
+
 		Dimension d1 = new Dimension(1024, 768);
 		driver.manage().window().setSize(d1);
-
 		waitTime(3000);
-
 		System.out.println(driver.manage().window().getSize());
 		takeSnap();
 		reportStep("Ipad landscape resize is successfull", "Pass");
+		WebElement hamburgericon2 = propElement(getPropfile(gpropname2, "Hamburgericon"));
+		if (hamburgericon2.isDisplayed()) {
+			reportStep("Hamburger Icon is displayed successfully", "Pass");
+		} else {
+			reportStep("Hamburger Icon is not displayed successfully", "Fail");
+
+		}
+		WebElement cardtitle2 = driver
+				.findElement(By.xpath("//h2[contains(text(),'Influence Library')and @class='field-content']"));
+		if (cardtitle2.isDisplayed()) {
+			reportStep("cardtitle is displayed successfully", "Pass");
+		} else {
+			reportStep("cardtitle Icon is not displayed successfully", "Fail");
+
+		}
 		Dimension d2 = new Dimension(375, 667);
 		driver.manage().window().setSize(d2);
 		waitTime(3000);
-
 		System.out.println(driver.manage().window().getSize());
 		takeSnap();
 		reportStep("Iphone potrait resize is successfull", "Pass");
+		WebElement hamburgericon3 = propElement(getPropfile(gpropname2, "Hamburgericon"));
+		if (hamburgericon3.isDisplayed()) {
+			reportStep("Hamburger Icon is displayed successfully", "Pass");
+		} else {
+			reportStep("Hamburger Icon is not displayed successfully", "Fail");
+
+		}
+		Dimension d3 = new Dimension(667, 375);
+		driver.manage().window().setSize(d3);
+		waitTime(3000);
+		System.out.println(driver.manage().window().getSize());
+		takeSnap();
+		reportStep("Iphone landscape resize is successfull", "Pass");
+		WebElement hamburgericon4 = propElement(getPropfile(gpropname2, "Hamburgericon"));
+		if (hamburgericon4.isDisplayed()) {
+			reportStep("Hamburger Icon is displayed successfully", "Pass");
+		} else {
+			reportStep("Hamburger Icon is not displayed successfully", "Fail");
+
+		}
+		Dimension d4 = new Dimension(360, 740);
+		driver.manage().window().setSize(d4);
+		waitTime(3000);
+		System.out.println(driver.manage().window().getSize());
+		takeSnap();
+		reportStep("Samsung Galaxy potrait resize is successfull", "Passs");
+		WebElement hamburgericon5 = propElement(getPropfile(gpropname2, "Hamburgericon"));
+		if (hamburgericon5.isDisplayed()) {
+			reportStep("Hamburger Icon is displayed successfully", "Pass");
+		} else {
+			reportStep("Hamburger Icon is not displayed successfully", "Fail");
+
+		}
+
+		Dimension d5 = new Dimension(740, 360);
+		driver.manage().window().setSize(d5);
+		waitTime(3000);
+		System.out.println(driver.manage().window().getSize());
+		takeSnap();
+		reportStep("Samsung Galaxy landscape resize is successfull", "Passs");
+		WebElement hamburgericon6 = propElement(getPropfile(gpropname2, "Hamburgericon"));
+		if (hamburgericon6.isDisplayed()) {
+			reportStep("Hamburger Icon is displayed successfully", "Pass");
+		} else {
+			reportStep("Hamburger Icon is not displayed successfully", "Fail");
+
+		}
 		return this;
 
+	}
+
+	@Then("Verify card is displaying in list pattern on resizing the window")
+	public Icivics_HomepageTeacherHeader carddisplayinlistpattern() {
+		Dimension d = new Dimension(768, 1024);
+		// Resize the current window to the given dimension
+		driver.manage().window().setSize(d);
+
+		WebElement cardtitle = propElement(getPropfile(gpropname2, "CardTitle1"));
+		if (cardtitle.isDisplayed()) {
+			reportStep("cardtitle is displayed successfully", "Pass");
+		} else {
+			reportStep("cardtitle Icon is not displayed successfully", "Fail");
+
+		}
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,350)", "CardTitle1");
+		Dimension d1 = new Dimension(1024, 768);
+		driver.manage().window().setSize(d1);
+		WebElement cardtitle1 = propElement(getPropfile(gpropname2, "CardTitle2"));
+		if (cardtitle1.isDisplayed()) {
+			reportStep("cardtitle is displayed successfully", "Pass");
+		} else {
+			reportStep("cardtitle Icon is not displayed successfully", "Fail");
+
+		}
+		JavascriptExecutor js1 = (JavascriptExecutor) driver;
+		js1.executeScript("window.scrollBy(0,350)", "CardTitle2");
+		reportStep("Ipad landscape resize is successfull", "Pass");
+
+		Dimension d2 = new Dimension(375, 667);
+		driver.manage().window().setSize(d2);
+		waitTime(3000);
+		WebElement cardtitle2 = propElement(getPropfile(gpropname2, "CardTitle3"));
+		if (cardtitle2.isDisplayed()) {
+			reportStep("cardtitle is displayed successfully", "Pass");
+		} else {
+			reportStep("cardtitle Icon is not displayed successfully", "Fail");
+
+		}
+		JavascriptExecutor js2 = (JavascriptExecutor) driver;
+		js2.executeScript("window.scrollBy(0,350)", "CardTitle3");
+		reportStep("Iphone potrait resize is successfull", "Pass");
+
+		Dimension d3 = new Dimension(667, 375);
+		driver.manage().window().setSize(d3);
+		waitTime(3000);
+		WebElement cardtitle3 = propElement(getPropfile(gpropname2, "CardTitle4"));
+		if (cardtitle3.isDisplayed()) {
+			reportStep("cardtitle is displayed successfully", "Pass");
+		} else {
+			reportStep("cardtitle Icon is not displayed successfully", "Fail");
+
+		}
+		JavascriptExecutor js3 = (JavascriptExecutor) driver;
+		js3.executeScript("window.scrollBy(0,350)", "CardTitle4");
+		reportStep("Iphone landscape resize is successfull", "Pass");
+		Dimension d4 = new Dimension(360, 740);
+		driver.manage().window().setSize(d4);
+		WebElement cardtitle4 = propElement(getPropfile(gpropname2, "CardTitle5"));
+		if (cardtitle4.isDisplayed()) {
+			reportStep("cardtitle is displayed successfully", "Pass");
+		} else {
+			reportStep("cardtitle Icon is not displayed successfully", "Fail");
+
+		}
+		JavascriptExecutor js4 = (JavascriptExecutor) driver;
+		js4.executeScript("window.scrollBy(0,350)", "CardTitle5");
+		reportStep("Samsung Galaxy potrait resize is successfull", "Pass");
+		Dimension d5 = new Dimension(740, 360);
+		driver.manage().window().setSize(d5);
+		WebElement cardtitle5 = propElement(getPropfile(gpropname2, "CardTitle6"));
+		if (cardtitle5.isDisplayed()) {
+			reportStep("cardtitle is displayed successfully", "Pass");
+		} else {
+			reportStep("cardtitle Icon is not displayed successfully", "Fail");
+
+		}
+		JavascriptExecutor js5 = (JavascriptExecutor) driver;
+		js5.executeScript("window.scrollBy(0,350)", "CardTitle6");
+		reportStep("Samsung Galaxy landscape resize is successfull", "Pass");
+		return this;
 	}
 }

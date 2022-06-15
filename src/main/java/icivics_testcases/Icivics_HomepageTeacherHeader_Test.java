@@ -65,10 +65,12 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 	}
 	// C7 - Does the header resize responsively at different resolutions?
 
-	@Test(dataProvider = "fetchData", priority = 9)
+	@Test(dataProvider = "fetchData", priority = 4)
 	public void C7_verifyresizeheaderintohamburger(String URL) throws IOException, InterruptedException {
-		node = test.createNode("C6 - Do all buttons have hover/click states?");
+		node = test.createNode("C7 - Does the header resize responsively at different resolutions?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).resizeheader();
+
+		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).resizeheader()
+				.carddisplayinlistpattern();
 	}
 }

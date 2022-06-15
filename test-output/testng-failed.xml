@@ -5,11 +5,11 @@
     <classes>
       <class name="icivics_testcases.Icivics_HomepageHeaderSigninMisc_Test">
         <methods>
+          <include name="C41_Verifysubmenuoptionisunderlined" invocation-numbers="0"/>
           <include name="afterMethod"/>
           <include name="setUpClass"/>
           <include name="setValues"/>
           <include name="stopReport"/>
-          <include name="C38_Verifysigninbuttonsubmenu" invocation-numbers="0"/>
           <include name="beforeMethod"/>
           <include name="report"/>
           <include name="tearDownClass"/>

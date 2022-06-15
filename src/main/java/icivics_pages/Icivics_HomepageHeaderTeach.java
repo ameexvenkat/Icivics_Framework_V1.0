@@ -15,10 +15,10 @@ import cucumber.api.java.en.Then;
 import projectSpecific.base.ProjectSpecificMethods;
 
 public class Icivics_HomepageHeaderTeach extends ProjectSpecificMethods {
-	public String gpropname1 = "Homepage/homepageheader";
-	public String gpropname2 = "Homepage/homepageteacherheader";
-	public String gpropname3 = "Homepage/homepageheaderplay";
-	public String gpropname4 = "Homepage/homepageheaderteach";
+	public String gpropname = "Homepage/homepageheader";
+	public String gpropname1 = "Homepage/homepageteacherheader";
+	public String gpropname2 = "Homepage/homepageheaderplay";
+	public String gpropname3 = "Homepage/homepageheaderteach";
 
 	public Icivics_HomepageHeaderTeach(RemoteWebDriver driver, ExtentTest node, Properties prop) {
 		this.driver = driver;
@@ -26,40 +26,53 @@ public class Icivics_HomepageHeaderTeach extends ProjectSpecificMethods {
 		this.prop = prop;
 	}
 
-	@Given("Launch the icivis educatorregistration URL")
+	@Given("Launch the icivis URL")
 	public Icivics_HomepageHeaderTeach launchURL(String URL) {
 		navigateto(URL);
 		return this;
 
+	}	
+	@Then("Verify on Clicking teach button at top teach submenu open ")
+	public Icivics_HomepageHeaderTeach clickonteachmenu() {
+		WebElement teachbutton = propElement(getPropfile(gpropname1, "Teachbutton"));
+		if (teachbutton.isDisplayed()) {
+			click(propElement(getPropfile(gpropname1, "Teachbutton")));
+			reportStep("Teachsubmenu is  display ", "Pass");
+		} else {
+			reportStep("Teachsubmenu is not display ", "Fail");
+		}
+		return this;
 	}
 
-	@Then("On Clicking  teach button at top Play menu should open")
-	public Icivics_HomepageHeaderTeach verifyteachsubmenu() {
-		click(propElement(getPropfile(gpropname2, "Teachbutton")));
-		waitTime(3000);
-		reportStep("Teachsubmenu display successfully", "Pass");
-		List<WebElement> dropdowns = driver.findElements(By.xpath("(//*[@class='dropdown-menu'])[6]"));
+	@Then("Verify click on Teach submenu Options display")
+	public Icivics_HomepageHeaderTeach verifyteachmenu() {
+		WebElement teachbutton = propElement(getPropfile(gpropname1, "Teachbutton"));
+		if (teachbutton.isDisplayed()) {
+			click(propElement(getPropfile(gpropname1, "Teachbutton")));
+			reportStep("Teachsubmenu display successfully", "Pass");
+		} else {
+			reportStep("Teachsubmenu is not display successfully", "Pass");
+		}
+		return this;
+	}
 
-		for (WebElement dropdown : dropdowns) {
-			System.out.println(dropdown.getText());
+	@Given("Verify on Clicking Teach button Options appear")
+	public Icivics_HomepageHeaderTeach verifyteachmenulist() {
+		
+		List<WebElement> allOptions = driver.findElements(By.xpath("(//*[@class='dropdown-menu'])[6]/li"));
+
+		reportStep("Teachbutton submenu count is" + " " + allOptions.size(), "Pass");
+		for (int i = 0; i < allOptions.size(); i++) {
+			WebElement optionelement = allOptions.get(i);
+			String optionsText = optionelement.getText();
+
+			reportStep("Teachbutton submenu is " + " " + optionsText, "Pass");
+
 		}
 		return this;
 
 	}
 
-	@Then("Click the teach button Links for 6 menu options should appear")
-	public Icivics_HomepageHeaderTeach verifymenuoptionscount() {
-		click(propElement(getPropfile(gpropname2, "Teachbutton")));
-		waitTime(3000);
-		reportStep("Teachsubmenu display successfully", "Pass");
-		List<WebElement> dropdowns = driver.findElements(By.xpath("(//*[@class='dropdown-menu'])[6]"));
-		System.out.println(dropdowns.size());
-		for (WebElement dropdown : dropdowns) {
-			System.out.println(dropdown.getText());
-		}
-		return this;
-
-	}
 	@Then("check all links of teach button")
 	public Icivics_HomepageHeaderTeach Teachbuttonelementsverification(String URL) throws IOException {
 		String propname = "Homepage/teachdropdown";
@@ -96,7 +109,7 @@ public class Icivics_HomepageHeaderTeach extends ProjectSpecificMethods {
 		verifyExactText(getprop(propname, "ecElement"), getpropstring(propname, "ecText"));
 		click(getprop(propname, "ecElement"));
 		verifyTitle(getpropstring(propname, "Community – iCivics"));
-		
+
 		// FAQ
 		navigateto(URL);
 		waitTime(3000);
@@ -110,13 +123,19 @@ public class Icivics_HomepageHeaderTeach extends ProjectSpecificMethods {
 		return this;
 
 	}
+
 	@Given("Click the teach menu, menu opens Click teach menu again Teach menu should closes")
 	public Icivics_HomepageHeaderTeach clickteachbuttonagain() {
-		click(propElement(getPropfile(gpropname2, "Teachbutton")));
-		waitTime(3000);
-		click(propElement(getPropfile(gpropname2, "Teachbutton")));
-		
+		WebElement teachbutton = propElement(getPropfile(gpropname1, "Teachbutton"));
+		if(teachbutton.isDisplayed())
+		{
+			click(propElement(getPropfile(gpropname1, "Teachbutton")));
+			reportStep("on clicking again teach submenu is close", "Pass");
+		}
+		else {
+			reportStep("Teach submenu is not display", "Pass");
+		}
 		return this;
 
-}
+	}
 }

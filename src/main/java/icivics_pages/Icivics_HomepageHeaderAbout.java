@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+
 import com.aventstack.extentreports.ExtentTest;
 
 import cucumber.api.java.en.Given;
@@ -15,11 +16,11 @@ import cucumber.api.java.en.Then;
 import projectSpecific.base.ProjectSpecificMethods;
 
 public class Icivics_HomepageHeaderAbout extends ProjectSpecificMethods {
-	public String gpropname1 = "Homepage/homepageheader";
-	public String gpropname2 = "Homepage/homepageteacherheader";
-	public String gpropname3 = "Homepage/homepageheaderplay";
-	public String gpropname4 = "Homepage/homepageheaderteach";
-	public String gpropname5 = "Homepage/homepageheaderteach";
+	public String gpropname = "Homepage/homepageheader";
+	public String gpropname1 = "Homepage/homepageteacherheader";
+	public String gpropname2 = "Homepage/homepageheaderplay";
+	public String gpropname3 = "Homepage/homepageheaderteach";
+	public String gpropname4 = "Homepage/homepageheaderabout";
 
 	public Icivics_HomepageHeaderAbout(RemoteWebDriver driver, ExtentTest node, Properties prop) {
 		this.driver = driver;
@@ -34,39 +35,51 @@ public class Icivics_HomepageHeaderAbout extends ProjectSpecificMethods {
 
 	}
 
-	@Then("On Clicking about button at top about menu should open")
+	@Then("Verify on Clicking about button at top about submenu open other than homepage")
 	public Icivics_HomepageHeaderAbout verifyaboutmenu() {
-		click(propElement(getPropfile(gpropname2, "Aboutbutton")));
+		WebElement aboutbutton = propElement(getPropfile(gpropname1, "Aboutbutton"));
+		click(propElement(getPropfile(gpropname, "Headerlogo2")));
 		waitTime(3000);
-		reportStep("Aboutsubmenu display successfully", "Pass");
-		click(propElement(getPropfile(gpropname1, "Headerlogo2")));
 
-		waitTime(3000);
-		WebElement aboutbutton = propElement(getPropfile(gpropname2, "Aboutbutton"));
 		if (aboutbutton.isDisplayed()) {
-			reportStep("aboutbutton Verified successfully", "Pass");
+			click(propElement(getPropfile(gpropname1, "Aboutbutton")));
+			reportStep("For Homepage aboutbutton Verified successfully", "Pass");
 		} else {
-			reportStep("aboutbutton is not Verified successfully", "Fail");
+			reportStep("For Homepage aboutbutton is not Verified successfully", "Fail");
 		}
 
 		return this;
 	}
 
-	@Then("Click the teach button Links for 6 menu options should appear")
-	public Icivics_HomepageHeaderAbout verifymenuoptionscount() {
-		click(propElement(getPropfile(gpropname2, "Aboutbutton")));
-		waitTime(3000);
-		reportStep("Aboutsubmenu display successfully", "Pass");
-		List<WebElement> dropdowns = driver.findElements(By.xpath("(//*[@class='dropdown-menu'])[7]"));
-		System.out.println(dropdowns.size());
-		for (WebElement dropdown : dropdowns) {
-			System.out.println(dropdown.getText());
+	public Icivics_HomepageHeaderAbout clickonaboutmenu() {
+		WebElement aboutbutton = propElement(getPropfile(gpropname1, "Aboutbutton"));
+		if (aboutbutton.isDisplayed()) {
+			click(propElement(getPropfile(gpropname1, "Aboutbutton")));
+			reportStep("Aboutsubmenu display successfully", "Pass");
+		} else {
+			reportStep("Aboutsubmenu is not display successfully", "Pass");
+		}
+		return this;
+	}
+
+	@Given("Verify on Clicking about button Options display")
+	public Icivics_HomepageHeaderAbout verifyaboutoptionscount() {
+
+		List<WebElement> allOptions = driver.findElements(By.xpath("(//*[@class='dropdown-menu'])[7]/li"));
+
+		reportStep("Aboutbutton submenu count is" + " " + allOptions.size(), "Pass");
+		for (int i = 0; i < allOptions.size(); i++) {
+			WebElement optionelement = allOptions.get(i);
+			String optionsText = optionelement.getText();
+
+			reportStep("Aboutbutton submenu is " + " " + optionsText, "Pass");
+
 		}
 		return this;
 
 	}
 
-	@Then("check all links of teach button")
+	@Given("Click on all about menu options and all options redirect to corresponding page")
 	public Icivics_HomepageHeaderAbout aboutbuttonelementsverification(String URL) throws IOException {
 		String propname = "Homepage/aboutdropdown";
 		String AboutButton = getPropfile(propname, "AboutButtonElement");
@@ -119,13 +132,19 @@ public class Icivics_HomepageHeaderAbout extends ProjectSpecificMethods {
 		return this;
 
 	}
+
 	@Given("Click the about menu, menu opens Click about menu again Teach menu should closes")
-	public Icivics_HomepageHeaderAbout  clickaboutbuttonagain() {
-		click(propElement(getPropfile(gpropname2, "Aboutbutton")));
-		waitTime(3000);
-		click(propElement(getPropfile(gpropname2, "Aboutbutton")));
-		
+	public Icivics_HomepageHeaderAbout clickaboutbuttonagain() {
+		WebElement Aboutbuttonlink = (propElement(getPropfile(gpropname1, "Aboutbutton")));
+
+		if (Aboutbuttonlink.isDisplayed()) {
+			click(propElement(getPropfile(gpropname1, "Aboutbutton")));
+			reportStep("About button is successfully clicked again and about menu is close", "Pass");
+			waitTime(3000);
+		} else {
+			reportStep("About button is not clicked again successfully and about menu is not close", "Fail");
+		}
 		return this;
 
-}
+	}
 }

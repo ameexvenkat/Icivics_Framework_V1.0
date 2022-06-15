@@ -25,7 +25,7 @@ public class Icivics_HomepageHeaderAbout_Test extends ProjectSpecificMethods {
 	public void C22_Verifyaboutsubmenu(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C22 -  When you select About, does a submenu open below the About button?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderAbout(driver, node, prop).launchURL(URL).verifyaboutmenu();
+		new Icivics_HomepageHeaderAbout(driver, node, prop).launchURL(URL).clickonaboutmenu().verifyaboutmenu();
 	}
 	// C23 - Do you see links to About iCivics, Who We Are, Our Strategy, CIVXNOW,
 	// Our Team, Blog, and Contact Us in the submenu?
@@ -35,25 +35,25 @@ public class Icivics_HomepageHeaderAbout_Test extends ProjectSpecificMethods {
 		node = test.createNode(
 				"C23 - Do you see links to About iCivics, Who We Are, Our Strategy, CIVXNOW, Our Team, Blog, and Contact Us in the submenu?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderAbout(driver, node, prop).launchURL(URL).verifymenuoptionscount();
+		new Icivics_HomepageHeaderAbout(driver, node, prop).launchURL(URL).clickonaboutmenu().verifyaboutoptionscount();
 	}
 	// C24 - When you select a link in the submenu, are you navigated to the
 	// appropriate page?
 
 	@Test(dataProvider = "fetchData", priority = 2)
-	public void C24_Verifysubmenucount(String URL) throws IOException, InterruptedException {
+	public void C24_VerifysubmenuElement(String URL) throws IOException, InterruptedException {
 		node = test
 				.createNode("C24 - When you select a link in the submenu, are you navigated to the appropriate page?");
 		extent.attachReporter(reporter);
 		new Icivics_HomepageHeaderAbout(driver, node, prop).launchURL(URL).aboutbuttonelementsverification(URL);
 	}
-	// C24 - When you select a link in the submenu, are you navigated to the
-	// appropriate page?
+	// C26 - If you are viewing one of the pages in the About submenu, is that page underlined in the submenu?
+
 
 	@Test(dataProvider = "fetchData", priority = 3)
-	public void C24_Verifysubmenucount1(String URL) throws IOException, InterruptedException {
+	public void C26_Verifysubmenucount1(String URL) throws IOException, InterruptedException {
 		node = test
-				.createNode("C24 - When you select a link in the submenu, are you navigated to the appropriate page?");
+				.createNode("C26 - If you are viewing one of the pages in the About submenu, is that page underlined in the submenu?");
 		extent.attachReporter(reporter);
 		new Icivics_HomepageHeaderAbout(driver, node, prop).launchURL(URL).aboutbuttonelementsverification(URL);
 	}
@@ -65,6 +65,6 @@ public class Icivics_HomepageHeaderAbout_Test extends ProjectSpecificMethods {
 		node = test
 				.createNode("C27 - When you select About again while the submenu is open, does the submenu close?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderAbout(driver, node, prop).launchURL(URL).clickaboutbuttonagain();
+		new Icivics_HomepageHeaderAbout(driver, node, prop).launchURL(URL).clickonaboutmenu().clickaboutbuttonagain();
 	}
 }

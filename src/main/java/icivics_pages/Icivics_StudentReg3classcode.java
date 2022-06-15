@@ -118,7 +118,7 @@ public class Icivics_StudentReg3classcode extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("Generated username should displayed correctly")
+	@Given("Verify generated username is displayed correctly")
 	public Icivics_StudentReg3classcode verifyusernamegenerateddisplay() throws IOException {
 		WebElement generatedusername = propElement(getPropfile(gpropname6, "Generatedusername"));
 		waitTime(3000);
@@ -133,7 +133,7 @@ public class Icivics_StudentReg3classcode extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@When("View verification page 3 Note about username and password should visible")
+	@Given("Verify Note about username and password is visible")
 	public Icivics_StudentReg3classcode verifyusernametextddisplay() {
 		WebElement usernametext = propElement(getPropfile(gpropname6, "UsernameText"));
 		String usernametext1 = usernametext.getText();
@@ -148,7 +148,7 @@ public class Icivics_StudentReg3classcode extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("Email address should displayed")
+	@Given("Verify Email address is displayed")
 	public Icivics_StudentReg3classcode verifyemailddisplay() throws IOException {
 		WebElement emailaddress = propElement(getPropfile(gpropname6, "Emailaddress3"));
 		waitTime(3000);
@@ -164,7 +164,7 @@ public class Icivics_StudentReg3classcode extends ProjectSpecificMethods {
 
 	}
 
-	@When("View verification page 3 Note about username or email and password is visible")
+	@Given("Verify Note about username or email and password is visible")
 	public Icivics_StudentReg3classcode verifyemailtextddisplay() {
 		WebElement emailtext = propElement(getPropfile(gpropname6, "EmailText"));
 		String emailtext1 = emailtext.getText();
@@ -179,7 +179,7 @@ public class Icivics_StudentReg3classcode extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@When("Click continue to my assignments Page should goes to student My iCivics page")
+	@Given("Verify Page goes to student My iCivics page")
 	public Icivics_StudentReg3classcode clickcontinuetomyassignmentbutton() {
 		WebElement continuetomyassignmentbutton = propElement(getPropfile(gpropname6, "Continuetomyassignmentbutton"));
 		continuetomyassignmentbutton.click();
