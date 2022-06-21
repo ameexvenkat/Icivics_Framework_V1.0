@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-
 import com.aventstack.extentreports.ExtentTest;
 
 import cucumber.api.java.en.Given;
@@ -28,26 +27,18 @@ public class Icivics_HomepageHeaderAbout extends ProjectSpecificMethods {
 		this.prop = prop;
 	}
 
-	@Given("Launch the icivis educatorregistration URL")
+	@Given(" Launch the icivics URL")
 	public Icivics_HomepageHeaderAbout launchURL(String URL) {
 		navigateto(URL);
 		return this;
 
 	}
 
-	@Then("Verify on Clicking about button at top about submenu open other than homepage")
+	@Then("Verify click on about button at top about submenu open other than homepage ")
 	public Icivics_HomepageHeaderAbout verifyaboutmenu() {
-		WebElement aboutbutton = propElement(getPropfile(gpropname1, "Aboutbutton"));
 		click(propElement(getPropfile(gpropname, "Headerlogo2")));
 		waitTime(3000);
-
-		if (aboutbutton.isDisplayed()) {
-			click(propElement(getPropfile(gpropname1, "Aboutbutton")));
-			reportStep("For Homepage aboutbutton Verified successfully", "Pass");
-		} else {
-			reportStep("For Homepage aboutbutton is not Verified successfully", "Fail");
-		}
-
+		reportStep("For Homepage aboutbutton is not present", "Fail");
 		return this;
 	}
 
@@ -62,7 +53,7 @@ public class Icivics_HomepageHeaderAbout extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Given("Verify on Clicking about button Options display")
+	@Given("Verify about submenu ")
 	public Icivics_HomepageHeaderAbout verifyaboutoptionscount() {
 
 		List<WebElement> allOptions = driver.findElements(By.xpath("(//*[@class='dropdown-menu'])[7]/li"));
@@ -79,7 +70,7 @@ public class Icivics_HomepageHeaderAbout extends ProjectSpecificMethods {
 
 	}
 
-	@Given("Click on all about menu options and all options redirect to corresponding page")
+	@Given("Verify click on all about menu options and all options redirect to corresponding page ")
 	public Icivics_HomepageHeaderAbout aboutbuttonelementsverification(String URL) throws IOException {
 		String propname = "Homepage/aboutdropdown";
 		String AboutButton = getPropfile(propname, "AboutButtonElement");
@@ -133,7 +124,7 @@ public class Icivics_HomepageHeaderAbout extends ProjectSpecificMethods {
 
 	}
 
-	@Given("Click the about menu, menu opens Click about menu again Teach menu should closes")
+	@Given("Verify on clicking about menu again it close")
 	public Icivics_HomepageHeaderAbout clickaboutbuttonagain() {
 		WebElement Aboutbuttonlink = (propElement(getPropfile(gpropname1, "Aboutbutton")));
 

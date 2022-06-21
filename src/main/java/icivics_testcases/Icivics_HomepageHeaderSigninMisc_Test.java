@@ -91,7 +91,7 @@ public class Icivics_HomepageHeaderSigninMisc_Test extends ProjectSpecificMethod
 		extent.attachReporter(reporter);
 		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).verifysigninbutton()
 				.verifyselectedsigninunderlined().verifyselectedregasmystuunderlined()
-				.verifyselectedregasmyteacherunderlined().Clickonsigninbuttonagain();
+				.verifyselectedregzasmyteacherunderlined().Clickonsigninbuttonagain();
 	}
 
 	// C42 - When you select Sign In / My iCivics again while the submenu is open,

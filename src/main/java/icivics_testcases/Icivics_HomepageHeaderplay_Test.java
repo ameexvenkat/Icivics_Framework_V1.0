@@ -56,7 +56,8 @@ public class Icivics_HomepageHeaderplay_Test extends ProjectSpecificMethods {
 		node = test.createNode(
 				"C12- If you are viewing one of the pages in the Play submenu, is that page underlined in the submenu?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderPlay(driver, node, prop).launchURL(URL).verifyselectedoptionunderlined();
+		new Icivics_HomepageHeaderPlay(driver, node, prop).launchURL(URL).verifyplaysubmenu()
+				.verifyselectedoptionunderlined().clickplaybuttonagain();
 	}
 
 	// C13 - When you select Play again while the submenu is open, does the submenu

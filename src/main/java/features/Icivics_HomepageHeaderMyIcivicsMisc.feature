@@ -22,7 +22,8 @@ Then login as a teacher
 And  Verify My iCivics button appears in top/right for an authenticated user 
 
 Scenario: C35 - Can you see your avatar icon represented in the button?
-Given
+Given Verify signin as a teacher with avatar
+Then Verify signin as a teacher with no avatar
 
 Scenario: C36 - When you select Sign In/My iCivics, does a submenu open below the button?
 Given login as a teacher  

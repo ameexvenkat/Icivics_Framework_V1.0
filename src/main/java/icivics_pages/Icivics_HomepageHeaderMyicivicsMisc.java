@@ -1,10 +1,14 @@
 package icivics_pages;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
+import java.util.Set;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -117,6 +121,49 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 		return this;
 	}
 
+	@Given("Verify signin as a teacher with avatar")
+	public Icivics_HomepageHeaderMyicivicsMisc verifywithavatar() {
+		WebElement avatar = driver.findElement(By.xpath("(//img[@class='avatar-pin '])[2]"));
+		waitTime(3000);
+
+		String srcvalue = avatar.getAttribute("src");
+		if (avatar.isDisplayed() && srcvalue.equalsIgnoreCase(
+				"https://staging.d9.icivics.org/sites/default/files/styles/profile-pic-full/public/uploads/avatar2/avatar-9306834-1655798221.png?itok=mKkfvCDS")) {
+			reportStep("Avatar image is displayed on the button", "Pass");
+		} else
+
+		{
+			reportStep("Avatar is not displayed ", "Fail");
+		}
+		return this;
+	}
+
+	@Then("Verify signin as a teacher with no avatar")
+	public Icivics_HomepageHeaderMyicivicsMisc verifywithnoavatar() {
+
+		WebElement signinbutton = propElement(getPropfile(gpropname1, "Signinbutton"));
+		signinbutton.click();
+		WebElement signinlink = propElement(getPropfile(gpropname1, "Signinlink"));
+		signinlink.click();
+		WebElement username = propElement(getPropfile(gpropname1, "Username"));
+		username.sendKeys("Village Supporter c7i0");
+		WebElement password = propElement(getPropfile(gpropname1, "Password"));
+		password.sendKeys("Tester@9090");
+		WebElement loginbutton = propElement(getPropfile(gpropname2, "Loginbutton"));
+		loginbutton.click();
+		waitTime(3000);
+		WebElement avatar = driver.findElement(By.xpath("(//img[@class='avatar-pin avatar-legacy'])[2]"));
+		String srcvalue = avatar.getAttribute("src");
+		if (avatar.isDisplayed() && srcvalue.equalsIgnoreCase(
+				"https://staging.d9.icivics.org/sites/default/files/styles/profile-pic-full/public/uploads/profile_pictures/profile-pic-full-default.png?itok=yiAEqTiV")) {
+
+			reportStep("My iCivics button has sillouette avatar ", "Pass");
+		} else {
+			reportStep("My iCivics button has no sillouette avatar", "Fail");
+		}
+		return this;
+	}
+
 	@And("Click on Myicivics button and verify submenu display")
 	public Icivics_HomepageHeaderMyicivicsMisc verifymyicvicsbuttonsubmenu() {
 		WebElement myicivicsbutton = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
@@ -207,7 +254,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 	}
 
 	public Icivics_HomepageHeaderMyicivicsMisc verifyselectedmyclassesunderlined() {
-		
+
 		waitTime(3000);
 		WebElement myclassesbutton = driver.findElement(By.xpath("(//li[@class='my classes']//a)[2]"));
 		myclassesbutton.click();
@@ -229,7 +276,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 	}
 
 	public Icivics_HomepageHeaderMyicivicsMisc verifyselectedmyfavoritesunderlined() {
-		
+
 		waitTime(3000);
 		WebElement myfavorites = driver.findElement(By.xpath("(//a[@title='My Favorites'])[2]"));
 		myfavorites.click();

@@ -31,9 +31,10 @@ public class Icivics_HomepageHeaderTeach extends ProjectSpecificMethods {
 		navigateto(URL);
 		return this;
 
-	}	
-	@Then("Verify on Clicking teach button at top teach submenu open ")
-	public Icivics_HomepageHeaderTeach clickonteachmenu() {
+	}
+
+	@Then("Verify on Clicking teach button at top teach submenu open")
+	public Icivics_HomepageHeaderTeach verifyteachmenu() {
 		WebElement teachbutton = propElement(getPropfile(gpropname1, "Teachbutton"));
 		if (teachbutton.isDisplayed()) {
 			click(propElement(getPropfile(gpropname1, "Teachbutton")));
@@ -44,21 +45,9 @@ public class Icivics_HomepageHeaderTeach extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("Verify click on Teach submenu Options display")
-	public Icivics_HomepageHeaderTeach verifyteachmenu() {
-		WebElement teachbutton = propElement(getPropfile(gpropname1, "Teachbutton"));
-		if (teachbutton.isDisplayed()) {
-			click(propElement(getPropfile(gpropname1, "Teachbutton")));
-			reportStep("Teachsubmenu display successfully", "Pass");
-		} else {
-			reportStep("Teachsubmenu is not display successfully", "Pass");
-		}
-		return this;
-	}
-
-	@Given("Verify on Clicking Teach button Options appear")
+	@Given(" Verify click on Teach menu Options display")
 	public Icivics_HomepageHeaderTeach verifyteachmenulist() {
-		
+
 		List<WebElement> allOptions = driver.findElements(By.xpath("(//*[@class='dropdown-menu'])[6]/li"));
 
 		reportStep("Teachbutton submenu count is" + " " + allOptions.size(), "Pass");
@@ -73,7 +62,7 @@ public class Icivics_HomepageHeaderTeach extends ProjectSpecificMethods {
 
 	}
 
-	@Then("check all links of teach button")
+	@Then("Verify click on links in the submenu")
 	public Icivics_HomepageHeaderTeach Teachbuttonelementsverification(String URL) throws IOException {
 		String propname = "Homepage/teachdropdown";
 		String TeachButton = getPropfile(propname, "TeachButtonElement");
@@ -124,15 +113,13 @@ public class Icivics_HomepageHeaderTeach extends ProjectSpecificMethods {
 
 	}
 
-	@Given("Click the teach menu, menu opens Click teach menu again Teach menu should closes")
+	@Given("Verify click on teach menu again it close")
 	public Icivics_HomepageHeaderTeach clickteachbuttonagain() {
 		WebElement teachbutton = propElement(getPropfile(gpropname1, "Teachbutton"));
-		if(teachbutton.isDisplayed())
-		{
+		if (teachbutton.isDisplayed()) {
 			click(propElement(getPropfile(gpropname1, "Teachbutton")));
 			reportStep("on clicking again teach submenu is close", "Pass");
-		}
-		else {
+		} else {
 			reportStep("Teach submenu is not display", "Pass");
 		}
 		return this;

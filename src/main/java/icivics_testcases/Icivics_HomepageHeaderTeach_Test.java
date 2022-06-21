@@ -13,7 +13,7 @@ public class Icivics_HomepageHeaderTeach_Test extends ProjectSpecificMethods {
 
 	@BeforeTest
 	public void setValues() {
-		testCaseName = "HomepageHeader";
+		testCaseName = "HomepageHeaderteach";
 		authors = "Venkat";
 		category = "Smoke";
 		dataSheetName = "Icivics_Homepageheaderteach";
@@ -25,7 +25,7 @@ public class Icivics_HomepageHeaderTeach_Test extends ProjectSpecificMethods {
 	public void C15_Verifyteachsubmenu(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C15 - When you select Teach, does a submenu open below the Teach button?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderTeach(driver, node, prop).launchURL(URL).verifyteachmenu() ;
+		new Icivics_HomepageHeaderTeach(driver, node, prop).launchURL(URL).verifyteachmenu();
 	}
 	// C16 - Do you see links to Search Our Library, Scope and Sequence,
 	// Professional Development, Get Started, Educatory Community, and FAQ in the
@@ -48,7 +48,6 @@ public class Icivics_HomepageHeaderTeach_Test extends ProjectSpecificMethods {
 		extent.attachReporter(reporter);
 		new Icivics_HomepageHeaderTeach(driver, node, prop).launchURL(URL).Teachbuttonelementsverification(URL);
 	}
-	
 
 	// C20 - When you select Teach again while the submenu is open, does the submenu
 	// close?

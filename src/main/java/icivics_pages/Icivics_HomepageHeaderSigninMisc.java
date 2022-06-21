@@ -36,7 +36,6 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 
 	}
 
-
 	@Then("Verify Donate button is display")
 	public Icivics_HomepageHeaderSigninMisc VerifyDonatebutton() {
 		WebElement donatebutton = propElement(getPropfile(gpropname1, "Donatebutton"));
@@ -95,7 +94,7 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 		if (Signinbutton.isDisplayed()) {
 			Signinbutton.click();
 			reportStep("Signinbutton is displayed", "Pass");
-			
+
 		} else {
 			reportStep("Signinbutton is not displayed", "Fail");
 		}
@@ -152,6 +151,7 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 		System.out.println(driver.getCurrentUrl());
 		return this;
 	}
+
 	@Given("Verify the signin submenu option you are on should be underlined.")
 	public Icivics_HomepageHeaderSigninMisc verifyselectedsigninunderlined() {
 
@@ -161,7 +161,8 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 		waitTime(3000);
 		click(propElement(getPropfile(gpropname6, "Signinbutton2")));
 		waitTime(3000);
-		String cssValue = driver.findElement(By.xpath("(//li[contains(@class,'first sign')]//a)[2]")).getCssValue("text-decoration");
+		String cssValue = driver.findElement(By.xpath("(//li[contains(@class,'first sign')]//a)[2]"))
+				.getCssValue("text-decoration");
 		System.out.println(cssValue);
 		if (cssValue.contains("underline")) {
 
@@ -173,33 +174,37 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 
 		return this;
 	}
+
 	public Icivics_HomepageHeaderSigninMisc verifyselectedregasmystuunderlined() {
-	waitTime(3000);
-	WebElement regasmystudentlink = driver.findElement(By.xpath("(//li[contains(@class,'register as')]//a)[3]"));
-	regasmystudentlink.click();
-	waitTime(3000);
-	click(propElement(getPropfile(gpropname6, "Signinbutton2")));
-	waitTime(3000);
-	String cssValue = driver.findElement(By.xpath("(//li[contains(@class,'register as')]//a)[3]")).getCssValue("text-decoration");
-	System.out.println(cssValue);
-	if (cssValue.contains("underline")) {
+		waitTime(3000);
+		WebElement regasmystudentlink = driver.findElement(By.xpath("(//li[contains(@class,'register as')]//a)[3]"));
+		regasmystudentlink.click();
+		waitTime(3000);
+		click(propElement(getPropfile(gpropname6, "Signinbutton2")));
+		waitTime(3000);
+		String cssValue = driver.findElement(By.xpath("(//li[contains(@class,'register as')]//a)[3]"))
+				.getCssValue("text-decoration");
+		System.out.println(cssValue);
+		if (cssValue.contains("underline")) {
 
-		reportStep("Selected page is underlined", "Pass");
+			reportStep("Selected page is underlined", "Pass");
 
-	} else {
-		reportStep("Selected page is not underlined", "Fail");
+		} else {
+			reportStep("Selected page is not underlined", "Fail");
+		}
+
+		return this;
 	}
 
-	return this;
-}
-	public Icivics_HomepageHeaderSigninMisc verifyselectedregasmyteacherunderlined() {
+	public Icivics_HomepageHeaderSigninMisc verifyselectedregzasmyteacherunderlined() {
 		waitTime(3000);
 		WebElement regasmyteacherlink = driver.findElement(By.xpath("(//a[@href='/user/register?role=teacher'])[2]"));
 		regasmyteacherlink.click();
 		waitTime(3000);
 		click(propElement(getPropfile(gpropname6, "Signinbutton2")));
 		waitTime(3000);
-		String cssValue = driver.findElement(By.xpath("(//a[@href='/user/register?role=teacher'])[2]")).getCssValue("text-decoration");
+		String cssValue = driver.findElement(By.xpath("(//a[@href='/user/register?role=teacher'])[2]"))
+				.getCssValue("text-decoration");
 		System.out.println(cssValue);
 		if (cssValue.contains("underline")) {
 
@@ -214,15 +219,16 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 
 	@Given("Verify Click on signin button submenu is display and click again submenu is close")
 	public Icivics_HomepageHeaderSigninMisc Clickonsigninbuttonagain() {
-		
-	WebElement signinbutton = propElement(getPropfile(gpropname1, "Signinbutton"));
-	if (signinbutton.isDisplayed()) {
-		signinbutton.click();
-		reportStep("on clicking again signin submenu is close", "Pass");
-	} else {
-		reportStep("Myicivicssubmenu is not display", "Pass");
-	}
-	return this;
 
-}
+		WebElement signinbutton = propElement(getPropfile(gpropname1, "Signinbutton"));
+		if (signinbutton.isDisplayed()) {
+			signinbutton.click();
+			reportStep("on clicking again signin submenu is close", "Pass");
+		} else {
+			reportStep("Myicivicssubmenu is not display", "Pass");
+		}
+		return this;
+
+	}
+
 }

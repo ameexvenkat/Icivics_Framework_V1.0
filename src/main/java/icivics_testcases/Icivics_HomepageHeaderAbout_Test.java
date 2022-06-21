@@ -13,7 +13,7 @@ public class Icivics_HomepageHeaderAbout_Test extends ProjectSpecificMethods {
 
 	@BeforeTest
 	public void setValues() {
-		testCaseName = "HomepageHeaderplay";
+		testCaseName = "HomepageHeaderAbout";
 		authors = "Venkat";
 		category = "Smoke";
 		dataSheetName = "Icivics_Homepageheaderabout";

@@ -67,11 +67,21 @@ public class Icivics_HomepageHeaderMyicivicsMisc_Test extends ProjectSpecificMet
 	// C35 - Can you see your avatar icon represented in the button?
 
 	@Test(dataProvider = "fetchData", priority = 5)
-	public void C35_VerifyIcivicsbutton1(String URL) throws IOException, InterruptedException {
+	public void C35_Verifytheavatar(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C35 - Can you see your avatar icon represented in the button?");
 		extent.attachReporter(reporter);
 		new Icivics_HomepageHeaderMyicivicsMisc(driver, node, prop).launchURL(URL).verifylogin()
-				.verifymyicvicsbuttonafterlogin();
+				.verifywithavatar();
+	}
+
+	// C35 - Can you see your avatar icon represented in the button?
+
+	@Test(dataProvider = "fetchData", priority = 5)
+	public void C35_Verifythenoavatar(String URL) throws IOException, InterruptedException {
+		node = test.createNode("C35 - Can you see your avatar icon represented in the button?");
+		extent.attachReporter(reporter);
+		new Icivics_HomepageHeaderMyicivicsMisc(driver, node, prop).launchURL(URL)
+				.verifywithnoavatar();
 	}
 
 	// C36 - When you select Sign In/My iCivics, does a submenu open below the
