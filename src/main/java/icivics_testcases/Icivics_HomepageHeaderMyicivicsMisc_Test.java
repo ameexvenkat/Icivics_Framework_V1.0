@@ -13,7 +13,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc_Test extends ProjectSpecificMet
 
 	@BeforeTest
 	public void setValues() {
-		testCaseName = "HomepageHeaderplay";
+		testCaseName = "HomepageHeaderMyIcivicsMisc";
 		authors = "Venkat";
 		category = "Smoke";
 		dataSheetName = "Icivics_Homepageheadermyicivicsmisc";
@@ -76,7 +76,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc_Test extends ProjectSpecificMet
 
 	// C35 - Can you see your avatar icon represented in the button?
 
-	@Test(dataProvider = "fetchData", priority = 5)
+	@Test(dataProvider = "fetchData", priority = 6)
 	public void C35_Verifythenoavatar(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C35 - Can you see your avatar icon represented in the button?");
 		extent.attachReporter(reporter);
@@ -87,7 +87,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc_Test extends ProjectSpecificMet
 	// C36 - When you select Sign In/My iCivics, does a submenu open below the
 	// button?
 
-	@Test(dataProvider = "fetchData", priority = 6)
+	@Test(dataProvider = "fetchData", priority = 7)
 	public void C36_VerifyIcivicssubmenu(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C36 - When you select Sign In/My iCivics, does a submenu open below the button?");
 		extent.attachReporter(reporter);
@@ -97,7 +97,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc_Test extends ProjectSpecificMet
 	// C37 - When you select Sign In, do you see links to Sign In, Register As a
 	// Student, Register As A Teacher in the submenu?
 
-	@Test(dataProvider = "fetchData", priority = 7)
+	@Test(dataProvider = "fetchData", priority = 8)
 	public void C37_VerifyIcivicssubmenu(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
 				"C37 - When you select Sign In, do you see links to Sign In, Register As a Student, Register As A Teacher in the submenu?");
@@ -108,7 +108,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc_Test extends ProjectSpecificMet
 	// C39 - When you select a link in the submenu, are you navigated to the
 	// appropriate page?
 
-	@Test(dataProvider = "fetchData", priority = 8)
+	@Test(dataProvider = "fetchData", priority = 9)
 	public void C39_Myicivicsbuttonelementsverification(String URL) throws IOException, InterruptedException {
 		node = test
 				.createNode("C39 -When you select a link in the submenu, are you navigated to the appropriate page?");
@@ -119,7 +119,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc_Test extends ProjectSpecificMet
 	// C41 - If you are viewing one of the pages in the Sign In/My iCivics submenu,
 	// is that page underlined in the submenu?
 
-	@Test(dataProvider = "fetchData", priority = 9)
+	@Test(dataProvider = "fetchData", priority = 10)
 	public void C41_verifyselectpageisunderlined(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
 				"C41 -If you are viewing one of the pages in the Sign In/My iCivics submenu, is that page underlined in the submenu?");
@@ -132,7 +132,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc_Test extends ProjectSpecificMet
 	// C42 - When you select Sign In / My iCivics again while the submenu is open,
 	// does the submenu close?
 
-	@Test(dataProvider = "fetchData", priority = 10)
+	@Test(dataProvider = "fetchData", priority = 11)
 	public void C42_Verifymyicivicsbuttonsubmenuclose(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
 				"C42 - When you select Sign In / My iCivics again while the submenu is open, does the submenu close?");

@@ -3,7 +3,7 @@
 <suite name="Suite">
 	<test thread-count="1" parallel = "classes" name="Test">
 		<classes>
-			<class name="icivics_testcases.Icivics_EducatorRegistration_Test" />
+			<class name="icivics_testcases.Icivics_HomepageHeader_Test" />
 			<class name="icivics_testcases.Icivics_EducatorRegistration1_Test" />
 			<class name="icivics_testcases.Icivics_EducatorRegistration2_Test" />
 			<class name="icivics_testcases.Icivics_EducatorRegistration3_Test" />

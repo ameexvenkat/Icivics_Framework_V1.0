@@ -1,7 +1,12 @@
-Feature: Homepage search our libraryunderlinedtext Validation
+Feature: Homepage Teach submenu link underlinedtext Validation
 
 Scenario: C19 - If you are viewing one of the pages in the Teach submenu, is that page underlined in the submenu?
-Given Launch the icivis educatorregistration URL
-Then Verify Menu appears with underlined option IF you are on main teach page, professional development, or get started.  Other pages do not have this behavior.
-
+Given Launch the icivics URL
+Then Verify on Clicking teach button at top teach submenu open
+Then Verify main teach page appears with underlined 
+Then Verify scope and sequence page display with underlined
+Then Verify professional development page display with underlined
+Then Verify getstarted page display with underlined
+Then Verify faq page display with underlined
+And Verify teach menu close on clicking again
 

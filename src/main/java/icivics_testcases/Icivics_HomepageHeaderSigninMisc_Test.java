@@ -12,7 +12,7 @@ public class Icivics_HomepageHeaderSigninMisc_Test extends ProjectSpecificMethod
 
 	@BeforeTest
 	public void setValues() {
-		testCaseName = "HomepageHeaderplay";
+		testCaseName = "HomepageHeadermysigninmisc";
 		authors = "Venkat";
 		category = "Smoke";
 		dataSheetName = "Icivics_Homepageheadersigninmisc";
@@ -69,7 +69,7 @@ public class Icivics_HomepageHeaderSigninMisc_Test extends ProjectSpecificMethod
 		node = test.createNode(
 				"C37 - When you select Sign In, do you see links to Sign In, Register As a Student, Register As A Teacher in the submenu?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).verifysigninbuttonsubmenu();
+		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).verifysigninbuttonsubmenulist();
 	}
 	// C38 - If not signed in and you select a link in the submenu, are you
 	// navigated to the appropriate page?

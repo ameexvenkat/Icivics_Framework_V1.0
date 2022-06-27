@@ -11,6 +11,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.aventstack.extentreports.ExtentTest;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import projectSpecific.base.ProjectSpecificMethods;
@@ -29,7 +30,7 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 		this.prop = prop;
 	}
 
-	@Given("Launch the icivis  URL")
+	@Given("Launch the icivics URL")
 	public Icivics_HomepageHeaderSigninMisc launchURL(String URL) {
 		navigateto(URL);
 		return this;
@@ -62,7 +63,7 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 
 	}
 
-	@Given("Verify Shop button appears")
+	@Given("Verify Shop button display")
 	public Icivics_HomepageHeaderSigninMisc VerifyShopbutton() {
 		WebElement Shopbutton = propElement(getPropfile(gpropname1, "shopbutton"));
 		if (Shopbutton.isDisplayed()) {
@@ -74,7 +75,7 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Given("click on shop button and verify the URL")
+	@Given("Verify click on shop button and redirct to corresponding page")
 	public Icivics_HomepageHeaderSigninMisc VerifyShopbuttonclick() throws IOException {
 		reportStep("Shopbutton is clicked ", "Pass");
 		WebElement shopbutton = propElement(getPropfile(gpropname6, "shopbuttonele"));
@@ -101,8 +102,8 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Given("Verify click on signin button and submenu display")
-	public Icivics_HomepageHeaderSigninMisc verifysigninbuttonsubmenu() {
+	@Given("Verify click on signin button and submenu list")
+	public Icivics_HomepageHeaderSigninMisc verifysigninbuttonsubmenulist() {
 		WebElement signinbutton = propElement(getPropfile(gpropname1, "Signinbutton"));
 		if (signinbutton.isDisplayed()) {
 			signinbutton.click();
@@ -110,8 +111,9 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 		} else {
 			reportStep("signinbutton is not displayed", "Fail");
 		}
+		String locatorvalue = getPropfile(gpropname6, "Dropdownlist");
+		List<WebElement> allOptions = propElement1(locatorvalue);
 
-		List<WebElement> allOptions = driver.findElements(By.xpath("(//*[@class='dropdown-menu'])[8]/li"));
 		System.out.println(allOptions.size());
 		reportStep("signinbutton submenu count is" + " " + allOptions.size(), "Pass");
 		for (int i = 0; i < allOptions.size(); i++) {
@@ -152,17 +154,17 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Given("Verify the signin submenu option you are on should be underlined.")
+	@Given("Verify the signin link is underlined.")
 	public Icivics_HomepageHeaderSigninMisc verifyselectedsigninunderlined() {
 
 		waitTime(3000);
-		WebElement signinlink = driver.findElement(By.xpath("(//li[contains(@class,'first sign')]//a)[2]"));
+		WebElement signinlink = propElement(getPropfile(gpropname6, "Signinlink"));
 		signinlink.click();
 		waitTime(3000);
-		click(propElement(getPropfile(gpropname6, "Signinbutton2")));
+		WebElement signinbutton = propElement(getPropfile(gpropname6, "Signinbutton2"));
+		signinbutton.click();
 		waitTime(3000);
-		String cssValue = driver.findElement(By.xpath("(//li[contains(@class,'first sign')]//a)[2]"))
-				.getCssValue("text-decoration");
+		String cssValue = propElement(getPropfile(gpropname6, "Signinlink")).getCssValue("text-decoration");
 		System.out.println(cssValue);
 		if (cssValue.contains("underline")) {
 
@@ -175,15 +177,16 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 		return this;
 	}
 
+	@Then("Verify register as my student link is underlined.")
 	public Icivics_HomepageHeaderSigninMisc verifyselectedregasmystuunderlined() {
 		waitTime(3000);
-		WebElement regasmystudentlink = driver.findElement(By.xpath("(//li[contains(@class,'register as')]//a)[3]"));
+		WebElement regasmystudentlink = propElement(getPropfile(gpropname6, "Studentlink"));
 		regasmystudentlink.click();
 		waitTime(3000);
-		click(propElement(getPropfile(gpropname6, "Signinbutton2")));
+		WebElement signinbutton = propElement(getPropfile(gpropname6, "Signinbutton2"));
+		signinbutton.click();
 		waitTime(3000);
-		String cssValue = driver.findElement(By.xpath("(//li[contains(@class,'register as')]//a)[3]"))
-				.getCssValue("text-decoration");
+		String cssValue = propElement(getPropfile(gpropname6, "Studentlink")).getCssValue("text-decoration");
 		System.out.println(cssValue);
 		if (cssValue.contains("underline")) {
 
@@ -196,15 +199,16 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 		return this;
 	}
 
+	@And("Verify register as my teacherlink is underlined.")
 	public Icivics_HomepageHeaderSigninMisc verifyselectedregzasmyteacherunderlined() {
 		waitTime(3000);
-		WebElement regasmyteacherlink = driver.findElement(By.xpath("(//a[@href='/user/register?role=teacher'])[2]"));
+		WebElement regasmyteacherlink = propElement(getPropfile(gpropname6, "Teacherlink"));
 		regasmyteacherlink.click();
 		waitTime(3000);
-		click(propElement(getPropfile(gpropname6, "Signinbutton2")));
+		WebElement signinbutton = propElement(getPropfile(gpropname6, "Signinbutton2"));
+		signinbutton.click();
 		waitTime(3000);
-		String cssValue = driver.findElement(By.xpath("(//a[@href='/user/register?role=teacher'])[2]"))
-				.getCssValue("text-decoration");
+		String cssValue = propElement(getPropfile(gpropname6, "Teacherlink")).getCssValue("text-decoration");
 		System.out.println(cssValue);
 		if (cssValue.contains("underline")) {
 
@@ -222,10 +226,10 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 
 		WebElement signinbutton = propElement(getPropfile(gpropname1, "Signinbutton"));
 		if (signinbutton.isDisplayed()) {
-			signinbutton.click();
-			reportStep("on clicking again signin submenu is close", "Pass");
+		click(propElement(getPropfile(gpropname1, "Signinbutton")));
+			reportStep("signin submenu is close after clicking again", "Pass");
 		} else {
-			reportStep("Myicivicssubmenu is not display", "Pass");
+			reportStep("Myicivicssubmenu is not display", "Fail");
 		}
 		return this;
 

@@ -1,14 +1,12 @@
 package icivics_pages;
 
 import java.io.IOException;
-import java.util.Iterator;
+
 import java.util.List;
 import java.util.Properties;
-import java.util.Set;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -26,6 +24,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 	public String gpropname4 = "Homepage/homepageheaderteach";
 	public String gpropname5 = "Homepage/homepageheaderabout";
 	public String gpropname6 = "Homepage/homepageheadersigninmisc";
+	public String gpropname7 = "Homepage/homepageheadermyicivics";
 
 	public Icivics_HomepageHeaderMyicivicsMisc(RemoteWebDriver driver, ExtentTest node, Properties prop) {
 		this.driver = driver;
@@ -33,7 +32,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 		this.prop = prop;
 	}
 
-	@Given("Launch the icivis URL")
+	@Given("Launch the icivics URL")
 	public Icivics_HomepageHeaderMyicivicsMisc launchURL(String URL) {
 		navigateto(URL);
 		return this;
@@ -123,12 +122,12 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 
 	@Given("Verify signin as a teacher with avatar")
 	public Icivics_HomepageHeaderMyicivicsMisc verifywithavatar() {
-		WebElement avatar = driver.findElement(By.xpath("(//img[@class='avatar-pin '])[2]"));
+		WebElement avatarimg = propElement(getPropfile(gpropname7, "Avatarimg"));
 		waitTime(3000);
 
-		String srcvalue = avatar.getAttribute("src");
-		if (avatar.isDisplayed() && srcvalue.equalsIgnoreCase(
-				"https://staging.d9.icivics.org/sites/default/files/styles/profile-pic-full/public/uploads/avatar2/avatar-9306834-1655798221.png?itok=mKkfvCDS")) {
+		String srcvalue = avatarimg.getAttribute("src");
+		String srcimg = getPropfile(gpropname7, "Srcimgvalue");
+		if (avatarimg.isDisplayed() && srcvalue.equalsIgnoreCase(srcimg)) {
 			reportStep("Avatar image is displayed on the button", "Pass");
 		} else
 
@@ -152,10 +151,10 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 		WebElement loginbutton = propElement(getPropfile(gpropname2, "Loginbutton"));
 		loginbutton.click();
 		waitTime(3000);
-		WebElement avatar = driver.findElement(By.xpath("(//img[@class='avatar-pin avatar-legacy'])[2]"));
+		WebElement avatar = propElement(getPropfile(gpropname7, "Avatar"));
 		String srcvalue = avatar.getAttribute("src");
-		if (avatar.isDisplayed() && srcvalue.equalsIgnoreCase(
-				"https://staging.d9.icivics.org/sites/default/files/styles/profile-pic-full/public/uploads/profile_pictures/profile-pic-full-default.png?itok=yiAEqTiV")) {
+		String value = getPropfile(gpropname7, "Srcvalue");
+		if (avatar.isDisplayed() && srcvalue.equalsIgnoreCase(value)) {
 
 			reportStep("My iCivics button has sillouette avatar ", "Pass");
 		} else {
@@ -189,7 +188,9 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 		} else {
 			reportStep("myicivics button is not displayed ", "Fail");
 		}
-		List<WebElement> allOptions = driver.findElements(By.xpath("(//*[@class='dropdown-menu'])[8]/li"));
+		String locatorvalue=getPropfile(gpropname7, "Dropdownlist");
+		List<WebElement> allOptions= propElement1(locatorvalue) ;
+	
 		System.out.println(allOptions.size());
 		reportStep("myicivics submenu count is" + " " + allOptions.size(), "Pass");
 		for (int i = 0; i < allOptions.size(); i++) {
@@ -231,16 +232,18 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 		return this;
 	}
 
-	@Given("Verify the option you are on is underlined.")
+	@Given("Verify myicivics link is underlined.")
 	public Icivics_HomepageHeaderMyicivicsMisc verifyselectedmyicivicsunderlined() {
 
 		waitTime(3000);
-		WebElement myicivcslink = driver.findElement(By.xpath("(//a[@title='My iCivics'])[2]"));
+
+		WebElement myicivcslink = propElement(getPropfile(gpropname7, "Myicivicslink"));
 		myicivcslink.click();
 		waitTime(3000);
-		click(propElement(getPropfile(gpropname2, "Myicivicsbutton")));
+		WebElement myicivicsbutton = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
+		myicivicsbutton.click();
 		waitTime(3000);
-		String cssValue = driver.findElement(By.xpath("(//a[@title='My iCivics'])[2]")).getCssValue("text-decoration");
+		String cssValue = propElement(getPropfile(gpropname7, "Myicivicslink")).getCssValue("text-decoration");
 		System.out.println(cssValue);
 		if (cssValue.contains("underline")) {
 
@@ -253,19 +256,19 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 		return this;
 	}
 
+	@Then("Verify myclasses link is underlined.")
 	public Icivics_HomepageHeaderMyicivicsMisc verifyselectedmyclassesunderlined() {
 
 		waitTime(3000);
-		WebElement myclassesbutton = driver.findElement(By.xpath("(//li[@class='my classes']//a)[2]"));
+		WebElement myclassesbutton = propElement(getPropfile(gpropname7, "Myclasslink"));
 		myclassesbutton.click();
 		waitTime(3000);
-		WebElement myicivicsbutton1 = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
-		myicivicsbutton1.click();
+		WebElement myicivicsbutton = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
+		myicivicsbutton.click();
 		waitTime(3000);
-		String cssValue1 = driver.findElement(By.xpath("(//li[@class='my classes']//a)[2]"))
-				.getCssValue("text-decoration");
-		System.out.println(cssValue1);
-		if (cssValue1.contains("underline")) {
+		String cssValue = propElement(getPropfile(gpropname7, "Myclasslink")).getCssValue("text-decoration");
+		System.out.println(cssValue);
+		if (cssValue.contains("underline")) {
 
 			reportStep("Selected page is underlined", "Pass");
 
@@ -275,19 +278,19 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 		return this;
 	}
 
+	@And("Verify myfavorite link is underlined.")
 	public Icivics_HomepageHeaderMyicivicsMisc verifyselectedmyfavoritesunderlined() {
 
 		waitTime(3000);
-		WebElement myfavorites = driver.findElement(By.xpath("(//a[@title='My Favorites'])[2]"));
+		WebElement myfavorites = propElement(getPropfile(gpropname7, "MyFavoriteslink"));
 		myfavorites.click();
 		waitTime(3000);
-		WebElement myicivicsbutton1 = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
-		myicivicsbutton1.click();
+		WebElement myicivicsbutton = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
+		myicivicsbutton.click();
 		waitTime(3000);
-		String cssValue1 = driver.findElement(By.xpath("(//a[@title='My Favorites'])[2]"))
-				.getCssValue("text-decoration");
-		System.out.println(cssValue1);
-		if (cssValue1.contains("underline")) {
+		String cssValue = propElement(getPropfile(gpropname7, "MyFavoriteslink")).getCssValue("text-decoration");
+		System.out.println(cssValue);
+		if (cssValue.contains("underline")) {
 
 			reportStep("Selected page is underlined", "Pass");
 
@@ -303,9 +306,9 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 		WebElement myicivicsbutton = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
 		if (myicivicsbutton.isDisplayed()) {
 			click(propElement(getPropfile(gpropname2, "Myicivicsbutton")));
-			reportStep("on clicking again myicivics submenu is close", "Pass");
+			reportStep("Myicivics submenu is close on clicking again", "Pass");
 		} else {
-			reportStep("Myicivicssubmenu is not display", "Pass");
+			reportStep("Myicivicssubmenu is not close", "Fail");
 		}
 		return this;
 

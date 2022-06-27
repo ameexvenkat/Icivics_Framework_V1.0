@@ -26,7 +26,7 @@ public class Icivics_HomepageHeaderTeach extends ProjectSpecificMethods {
 		this.prop = prop;
 	}
 
-	@Given("Launch the icivis URL")
+	@Given("Launch the icivics URL")
 	public Icivics_HomepageHeaderTeach launchURL(String URL) {
 		navigateto(URL);
 		return this;
@@ -45,10 +45,10 @@ public class Icivics_HomepageHeaderTeach extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Given(" Verify click on Teach menu Options display")
+	@Given("Verify click on Teach button and menu Options display")
 	public Icivics_HomepageHeaderTeach verifyteachmenulist() {
-
-		List<WebElement> allOptions = driver.findElements(By.xpath("(//*[@class='dropdown-menu'])[6]/li"));
+		String locatorvalue = getPropfile(gpropname3, "Dropdownlist");
+		List<WebElement> allOptions = propElement1(locatorvalue);
 
 		reportStep("Teachbutton submenu count is" + " " + allOptions.size(), "Pass");
 		for (int i = 0; i < allOptions.size(); i++) {
@@ -118,7 +118,7 @@ public class Icivics_HomepageHeaderTeach extends ProjectSpecificMethods {
 		WebElement teachbutton = propElement(getPropfile(gpropname1, "Teachbutton"));
 		if (teachbutton.isDisplayed()) {
 			click(propElement(getPropfile(gpropname1, "Teachbutton")));
-			reportStep("on clicking again teach submenu is close", "Pass");
+			reportStep("Teach submenu is close on clicking again", "Pass");
 		} else {
 			reportStep("Teach submenu is not display", "Pass");
 		}

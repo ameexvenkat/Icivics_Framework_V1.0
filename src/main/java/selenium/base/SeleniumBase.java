@@ -352,7 +352,9 @@ public class SeleniumBase extends Reporter implements Browser, Element {
 				return driver.findElementsById(value);
 			case "name":
 				return driver.findElementsByName(value);
-			case "class":
+	
+			
+		case "class":
 				return driver.findElementsByClassName(value);
 			case "link":
 				return driver.findElementsByLinkText(value);

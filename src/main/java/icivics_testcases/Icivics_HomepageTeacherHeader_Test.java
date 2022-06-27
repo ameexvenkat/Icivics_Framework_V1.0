@@ -40,6 +40,29 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).signin2()
 				.Verifyheaderbuttonsafterlogin();
 	}
+	// C4 - Are all header elements consistent with those in the mockups?(Need to
+	// take one content from each content type)
+
+	@Test(dataProvider = "fetchData", priority = 1)
+	public void C4_Verifyheaderelemets(String URL) throws IOException, InterruptedException {
+		node = test.createNode(
+				"C4 - Are all header elements consistent with those in the mockups?(Need to take one content from each content type");
+		extent.attachReporter(reporter);
+		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifyblogcontenttype()
+				.VerifyLogo().playbutton().Teachbutton().aboutbutton().donatebutton().shopbutton().verifysigninbutton()
+				.launchteacherpageURL(URL).verifycurriculumcontenttype().VerifyLogo().playbutton().Teachbutton()
+				.aboutbutton().donatebutton().shopbutton().verifysigninbutton().launchteacherpageURL(URL)
+				.verifydbquestcontenttype().VerifyLogo().playbutton().Teachbutton().aboutbutton().donatebutton()
+				.shopbutton().verifysigninbutton().launchteacherpageURL(URL).verifygamecontenttype().VerifyLogo()
+				.playbutton().Teachbutton().aboutbutton().donatebutton().shopbutton().verifysigninbutton()
+				.launchteacherpageURL(URL).verifylessonplaycontenttype().VerifyLogo().playbutton().Teachbutton()
+				.aboutbutton().donatebutton().shopbutton().verifysigninbutton().launchteacherpageURL(URL)
+				.verifyprofessionaldeveopmentcontenttype().VerifyLogo().playbutton().Teachbutton().aboutbutton()
+				.donatebutton().shopbutton().verifysigninbutton().launchteacherpageURL(URL).verifyvideocontenttype()
+				.VerifyLogo().playbutton().Teachbutton().aboutbutton().donatebutton().shopbutton().verifysigninbutton()
+				.launchteacherpageURL(URL).verifyWebquestcontenttype().VerifyLogo().playbutton().Teachbutton()
+				.aboutbutton().donatebutton().shopbutton().verifysigninbutton();
+	}
 	// C6 - Do all buttons have hover/click states?
 
 	@Test(dataProvider = "fetchData", priority = 2)
@@ -48,7 +71,7 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 		extent.attachReporter(reporter);
 		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifyplaybuttonhover()
 				.verifyteachbuttonhover().verifyaboutbuttonhover().verifydonatebuttonhover().launchteacherpageURL(URL)
-				.verifyshopbuttonhover().launchteacherpageURL(URL).verifysigninbuttonhover()
+				.verifyshopbuttonhover().launchteacherpageURL(URL).verifysigninbuttonhover().signin2()
 				.verifymyicvicsbuttonhover();
 	}
 

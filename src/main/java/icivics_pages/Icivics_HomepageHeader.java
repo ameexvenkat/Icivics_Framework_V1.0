@@ -6,8 +6,6 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentTest;
 
@@ -27,7 +25,7 @@ public class Icivics_HomepageHeader extends ProjectSpecificMethods {
 		this.prop = prop;
 	}
 
-	@Given("Launch the icivis educatorregistration URL")
+	@Given("Launch the icivics URL")
 	public Icivics_HomepageHeader launchURL(String URL) {
 		navigateto(URL);
 		return this;
@@ -57,36 +55,36 @@ public class Icivics_HomepageHeader extends ProjectSpecificMethods {
 	public Icivics_HomepageHeader VerifyLogo() {
 		WebElement logo = propElement(getPropfile(gpropname1, "Headerlogo"));
 		if (logo.isDisplayed()) {
-			reportStep("Logo Verified successfully", "Pass");
+			reportStep("Icivics logo is displayed", "Pass");
 		} else {
-			reportStep("Logo is not Verified successfully", "Fail");
+			reportStep("Icivics logo is not displayed", "Fail");
 		}
 		click(propElement(getPropfile(gpropname1, "Headerlogo")));
 		waitTime(3000);
-		reportStep("on clicking Logo reloads the page successfully", "Pass");
+		reportStep("Page reloads successfully", "Pass");
 
 		return this;
 	}
 
-	@Then("Verify Donate buttons should appear in the top/right")
+	@Given("Verify Donate buttons should appear in the top/right")
 	public Icivics_HomepageHeader VerifyDonatebutton() {
 		WebElement donatebutton = propElement(getPropfile(gpropname1, "Donatebutton"));
 		if (donatebutton.isDisplayed()) {
-			reportStep("Donatebutton Verified successfully", "Pass");
+			reportStep("Donatebutton is display", "Pass");
 		} else {
-			reportStep("Donatebutton is not Verified successfully", "Fail");
+			reportStep("Donatebutton is not display", "Fail");
 		}
 
 		return this;
 	}
 
-	@And("Verify Shop buttons should appear in the top/right")
+	@Then("Verify Shop buttons should appear in the top/right")
 	public Icivics_HomepageHeader Verifyshopbutton() {
 		WebElement shopbutton = propElement(getPropfile(gpropname1, "shopbutton"));
 		if (shopbutton.isDisplayed()) {
-			reportStep("Shopbutton Verified successfully", "Pass");
+			reportStep("Shopbutton is dislay", "Pass");
 		} else {
-			reportStep("Shopbutton is not Verified successfully", "Fail");
+			reportStep("Shopbutton is not  dislay", "Fail");
 		}
 
 		return this;
@@ -96,9 +94,9 @@ public class Icivics_HomepageHeader extends ProjectSpecificMethods {
 	public Icivics_HomepageHeader Verifymyicivicsbuttondisplayafterlogin() {
 		WebElement signinbutton = propElement(getPropfile(gpropname1, "Signinbutton"));
 		if (signinbutton.isDisplayed()) {
-			reportStep("Signin button Verified successfully", "Pass");
+			reportStep("Signin button is display", "Pass");
 		} else {
-			reportStep("Signin button is not Verified successfully", "Fail");
+			reportStep("Signin button is not display", "Fail");
 		}
 		click(propElement(getPropfile(gpropname1, "Signinbutton")));
 		click(propElement(getPropfile(gpropname1, "Signinlink")));
@@ -110,53 +108,51 @@ public class Icivics_HomepageHeader extends ProjectSpecificMethods {
 		waitTime(3000);
 		WebElement myicivicsbutton2 = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
 		if (myicivicsbutton2.isDisplayed()) {
-			reportStep("Myicivicsbutton Verified successfully", "Pass");
+			reportStep("Myicivicsbutton is display", "Pass");
 		} else {
-			reportStep("Myicivicsbutton is not Verified successfully", "Fail");
+			reportStep("Myicivicsbutton is not display", "Fail");
 		}
 		return this;
 
 	}
 
-	@Then("Verify header button after login")
+	@And("Verify header button after login")
 	public Icivics_HomepageHeader Verifyheaderbuttonsafterlogin() {
 		WebElement donatebutton = propElement(getPropfile(gpropname1, "Donatebutton"));
 		if (donatebutton.isDisplayed()) {
-			reportStep("Donatebutton Verified successfully", "Pass");
+			reportStep("Donatebutton is display after login ", "Pass");
 		} else {
-			reportStep("Donatebutton is not Verified successfully", "Fail");
+			reportStep("Donatebutton is not display", "Fail");
 		}
 
 		WebElement shopbutton = propElement(getPropfile(gpropname1, "shopbutton2"));
 		if (shopbutton.isDisplayed()) {
-			reportStep("Shopbutton Verified successfully", "Pass");
+			reportStep("Shopbutton is display after login ", "Pass");
 		} else {
-			reportStep("Shopbutton is not Verified successfully", "Fail");
+			reportStep("Shopbutton is not display", "Fail");
 		}
 
 		WebElement myicivicsbutton2 = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
 		if (myicivicsbutton2.isDisplayed()) {
-			reportStep("Myicivicsbutton Verified successfully", "Pass");
+			reportStep("Myicivicsbutton is display after login ", "Pass");
 		} else {
-			reportStep("Myicivicsbutton is not Verified successfully", "Fail");
+			reportStep("Myicivicsbutton is not display", "Fail");
 		}
 		return this;
 	}
 
-	@When("Click on donation popup there should never be a popup asking for donation")
+	@Given("Verify donation popup display")
 	public Icivics_HomepageHeader Verifydonationpopup() {
-		// WebElement Donatebutton = propElement(getPropfile(gpropname1,
-		// "Donatebutton"));
+
 		click(propElement(getPropfile(gpropname1, "Donatebutton")));
-		// acceptAlert();
 
 		try {
 			Alert alert = driver.switchTo().alert();
 			System.out.println(alert.getText() + " Alert is Displayed");
-			reportStep("Alert is present", "Fail");
+			reportStep("Donation popup is present", "Fail");
 		} catch (NoAlertPresentException ex) {
 			System.out.println("Alert is NOT Displayed");
-			reportStep("Alert is not present", "Pass");
+			reportStep("Donation Popup is not present", "Pass");
 		}
 
 		return this;

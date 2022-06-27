@@ -13,7 +13,7 @@ import com.aventstack.extentreports.ExtentTest;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+
 import projectSpecific.base.ProjectSpecificMethods;
 
 public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
@@ -26,7 +26,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		this.prop = prop;
 	}
 
-	@Given("Launch the icivis educatorregistration URL")
+	@Given("Launch the icivics URL")
 	public Icivics_HomepageTeacherHeader launchteacherpageURL(String URL) {
 		navigateto(URL);
 		return this;
@@ -45,13 +45,24 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
+	public Icivics_HomepageTeacherHeader VerifyLogo() {
+		WebElement logo = propElement(getPropfile(gpropname2, "Headerlogo1"));
+		if (logo.isDisplayed()) {
+			reportStep("Icivics logo is display", "Pass");
+		} else {
+			reportStep("Icivics logo is not display", "Fail");
+		}
+
+		return this;
+	}
+
 	@Then("Verify Play buttons should appear in the top/right")
 	public Icivics_HomepageTeacherHeader playbutton() {
 		WebElement playbutton = propElement(getPropfile(gpropname2, "Playbutton"));
 		if (playbutton.isDisplayed()) {
-			reportStep("playbutton Verified successfully", "Pass");
+			reportStep("playbutton is display", "Pass");
 		} else {
-			reportStep("playbutton is not Verified successfully", "Fail");
+			reportStep("playbutton is not display", "Fail");
 		}
 
 		return this;
@@ -61,9 +72,9 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 	public Icivics_HomepageTeacherHeader Teachbutton() {
 		WebElement teachbutton = propElement(getPropfile(gpropname2, "Teachbutton"));
 		if (teachbutton.isDisplayed()) {
-			reportStep("Teachbutton Verified successfully", "Pass");
+			reportStep("Teachbutton is display", "Pass");
 		} else {
-			reportStep("Teachbutton is not Verified successfully", "Fail");
+			reportStep("Teachbutton is not display", "Fail");
 		}
 
 		return this;
@@ -73,9 +84,9 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 	public Icivics_HomepageTeacherHeader aboutbutton() {
 		WebElement aboutbutton = propElement(getPropfile(gpropname2, "Aboutbutton"));
 		if (aboutbutton.isDisplayed()) {
-			reportStep("aboutbutton Verified successfully", "Pass");
+			reportStep("aboutbutton is display", "Pass");
 		} else {
-			reportStep("aboutbutton is not Verified successfully", "Fail");
+			reportStep("aboutbutton is not display", "Fail");
 		}
 
 		return this;
@@ -85,9 +96,9 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 	public Icivics_HomepageTeacherHeader donatebutton() {
 		WebElement donatebutton = propElement(getPropfile(gpropname1, "Donatebutton"));
 		if (donatebutton.isDisplayed()) {
-			reportStep("donatebutton Verified successfully", "Pass");
+			reportStep("donatebutton is display", "Pass");
 		} else {
-			reportStep("donatebutton is not Verified successfully", "Fail");
+			reportStep("donatebutton is not display", "Fail");
 		}
 
 		return this;
@@ -97,11 +108,24 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 	public Icivics_HomepageTeacherHeader shopbutton() {
 		WebElement Shopbutton = propElement(getPropfile(gpropname1, "shopbutton"));
 		if (Shopbutton.isDisplayed()) {
-			reportStep("Shopbutton Verified successfully", "Pass");
+			reportStep("Shopbutton is display", "Pass");
 		} else {
-			reportStep("Shopbutton is not Verified successfully", "Fail");
+			reportStep("Shopbutton is not display", "Fail");
 		}
 
+		return this;
+	}
+
+	public Icivics_HomepageTeacherHeader verifysigninbutton() {
+
+		WebElement Signinbutton = propElement(getPropfile(gpropname2, "Signinbutton2"));
+		if (Signinbutton.isDisplayed()) {
+			Signinbutton.click();
+			reportStep("Signinbutton is displayed", "Pass");
+
+		} else {
+			reportStep("Signinbutton is not displayed", "Fail");
+		}
 		return this;
 	}
 
@@ -174,7 +198,224 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("Verify playbutton should have Hand cursor should appear over buttons Tooltip appears after hover.")
+	@Given("Verify Header elements are consistent with mockup")
+	public Icivics_HomepageTeacherHeader verifyblogcontenttype() {
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "Blog"));
+
+		WebElement curriculumchkbox = propElement(getPropfile(gpropname2, "Curriculumunit"));
+		curriculumchkbox.click();
+		waitTime(5000);
+		WebElement blogcheckbox = propElement(getPropfile(gpropname2, "Blogcheckbox"));
+		boolean blogcheckedbox = blogcheckbox.isSelected();
+
+		if (blogcheckedbox) {
+			reportStep("Blog checkbox is already checked", "Pass");
+		} else {
+
+			blogcheckbox.click();
+			waitTime(5000);
+			reportStep("Blog checkbox is checked now ", "Pass");
+		}
+		WebElement viewbutton = propElement(getPropfile(gpropname2, "Viewbutton"));
+		if (viewbutton.isDisplayed()) {
+			viewbutton.click();
+			waitTime(3000);
+			reportStep("Page is display", "Pass");
+		} else {
+			reportStep("Page is not display", "Pass");
+		}
+		return this;
+	}
+
+	@Then("Verify curriculum unit content type")
+	public Icivics_HomepageTeacherHeader verifycurriculumcontenttype() {
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "Blog"));
+
+		waitTime(3000);
+		WebElement curriculumchkbox = propElement(getPropfile(gpropname2, "Curriculumunit"));
+		boolean cucheckedbox = curriculumchkbox.isSelected();
+		if (cucheckedbox) {
+			reportStep("curriculum checkbox is already checked", "Pass");
+		} else {
+
+			curriculumchkbox.click();
+			waitTime(3000);
+			reportStep("curriculum checkbox is checked now ", "Pass");
+		}
+		WebElement viewbutton = propElement(getPropfile(gpropname2, "Viewbutton"));
+		if (viewbutton.isDisplayed()) {
+			viewbutton.click();
+			waitTime(3000);
+			reportStep("Page is display", "Pass");
+		} else {
+			reportStep("Page is not display", "Pass");
+		}
+		return this;
+	}
+
+	@Then("Verify DBquest content type")
+	public Icivics_HomepageTeacherHeader verifydbquestcontenttype() {
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "Blog"));
+		waitTime(3000);
+		WebElement curriculumchkbox = propElement(getPropfile(gpropname2, "Curriculumunit"));
+		curriculumchkbox.click();
+		waitTime(5000);
+		WebElement dbquest = propElement(getPropfile(gpropname2, "Dbquest"));
+		boolean dbcheckedbox = dbquest.isSelected();
+		if (dbcheckedbox) {
+			reportStep("DBQUEST checkbox is already checked", "Pass");
+		} else {
+			dbquest.click();
+			waitTime(5000);
+			reportStep("DBQUEST checkbox is checked now ", "Pass");
+		}
+		WebElement viewbutton = propElement(getPropfile(gpropname2, "Viewbutton"));
+		if (viewbutton.isDisplayed()) {
+			viewbutton.click();
+			waitTime(3000);
+			reportStep("Page is display", "Pass");
+		} else {
+			reportStep("Page is not display", "Pass");
+		}
+		return this;
+	}
+
+	@Then("Verify Game content type")
+	public Icivics_HomepageTeacherHeader verifygamecontenttype() {
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "Blog"));
+		waitTime(3000);
+		WebElement curriculumchkbox = propElement(getPropfile(gpropname2, "Curriculumunit"));
+		curriculumchkbox.click();
+		waitTime(5000);
+		WebElement gamechkbox = propElement(getPropfile(gpropname2, "Game"));
+		boolean gamecheckedbox = gamechkbox.isSelected();
+		if (gamecheckedbox) {
+			reportStep("Game checkbox is already checked", "Pass");
+		} else {
+			gamechkbox.click();
+			waitTime(5000);
+			reportStep("Game checkbox is checked now ", "Pass");
+		}
+		WebElement viewbutton = propElement(getPropfile(gpropname2, "Viewbutton"));
+		if (viewbutton.isDisplayed()) {
+			viewbutton.click();
+			waitTime(3000);
+			reportStep("Page is display", "Pass");
+		} else {
+			reportStep("Page is not display", "Pass");
+		}
+		return this;
+	}
+
+	@Then("Verify Lessonplay content type")
+	public Icivics_HomepageTeacherHeader verifylessonplaycontenttype() {
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "Blog"));
+
+		waitTime(3000);
+		WebElement curriculumchkbox = propElement(getPropfile(gpropname2, "Curriculumunit"));
+		curriculumchkbox.click();
+		waitTime(5000);
+		WebElement lessonplaychkbox = propElement(getPropfile(gpropname2, "Lessonplay"));
+		boolean lessonplaycheckedbox = lessonplaychkbox.isSelected();
+		if (lessonplaycheckedbox) {
+			reportStep("Lessonplay checkbox is already checked", "Pass");
+		} else {
+			lessonplaychkbox.click();
+			waitTime(5000);
+			reportStep("Lessonplay checkbox is checked now ", "Pass");
+		}
+		WebElement viewbutton = propElement(getPropfile(gpropname2, "Viewbutton"));
+		if (viewbutton.isDisplayed()) {
+			viewbutton.click();
+			waitTime(3000);
+			reportStep("Page is display", "Pass");
+		} else {
+			reportStep("Page is not display", "Pass");
+		}
+		return this;
+	}
+	@Then("Verify Professional development content type")
+	public Icivics_HomepageTeacherHeader verifyprofessionaldeveopmentcontenttype() {
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "Blog"));
+
+		waitTime(3000);
+		WebElement curriculumchkbox = propElement(getPropfile(gpropname2, "Curriculumunit"));
+		curriculumchkbox.click();
+		waitTime(5000);
+		WebElement Pdchkbox = propElement(getPropfile(gpropname2, "Pd"));
+		boolean pbcheckedbox = Pdchkbox.isSelected();
+		if (pbcheckedbox) {
+			reportStep("Professional development checkbox is already checked", "Pass");
+		} else {
+			Pdchkbox.click();
+			waitTime(5000);
+			reportStep("Professional development checkbox is checked now ", "Pass");
+		}
+		WebElement viewbutton = propElement(getPropfile(gpropname2, "Viewbutton"));
+		if (viewbutton.isDisplayed()) {
+			viewbutton.click();
+			waitTime(3000);
+			reportStep("Page is display", "Pass");
+		} else {
+			reportStep("Page is not display", "Pass");
+		}
+		return this;
+	}
+	@Then("Verify Video content type")
+	public Icivics_HomepageTeacherHeader verifyvideocontenttype() {
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "Blog"));
+
+		waitTime(3000);
+		WebElement curriculumchkbox = propElement(getPropfile(gpropname2, "Curriculumunit"));
+		curriculumchkbox.click();
+		waitTime(5000);
+		WebElement videochkbox = propElement(getPropfile(gpropname2, "Video"));
+		boolean videocheckedbox = videochkbox.isSelected();
+		if (videocheckedbox) {
+			reportStep("Video checkbox is already checked", "Pass");
+		} else {
+			videochkbox.click();
+			waitTime(5000);
+			reportStep("Video checkbox is checked now ", "Pass");
+		}
+		WebElement viewbutton = propElement(getPropfile(gpropname2, "Viewbutton"));
+		if (viewbutton.isDisplayed()) {
+			viewbutton.click();
+			waitTime(3000);
+			reportStep("Page is display", "Pass");
+		} else {
+			reportStep("Page is not display", "Pass");
+		}
+		return this;
+	}
+@Then("Verify Webquest content type")
+public Icivics_HomepageTeacherHeader verifyWebquestcontenttype() {
+	scrollToTheGivenWebElement(getPropfile(gpropname2, "Blog"));
+
+	waitTime(3000);
+	WebElement curriculumchkbox = propElement(getPropfile(gpropname2, "Curriculumunit"));
+	curriculumchkbox.click();
+	waitTime(5000);
+	WebElement webquestchkbox = propElement(getPropfile(gpropname2, "WebQuest"));
+	boolean webquestchbox = webquestchkbox.isSelected();
+	if (webquestchbox) {
+		reportStep("Webquest checkbox is already checked", "Pass");
+	} else {
+		webquestchkbox.click();
+		waitTime(5000);
+		reportStep("Webquest checkbox is checked now ", "Pass");
+	}
+	WebElement viewbutton = propElement(getPropfile(gpropname2, "Viewbutton"));
+	if (viewbutton.isDisplayed()) {
+		viewbutton.click();
+		waitTime(3000);
+		reportStep("Page is display", "Pass");
+	} else {
+		reportStep("Page is not display", "Pass");
+	}
+	return this;
+}
+	@Given("Verify playbutton should have Hand cursor should appear over buttons Tooltip appears after hover.")
 	public Icivics_HomepageTeacherHeader verifyplaybuttonhover() {
 
 		String playbuttonhover = getPropfile(gpropname2, "Playbutton");
@@ -277,11 +518,11 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 	@Then("Verify myicivicsbutton should not present for anonymous user it should present only when we login")
 	public Icivics_HomepageTeacherHeader verifysigninbuttonhover() {
 
-		String signinbuttonhover = getPropfile(gpropname1, "Signinbutton");
+		String signinbuttonhover = getPropfile(gpropname2, "Signinbutton");
 		mouseOverAction(signinbuttonhover);
 		waitTime(3000);
 		WebElement Signinbuttontooltip = propElement(signinbuttonhover);
-		String ExpectedTooltip = getPropfile(gpropname2, "Myicivicstooltip");
+		String ExpectedTooltip = getPropfile(gpropname2, "Signintooltip");
 		String actualTooltip = Signinbuttontooltip.getAttribute("title");
 		if (actualTooltip.equals(ExpectedTooltip)) {
 			reportStep("Expected Tooltip and Actual Tooltip text matched successfully", "Pass");
@@ -324,6 +565,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		waitTime(3000);
 		WebElement myicivicstooltip = propElement(myicivicsbuttonhover);
 		String ExpectedTooltip1 = getPropfile(gpropname2, "Myicivicstooltip");
+		waitTime(3000);
 		String actualTooltip1 = myicivicstooltip.getAttribute("title");
 		if (actualTooltip1.equals(ExpectedTooltip1)) {
 			reportStep("Expected Tooltip and Actual Tooltip text matched successfully", "Pass");
@@ -354,7 +596,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@When("Header is resize it should should turn into hamburger menu when its small enough")
+	@Given("Verify header resize turn into hamburger menu when its small enough")
 	public Icivics_HomepageTeacherHeader resizeheader() {
 
 		Dimension d = new Dimension(768, 1024);

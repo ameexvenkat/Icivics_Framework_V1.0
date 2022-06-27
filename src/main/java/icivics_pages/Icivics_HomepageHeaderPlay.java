@@ -6,7 +6,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -26,7 +26,7 @@ public class Icivics_HomepageHeaderPlay extends ProjectSpecificMethods {
 		this.prop = prop;
 	}
 
-	@Given("Launch the icivis URL")
+	@Given("Launch the icivics URL")
 	public Icivics_HomepageHeaderPlay launchURL(String URL) {
 		navigateto(URL);
 		return this;
@@ -47,10 +47,10 @@ public class Icivics_HomepageHeaderPlay extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Given("Verify Links for each iCivics game display")
+	@Given("Verify iCivics game submenu list display")
 	public Icivics_HomepageHeaderPlay verifyplaysubmenulist() {
-
-		List<WebElement> allOptions = driver.findElements(By.xpath("(//*[@class='dropdown-menu'])[5]/li"));
+		String locatorvalue = getPropfile(gpropname3, "Dropdownlist");
+		List<WebElement> allOptions = propElement1(locatorvalue);
 
 		reportStep("playbutton submenu count is" + " " + allOptions.size(), "Pass");
 		for (int i = 0; i < allOptions.size(); i++) {
@@ -180,43 +180,45 @@ public class Icivics_HomepageHeaderPlay extends ProjectSpecificMethods {
 
 	@Given("Verify selected page is underlined")
 	public Icivics_HomepageHeaderPlay verifyselectedoptionunderlined() {
-		waitTime(3000);
-		WebElement allgameslink = driver.findElement(By.xpath("(//a[@class='active-trail is-active'])[2]"));
-		allgameslink.click();
-		waitTime(3000);
+		navigateto("https://staging.d9.icivics.org/teachers");
 		click(propElement(getPropfile(gpropname2, "Playbutton")));
 		waitTime(3000);
-		String cssValue = driver.findElement(By.xpath("(//a[@class='active-trail is-active'])[2]"))
-				.getCssValue("text-decoration");
-		System.out.println(cssValue);
-		if (cssValue.contains("underline")) {
+		String locatorvalue = getPropfile(gpropname3, "Dropdownlist");
+		List<WebElement> allOptions = propElement1(locatorvalue);
+		reportStep("Playbutton submenu count is" + " " + allOptions.size(), "Pass");
+		for (int i = 1; i <= allOptions.size(); i++) {
 
-			reportStep("Selected'ALLGAMES'page is underlined", "Pass");
+			WebElement Options = propElement(getPropfile(gpropname3, "Dropdownlistplay"));
+			Options.click();
+			waitTime(3000);
+			String URL = driver.getCurrentUrl();
+			if (URL == "https://staging.d9.icivics.org/game-odyssey") {
+				navigateto("url");
 
-		} else {
-			reportStep("Selected page is not underlined", "Fail");
+			} else {
+				click(propElement(getPropfile(gpropname2, "Playbutton")));
+				waitTime(3000);
+				WebElement options1 = propElement(getPropfile(gpropname3, "Dropdownplaylist"));
+
+				String cssvalue = options1.getCssValue("text-decoration");
+				System.out.println(cssvalue);
+				waitTime(3000);
+				if (cssvalue.contains("underline")) {
+					reportStep("Selected page is underlined", "Pass");
+				} else {
+					reportStep("Selected page is not underlined", "Fail");
+				}
+				navigateto("https://staging.d9.icivics.org/teachers");
+				click(propElement(getPropfile(gpropname2, "Playbutton")));
+				waitTime(3000);
+
+			}
+
 		}
-		waitTime(3000);
-		WebElement csv = driver.findElement(By.xpath("(//li[contains(@class,'cast your')]//a)[2]"));
-		csv.click();
-		waitTime(3000);
-		click(propElement(getPropfile(gpropname2, "Playbutton")));
-		waitTime(3000);
-		String cssValue1 = driver.findElement(By.xpath("(//li[contains(@class,'cast your')]//a)[2]"))
-				.getCssValue("text-decoration");
-		System.out.println(cssValue);
-		if (cssValue1 .contains("underline")) {
-
-			reportStep("Selected 'CAST YOUR VOTE' page is underlined", "Pass");
-
-		} else {
-			reportStep("Selected page is not underlined", "Fail");
-		}
-
 		return this;
 	}
 
-	@Given("Click on the play menu again and verify submenu is close")
+	@Given("Verify Click on the play menu again and submenu is close")
 
 	public Icivics_HomepageHeaderPlay clickplaybuttonagain() {
 
