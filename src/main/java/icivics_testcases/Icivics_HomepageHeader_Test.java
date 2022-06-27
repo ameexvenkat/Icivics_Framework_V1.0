@@ -40,7 +40,7 @@ public class Icivics_HomepageHeader_Test extends ProjectSpecificMethods {
 	// C2 - While on the iCivics Home Page, do you see buttons for Donate, Shop, and
 	// My iCivics in the navigation bar?
 
-	@Test(dataProvider = "fetchData", priority = 1)
+	@Test(dataProvider = "fetchData", priority = 2)
 	public void C2_VerifyHeaderbuttonforauthenticateduser(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
 				"C2 - While on the iCivics Home Page, do you see buttons for Donate, Shop,  and My iCivics in the navigation bar?");
@@ -50,7 +50,7 @@ public class Icivics_HomepageHeader_Test extends ProjectSpecificMethods {
 
 	// C1538 - Does the donation popup NOT show?
 
-	@Test(dataProvider = "fetchData", priority = 2)
+	@Test(dataProvider = "fetchData", priority = 3)
 	public void C1538_Verifydonationpopup(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C1538 - Does the donation popup NOT show?");
 		extent.attachReporter(reporter);

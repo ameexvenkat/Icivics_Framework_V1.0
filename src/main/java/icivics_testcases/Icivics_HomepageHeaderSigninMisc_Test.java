@@ -64,7 +64,7 @@ public class Icivics_HomepageHeaderSigninMisc_Test extends ProjectSpecificMethod
 	// C37 - When you select Sign In, do you see links to Sign In, Register As a
 	// Student, Register As A Teacher in the submenu?
 
-	@Test(dataProvider = "fetchData", priority = 8)
+	@Test(dataProvider = "fetchData", priority = 5)
 	public void C37_Verifysigninbuttonsubmenu(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
 				"C37 - When you select Sign In, do you see links to Sign In, Register As a Student, Register As A Teacher in the submenu?");
@@ -74,7 +74,7 @@ public class Icivics_HomepageHeaderSigninMisc_Test extends ProjectSpecificMethod
 	// C38 - If not signed in and you select a link in the submenu, are you
 	// navigated to the appropriate page?
 
-	@Test(dataProvider = "fetchData", priority = 9)
+	@Test(dataProvider = "fetchData", priority = 6)
 	public void C38_Verifysigninbuttonsubmenu(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
 				"C38 - If not signed in and you select a link in the submenu, are you navigated to the appropriate page?");
@@ -84,7 +84,7 @@ public class Icivics_HomepageHeaderSigninMisc_Test extends ProjectSpecificMethod
 	// C41 - If you are viewing one of the pages in the Sign In submenu, is that
 	// page underlined in the submenu?
 
-	@Test(dataProvider = "fetchData", priority = 9)
+	@Test(dataProvider = "fetchData", priority = 7)
 	public void C41_Verifysubmenuoptionisunderlined(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
 				"C41 - If you are viewing one of the pages in the Sign In/My iCivics submenu, is that page underlined in the submenu?");
@@ -97,7 +97,7 @@ public class Icivics_HomepageHeaderSigninMisc_Test extends ProjectSpecificMethod
 	// C42 - When you select Sign In / My iCivics again while the submenu is open,
 	// does the submenu close?
 
-	@Test(dataProvider = "fetchData", priority = 9)
+	@Test(dataProvider = "fetchData", priority = 8)
 	public void C42_Verifysubmenuoptionisunderlined(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
 				"C42 - When you select Sign In / My iCivics again while the submenu is open, does the submenu close?");

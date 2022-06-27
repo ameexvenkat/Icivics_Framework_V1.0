@@ -12,7 +12,7 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 
 	@BeforeTest
 	public void setValues() {
-		testCaseName = "HomepageHeader";
+		testCaseName = "HomepageTeacherHeader";
 		authors = "Venkat";
 		category = "Smoke";
 		dataSheetName = "Icivics_Homepageteacherheader";
@@ -43,7 +43,7 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 	// C4 - Are all header elements consistent with those in the mockups?(Need to
 	// take one content from each content type)
 
-	@Test(dataProvider = "fetchData", priority = 1)
+	@Test(dataProvider = "fetchData", priority = 2)
 	public void C4_Verifyheaderelemets(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
 				"C4 - Are all header elements consistent with those in the mockups?(Need to take one content from each content type");
@@ -65,7 +65,7 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 	}
 	// C6 - Do all buttons have hover/click states?
 
-	@Test(dataProvider = "fetchData", priority = 2)
+	@Test(dataProvider = "fetchData", priority = 3)
 	public void C6_Verifyheaderbuttonhoverforanonymoususer(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C6 - Do all buttons have hover/click states?");
 		extent.attachReporter(reporter);
@@ -77,7 +77,7 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 
 	// C6 - Do all buttons have hover/click states?
 
-	@Test(dataProvider = "fetchData", priority = 3)
+	@Test(dataProvider = "fetchData", priority = 4)
 	public void C6_verifyaheaderbuttonhoverforauthenticateduser(String URL) {
 		node = test.createNode("C6 - Do all buttons have hover/click states?");
 		extent.attachReporter(reporter);
@@ -88,7 +88,7 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 	}
 	// C7 - Does the header resize responsively at different resolutions?
 
-	@Test(dataProvider = "fetchData", priority = 4)
+	@Test(dataProvider = "fetchData", priority = 5)
 	public void C7_verifyresizeheaderintohamburger(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C7 - Does the header resize responsively at different resolutions?");
 		extent.attachReporter(reporter);

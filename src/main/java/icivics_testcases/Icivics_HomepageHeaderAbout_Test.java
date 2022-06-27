@@ -60,7 +60,7 @@ public class Icivics_HomepageHeaderAbout_Test extends ProjectSpecificMethods {
 	// C27 - When you select About again while the submenu is open, does the submenu close?
 
 
-	@Test(dataProvider = "fetchData", priority = 4)
+	@Test(dataProvider = "fetchData", priority = 3)
 	public void C27_Verifyclickaboutbuttonagain(String URL) throws IOException, InterruptedException {
 		node = test
 				.createNode("C27 - When you select About again while the submenu is open, does the submenu close?");

@@ -38,7 +38,7 @@ public class Icivics_HomepageHeaderplay_Test extends ProjectSpecificMethods {
 	// C10 - When you select a link in the submenu, are you navigated to the
 	// appropriate page?
 
-	@Test(dataProvider = "fetchData", priority = 1)
+	@Test(dataProvider = "fetchData", priority = 2)
 	public void C10_Verifyplaybuttonelements(String URL) throws IOException, InterruptedException {
 		node = test
 				.createNode("C10- When you select a link in the submenu, are you navigated to the appropriate page?");
@@ -49,7 +49,7 @@ public class Icivics_HomepageHeaderplay_Test extends ProjectSpecificMethods {
 	// C12 -If you are viewing one of the pages in the Play submenu, is that page
 	// underlined in the submenu?
 
-	@Test(dataProvider = "fetchData", priority = 2)
+	@Test(dataProvider = "fetchData", priority = 3)
 	public void C12_Verifypageisunderlined(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
 				"C12- If you are viewing one of the pages in the Play submenu, is that page underlined in the submenu?");
@@ -61,7 +61,7 @@ public class Icivics_HomepageHeaderplay_Test extends ProjectSpecificMethods {
 	// C13 - When you select Play again while the submenu is open, does the submenu
 	// close?
 
-	@Test(dataProvider = "fetchData", priority = 3)
+	@Test(dataProvider = "fetchData", priority = 4)
 	public void C13_Verifyclickonplaybuttonagain(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C13- When you select Play again while the submenu is open, does the submenu close?");
 		extent.attachReporter(reporter);

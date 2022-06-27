@@ -52,7 +52,7 @@ public class Icivics_HomepageHeaderTeach_Test extends ProjectSpecificMethods {
 	// C20 - When you select Teach again while the submenu is open, does the submenu
 	// close?
 
-	@Test(dataProvider = "fetchData", priority = 4)
+	@Test(dataProvider = "fetchData", priority = 3)
 	public void C20_verifyclickteachbuttonagain(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C20 - When you select Teach again while the submenu is open, does the submenu close?");
 		extent.attachReporter(reporter);
