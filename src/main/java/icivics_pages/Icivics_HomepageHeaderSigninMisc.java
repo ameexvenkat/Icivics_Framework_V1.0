@@ -207,7 +207,7 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 		waitTime(3000);
 		WebElement signinbutton = propElement(getPropfile(gpropname6, "Signinbutton2"));
 		signinbutton.click();
-		waitTime(3000);
+		waitTime(5000);
 		String cssValue = propElement(getPropfile(gpropname6, "Teacherlink")).getCssValue("text-decoration");
 		System.out.println(cssValue);
 		if (cssValue.contains("underline")) {

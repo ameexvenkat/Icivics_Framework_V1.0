@@ -52,12 +52,12 @@ public class Icivics_HomepageHeaderteach2 extends ProjectSpecificMethods {
 		waitTime(3000);
 		click(propElement(getPropfile(gpropname1, "Teachbutton")));
 		waitTime(7000);
-		String cssValue = propElement(getPropfile(gpropname4, "Sollink1")).getCssValue("text-decoration");
-		String cssValue1 = propElement(getPropfile(gpropname4, "Snslink")).getCssValue("text-decoration");
-		String cssValue2 = propElement(getPropfile(gpropname4, "Pdlink")).getCssValue("text-decoration");
-		String cssValue3 = propElement(getPropfile(gpropname4, "Gslink")).getCssValue("text-decoration");
-		String cssValue4 = propElement(getPropfile(gpropname4, "Eclink")).getCssValue("text-decoration");
-		String cssValue5 = propElement(getPropfile(gpropname4, "Faqlink")).getCssValue("text-decoration");
+		String cssValue = propElement(getPropfile(gpropname4, "Sollink1")).getCssValue("text-decoration-line");
+		String cssValue1 = propElement(getPropfile(gpropname4, "Snslink")).getCssValue("text-decoration-line");
+		String cssValue2 = propElement(getPropfile(gpropname4, "Pdlink")).getCssValue("text-decoration-line");
+		String cssValue3 = propElement(getPropfile(gpropname4, "Gslink")).getCssValue("text-decoration-line");
+		String cssValue4 = propElement(getPropfile(gpropname4, "Eclink")).getCssValue("text-decoration-line");
+		String cssValue5 = propElement(getPropfile(gpropname4, "Faqlink")).getCssValue("text-decoration-line");
 		System.out.println(cssValue);
 		if (cssValue.contains("underline") && cssValue1.contains("none") && cssValue2.contains("none")
 				&& cssValue3.contains("none") && cssValue4.contains("none") && cssValue5.contains("none")) {
@@ -77,12 +77,12 @@ public class Icivics_HomepageHeaderteach2 extends ProjectSpecificMethods {
 		waitTime(3000);
 		click(propElement(getPropfile(gpropname1, "Teachbutton")));
 		waitTime(3000);
-		String cssValue = propElement(getPropfile(gpropname4, "Sollink")).getCssValue("text-decoration");
-		String cssValue1 = propElement(getPropfile(gpropname4, "Snslink")).getCssValue("text-decoration");
-		String cssValue2 = propElement(getPropfile(gpropname4, "Pdlink")).getCssValue("text-decoration");
-		String cssValue3 = propElement(getPropfile(gpropname4, "Gslink")).getCssValue("text-decoration");
-		String cssValue4 = propElement(getPropfile(gpropname4, "Eclink")).getCssValue("text-decoration");
-		String cssValue5 = propElement(getPropfile(gpropname4, "Faqlink")).getCssValue("text-decoration");
+		String cssValue = propElement(getPropfile(gpropname4, "Sollink")).getCssValue("text-decoration-line");
+		String cssValue1 = propElement(getPropfile(gpropname4, "Snslink")).getCssValue("text-decoration-line");
+		String cssValue2 = propElement(getPropfile(gpropname4, "Pdlink")).getCssValue("text-decoration-line");
+		String cssValue3 = propElement(getPropfile(gpropname4, "Gslink")).getCssValue("text-decoration-line");
+		String cssValue4 = propElement(getPropfile(gpropname4, "Eclink")).getCssValue("text-decoration-line");
+		String cssValue5 = propElement(getPropfile(gpropname4, "Faqlink")).getCssValue("text-decoration-line");
 		if (cssValue.contains("none") && cssValue1.contains("underline") && cssValue2.contains("none")
 				&& cssValue3.contains("none") && cssValue4.contains("none") && cssValue5.contains("none")) {
 
@@ -101,12 +101,12 @@ public class Icivics_HomepageHeaderteach2 extends ProjectSpecificMethods {
 		waitTime(3000);
 		click(propElement(getPropfile(gpropname1, "Teachbutton")));
 		waitTime(3000);
-		String cssValue = propElement(getPropfile(gpropname4, "Sollink")).getCssValue("text-decoration");
-		String cssValue1 = propElement(getPropfile(gpropname4, "Snslink")).getCssValue("text-decoration");
-		String cssValue2 = propElement(getPropfile(gpropname4, "Pdlink1")).getCssValue("text-decoration");
-		String cssValue3 = propElement(getPropfile(gpropname4, "Gslink")).getCssValue("text-decoration");
-		String cssValue4 = propElement(getPropfile(gpropname4, "Eclink")).getCssValue("text-decoration");
-		String cssValue5 = propElement(getPropfile(gpropname4, "Faqlink")).getCssValue("text-decoration");
+		String cssValue = propElement(getPropfile(gpropname4, "Sollink")).getCssValue("text-decoration-line");
+		String cssValue1 = propElement(getPropfile(gpropname4, "Snslink")).getCssValue("text-decoration-line");
+		String cssValue2 = propElement(getPropfile(gpropname4, "Pdlink1")).getCssValue("text-decoration-line");
+		String cssValue3 = propElement(getPropfile(gpropname4, "Gslink")).getCssValue("text-decoration-line");
+		String cssValue4 = propElement(getPropfile(gpropname4, "Eclink")).getCssValue("text-decoration-line");
+		String cssValue5 = propElement(getPropfile(gpropname4, "Faqlink")).getCssValue("text-decoration-line");
 		if (cssValue.contains("none") && cssValue1.contains("none") && cssValue2.contains("underline")
 				&& cssValue3.contains("none") && cssValue4.contains("none") && cssValue5.contains("none")) {
 
@@ -125,12 +125,13 @@ public class Icivics_HomepageHeaderteach2 extends ProjectSpecificMethods {
 		waitTime(3000);
 		click(propElement(getPropfile(gpropname1, "Teachbutton")));
 		waitTime(3000);
-		String cssValue = propElement(getPropfile(gpropname4, "Sollink")).getCssValue("text-decoration");
-		String cssValue1 = propElement(getPropfile(gpropname4, "Snslink")).getCssValue("text-decoration");
-		String cssValue2 = propElement(getPropfile(gpropname4, "Pdlink1")).getCssValue("text-decoration");
-		String cssValue3 = propElement(getPropfile(gpropname4, "Gslink")).getCssValue("text-decoration");
-		String cssValue4 = propElement(getPropfile(gpropname4, "Eclink")).getCssValue("text-decoration");
-		String cssValue5 = propElement(getPropfile(gpropname4, "Faqlink")).getCssValue("text-decoration");
+		String cssValue = propElement(getPropfile(gpropname4, "Sollink")).getCssValue("text-decoration-line");
+		String cssValue1 = propElement(getPropfile(gpropname4, "Snslink")).getCssValue("text-decoration-line");
+		String cssValue2 = propElement(getPropfile(gpropname4, "Pdlink1")).getCssValue("text-decoration-line");
+		String cssValue3 = propElement(getPropfile(gpropname4, "Gslink")).getCssValue("text-decoration-line");
+		String cssValue4 = propElement(getPropfile(gpropname4, "Eclink")).getCssValue("text-decoration-line");
+		String cssValue5 = propElement(getPropfile(gpropname4, "Faqlink")).getCssValue("text-decoration-line");
+
 		if (cssValue.contains("none") && cssValue1.contains("none") && cssValue2.contains("none")
 				&& cssValue3.contains("underline") && cssValue4.contains("none") && cssValue5.contains("none")) {
 
@@ -150,9 +151,9 @@ public class Icivics_HomepageHeaderteach2 extends ProjectSpecificMethods {
 		waitTime(3000);
 		mouseOverAction(getPropfile(gpropname4, "Eclink"));
 		waitTime(5000);
-		String cssValue4 = propElement(getPropfile(gpropname4, "Eclink")).getCssValue("text-decoration");
+		String cssValue4 = propElement(getPropfile(gpropname4, "Eclink")).getCssValue("text-decoration-line");
 
-		if (cssValue4.contains("none")) {
+		if (cssValue4.contains("underline")) {
 
 			reportStep("Selected page is underlined and non selected page is not underlined", "Pass");
 
@@ -161,24 +162,23 @@ public class Icivics_HomepageHeaderteach2 extends ProjectSpecificMethods {
 		}
 		return this;
 	}
-	/*
-	 * "Eclink")).getCssValue("text-decoration"); if
-	 * (cssValue4.contains("underline")) {
-	 * 
-	 * reportStep("Selected page is underlined", "Pass");
-	 * 
-	 * } else { reportStep("Selected page is not underlined", "Fail"); } WebElement
-	 * faqlink = propElement(getPropfile(gpropname4, "Faqlink")); faqlink.click();
-	 * waitTime(3000); click(propElement(getPropfile(gpropname1, "Teachbutton")));
-	 * waitTime(3000); String cssValue5 = propElement(getPropfile(gpropname4,
-	 * "Faqlink")).getCssValue("text-decoration"); if
-	 * (cssValue5.contains("underline")) {
-	 * 
-	 * reportStep("Selected page is underlined", "Pass");
-	 * 
-	 * } else { reportStep("Selected page is not underlined", "Fail"); } return
-	 * this; }
-	 */
+
+	@Then("Verify faq page display with underlined")
+	public Icivics_HomepageHeaderteach2 verifytextisunderlined5() {
+		waitTime(3000);
+		mouseOverAction(getPropfile(gpropname4, "Faqlink"));
+		waitTime(5000);
+		String cssValue5 = propElement(getPropfile(gpropname4, "Faqlink")).getCssValue("text-decoration-line");
+
+		if (cssValue5.contains("underline")) {
+
+			reportStep("Selected page is underlined and non selected page is not underlined", "Pass");
+
+		} else {
+			reportStep("Selected page is not underlined", "Fail");
+		}
+		return this;
+	}
 
 	@And("Verify teach menu close on clicking again")
 	public Icivics_HomepageHeaderteach2 clickteachbuttonagain() {

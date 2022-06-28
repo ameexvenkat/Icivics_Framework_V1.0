@@ -26,8 +26,9 @@ public class Icivicvs_HomepageHeaderteach2_Test extends ProjectSpecificMethods {
 		node = test.createNode(
 				"C19 - If you are viewing one of the pages in the Teach submenu, is that page underlined in the submenu?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderteach2(driver, node, prop).launchURL(URL).verifyteachmenu()
-				.verifytextisunderlined3().verifytextisunderlined4().clickteachbuttonagain();
+		new Icivics_HomepageHeaderteach2(driver, node, prop).launchURL(URL).verifyteachmenu().verifytextisunderlined()
+				.verifytextisunderlined1().verifytextisunderlined2().verifytextisunderlined3().verifytextisunderlined4()
+				.verifytextisunderlined5().clickteachbuttonagain();
 	}
 
 }

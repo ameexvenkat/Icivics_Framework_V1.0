@@ -334,6 +334,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		}
 		return this;
 	}
+
 	@Then("Verify Professional development content type")
 	public Icivics_HomepageTeacherHeader verifyprofessionaldeveopmentcontenttype() {
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "Blog"));
@@ -361,6 +362,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		}
 		return this;
 	}
+
 	@Then("Verify Video content type")
 	public Icivics_HomepageTeacherHeader verifyvideocontenttype() {
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "Blog"));
@@ -388,33 +390,35 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		}
 		return this;
 	}
-@Then("Verify Webquest content type")
-public Icivics_HomepageTeacherHeader verifyWebquestcontenttype() {
-	scrollToTheGivenWebElement(getPropfile(gpropname2, "Blog"));
 
-	waitTime(3000);
-	WebElement curriculumchkbox = propElement(getPropfile(gpropname2, "Curriculumunit"));
-	curriculumchkbox.click();
-	waitTime(5000);
-	WebElement webquestchkbox = propElement(getPropfile(gpropname2, "WebQuest"));
-	boolean webquestchbox = webquestchkbox.isSelected();
-	if (webquestchbox) {
-		reportStep("Webquest checkbox is already checked", "Pass");
-	} else {
-		webquestchkbox.click();
-		waitTime(5000);
-		reportStep("Webquest checkbox is checked now ", "Pass");
-	}
-	WebElement viewbutton = propElement(getPropfile(gpropname2, "Viewbutton"));
-	if (viewbutton.isDisplayed()) {
-		viewbutton.click();
+	@Then("Verify Webquest content type")
+	public Icivics_HomepageTeacherHeader verifyWebquestcontenttype() {
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "Blog"));
+
 		waitTime(3000);
-		reportStep("Page is display", "Pass");
-	} else {
-		reportStep("Page is not display", "Pass");
+		WebElement curriculumchkbox = propElement(getPropfile(gpropname2, "Curriculumunit"));
+		curriculumchkbox.click();
+		waitTime(5000);
+		WebElement webquestchkbox = propElement(getPropfile(gpropname2, "WebQuest"));
+		boolean webquestchbox = webquestchkbox.isSelected();
+		if (webquestchbox) {
+			reportStep("Webquest checkbox is already checked", "Pass");
+		} else {
+			webquestchkbox.click();
+			waitTime(5000);
+			reportStep("Webquest checkbox is checked now ", "Pass");
+		}
+		WebElement viewbutton = propElement(getPropfile(gpropname2, "Viewbutton"));
+		if (viewbutton.isDisplayed()) {
+			viewbutton.click();
+			waitTime(3000);
+			reportStep("Page is display", "Pass");
+		} else {
+			reportStep("Page is not display", "Pass");
+		}
+		return this;
 	}
-	return this;
-}
+
 	@Given("Verify playbutton should have Hand cursor should appear over buttons Tooltip appears after hover.")
 	public Icivics_HomepageTeacherHeader verifyplaybuttonhover() {
 
@@ -629,13 +633,7 @@ public Icivics_HomepageTeacherHeader verifyWebquestcontenttype() {
 		System.out.println(driver.manage().window().getSize());
 		takeSnap();
 		reportStep("Ipad landscape resize is successfull", "Pass");
-		WebElement hamburgericon2 = propElement(getPropfile(gpropname2, "Hamburgericon"));
-		if (hamburgericon2.isDisplayed()) {
-			reportStep("Hamburger Icon is displayed successfully", "Pass");
-		} else {
-			reportStep("Hamburger Icon is not displayed successfully", "Fail");
 
-		}
 		WebElement cardtitle2 = driver
 				.findElement(By.xpath("//h2[contains(text(),'Influence Library')and @class='field-content']"));
 		if (cardtitle2.isDisplayed()) {
