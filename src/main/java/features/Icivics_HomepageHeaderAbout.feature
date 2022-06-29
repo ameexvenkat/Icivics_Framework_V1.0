@@ -11,8 +11,8 @@ Given Verify about submenu
 Scenario: C24 - When you select a link in the submenu, are you navigated to the appropriate page?
 Given Verify click on all about menu options and all options redirect to corresponding page 
 
-Scenario: C26 - If you are viewing one of the pages in the About submenu, is that page underlined in the submenu?
-Given 
+Scenario: C26 - If you are viewing one of the pages in the About submenu is that page underlined in the submenu?
+
 
 Scenario: C27 - When you select About again while the submenu is open, does the submenu close?
 Given Verify click on  about menu again it close

@@ -4,9 +4,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -88,7 +87,7 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 
 	}
 
-	@Given("Verify Sign in button appears in top/right for an anonymous user")
+	@Given("Verify Sign in button appears in top right for an anonymous user")
 	public Icivics_HomepageHeaderSigninMisc verifysigninbutton() {
 
 		WebElement Signinbutton = propElement(getPropfile(gpropname6, "Signinbutton2"));
@@ -226,7 +225,7 @@ public class Icivics_HomepageHeaderSigninMisc extends ProjectSpecificMethods {
 
 		WebElement signinbutton = propElement(getPropfile(gpropname1, "Signinbutton"));
 		if (signinbutton.isDisplayed()) {
-		click(propElement(getPropfile(gpropname1, "Signinbutton")));
+			click(propElement(getPropfile(gpropname1, "Signinbutton")));
 			reportStep("signin submenu is close after clicking again", "Pass");
 		} else {
 			reportStep("Myicivicssubmenu is not display", "Fail");

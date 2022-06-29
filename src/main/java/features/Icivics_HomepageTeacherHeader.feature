@@ -3,12 +3,12 @@ Feature: Homepage HeaderTeacher page Validation
 Scenario: C3 -While on all other pages, do you see buttons for Play, Teach, About, Donate, Shop, and My iCivics in the navigation bar?
 Given Launch the icivics URL
 When homepage is loaded successfully
-Then Verify Play buttons should appear in the top/right
-Then Verify Teach buttons should appear in the top/right
-Then Verify About buttons should appear in the top/right
-Then Verify Donate buttons should appear in the top/right
-Then Verify Shop buttons should appear in the top/right
-And Verify after login MyIcivics buttons should appear in the top/right
+Then Verify Play buttons should appear in the top right
+Then Verify Teach buttons should appear in the top right
+Then Verify About buttons should appear in the top right
+Then Verify Donate buttons should appear in the top right
+Then Verify Shop buttons should appear in the top right
+And Verify after login MyIcivics buttons should appear in the top right
 Then Verify header button after login
 
 Scenario: C4-Are all header elements consistent with those in the mockups?(Need to take one content from each content type)

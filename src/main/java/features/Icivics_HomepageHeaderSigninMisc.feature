@@ -14,7 +14,7 @@ Scenario: C32 - When you select Shop, are you directed to https://icivics.myshop
 Given Verify click on shop button and redirct to corresponding page 
 
 Scenario: C33 - If you are not signed in, do you see a Sign In button instead of My iCivics?
-Given Verify Sign in button appears in top/right for an anonymous user
+Given Verify Sign in button appears in top right for an anonymous user
 
 Scenario: C37 - When you select Sign In/My iCivics, does a submenu open below the button?
 Given Verify click on signin button and submenu list

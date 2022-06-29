@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 
-import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -107,7 +105,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 
 	}
 
-	@And("Verify My iCivics button appears in top/right for an authenticated user")
+	@And("Verify My iCivics button appears in top right for an authenticated user")
 	public Icivics_HomepageHeaderMyicivicsMisc verifymyicvicsbuttonafterlogin() {
 
 		WebElement myicivicsbutton = propElement(getPropfile(gpropname2, "Myicivicsbutton2"));
@@ -188,9 +186,9 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 		} else {
 			reportStep("myicivics button is not displayed ", "Fail");
 		}
-		String locatorvalue=getPropfile(gpropname7, "Dropdownlist");
-		List<WebElement> allOptions= propElement1(locatorvalue) ;
-	
+		String locatorvalue = getPropfile(gpropname7, "Dropdownlist");
+		List<WebElement> allOptions = propElement1(locatorvalue);
+
 		System.out.println(allOptions.size());
 		reportStep("myicivics submenu count is" + " " + allOptions.size(), "Pass");
 		for (int i = 0; i < allOptions.size(); i++) {

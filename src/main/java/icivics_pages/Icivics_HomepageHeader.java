@@ -51,7 +51,7 @@ public class Icivics_HomepageHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("Verify iCivics logo is at top/left on Clicking it reloads the page")
+	@Then("Verify iCivics logo is at top left on Clicking it reloads the page")
 	public Icivics_HomepageHeader VerifyLogo() {
 		WebElement logo = propElement(getPropfile(gpropname1, "Headerlogo"));
 		if (logo.isDisplayed()) {
@@ -66,7 +66,7 @@ public class Icivics_HomepageHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Given("Verify Donate buttons should appear in the top/right")
+	@Given("Verify Donate buttons should appear in the top right")
 	public Icivics_HomepageHeader VerifyDonatebutton() {
 		WebElement donatebutton = propElement(getPropfile(gpropname1, "Donatebutton"));
 		if (donatebutton.isDisplayed()) {
@@ -78,7 +78,7 @@ public class Icivics_HomepageHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("Verify Shop buttons should appear in the top/right")
+	@Then("Verify Shop buttons should appear in the top right")
 	public Icivics_HomepageHeader Verifyshopbutton() {
 		WebElement shopbutton = propElement(getPropfile(gpropname1, "shopbutton"));
 		if (shopbutton.isDisplayed()) {
@@ -90,7 +90,7 @@ public class Icivics_HomepageHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@And("Verify after login MyIcivics buttons should appear in the top/right")
+	@And("Verify after login MyIcivics buttons should appear in the top right")
 	public Icivics_HomepageHeader Verifymyicivicsbuttondisplayafterlogin() {
 		WebElement signinbutton = propElement(getPropfile(gpropname1, "Signinbutton"));
 		if (signinbutton.isDisplayed()) {
@@ -101,9 +101,9 @@ public class Icivics_HomepageHeader extends ProjectSpecificMethods {
 		click(propElement(getPropfile(gpropname1, "Signinbutton")));
 		click(propElement(getPropfile(gpropname1, "Signinlink")));
 		WebElement username = propElement(getPropfile(gpropname1, "Username"));
-		username.sendKeys("Bronze Speaker 1r4e");
+		clearAndType(username, getPropfile(gpropname1, "USERNAME"));
 		WebElement password = propElement(getPropfile(gpropname1, "Password"));
-		password.sendKeys("i898qrCiPK9Hwgb");
+		clearAndType(password, getPropfile(gpropname1, "PASSWORD"));
 		click(propElement(getPropfile(gpropname2, "Loginbutton")));
 		waitTime(3000);
 		WebElement myicivicsbutton2 = propElement(getPropfile(gpropname2, "Myicivicsbutton"));

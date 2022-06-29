@@ -56,7 +56,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("Verify Play buttons should appear in the top/right")
+	@Then("Verify Play buttons should appear in the top right")
 	public Icivics_HomepageTeacherHeader playbutton() {
 		WebElement playbutton = propElement(getPropfile(gpropname2, "Playbutton"));
 		if (playbutton.isDisplayed()) {
@@ -68,7 +68,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("Verify Teach buttons should appear in the top/right")
+	@Then("Verify Teach buttons should appear in the top right")
 	public Icivics_HomepageTeacherHeader Teachbutton() {
 		WebElement teachbutton = propElement(getPropfile(gpropname2, "Teachbutton"));
 		if (teachbutton.isDisplayed()) {
@@ -80,7 +80,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("Verify About buttons should appear in the top/right")
+	@Then("Verify About buttons should appear in the top right")
 	public Icivics_HomepageTeacherHeader aboutbutton() {
 		WebElement aboutbutton = propElement(getPropfile(gpropname2, "Aboutbutton"));
 		if (aboutbutton.isDisplayed()) {
@@ -92,7 +92,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("Verify Donate buttons should appear in the top/right")
+	@Then("Verify Donate buttons should appear in the top right")
 	public Icivics_HomepageTeacherHeader donatebutton() {
 		WebElement donatebutton = propElement(getPropfile(gpropname1, "Donatebutton"));
 		if (donatebutton.isDisplayed()) {
@@ -104,7 +104,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@Then("Verify Shop buttons should appear in the top/right")
+	@Then("Verify Shop buttons should appear in the top right")
 	public Icivics_HomepageTeacherHeader shopbutton() {
 		WebElement Shopbutton = propElement(getPropfile(gpropname1, "shopbutton"));
 		if (Shopbutton.isDisplayed()) {
@@ -129,7 +129,7 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 		return this;
 	}
 
-	@And("Verify after login MyIcivics buttons should appear in the top/right")
+	@And("Verify after login MyIcivics buttons should appear in the top right")
 	public Icivics_HomepageTeacherHeader Verifymyicivicsbuttondisplayafterlogin() {
 		WebElement signinbutton = propElement(getPropfile(gpropname1, "Signinbutton"));
 		if (signinbutton.isDisplayed()) {

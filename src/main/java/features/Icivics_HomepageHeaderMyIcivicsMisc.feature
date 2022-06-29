@@ -19,7 +19,7 @@ Then click on shop button and verify the URL
 Scenario: C34 - If you are signed in, do you see a My iCivics button instead of Sign In?
 Given Launch the icivics URL
 Then login as a teacher  
-And Verify My iCivics button appears in top/right for an authenticated user 
+And Verify My iCivics button appears in top right for an authenticated user 
 
 Scenario: C35 - Can you see your avatar icon represented in the button?
 Given Verify signin as a teacher with avatar
