@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -49,7 +48,7 @@ public class Icivics_HomepageHeaderPlay extends ProjectSpecificMethods {
 
 	@Given("Verify iCivics game submenu list display")
 	public Icivics_HomepageHeaderPlay verifyplaysubmenulist() {
-		String locatorvalue = getPropfile(gpropname3, "Dropdownlist");
+		String locatorvalue = getPropfile(gpropname3, "Dropdownsubmenu");
 		List<WebElement> allOptions = propElement1(locatorvalue);
 
 		reportStep("playbutton submenu count is" + " " + allOptions.size(), "Pass");

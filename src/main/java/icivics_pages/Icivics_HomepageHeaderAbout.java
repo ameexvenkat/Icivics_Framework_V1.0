@@ -38,10 +38,10 @@ public class Icivics_HomepageHeaderAbout extends ProjectSpecificMethods {
 	public Icivics_HomepageHeaderAbout clickonaboutmenu() {
 		WebElement aboutbutton = propElement(getPropfile(gpropname1, "Aboutbutton"));
 		if (aboutbutton.isDisplayed()) {
-			click(propElement(getPropfile(gpropname1, "Aboutbutton")));
-			reportStep("Aboutsubmenu display successfully", "Pass");
+			aboutbutton.click();
+			reportStep("Aboutsubmenu is display", "Pass");
 		} else {
-			reportStep("Aboutsubmenu is not display successfully", "Pass");
+			reportStep("Aboutsubmenu is not display", "Pass");
 		}
 		return this;
 	}

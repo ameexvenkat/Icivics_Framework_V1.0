@@ -24,7 +24,7 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 	@Test(dataProvider = "fetchData", priority = 0)
 	public void C3_Verifyheaderbuttonsforanonymoususer(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
-				"C3 - While on all other pages, do you see buttons for Play, Teach, About, Donate, Shop, and My iCivics in the navigation bar?");
+				"C3 - While on all other pages, do you see buttons for Play, Teach, About, Donate, Shop, and My iCivics in the navigation bar?(for anonymous user)");
 		extent.attachReporter(reporter);
 		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).playbutton().Teachbutton()
 				.aboutbutton().donatebutton().shopbutton().Verifymyicivicsbuttondisplayafterlogin();
@@ -35,7 +35,7 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 	@Test(dataProvider = "fetchData", priority = 1)
 	public void C3_Verifyheaderbuttonsforauthenticateduser(String URL) throws IOException, InterruptedException {
 		node = test.createNode(
-				"C3 - While on all other pages, do you see buttons for Play, Teach, About, Donate, Shop, and My iCivics in the navigation bar?");
+				"C3 - While on all other pages, do you see buttons for Play, Teach, About, Donate, Shop, and My iCivics in the navigation bar?for authenticated user");
 		extent.attachReporter(reporter);
 		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).signin2()
 				.Verifyheaderbuttonsafterlogin();
@@ -67,7 +67,7 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 
 	@Test(dataProvider = "fetchData", priority = 3)
 	public void C6_Verifyheaderbuttonhoverforanonymoususer(String URL) throws IOException, InterruptedException {
-		node = test.createNode("C6 - Do all buttons have hover/click states?");
+		node = test.createNode("C6 - Do all buttons have hover/click states?for anonymous user");
 		extent.attachReporter(reporter);
 		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).verifyplaybuttonhover()
 				.verifyteachbuttonhover().verifyaboutbuttonhover().verifydonatebuttonhover().launchteacherpageURL(URL)
@@ -79,7 +79,7 @@ public class Icivics_HomepageTeacherHeader_Test extends ProjectSpecificMethods {
 
 	@Test(dataProvider = "fetchData", priority = 4)
 	public void C6_verifyaheaderbuttonhoverforauthenticateduser(String URL) {
-		node = test.createNode("C6 - Do all buttons have hover/click states?");
+		node = test.createNode("C6 - Do all buttons have hover/click states?for authenticated user");
 		extent.attachReporter(reporter);
 		new Icivics_HomepageTeacherHeader(driver, node, prop).launchteacherpageURL(URL).signin2()
 				.verifyplaybuttonhover().verifyteachbuttonhover().verifyaboutbuttonhover().verifydonatebuttonhover()

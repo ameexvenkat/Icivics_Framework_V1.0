@@ -1,0 +1,2068 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ICIVICS TEST REPORT</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>ICIVICS AUTOMATION DASHBOARD</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Jun 30, 2022 02:40:14 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='88.889%'><span class='strong'>32</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='11.111%'>4</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='97.163%'><span class='strong'>137</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='2.837%'>4</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageTeacherHeader</span>
+						<span class='test-time'>Jun 30, 2022 12:54:09 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 30, 2022 12:54:09 PM</span>
+	<span class='label end-time'>Jun 30, 2022 12:55:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 2s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C3 - While on all other pages, do you see buttons for Play, Teach, About, Donate, Shop, and My iCivics in the navigation bar?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+574ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:54:46 PM</td>
+													<td class='step-details'>playbutton is display<img data-featherlight="./../images/323482180.jpg" width="10%" src="./../images/323482180.jpg" data-src="./../images/323482180.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:54:46 PM</td>
+													<td class='step-details'>Teachbutton is display<img data-featherlight="./../images/413663655.jpg" width="10%" src="./../images/413663655.jpg" data-src="./../images/413663655.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:54:46 PM</td>
+													<td class='step-details'>aboutbutton is display<img data-featherlight="./../images/181739734.jpg" width="10%" src="./../images/181739734.jpg" data-src="./../images/181739734.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:54:47 PM</td>
+													<td class='step-details'>donatebutton is display<img data-featherlight="./../images/726734515.jpg" width="10%" src="./../images/726734515.jpg" data-src="./../images/726734515.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:54:47 PM</td>
+													<td class='step-details'>Shopbutton is display<img data-featherlight="./../images/660068674.jpg" width="10%" src="./../images/660068674.jpg" data-src="./../images/660068674.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:54:47 PM</td>
+													<td class='step-details'>Signin button Verified successfully<img data-featherlight="./../images/349625098.jpg" width="10%" src="./../images/349625098.jpg" data-src="./../images/349625098.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:55:11 PM</td>
+													<td class='step-details'>Myicivicsbutton is display<img data-featherlight="./../images/498715282.jpg" width="10%" src="./../images/498715282.jpg" data-src="./../images/498715282.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageTeacherHeader</span>
+						<span class='test-time'>Jun 30, 2022 12:57:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 30, 2022 12:57:00 PM</span>
+	<span class='label end-time'>Jun 30, 2022 12:57:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 54s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='4'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C3 - While on all other pages, do you see buttons for Play, Teach, About, Donate, Shop, and My iCivics in the navigation bar?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+589ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:57:29 PM</td>
+													<td class='step-details'>playbutton is display<img data-featherlight="./../images/51352969.jpg" width="10%" src="./../images/51352969.jpg" data-src="./../images/51352969.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:57:30 PM</td>
+													<td class='step-details'>Teachbutton is display<img data-featherlight="./../images/194017672.jpg" width="10%" src="./../images/194017672.jpg" data-src="./../images/194017672.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:57:30 PM</td>
+													<td class='step-details'>aboutbutton is display<img data-featherlight="./../images/408101998.jpg" width="10%" src="./../images/408101998.jpg" data-src="./../images/408101998.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:57:30 PM</td>
+													<td class='step-details'>donatebutton is display<img data-featherlight="./../images/640662800.jpg" width="10%" src="./../images/640662800.jpg" data-src="./../images/640662800.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:57:30 PM</td>
+													<td class='step-details'>Shopbutton is display<img data-featherlight="./../images/564892694.jpg" width="10%" src="./../images/564892694.jpg" data-src="./../images/564892694.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:57:30 PM</td>
+													<td class='step-details'>Signin button is display<img data-featherlight="./../images/318794090.jpg" width="10%" src="./../images/318794090.jpg" data-src="./../images/318794090.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:57:54 PM</td>
+													<td class='step-details'>Myicivicsbutton is display<img data-featherlight="./../images/901653829.jpg" width="10%" src="./../images/901653829.jpg" data-src="./../images/901653829.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageTeacherHeader</span>
+						<span class='test-time'>Jun 30, 2022 01:03:19 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 30, 2022 01:03:19 PM</span>
+	<span class='label end-time'>Jun 30, 2022 01:04:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 57s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='6'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C3 - While on all other pages, do you see buttons for Play, Teach, About, Donate, Shop, and My iCivics in the navigation bar?for authenticated user</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+599ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:03:48 PM</td>
+													<td class='step-details'>The Element SIGN IN clicked<img data-featherlight="./../images/65152564.jpg" width="10%" src="./../images/65152564.jpg" data-src="./../images/65152564.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:04:11 PM</td>
+													<td class='step-details'>The Element LOG IN clicked<img data-featherlight="./../images/856083164.jpg" width="10%" src="./../images/856083164.jpg" data-src="./../images/856083164.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:04:15 PM</td>
+													<td class='step-details'>playbutton is display<img data-featherlight="./../images/493074560.jpg" width="10%" src="./../images/493074560.jpg" data-src="./../images/493074560.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:04:15 PM</td>
+													<td class='step-details'>Teachbutton is display<img data-featherlight="./../images/851952987.jpg" width="10%" src="./../images/851952987.jpg" data-src="./../images/851952987.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:04:15 PM</td>
+													<td class='step-details'>aboutbutton is display<img data-featherlight="./../images/563661905.jpg" width="10%" src="./../images/563661905.jpg" data-src="./../images/563661905.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:04:15 PM</td>
+													<td class='step-details'>Donatebutton is display<img data-featherlight="./../images/642445615.jpg" width="10%" src="./../images/642445615.jpg" data-src="./../images/642445615.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:04:15 PM</td>
+													<td class='step-details'>Shopbutton is display<img data-featherlight="./../images/263329594.jpg" width="10%" src="./../images/263329594.jpg" data-src="./../images/263329594.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:04:16 PM</td>
+													<td class='step-details'>Myicivicsbutton is display<img data-featherlight="./../images/387921803.jpg" width="10%" src="./../images/387921803.jpg" data-src="./../images/387921803.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeader</span>
+						<span class='test-time'>Jun 30, 2022 01:19:58 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 30, 2022 01:19:58 PM</span>
+	<span class='label end-time'>Jun 30, 2022 01:20:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='8'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C1538 - Does the donation popup NOT show?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+607ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:20:10 PM</td>
+													<td class='step-details'>The Element DONATE clicked<img data-featherlight="./../images/719869008.jpg" width="10%" src="./../images/719869008.jpg" data-src="./../images/719869008.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:20:11 PM</td>
+													<td class='step-details'>Donation Popup is not present<img data-featherlight="./../images/678380360.jpg" width="10%" src="./../images/678380360.jpg" data-src="./../images/678380360.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeaderplay</span>
+						<span class='test-time'>Jun 30, 2022 01:27:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 30, 2022 01:27:00 PM</span>
+	<span class='label end-time'>Jun 30, 2022 01:27:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 35s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='10'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C9- Do you see links to All Games, as well as each individual game in the submenu?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+612ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:30 PM</td>
+													<td class='step-details'>playbutton submenu is display<img data-featherlight="./../images/812240292.jpg" width="10%" src="./../images/812240292.jpg" data-src="./../images/812240292.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:30 PM</td>
+													<td class='step-details'>playbutton submenu count is 17<img data-featherlight="./../images/334177897.jpg" width="10%" src="./../images/334177897.jpg" data-src="./../images/334177897.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:31 PM</td>
+													<td class='step-details'>Playbutton submenu is ALL GAMES<img data-featherlight="./../images/279591979.jpg" width="10%" src="./../images/279591979.jpg" data-src="./../images/279591979.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:31 PM</td>
+													<td class='step-details'>Playbutton submenu is ARGUMENT WARS<img data-featherlight="./../images/165913257.jpg" width="10%" src="./../images/165913257.jpg" data-src="./../images/165913257.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:31 PM</td>
+													<td class='step-details'>Playbutton submenu is BRANCHES OF POWER<img data-featherlight="./../images/562984072.jpg" width="10%" src="./../images/562984072.jpg" data-src="./../images/562984072.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:31 PM</td>
+													<td class='step-details'>Playbutton submenu is CAST YOUR VOTE<img data-featherlight="./../images/518090146.jpg" width="10%" src="./../images/518090146.jpg" data-src="./../images/518090146.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:32 PM</td>
+													<td class='step-details'>Playbutton submenu is CONVENE THE COUNCIL<img data-featherlight="./../images/477015901.jpg" width="10%" src="./../images/477015901.jpg" data-src="./../images/477015901.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:32 PM</td>
+													<td class='step-details'>Playbutton submenu is COUNTIES WORK<img data-featherlight="./../images/428056662.jpg" width="10%" src="./../images/428056662.jpg" data-src="./../images/428056662.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:32 PM</td>
+													<td class='step-details'>Playbutton submenu is COUNTIES WORK: TEXAS<img data-featherlight="./../images/632504643.jpg" width="10%" src="./../images/632504643.jpg" data-src="./../images/632504643.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:32 PM</td>
+													<td class='step-details'>Playbutton submenu is COURT QUEST<img data-featherlight="./../images/130355930.jpg" width="10%" src="./../images/130355930.jpg" data-src="./../images/130355930.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:33 PM</td>
+													<td class='step-details'>Playbutton submenu is DO I HAVE A RIGHT?<img data-featherlight="./../images/361960344.jpg" width="10%" src="./../images/361960344.jpg" data-src="./../images/361960344.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:33 PM</td>
+													<td class='step-details'>Playbutton submenu is EXECUTIVE COMMAND<img data-featherlight="./../images/40594777.jpg" width="10%" src="./../images/40594777.jpg" data-src="./../images/40594777.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:33 PM</td>
+													<td class='step-details'>Playbutton submenu is GAME ODYSSEY<img data-featherlight="./../images/70807940.jpg" width="10%" src="./../images/70807940.jpg" data-src="./../images/70807940.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:33 PM</td>
+													<td class='step-details'>Playbutton submenu is IMMIGRATION NATION<img data-featherlight="./../images/489068266.jpg" width="10%" src="./../images/489068266.jpg" data-src="./../images/489068266.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:34 PM</td>
+													<td class='step-details'>Playbutton submenu is LAWCRAFT<img data-featherlight="./../images/397353303.jpg" width="10%" src="./../images/397353303.jpg" data-src="./../images/397353303.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:34 PM</td>
+													<td class='step-details'>Playbutton submenu is NEWSFEED DEFENDERS<img data-featherlight="./../images/42067081.jpg" width="10%" src="./../images/42067081.jpg" data-src="./../images/42067081.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:34 PM</td>
+													<td class='step-details'>Playbutton submenu is RACE TO RATIFY<img data-featherlight="./../images/306651474.jpg" width="10%" src="./../images/306651474.jpg" data-src="./../images/306651474.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:34 PM</td>
+													<td class='step-details'>Playbutton submenu is SORTIFY: U.S. CITIZENSHIP<img data-featherlight="./../images/806301901.jpg" width="10%" src="./../images/806301901.jpg" data-src="./../images/806301901.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:27:35 PM</td>
+													<td class='step-details'>Playbutton submenu is WIN THE WHITE HOUSE<img data-featherlight="./../images/701470073.jpg" width="10%" src="./../images/701470073.jpg" data-src="./../images/701470073.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeaderteach</span>
+						<span class='test-time'>Jun 30, 2022 01:38:54 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 30, 2022 01:38:54 PM</span>
+	<span class='label end-time'>Jun 30, 2022 01:39:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='12'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C15 - When you select Teach, does a submenu open below the Teach button?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+625ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:39:03 PM</td>
+													<td class='step-details'>Teachsubmenu is display<img data-featherlight="./../images/469373858.jpg" width="10%" src="./../images/469373858.jpg" data-src="./../images/469373858.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeaderteach</span>
+						<span class='test-time'>Jun 30, 2022 01:40:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 30, 2022 01:40:31 PM</span>
+	<span class='label end-time'>Jun 30, 2022 01:40:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='14'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C20 - When you select Teach again while the submenu is open, does the submenu close?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+631ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:40:39 PM</td>
+													<td class='step-details'>Teachsubmenu is display<img data-featherlight="./../images/795864521.jpg" width="10%" src="./../images/795864521.jpg" data-src="./../images/795864521.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:40:40 PM</td>
+													<td class='step-details'>The Element teach clicked<img data-featherlight="./../images/438916658.jpg" width="10%" src="./../images/438916658.jpg" data-src="./../images/438916658.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:40:40 PM</td>
+													<td class='step-details'>Teach submenu is close on clicking again<img data-featherlight="./../images/531956150.jpg" width="10%" src="./../images/531956150.jpg" data-src="./../images/531956150.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeaderAbout</span>
+						<span class='test-time'>Jun 30, 2022 01:46:10 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 30, 2022 01:46:10 PM</span>
+	<span class='label end-time'>Jun 30, 2022 01:46:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 34s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='16'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C22 - When you select About, does a submenu open below the About button?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+635ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:46:19 PM</td>
+													<td class='step-details'>Aboutsubmenu display successfully<img data-featherlight="./../images/455017510.jpg" width="10%" src="./../images/455017510.jpg" data-src="./../images/455017510.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:46:41 PM</td>
+													<td class='step-details'>The Element clicked<img data-featherlight="./../images/898443125.jpg" width="10%" src="./../images/898443125.jpg" data-src="./../images/898443125.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:46:44 PM</td>
+													<td class='step-details'>For Homepage aboutbutton is not present<img data-featherlight="./../images/53486003.jpg" width="10%" src="./../images/53486003.jpg" data-src="./../images/53486003.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeaderAbout</span>
+						<span class='test-time'>Jun 30, 2022 02:08:30 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 30, 2022 02:08:30 PM</span>
+	<span class='label end-time'>Jun 30, 2022 02:08:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='18'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C27 - When you select About again while the submenu is open, does the submenu close?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+640ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:08:40 PM</td>
+													<td class='step-details'>Aboutsubmenu is display<img data-featherlight="./../images/600710333.jpg" width="10%" src="./../images/600710333.jpg" data-src="./../images/600710333.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:08:41 PM</td>
+													<td class='step-details'>The Element about clicked<img data-featherlight="./../images/309268131.jpg" width="10%" src="./../images/309268131.jpg" data-src="./../images/309268131.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:08:41 PM</td>
+													<td class='step-details'>About button is clicked again and about menu is close<img data-featherlight="./../images/632401436.jpg" width="10%" src="./../images/632401436.jpg" data-src="./../images/632401436.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeadermysigninmisc</span>
+						<span class='test-time'>Jun 30, 2022 02:13:54 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 30, 2022 02:13:54 PM</span>
+	<span class='label end-time'>Jun 30, 2022 02:14:06 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='20'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C42 - When you select Sign In / My iCivics again while the submenu is open, does the submenu close?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+646ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:14:05 PM</td>
+													<td class='step-details'>Signinbutton is displayed<img data-featherlight="./../images/11115291.jpg" width="10%" src="./../images/11115291.jpg" data-src="./../images/11115291.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:14:06 PM</td>
+													<td class='step-details'>The Element SIGN IN clicked<img data-featherlight="./../images/162572661.jpg" width="10%" src="./../images/162572661.jpg" data-src="./../images/162572661.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:14:06 PM</td>
+													<td class='step-details'>signin submenu is close after clicking again<img data-featherlight="./../images/14824012.jpg" width="10%" src="./../images/14824012.jpg" data-src="./../images/14824012.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeaderMyIcivicsMisc</span>
+						<span class='test-time'>Jun 30, 2022 02:21:47 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 30, 2022 02:21:47 PM</span>
+	<span class='label end-time'>Jun 30, 2022 02:32:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 10m 15s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='22'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C29 - Can you see an appropriate icon for Donate?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+655ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:22:23 PM</td>
+													<td class='step-details'>Donatebutton is displayed<img data-featherlight="./../images/184821005.jpg" width="10%" src="./../images/184821005.jpg" data-src="./../images/184821005.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='23'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C30 - When you select Donate, are you directed to https://give.icivics.org/?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+656ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:22:53 PM</td>
+													<td class='step-details'>Donatebutton is clicked<img data-featherlight="./../images/208839233.jpg" width="10%" src="./../images/208839233.jpg" data-src="./../images/208839233.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:23:01 PM</td>
+													<td class='step-details'>'Donatebutton is clicked'redirect to corresponding pagehttps://give.icivics.org/q7Mcn0NUdUylSaBbpfwl4w2?_ga=2.161306489.575082774.1656579151-1417059314.1656579150<img data-featherlight="./../images/754506085.jpg" width="10%" src="./../images/754506085.jpg" data-src="./../images/754506085.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='24'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C31 - Can you see an appropriate icon for Shop?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+658ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:24:01 PM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;(//a[@title='Shop iCivics.'])[2] Not Found with value: (//a[@title='Shop iCivics.'])[2]<img data-featherlight="./../images/460950984.jpg" width="10%" src="./../images/460950984.jpg" data-src="./../images/460950984.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='25'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C32 - When you select Shop, are you directed to https://icivics.myshopify.com/?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+659ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:24:30 PM</td>
+													<td class='step-details'>Shopbutton is clicked<img data-featherlight="./../images/581468245.jpg" width="10%" src="./../images/581468245.jpg" data-src="./../images/581468245.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:25:01 PM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;(//a[@title='Shop iCivics.'])[2] Not Found with value: (//a[@title='Shop iCivics.'])[2]<img data-featherlight="./../images/843637158.jpg" width="10%" src="./../images/843637158.jpg" data-src="./../images/843637158.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='26'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C34 - If you are signed in, do you see a My iCivics button instead of Sign In?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+663ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:25:30 PM</td>
+													<td class='step-details'>Myicivicsbutton is display after login instead of signin button<img data-featherlight="./../images/615704851.jpg" width="10%" src="./../images/615704851.jpg" data-src="./../images/615704851.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='27'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C35 - Can you see your avatar icon represented in the button?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+664ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:26:04 PM</td>
+													<td class='step-details'>Avatar image is displayed on the button<img data-featherlight="./../images/862634488.jpg" width="10%" src="./../images/862634488.jpg" data-src="./../images/862634488.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='28'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C35 - Can you see your avatar icon represented in the button?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+665ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:26:34 PM</td>
+													<td class='step-details'>My iCivics button has sillouette avatar<img data-featherlight="./../images/285925894.jpg" width="10%" src="./../images/285925894.jpg" data-src="./../images/285925894.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='29'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C36 - When you select Sign In/My iCivics, does a submenu open below the button?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+666ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:27:04 PM</td>
+													<td class='step-details'>myicivics button is clicked and submenu is display<img data-featherlight="./../images/155934653.jpg" width="10%" src="./../images/155934653.jpg" data-src="./../images/155934653.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='30'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C37 - When you select Sign In, do you see links to Sign In, Register As a Student, Register As A Teacher in the submenu?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+667ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:27:33 PM</td>
+													<td class='step-details'>myicivics button is clicked and submenu is display<img data-featherlight="./../images/462122548.jpg" width="10%" src="./../images/462122548.jpg" data-src="./../images/462122548.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:27:33 PM</td>
+													<td class='step-details'>myicivics submenu count is 3<img data-featherlight="./../images/266294908.jpg" width="10%" src="./../images/266294908.jpg" data-src="./../images/266294908.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:27:34 PM</td>
+													<td class='step-details'>myicivcs submenu is MY ICIVICS<img data-featherlight="./../images/247037628.jpg" width="10%" src="./../images/247037628.jpg" data-src="./../images/247037628.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:27:34 PM</td>
+													<td class='step-details'>myicivcs submenu is MY CLASSES<img data-featherlight="./../images/821497580.jpg" width="10%" src="./../images/821497580.jpg" data-src="./../images/821497580.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:27:34 PM</td>
+													<td class='step-details'>myicivcs submenu is MY FAVORITES<img data-featherlight="./../images/577616057.jpg" width="10%" src="./../images/577616057.jpg" data-src="./../images/577616057.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='31'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C39 -When you select a link in the submenu, are you navigated to the appropriate page?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+669ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:11 PM</td>
+													<td class='step-details'>The mouse over by xpath : (//a[@title='MY ICIVICS'])[2] is performed.<img data-featherlight="./../images/845686016.jpg" width="10%" src="./../images/845686016.jpg" data-src="./../images/845686016.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:12 PM</td>
+													<td class='step-details'>The element [[ChromeDriver: chrome on WINDOWS (a8cae824b1c9b097eaf5272e1c7df3c3)] -&gt; xpath: (//a[@title='My iCivics'])[2]] is visible<img data-featherlight="./../images/654650670.jpg" width="10%" src="./../images/654650670.jpg" data-src="./../images/654650670.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:12 PM</td>
+													<td class='step-details'>The expected text contains the actual MY ICIVICS<img data-featherlight="./../images/595802007.jpg" width="10%" src="./../images/595802007.jpg" data-src="./../images/595802007.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:30 PM</td>
+													<td class='step-details'>The Element MY ICIVICS clicked<img data-featherlight="./../images/427417743.jpg" width="10%" src="./../images/427417743.jpg" data-src="./../images/427417743.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:30 PM</td>
+													<td class='step-details'>The expected https://staging.d9.icivics.org/user/9306834 url as same as the https://staging.d9.icivics.org/user/9306834 actual url.<img data-featherlight="./../images/779845728.jpg" width="10%" src="./../images/779845728.jpg" data-src="./../images/779845728.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:30 PM</td>
+													<td class='step-details'>The expected text contains the actual Welcome back,<img data-featherlight="./../images/44120839.jpg" width="10%" src="./../images/44120839.jpg" data-src="./../images/44120839.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:31 PM</td>
+													<td class='step-details'>The mouse over by xpath : (//a[@title='MY ICIVICS'])[2] is performed.<img data-featherlight="./../images/438782606.jpg" width="10%" src="./../images/438782606.jpg" data-src="./../images/438782606.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:31 PM</td>
+													<td class='step-details'>The element [[ChromeDriver: chrome on WINDOWS (a8cae824b1c9b097eaf5272e1c7df3c3)] -&gt; xpath: (//a[@title='My Classes'])[2]] is visible<img data-featherlight="./../images/881498133.jpg" width="10%" src="./../images/881498133.jpg" data-src="./../images/881498133.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:31 PM</td>
+													<td class='step-details'>The expected text contains the actual MY CLASSES<img data-featherlight="./../images/833407732.jpg" width="10%" src="./../images/833407732.jpg" data-src="./../images/833407732.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:39 PM</td>
+													<td class='step-details'>The Element MY CLASSES clicked<img data-featherlight="./../images/895125462.jpg" width="10%" src="./../images/895125462.jpg" data-src="./../images/895125462.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:39 PM</td>
+													<td class='step-details'>The expected https://staging.d9.icivics.org/classes url as same as the https://staging.d9.icivics.org/classes actual url.<img data-featherlight="./../images/369879130.jpg" width="10%" src="./../images/369879130.jpg" data-src="./../images/369879130.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:40 PM</td>
+													<td class='step-details'>The expected text contains the actual SYNC CLASSROOM CLASSES<img data-featherlight="./../images/181957172.jpg" width="10%" src="./../images/181957172.jpg" data-src="./../images/181957172.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:40 PM</td>
+													<td class='step-details'>The mouse over by xpath : (//a[@title='MY ICIVICS'])[2] is performed.<img data-featherlight="./../images/473047204.jpg" width="10%" src="./../images/473047204.jpg" data-src="./../images/473047204.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:40 PM</td>
+													<td class='step-details'>The element [[ChromeDriver: chrome on WINDOWS (a8cae824b1c9b097eaf5272e1c7df3c3)] -&gt; xpath: (//a[@title='My Favorites'])[2]] is visible<img data-featherlight="./../images/228742125.jpg" width="10%" src="./../images/228742125.jpg" data-src="./../images/228742125.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:41 PM</td>
+													<td class='step-details'>The expected text contains the actual MY FAVORITES<img data-featherlight="./../images/901796790.jpg" width="10%" src="./../images/901796790.jpg" data-src="./../images/901796790.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:55 PM</td>
+													<td class='step-details'>The Element MY FAVORITES clicked<img data-featherlight="./../images/883451020.jpg" width="10%" src="./../images/883451020.jpg" data-src="./../images/883451020.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:55 PM</td>
+													<td class='step-details'>The expected https://staging.d9.icivics.org/favorites url as same as the https://staging.d9.icivics.org/favorites actual url.<img data-featherlight="./../images/623604426.jpg" width="10%" src="./../images/623604426.jpg" data-src="./../images/623604426.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:28:55 PM</td>
+													<td class='step-details'>The expected text contains the actual Lessons from Antiquity<img data-featherlight="./../images/745130483.jpg" width="10%" src="./../images/745130483.jpg" data-src="./../images/745130483.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='32'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C41 -If you are viewing one of the pages in the Sign In/My iCivics submenu, is that page underlined in the submenu?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+679ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:29:25 PM</td>
+													<td class='step-details'>myicivics button is clicked and submenu is display<img data-featherlight="./../images/881182213.jpg" width="10%" src="./../images/881182213.jpg" data-src="./../images/881182213.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:29:59 PM</td>
+													<td class='step-details'>Selected page is underlined<img data-featherlight="./../images/123102653.jpg" width="10%" src="./../images/123102653.jpg" data-src="./../images/123102653.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:30:32 PM</td>
+													<td class='step-details'>Selected page is not underlined<img data-featherlight="./../images/798776291.jpg" width="10%" src="./../images/798776291.jpg" data-src="./../images/798776291.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:31:05 PM</td>
+													<td class='step-details'>Selected page is underlined<img data-featherlight="./../images/785657873.jpg" width="10%" src="./../images/785657873.jpg" data-src="./../images/785657873.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:31:05 PM</td>
+													<td class='step-details'>The Element MY ICIVICS clicked<img data-featherlight="./../images/572326082.jpg" width="10%" src="./../images/572326082.jpg" data-src="./../images/572326082.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:31:05 PM</td>
+													<td class='step-details'>Myicivics submenu is close on clicking again<img data-featherlight="./../images/756911309.jpg" width="10%" src="./../images/756911309.jpg" data-src="./../images/756911309.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='33'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C42 - When you select Sign In / My iCivics again while the submenu is open, does the submenu close?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+680ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:32:02 PM</td>
+													<td class='step-details'>The Element MY ICIVICS clicked<img data-featherlight="./../images/750739838.jpg" width="10%" src="./../images/750739838.jpg" data-src="./../images/750739838.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:32:02 PM</td>
+													<td class='step-details'>Myicivics submenu is close on clicking again<img data-featherlight="./../images/547938882.jpg" width="10%" src="./../images/547938882.jpg" data-src="./../images/547938882.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='34'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeaderMyIcivicsMisc</span>
+						<span class='test-time'>Jun 30, 2022 02:36:50 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 30, 2022 02:36:50 PM</span>
+	<span class='label end-time'>Jun 30, 2022 02:37:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 36s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='35'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C31 - Can you see an appropriate icon for Shop?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 1s+690ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:37:26 PM</td>
+													<td class='step-details'>Shopbutton is displayed<img data-featherlight="./../images/855420569.jpg" width="10%" src="./../images/855420569.jpg" data-src="./../images/855420569.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='36'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeaderMyIcivicsMisc</span>
+						<span class='test-time'>Jun 30, 2022 02:38:13 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 30, 2022 02:38:13 PM</span>
+	<span class='label end-time'>Jun 30, 2022 02:38:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 38s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='37'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C32 - When you select Shop, are you directed to https://icivics.myshopify.com/?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:14 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 23s+697ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:38:47 PM</td>
+													<td class='step-details'>Shopbutton is clicked<img data-featherlight="./../images/481195661.jpg" width="10%" src="./../images/481195661.jpg" data-src="./../images/481195661.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:38:51 PM</td>
+													<td class='step-details'>'Shopbutton is clicked'redirect to corresponding pagehttps://icivics.myshopify.com/<img data-featherlight="./../images/173035732.jpg" width="10%" src="./../images/173035732.jpg" data-src="./../images/173035732.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeaderMyIcivicsMisc</span>
+						<span class='test-time'>Jun 30, 2022 02:40:14 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 30, 2022 02:40:14 PM</span>
+	<span class='label end-time'>Jun 30, 2022 02:49:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 9m 1s+411ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='39'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C29 -  Can you see an appropriate icon for Donate?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:40:48 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 29s+25ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:40:48 PM</td>
+													<td class='step-details'>Donatebutton is displayed<img data-featherlight='./../images/724285939.jpg' width='10%' src='./../images/724285939.jpg' data-src='./../images/724285939.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='40'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C30 -  When you select Donate, are you directed to https://give.icivics.org/?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:41:27 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 35s+208ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:41:19 PM</td>
+													<td class='step-details'>Donatebutton is clicked<img data-featherlight='./../images/329678896.jpg' width='10%' src='./../images/329678896.jpg' data-src='./../images/329678896.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:41:27 PM</td>
+													<td class='step-details'>'Donatebutton is clicked'redirect to corresponding pagehttps://give.icivics.org/q7Mcn0NUdUylSaBbpfwl4w2?_ga=2.97108827.512744986.1656580257-222566675.1656580256<img data-featherlight='./../images/84182435.jpg' width='10%' src='./../images/84182435.jpg' data-src='./../images/84182435.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='41'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C31 -  Can you see an appropriate icon for Shop?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:41:58 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 28s+618ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:41:58 PM</td>
+													<td class='step-details'>Shopbutton is displayed<img data-featherlight='./../images/554115294.jpg' width='10%' src='./../images/554115294.jpg' data-src='./../images/554115294.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='42'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C32 -  When you select Shop, are you directed to https://icivics.myshopify.com/?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:42:31 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 30s+974ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:42:27 PM</td>
+													<td class='step-details'>Shopbutton is clicked<img data-featherlight='./../images/11107277.jpg' width='10%' src='./../images/11107277.jpg' data-src='./../images/11107277.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:42:31 PM</td>
+													<td class='step-details'>'Shopbutton is clicked'redirect to corresponding pagehttps://icivics.myshopify.com/<img data-featherlight='./../images/475208546.jpg' width='10%' src='./../images/475208546.jpg' data-src='./../images/475208546.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='43'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C34 - If you are signed in, do you see a My iCivics button instead of Sign In?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:43:02 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 28s+235ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:43:02 PM</td>
+													<td class='step-details'>Myicivicsbutton is display after login instead of signin button<img data-featherlight='./../images/842048180.jpg' width='10%' src='./../images/842048180.jpg' data-src='./../images/842048180.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='44'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C35 - Can you see your avatar icon represented in the button?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:43:36 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 32s+737ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:43:36 PM</td>
+													<td class='step-details'>Avatar image is displayed on the button<img data-featherlight='./../images/444504073.jpg' width='10%' src='./../images/444504073.jpg' data-src='./../images/444504073.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='45'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C35 - Can you see your avatar icon represented in the button?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:44:09 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 29s+619ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:44:09 PM</td>
+													<td class='step-details'>My iCivics button has sillouette avatar<img data-featherlight='./../images/150970047.jpg' width='10%' src='./../images/150970047.jpg' data-src='./../images/150970047.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='46'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C36 - When you select Sign In/My iCivics, does a submenu open below the button?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:44:39 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 27s+614ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:44:39 PM</td>
+													<td class='step-details'>myicivics button is clicked and submenu is display<img data-featherlight='./../images/250636200.jpg' width='10%' src='./../images/250636200.jpg' data-src='./../images/250636200.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='47'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C37 - When you select Sign In, do you see links to Sign In, Register As a Student, Register As A Teacher in the submenu?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:45:11 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 30s+180ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:45:10 PM</td>
+													<td class='step-details'>myicivics button is clicked and submenu is display<img data-featherlight='./../images/22852907.jpg' width='10%' src='./../images/22852907.jpg' data-src='./../images/22852907.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:45:10 PM</td>
+													<td class='step-details'>myicivics submenu count is 3<img data-featherlight='./../images/144354619.jpg' width='10%' src='./../images/144354619.jpg' data-src='./../images/144354619.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:45:11 PM</td>
+													<td class='step-details'>myicivcs submenu is  MY ICIVICS<img data-featherlight='./../images/904914326.jpg' width='10%' src='./../images/904914326.jpg' data-src='./../images/904914326.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:45:11 PM</td>
+													<td class='step-details'>myicivcs submenu is  MY CLASSES<img data-featherlight='./../images/531815748.jpg' width='10%' src='./../images/531815748.jpg' data-src='./../images/531815748.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:45:11 PM</td>
+													<td class='step-details'>myicivcs submenu is  MY FAVORITES<img data-featherlight='./../images/231356569.jpg' width='10%' src='./../images/231356569.jpg' data-src='./../images/231356569.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='48'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C39 -When you select a link in the submenu, are you navigated to the appropriate page?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:46:32 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 1m 18s+518ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:45:47 PM</td>
+													<td class='step-details'>The mouse over by xpath : (//a[@title='MY ICIVICS'])[2] is performed.<img data-featherlight='./../images/233543670.jpg' width='10%' src='./../images/233543670.jpg' data-src='./../images/233543670.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:45:47 PM</td>
+													<td class='step-details'>The element [[ChromeDriver: chrome on WINDOWS (1583e89e9dfcfba700f2e80132ff0537)] -> xpath: (//a[@title='My iCivics'])[2]] is visible<img data-featherlight='./../images/53878976.jpg' width='10%' src='./../images/53878976.jpg' data-src='./../images/53878976.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:45:48 PM</td>
+													<td class='step-details'>The expected text contains the actual MY ICIVICS<img data-featherlight='./../images/179256994.jpg' width='10%' src='./../images/179256994.jpg' data-src='./../images/179256994.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:05 PM</td>
+													<td class='step-details'>The Element MY ICIVICS clicked<img data-featherlight='./../images/202033982.jpg' width='10%' src='./../images/202033982.jpg' data-src='./../images/202033982.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:06 PM</td>
+													<td class='step-details'>The expected https://staging.d9.icivics.org/user/9306834 url as same as the https://staging.d9.icivics.org/user/9306834 actual url.<img data-featherlight='./../images/558241591.jpg' width='10%' src='./../images/558241591.jpg' data-src='./../images/558241591.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:06 PM</td>
+													<td class='step-details'>The expected text contains the actual Welcome back,<img data-featherlight='./../images/769989949.jpg' width='10%' src='./../images/769989949.jpg' data-src='./../images/769989949.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:07 PM</td>
+													<td class='step-details'>The mouse over by xpath : (//a[@title='MY ICIVICS'])[2] is performed.<img data-featherlight='./../images/215360814.jpg' width='10%' src='./../images/215360814.jpg' data-src='./../images/215360814.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:07 PM</td>
+													<td class='step-details'>The element [[ChromeDriver: chrome on WINDOWS (1583e89e9dfcfba700f2e80132ff0537)] -> xpath: (//a[@title='My Classes'])[2]] is visible<img data-featherlight='./../images/374412955.jpg' width='10%' src='./../images/374412955.jpg' data-src='./../images/374412955.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:07 PM</td>
+													<td class='step-details'>The expected text contains the actual MY CLASSES<img data-featherlight='./../images/801187113.jpg' width='10%' src='./../images/801187113.jpg' data-src='./../images/801187113.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:14 PM</td>
+													<td class='step-details'>The Element MY CLASSES clicked<img data-featherlight='./../images/442326830.jpg' width='10%' src='./../images/442326830.jpg' data-src='./../images/442326830.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:14 PM</td>
+													<td class='step-details'>The expected https://staging.d9.icivics.org/classes url as same as the https://staging.d9.icivics.org/classes actual url.<img data-featherlight='./../images/485973221.jpg' width='10%' src='./../images/485973221.jpg' data-src='./../images/485973221.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:15 PM</td>
+													<td class='step-details'>The expected text contains the actual SYNC CLASSROOM CLASSES<img data-featherlight='./../images/578599211.jpg' width='10%' src='./../images/578599211.jpg' data-src='./../images/578599211.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:15 PM</td>
+													<td class='step-details'>The mouse over by xpath : (//a[@title='MY ICIVICS'])[2] is performed.<img data-featherlight='./../images/498935115.jpg' width='10%' src='./../images/498935115.jpg' data-src='./../images/498935115.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:16 PM</td>
+													<td class='step-details'>The element [[ChromeDriver: chrome on WINDOWS (1583e89e9dfcfba700f2e80132ff0537)] -> xpath: (//a[@title='My Favorites'])[2]] is visible<img data-featherlight='./../images/586089073.jpg' width='10%' src='./../images/586089073.jpg' data-src='./../images/586089073.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:16 PM</td>
+													<td class='step-details'>The expected text contains the actual MY FAVORITES<img data-featherlight='./../images/182079500.jpg' width='10%' src='./../images/182079500.jpg' data-src='./../images/182079500.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:31 PM</td>
+													<td class='step-details'>The Element MY FAVORITES clicked<img data-featherlight='./../images/693746919.jpg' width='10%' src='./../images/693746919.jpg' data-src='./../images/693746919.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:31 PM</td>
+													<td class='step-details'>The expected https://staging.d9.icivics.org/favorites url as same as the https://staging.d9.icivics.org/favorites actual url.<img data-featherlight='./../images/159877036.jpg' width='10%' src='./../images/159877036.jpg' data-src='./../images/159877036.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:46:32 PM</td>
+													<td class='step-details'>The expected text contains the actual Lessons from Antiquity<img data-featherlight='./../images/110665396.jpg' width='10%' src='./../images/110665396.jpg' data-src='./../images/110665396.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='49'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C41 -If you are viewing one of the pages in the Sign In/My iCivics submenu, is that page underlined in the submenu?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:48:42 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 7s+910ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:47:02 PM</td>
+													<td class='step-details'>myicivics button is clicked and submenu is display<img data-featherlight='./../images/38572428.jpg' width='10%' src='./../images/38572428.jpg' data-src='./../images/38572428.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:47:36 PM</td>
+													<td class='step-details'>Selected page is underlined<img data-featherlight='./../images/409129212.jpg' width='10%' src='./../images/409129212.jpg' data-src='./../images/409129212.jpg'></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:48:09 PM</td>
+													<td class='step-details'>Selected page is not underlined<img data-featherlight='./../images/310759005.jpg' width='10%' src='./../images/310759005.jpg' data-src='./../images/310759005.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:48:42 PM</td>
+													<td class='step-details'>Selected page is underlined<img data-featherlight='./../images/334316990.jpg' width='10%' src='./../images/334316990.jpg' data-src='./../images/334316990.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:48:42 PM</td>
+													<td class='step-details'>The Element MY ICIVICS clicked<img data-featherlight='./../images/58767108.jpg' width='10%' src='./../images/58767108.jpg' data-src='./../images/58767108.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:48:42 PM</td>
+													<td class='step-details'>Myicivics submenu is close on clicking again<img data-featherlight='./../images/99981910.jpg' width='10%' src='./../images/99981910.jpg' data-src='./../images/99981910.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='50'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C42 - When you select Sign In / My iCivics again while the submenu is open, does the submenu close?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 30, 2022 02:49:16 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 31s+67ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:49:15 PM</td>
+													<td class='step-details'>The Element MY ICIVICS clicked<img data-featherlight='./../images/513973858.jpg' width='10%' src='./../images/513973858.jpg' data-src='./../images/513973858.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>2:49:16 PM</td>
+													<td class='step-details'>Myicivics submenu is close on clicking again<img data-featherlight='./../images/511017178.jpg' width='10%' src='./../images/511017178.jpg' data-src='./../images/511017178.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>36</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>141</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jun 30, 2022 02:40:14 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jun 30, 2022 02:49:16 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 9m 2s+806ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 32,
+				failParent: 4,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 4,
+				
+				passChild: 137,
+				failChild: 4,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 4,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('#test-view-charts').addClass('hide');
+			});
+		</script>
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>

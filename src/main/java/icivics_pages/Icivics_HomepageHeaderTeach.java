@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -37,9 +36,11 @@ public class Icivics_HomepageHeaderTeach extends ProjectSpecificMethods {
 	public Icivics_HomepageHeaderTeach verifyteachmenu() {
 		WebElement teachbutton = propElement(getPropfile(gpropname1, "Teachbutton"));
 		if (teachbutton.isDisplayed()) {
-			click(propElement(getPropfile(gpropname1, "Teachbutton")));
+			teachbutton.click();
+
 			reportStep("Teachsubmenu is  display ", "Pass");
 		} else {
+
 			reportStep("Teachsubmenu is not display ", "Fail");
 		}
 		return this;

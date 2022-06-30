@@ -82,7 +82,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 
 	@Given("Verify Shop button is display")
 	public Icivics_HomepageHeaderMyicivicsMisc VerifyShopbutton() {
-		WebElement Shopbutton = propElement(getPropfile(gpropname1, "shopbutton"));
+		WebElement Shopbutton = propElement(getPropfile(gpropname7, "Shopbutton"));
 		if (Shopbutton.isDisplayed()) {
 			reportStep("Shopbutton is displayed", "Pass");
 		} else {
@@ -95,7 +95,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc extends ProjectSpecificMethods 
 	@Given("click on shop button and verify the URL")
 	public Icivics_HomepageHeaderMyicivicsMisc VerifyShopbuttonclick() throws IOException {
 		reportStep("Shopbutton is clicked", "Pass");
-		WebElement shopbutton = propElement(getPropfile(gpropname6, "shopbuttonele"));
+		WebElement shopbutton = propElement(getPropfile(gpropname7, "Shopbutton"));
 		shopbutton.click();
 		waitTime(3000);
 		String URL = driver.getCurrentUrl();

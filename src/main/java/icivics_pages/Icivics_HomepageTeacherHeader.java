@@ -35,7 +35,8 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 
 	public Icivics_HomepageTeacherHeader signin2() {
 		click(propElement(getPropfile(gpropname1, "Signinbutton")));
-		click(propElement(getPropfile(gpropname1, "Signinlink")));
+		WebElement link = propElement(getPropfile(gpropname1, "Signinlink"));
+		link.click();
 		WebElement username = propElement(getPropfile(gpropname1, "Username"));
 		username.sendKeys("Bronze Speaker 1r4e");
 		WebElement password = propElement(getPropfile(gpropname1, "Password"));
@@ -133,23 +134,26 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 	public Icivics_HomepageTeacherHeader Verifymyicivicsbuttondisplayafterlogin() {
 		WebElement signinbutton = propElement(getPropfile(gpropname1, "Signinbutton"));
 		if (signinbutton.isDisplayed()) {
-			reportStep("Signin button Verified successfully", "Pass");
+			reportStep("Signin button is display", "Pass");
 		} else {
-			reportStep("Signin button is not Verified successfully", "Fail");
+			reportStep("Signin button is not display", "Fail");
 		}
-		click(propElement(getPropfile(gpropname1, "Signinbutton")));
-		click(propElement(getPropfile(gpropname1, "Signinlink")));
+		WebElement signbutton=propElement(getPropfile(gpropname1, "Signinbutton"));
+		signbutton.click();
+		WebElement link = propElement(getPropfile(gpropname1, "Signinlink"));
+		link.click();
 		WebElement username = propElement(getPropfile(gpropname1, "Username"));
 		username.sendKeys("Bronze Speaker 1r4e");
 		WebElement password = propElement(getPropfile(gpropname1, "Password"));
 		password.sendKeys("i898qrCiPK9Hwgb");
-		click(propElement(getPropfile(gpropname2, "Loginbutton")));
+		WebElement login= propElement(getPropfile(gpropname2, "Loginbutton"));
+		login.click();
 		waitTime(3000);
 		WebElement myicivicsbutton2 = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
 		if (myicivicsbutton2.isDisplayed()) {
-			reportStep("Myicivicsbutton Verified successfully", "Pass");
+			reportStep("Myicivicsbutton is display", "Pass");
 		} else {
-			reportStep("Myicivicsbutton is not Verified successfully", "Fail");
+			reportStep("Myicivicsbutton is not display", "Fail");
 		}
 		return this;
 
@@ -159,41 +163,41 @@ public class Icivics_HomepageTeacherHeader extends ProjectSpecificMethods {
 	public Icivics_HomepageTeacherHeader Verifyheaderbuttonsafterlogin() {
 		WebElement playbutton = propElement(getPropfile(gpropname2, "Playbutton"));
 		if (playbutton.isDisplayed()) {
-			reportStep("playbutton Verified successfully", "Pass");
+			reportStep("playbutton is display", "Pass");
 		} else {
-			reportStep("playbutton is not Verified successfully", "Fail");
+			reportStep("playbutton is not display", "Fail");
 		}
 		WebElement teachbutton = propElement(getPropfile(gpropname2, "Teachbutton"));
 		if (teachbutton.isDisplayed()) {
-			reportStep("Teachbutton Verified successfully", "Pass");
+			reportStep("Teachbutton is display", "Pass");
 		} else {
-			reportStep("Teachbutton is not Verified successfully", "Fail");
+			reportStep("Teachbutton is not display", "Fail");
 		}
 		WebElement aboutbutton = propElement(getPropfile(gpropname2, "Aboutbutton"));
 		if (aboutbutton.isDisplayed()) {
-			reportStep("aboutbutton Verified successfully", "Pass");
+			reportStep("aboutbutton is display", "Pass");
 		} else {
-			reportStep("aboutbutton is not Verified successfully", "Fail");
+			reportStep("aboutbutton is not display", "Fail");
 		}
 		WebElement donatebutton = propElement(getPropfile(gpropname1, "Donatebutton"));
 		if (donatebutton.isDisplayed()) {
-			reportStep("Donatebutton Verified successfully", "Pass");
+			reportStep("Donatebutton is display", "Pass");
 		} else {
-			reportStep("Donatebutton is not Verified successfully", "Fail");
+			reportStep("Donatebutton is not display", "Fail");
 		}
 
 		WebElement shopbutton = propElement(getPropfile(gpropname1, "shopbutton2"));
 		if (shopbutton.isDisplayed()) {
-			reportStep("Shopbutton Verified successfully", "Pass");
+			reportStep("Shopbutton is  display", "Pass");
 		} else {
-			reportStep("Shopbutton is not Verified successfully", "Fail");
+			reportStep("Shopbutton is not display", "Fail");
 		}
 
 		WebElement myicivicsbutton2 = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
 		if (myicivicsbutton2.isDisplayed()) {
-			reportStep("Myicivicsbutton Verified successfully", "Pass");
+			reportStep("Myicivicsbutton is display", "Pass");
 		} else {
-			reportStep("Myicivicsbutton is not Verified successfully", "Fail");
+			reportStep("Myicivicsbutton is not display", "Fail");
 		}
 		return this;
 	}

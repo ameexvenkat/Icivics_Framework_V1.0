@@ -61,7 +61,7 @@ public class Icivics_HomepageHeader extends ProjectSpecificMethods {
 		}
 		click(propElement(getPropfile(gpropname1, "Headerlogo")));
 		waitTime(3000);
-		reportStep("Page reloads successfully", "Pass");
+		reportStep("On Clicking Page reloads and Icivics logo is present", "Pass");
 
 		return this;
 	}
@@ -82,7 +82,7 @@ public class Icivics_HomepageHeader extends ProjectSpecificMethods {
 	public Icivics_HomepageHeader Verifyshopbutton() {
 		WebElement shopbutton = propElement(getPropfile(gpropname1, "shopbutton"));
 		if (shopbutton.isDisplayed()) {
-			reportStep("Shopbutton is dislay", "Pass");
+			reportStep("Shopbutton is display", "Pass");
 		} else {
 			reportStep("Shopbutton is not  dislay", "Fail");
 		}
@@ -98,8 +98,10 @@ public class Icivics_HomepageHeader extends ProjectSpecificMethods {
 		} else {
 			reportStep("Signin button is not display", "Fail");
 		}
-		click(propElement(getPropfile(gpropname1, "Signinbutton")));
-		click(propElement(getPropfile(gpropname1, "Signinlink")));
+		WebElement signbutton = propElement(getPropfile(gpropname1, "Signinbutton"));
+		signbutton.click();
+		WebElement signinlink= propElement(getPropfile(gpropname1, "Signinlink"));
+		signinlink.click();
 		WebElement username = propElement(getPropfile(gpropname1, "Username"));
 		clearAndType(username, getPropfile(gpropname1, "USERNAME"));
 		WebElement password = propElement(getPropfile(gpropname1, "Password"));

@@ -102,7 +102,7 @@ public class Icivics_HomepageHeaderSigninMisc_Test extends ProjectSpecificMethod
 		node = test.createNode(
 				"C42 - When you select Sign In / My iCivics again while the submenu is open, does the submenu close?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).Clickonsigninbuttonagain();
+		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).verifysigninbutton().Clickonsigninbuttonagain();
 	}
 
 }

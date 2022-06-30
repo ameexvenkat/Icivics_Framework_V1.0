@@ -25,7 +25,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc_Test extends ProjectSpecificMet
 	public void C29_Verifydonatebutton(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C29 -  Can you see an appropriate icon for Donate?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).VerifyDonatebutton();
+		new Icivics_HomepageHeaderMyicivicsMisc(driver, node, prop).launchURL(URL).verifylogin().VerifyDonatebutton();
 	}
 	// C30 - When you select Donate, are you directed to https://give.icivics.org/?
 
@@ -33,7 +33,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc_Test extends ProjectSpecificMet
 	public void C30_Verifydonatebuttonclick(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C30 -  When you select Donate, are you directed to https://give.icivics.org/?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).VerifyDonateclick();
+		new Icivics_HomepageHeaderMyicivicsMisc(driver, node, prop).launchURL(URL).verifylogin().VerifyDonateclick();
 	}
 	// C31 - Can you see an appropriate icon for Shop?
 
@@ -41,7 +41,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc_Test extends ProjectSpecificMet
 	public void C31_Verifyshopbutton(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C31 -  Can you see an appropriate icon for Shop?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).VerifyShopbutton();
+		new Icivics_HomepageHeaderMyicivicsMisc(driver, node, prop).launchURL(URL).verifylogin().VerifyShopbutton();
 	}
 	// C32 - When you select Shop, are you directed to
 	// https://icivics.myshopify.com/?
@@ -50,7 +50,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc_Test extends ProjectSpecificMet
 	public void C32_Verifyshopbuttonclick(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C32 -  When you select Shop, are you directed to https://icivics.myshopify.com/?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderSigninMisc(driver, node, prop).launchURL(URL).VerifyShopbuttonclick();
+		new Icivics_HomepageHeaderMyicivicsMisc(driver, node, prop).launchURL(URL).verifylogin().VerifyShopbuttonclick();
 	}
 
 	// C34 - If you are signed in, do you see a My iCivics button instead of Sign
@@ -70,8 +70,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc_Test extends ProjectSpecificMet
 	public void C35_Verifytheavatar(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C35 - Can you see your avatar icon represented in the button?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderMyicivicsMisc(driver, node, prop).launchURL(URL).verifylogin()
-				.verifywithavatar();
+		new Icivics_HomepageHeaderMyicivicsMisc(driver, node, prop).launchURL(URL).verifylogin().verifywithavatar();
 	}
 
 	// C35 - Can you see your avatar icon represented in the button?
@@ -80,8 +79,7 @@ public class Icivics_HomepageHeaderMyicivicsMisc_Test extends ProjectSpecificMet
 	public void C35_Verifythenoavatar(String URL) throws IOException, InterruptedException {
 		node = test.createNode("C35 - Can you see your avatar icon represented in the button?");
 		extent.attachReporter(reporter);
-		new Icivics_HomepageHeaderMyicivicsMisc(driver, node, prop).launchURL(URL)
-				.verifywithnoavatar();
+		new Icivics_HomepageHeaderMyicivicsMisc(driver, node, prop).launchURL(URL).verifywithnoavatar();
 	}
 
 	// C36 - When you select Sign In/My iCivics, does a submenu open below the
