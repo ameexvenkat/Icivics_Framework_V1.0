@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Regression_TestScripts">
+		<classes>
+			<class name="icivics_testcases.EducatorRegistration_Test" />
+			<class name="icivics_testcases.EducatorRegistration1_Test" />
+			<class name="icivics_testcases.EducatorRegistration2_Test" />
+			<class name="icivics_testcases.EducatorRegistration3_Test" />
+			<class name="icivics_testcases.EducatorRegistration4_Test" />
+			<class name="icivics_testcases.EducatorRegistration5_Test" />
+			<class name="icivics_testcases.StudentRegistration1classcode_Test" />
+			<class name="icivics_testcases.StudentRegistration1Email_Test" />
+			<class name="icivics_testcases.StudentRegistration2classcode_Test" />
+			<class name="icivics_testcases.StudentRegistration2Email_Test" />
+			<class name="icivics_testcases.StudentRegistration3classcode_Test" />
+			<class name="icivics_testcases.StudentRegistration3Email_Test" />
+			<class name="icivics_testcases.HP_1Header_Test" />
+			<class name="icivics_testcases.HP_1TeacherHeader_Test" />
+			<class name="icivics_testcases.HP_2Headerplay_Test" />
+			<class name="icivics_testcases.HP_3HeaderTeach_Test" />
+			<class name="icivics_testcases.HP_3Headerteach2_Test" />
+			<class name="icivics_testcases.HP_4HeaderAbout_Test" />
+			<class name="icivics_testcases.HP_5HeaderMyicivicsMisc_Test" />
+			<class name="icivics_testcases.HP_5HeaderSigninMisc_Test" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

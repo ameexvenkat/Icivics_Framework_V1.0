@@ -1,0 +1,1776 @@
+<html>
+<head>
+<title>TestNG:  Regression_TestScripts</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Regression_TestScripts</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>145/17/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jul 04 22:12:29 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>3842 seconds (3842481 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1classcode_Test.C427_verifyemailfieldsdisappear()'><b>C427_verifyemailfieldsdisappear</b><br>Test class: icivics_testcases.StudentRegistration1classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52289}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4b716915a5677eeac34f22a2a143fec4
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at icivics_pages.StudentReg1classcode.clickonremovelink(StudentReg1classcode.java:126)
+	at icivics_testcases.StudentRegistration1classcode_Test.C427_verifyemailfieldsdisappear(StudentRegistration1classcode_Test.java:50)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1016270773", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1016270773'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52289}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4b716915a5677eeac34f22a2a143fec4
+	at sun.reflect.GeneratedConstructorAccessor67.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at icivics_pages.StudentReg1classcode.clickonremovelink(StudentReg1classcode.java:126)
+	at icivics_testcases.StudentRegistration1classcode_Test.C427_verifyemailfieldsdisappear(StudentRegistration1classcode_Test.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>7</td>
+<td>icivics_testcases.StudentRegistration1classcode_Test@27fe3806</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration3Email_Test.C376_verifyresendbutton()'><b>C376_verifyresendbutton</b><br>Test class: icivics_testcases.StudentRegistration3Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:54455}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f82fee9f0ea7d36b141bf6cdb4a18152
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at icivics_pages.StudentReg3Email.verifywithvaliddata(StudentReg3Email.java:67)
+	at icivics_testcases.StudentRegistration3Email_Test.C376_verifyresendbutton(StudentRegistration3Email_Test.java:64)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1522941102", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1522941102'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:54455}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f82fee9f0ea7d36b141bf6cdb4a18152
+	at sun.reflect.GeneratedConstructorAccessor67.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at icivics_pages.StudentReg3Email.verifywithvaliddata(StudentReg3Email.java:67)
+	at icivics_testcases.StudentRegistration3Email_Test.C376_verifyresendbutton(StudentRegistration3Email_Test.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>icivics_testcases.StudentRegistration3Email_Test@4f51b3e0</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1classcode_Test.C435_verifyregistrationwithvalidvalue()'><b>C435_verifyregistrationwithvalidvalue</b><br>Test class: icivics_testcases.StudentRegistration1classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52576}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9fd07bae1e0f680ed9197f475a2569f7
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at selenium.base.SeleniumBase.click(SeleniumBase.java:59)
+	at icivics_pages.StudentReg1classcode.verifyregistrationwithvalidvalue(StudentReg1classcode.java:749)
+	at icivics_testcases.StudentRegistration1classcode_Test.C435_verifyregistrationwithvalidvalue(StudentRegistration1classcode_Test.java:133)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace877134882", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace877134882'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52576}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9fd07bae1e0f680ed9197f475a2569f7
+	at sun.reflect.GeneratedConstructorAccessor67.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at selenium.base.SeleniumBase.click(SeleniumBase.java:59)
+	at icivics_pages.StudentReg1classcode.verifyregistrationwithvalidvalue(StudentReg1classcode.java:749)
+	at icivics_testcases.StudentRegistration1classcode_Test.C435_verifyregistrationwithvalidvalue(StudentRegistration1classcode_Test.java:133)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>8</td>
+<td>icivics_testcases.StudentRegistration1classcode_Test@27fe3806</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration2_Test.C338_verifybreadcrumbspage1()'><b>C338_verifybreadcrumbspage1</b><br>Test class: icivics_testcases.EducatorRegistration2_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:50655}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e87a4af2f1d37f2df787591bee4775f9
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at icivics_pages.EducatorRegistration2.verifywithvaliddata(EducatorRegistration2.java:67)
+	at icivics_testcases.EducatorRegistration2_Test.C338_verifybreadcrumbspage1(EducatorRegistration2_Test.java:27)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1183266411", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1183266411'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:50655}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e87a4af2f1d37f2df787591bee4775f9
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at icivics_pages.EducatorRegistration2.verifywithvaliddata(EducatorRegistration2.java:67)
+	at icivics_testcases.EducatorRegistration2_Test.C338_verifybreadcrumbspage1(EducatorRegistration2_Test.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>5</td>
+<td>icivics_testcases.EducatorRegistration2_Test@2698dc7</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1Email_Test.C397_Verifyclasscodelink()'><b>C397_Verifyclasscodelink</b><br>Test class: icivics_testcases.StudentRegistration1Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53047}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e1b17ef3bd15cf4d5015f1685e4e1d02
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at icivics_pages.StudentReg1Email.verifyclasscodelink(StudentReg1Email.java:797)
+	at icivics_testcases.StudentRegistration1Email_Test.C397_Verifyclasscodelink(StudentRegistration1Email_Test.java:144)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace545082195", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace545082195'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53047}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e1b17ef3bd15cf4d5015f1685e4e1d02
+	at sun.reflect.GeneratedConstructorAccessor67.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at icivics_pages.StudentReg1Email.verifyclasscodelink(StudentReg1Email.java:797)
+	at icivics_testcases.StudentRegistration1Email_Test.C397_Verifyclasscodelink(StudentRegistration1Email_Test.java:144)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>icivics_testcases.StudentRegistration1Email_Test@5f71c76a</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration4_Test.C360_verifyalldataremembered()'><b>C360_verifyalldataremembered</b><br>Test class: icivics_testcases.EducatorRegistration4_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td><div><pre>java.lang.NullPointerException
+	at icivics_pages.EducatorRegistration4.verifySchoolremembered(EducatorRegistration4.java:168)
+	at icivics_testcases.EducatorRegistration4_Test.C360_verifyalldataremembered(EducatorRegistration4_Test.java:44)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace54615406", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace54615406'><pre>java.lang.NullPointerException
+	at icivics_pages.EducatorRegistration4.verifySchoolremembered(EducatorRegistration4.java:168)
+	at icivics_testcases.EducatorRegistration4_Test.C360_verifyalldataremembered(EducatorRegistration4_Test.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>24</td>
+<td>icivics_testcases.EducatorRegistration4_Test@17baae6e</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1classcode_Test.C425_verifyemailfieldsappear()'><b>C425_verifyemailfieldsappear</b><br>Test class: icivics_testcases.StudentRegistration1classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52219}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d71dbe231efafb96e50a8d5e0c948b6
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at icivics_pages.StudentReg1classcode.verifyOptionallink(StudentReg1classcode.java:59)
+	at icivics_testcases.StudentRegistration1classcode_Test.C425_verifyemailfieldsappear(StudentRegistration1classcode_Test.java:29)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2110090250", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2110090250'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52219}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d71dbe231efafb96e50a8d5e0c948b6
+	at sun.reflect.GeneratedConstructorAccessor67.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at icivics_pages.StudentReg1classcode.verifyOptionallink(StudentReg1classcode.java:59)
+	at icivics_testcases.StudentRegistration1classcode_Test.C425_verifyemailfieldsappear(StudentRegistration1classcode_Test.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>icivics_testcases.StudentRegistration1classcode_Test@27fe3806</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1classcode_Test.C432_verifyinvaliderrormsg()'><b>C432_verifyinvaliderrormsg</b><br>Test class: icivics_testcases.StudentRegistration1classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td><div><pre>java.lang.NullPointerException
+	at icivics_pages.StudentReg1classcode.verifyinvaliderrormsg(StudentReg1classcode.java:364)
+	at icivics_testcases.StudentRegistration1classcode_Test.C432_verifyinvaliderrormsg(StudentRegistration1classcode_Test.java:100)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1796868725", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1796868725'><pre>java.lang.NullPointerException
+	at icivics_pages.StudentReg1classcode.verifyinvaliderrormsg(StudentReg1classcode.java:364)
+	at icivics_testcases.StudentRegistration1classcode_Test.C432_verifyinvaliderrormsg(StudentRegistration1classcode_Test.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>8</td>
+<td>icivics_testcases.StudentRegistration1classcode_Test@27fe3806</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1classcode_Test.C431_verifyAsteriks()'><b>C431_verifyAsteriks</b><br>Test class: icivics_testcases.StudentRegistration1classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52425}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fc0a2acb2c68e8be8947d5a5b7a3a831
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at icivics_pages.StudentReg1classcode.clickOptionallink(StudentReg1classcode.java:51)
+	at icivics_testcases.StudentRegistration1classcode_Test.C431_verifyAsteriks(StudentRegistration1classcode_Test.java:88)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace634489345", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace634489345'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52425}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fc0a2acb2c68e8be8947d5a5b7a3a831
+	at sun.reflect.GeneratedConstructorAccessor67.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at icivics_pages.StudentReg1classcode.clickOptionallink(StudentReg1classcode.java:51)
+	at icivics_testcases.StudentRegistration1classcode_Test.C431_verifyAsteriks(StudentRegistration1classcode_Test.java:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>icivics_testcases.StudentRegistration1classcode_Test@27fe3806</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration3_Test.C352_verifyallfieldsallowtoentertextandmakeselection()'><b>C352_verifyallfieldsallowtoentertextandmakeselection</b><br>Test class: icivics_testcases.EducatorRegistration3_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td><div><pre>java.lang.NullPointerException
+	at icivics_pages.EducatorRegistration3.Verifyzipcodeerrormsg(EducatorRegistration3.java:290)
+	at icivics_testcases.EducatorRegistration3_Test.C352_verifyallfieldsallowtoentertextandmakeselection(EducatorRegistration3_Test.java:62)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1828130916", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1828130916'><pre>java.lang.NullPointerException
+	at icivics_pages.EducatorRegistration3.Verifyzipcodeerrormsg(EducatorRegistration3.java:290)
+	at icivics_testcases.EducatorRegistration3_Test.C352_verifyallfieldsallowtoentertextandmakeselection(EducatorRegistration3_Test.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>23</td>
+<td>icivics_testcases.EducatorRegistration3_Test@43d7741f</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration1_Test.C336_verifyinvaliderrormsg()'><b>C336_verifyinvaliderrormsg</b><br>Test class: icivics_testcases.EducatorRegistration1_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td><div><pre>java.lang.NullPointerException
+	at icivics_pages.EducatorRegistration1.verifyinvaliderrormsg(EducatorRegistration1.java:593)
+	at icivics_testcases.EducatorRegistration1_Test.C336_verifyinvaliderrormsg(EducatorRegistration1_Test.java:121)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1929760689", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1929760689'><pre>java.lang.NullPointerException
+	at icivics_pages.EducatorRegistration1.verifyinvaliderrormsg(EducatorRegistration1.java:593)
+	at icivics_testcases.EducatorRegistration1_Test.C336_verifyinvaliderrormsg(EducatorRegistration1_Test.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>5</td>
+<td>icivics_testcases.EducatorRegistration1_Test@44f75083</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration5_Test.C373_verifywelcomemessage()'><b>C373_verifywelcomemessage</b><br>Test class: icivics_testcases.EducatorRegistration5_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td><div><pre>java.lang.NullPointerException
+	at icivics_pages.EducatorRegistration5.verifywithvaliddata(EducatorRegistration5.java:100)
+	at icivics_testcases.EducatorRegistration5_Test.C373_verifywelcomemessage(EducatorRegistration5_Test.java:36)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1904032555", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1904032555'><pre>java.lang.NullPointerException
+	at icivics_pages.EducatorRegistration5.verifywithvaliddata(EducatorRegistration5.java:100)
+	at icivics_testcases.EducatorRegistration5_Test.C373_verifywelcomemessage(EducatorRegistration5_Test.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>23</td>
+<td>icivics_testcases.EducatorRegistration5_Test@69379752</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1classcode_Test.C430_verifyregistrationwithvaliddata()'><b>C430_verifyregistrationwithvaliddata</b><br>Test class: icivics_testcases.StudentRegistration1classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52389}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 49c6abbbea8038e7a53ea9a88b8adeb0
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at icivics_pages.StudentReg1classcode.clickOptionallink(StudentReg1classcode.java:51)
+	at icivics_testcases.StudentRegistration1classcode_Test.C430_verifyregistrationwithvaliddata(StudentRegistration1classcode_Test.java:77)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1379294113", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1379294113'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.66)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AMX-RL-20-348-W&apos;, ip: &apos;10.10.7.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52389}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 49c6abbbea8038e7a53ea9a88b8adeb0
+	at sun.reflect.GeneratedConstructorAccessor67.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at icivics_pages.StudentReg1classcode.clickOptionallink(StudentReg1classcode.java:51)
+	at icivics_testcases.StudentRegistration1classcode_Test.C430_verifyregistrationwithvaliddata(StudentRegistration1classcode_Test.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>icivics_testcases.StudentRegistration1classcode_Test@27fe3806</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration3_Test.C350_verifyalldataremembered()'><b>C350_verifyalldataremembered</b><br>Test class: icivics_testcases.EducatorRegistration3_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td><div><pre>java.lang.NullPointerException
+	at icivics_pages.EducatorRegistration3.verifygradelevelremembered(EducatorRegistration3.java:153)
+	at icivics_testcases.EducatorRegistration3_Test.C350_verifyalldataremembered(EducatorRegistration3_Test.java:42)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace750518820", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace750518820'><pre>java.lang.NullPointerException
+	at icivics_pages.EducatorRegistration3.verifygradelevelremembered(EducatorRegistration3.java:153)
+	at icivics_testcases.EducatorRegistration3_Test.C350_verifyalldataremembered(EducatorRegistration3_Test.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>16</td>
+<td>icivics_testcases.EducatorRegistration3_Test@43d7741f</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration3_Test.C354_verifyallfieldswithinvaliddata()'><b>C354_verifyallfieldswithinvaliddata</b><br>Test class: icivics_testcases.EducatorRegistration3_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td><div><pre>java.lang.NullPointerException
+	at icivics_pages.EducatorRegistration3.verifyenterinvaliddata(EducatorRegistration3.java:339)
+	at icivics_testcases.EducatorRegistration3_Test.C354_verifyallfieldswithinvaliddata(EducatorRegistration3_Test.java:72)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace604672082", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace604672082'><pre>java.lang.NullPointerException
+	at icivics_pages.EducatorRegistration3.verifyenterinvaliddata(EducatorRegistration3.java:339)
+	at icivics_testcases.EducatorRegistration3_Test.C354_verifyallfieldswithinvaliddata(EducatorRegistration3_Test.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>26</td>
+<td>icivics_testcases.EducatorRegistration3_Test@43d7741f</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration5_Test.C372_verifybreadcrumbspage5()'><b>C372_verifybreadcrumbspage5</b><br>Test class: icivics_testcases.EducatorRegistration5_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td><div><pre>java.lang.NullPointerException
+	at icivics_pages.EducatorRegistration5.verifywithvaliddata(EducatorRegistration5.java:116)
+	at icivics_testcases.EducatorRegistration5_Test.C372_verifybreadcrumbspage5(EducatorRegistration5_Test.java:27)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1048168928", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1048168928'><pre>java.lang.NullPointerException
+	at icivics_pages.EducatorRegistration5.verifywithvaliddata(EducatorRegistration5.java:116)
+	at icivics_testcases.EducatorRegistration5_Test.C372_verifybreadcrumbspage5(EducatorRegistration5_Test.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>25</td>
+<td>icivics_testcases.EducatorRegistration5_Test@69379752</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2classcode_Test.C410_VerifyPasswordindicatormatch()'><b>C410_VerifyPasswordindicatormatch</b><br>Test class: icivics_testcases.StudentRegistration2classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td><div><pre>java.lang.NullPointerException
+	at icivics_pages.StudentReg2classcode.VerifyPasswordindicatormatch(StudentReg2classcode.java:310)
+	at icivics_testcases.StudentRegistration2classcode_Test.C410_VerifyPasswordindicatormatch(StudentRegistration2classcode_Test.java:113)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace88616981", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace88616981'><pre>java.lang.NullPointerException
+	at icivics_pages.StudentReg2classcode.VerifyPasswordindicatormatch(StudentReg2classcode.java:310)
+	at icivics_testcases.StudentRegistration2classcode_Test.C410_VerifyPasswordindicatormatch(StudentRegistration2classcode_Test.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>12</td>
+<td>icivics_testcases.StudentRegistration2classcode_Test@1d7acb34</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration4_Test.C368_verifyallfieldswithinvaliddata()'><b>C368_verifyallfieldswithinvaliddata</b><br>Test class: icivics_testcases.EducatorRegistration4_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>27</td>
+<td>icivics_testcases.EducatorRegistration4_Test@17baae6e</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1classcode_Test.C433_verifyerrormsgverifyemailblankfield()'><b>C433_verifyerrormsgverifyemailblankfield</b><br>Test class: icivics_testcases.StudentRegistration1classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>49</td>
+<td>icivics_testcases.StudentRegistration1classcode_Test@27fe3806</td></tr>
+<tr>
+<td title='icivics_testcases.HP_2Headerplay_Test.C8_Verifyplaysubmenu()'><b>C8_Verifyplaysubmenu</b><br>Test class: icivics_testcases.HP_2Headerplay_Test<br>Parameters: https://staging.d9.icivics.org/games</td>
+<td></td>
+<td>4</td>
+<td>icivics_testcases.HP_2Headerplay_Test@133e16fd</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration4_Test.C363_verifyallpage4fields()'><b>C363_verifyallpage4fields</b><br>Test class: icivics_testcases.EducatorRegistration4_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>36</td>
+<td>icivics_testcases.EducatorRegistration4_Test@17baae6e</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderSigninMisc_Test.C32_Verifyshopbuttonclick()'><b>C32_Verifyshopbuttonclick</b><br>Test class: icivics_testcases.HP_5HeaderSigninMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>6</td>
+<td>icivics_testcases.HP_5HeaderSigninMisc_Test@5e955596</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration5_Test.C376_verifyresendbutton()'><b>C376_verifyresendbutton</b><br>Test class: icivics_testcases.EducatorRegistration5_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>31</td>
+<td>icivics_testcases.EducatorRegistration5_Test@69379752</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration3_Test.C348_verifybreadcrumbspage3()'><b>C348_verifybreadcrumbspage3</b><br>Test class: icivics_testcases.EducatorRegistration3_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>15</td>
+<td>icivics_testcases.EducatorRegistration3_Test@43d7741f</td></tr>
+<tr>
+<td title='icivics_testcases.HP_1TeacherHeader_Test.C7_verifyresizeheaderintohamburger()'><b>C7_verifyresizeheaderintohamburger</b><br>Test class: icivics_testcases.HP_1TeacherHeader_Test<br>Parameters: https://staging.d9.icivics.org/teachers</td>
+<td></td>
+<td>32</td>
+<td>icivics_testcases.HP_1TeacherHeader_Test@5e57643e</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2classcode_Test.C405_verifypage2SignUpforEmailsfield()'><b>C405_verifypage2SignUpforEmailsfield</b><br>Test class: icivics_testcases.StudentRegistration2classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>12</td>
+<td>icivics_testcases.StudentRegistration2classcode_Test@1d7acb34</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2Email_Test.C408_hoveronpwdfield()'><b>C408_hoveronpwdfield</b><br>Test class: icivics_testcases.StudentRegistration2Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>7</td>
+<td>icivics_testcases.StudentRegistration2Email_Test@48a242ce</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration5_Test.C377_verifynotification()'><b>C377_verifynotification</b><br>Test class: icivics_testcases.EducatorRegistration5_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>34</td>
+<td>icivics_testcases.EducatorRegistration5_Test@69379752</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration4_Test.C367_verifypasswordIndicatormatch()'><b>C367_verifypasswordIndicatormatch</b><br>Test class: icivics_testcases.EducatorRegistration4_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>24</td>
+<td>icivics_testcases.EducatorRegistration4_Test@17baae6e</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderMyicivicsMisc_Test.C37_VerifyIcivicssubmenu()'><b>C37_VerifyIcivicssubmenu</b><br>Test class: icivics_testcases.HP_5HeaderMyicivicsMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>9</td>
+<td>icivics_testcases.HP_5HeaderMyicivicsMisc_Test@1cab0bfb</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration2_Test.C342_verifymakeselection()'><b>C342_verifymakeselection</b><br>Test class: icivics_testcases.EducatorRegistration2_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>18</td>
+<td>icivics_testcases.EducatorRegistration2_Test@2698dc7</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration4_Test.C370_verifyallfieldswithblankandinvaliddata()'><b>C370_verifyallfieldswithblankandinvaliddata</b><br>Test class: icivics_testcases.EducatorRegistration4_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>27</td>
+<td>icivics_testcases.EducatorRegistration4_Test@17baae6e</td></tr>
+<tr>
+<td title='icivics_testcases.HP_2Headerplay_Test.C13_Verifyclickonplaybuttonagain()'><b>C13_Verifyclickonplaybuttonagain</b><br>Test class: icivics_testcases.HP_2Headerplay_Test<br>Parameters: https://staging.d9.icivics.org/games</td>
+<td></td>
+<td>5</td>
+<td>icivics_testcases.HP_2Headerplay_Test@133e16fd</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration4_Test.C369_verifyallfieldswithblankdata()'><b>C369_verifyallfieldswithblankdata</b><br>Test class: icivics_testcases.EducatorRegistration4_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>25</td>
+<td>icivics_testcases.EducatorRegistration4_Test@17baae6e</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration3_Test.C357_verifyvalidsubmission()'><b>C357_verifyvalidsubmission</b><br>Test class: icivics_testcases.EducatorRegistration3_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>27</td>
+<td>icivics_testcases.EducatorRegistration3_Test@43d7741f</td></tr>
+<tr>
+<td title='icivics_testcases.HP_3Headerteach2_Test.C19_Verifyteachsubmenu()'><b>C19_Verifyteachsubmenu</b><br>Test class: icivics_testcases.HP_3Headerteach2_Test<br>Parameters: https://staging.d9.icivics.org/teachers</td>
+<td></td>
+<td>74</td>
+<td>icivics_testcases.HP_3Headerteach2_Test@1ad282e0</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2classcode_Test.C414_verifypage3loaded()'><b>C414_verifypage3loaded</b><br>Test class: icivics_testcases.StudentRegistration2classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>18</td>
+<td>icivics_testcases.StudentRegistration2classcode_Test@1d7acb34</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration2_Test.C339_verifypreviouspage()'><b>C339_verifypreviouspage</b><br>Test class: icivics_testcases.EducatorRegistration2_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>10</td>
+<td>icivics_testcases.EducatorRegistration2_Test@2698dc7</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1Email_Test.C385_Verifyvideolink()'><b>C385_Verifyvideolink</b><br>Test class: icivics_testcases.StudentRegistration1Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>15</td>
+<td>icivics_testcases.StudentRegistration1Email_Test@5f71c76a</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2classcode_Test.C412_verifytermsofuseandprivacycheckbox()'><b>C412_verifytermsofuseandprivacycheckbox</b><br>Test class: icivics_testcases.StudentRegistration2classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>12</td>
+<td>icivics_testcases.StudentRegistration2classcode_Test@1d7acb34</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration2_Test.C340_verifyalldataremembered()'><b>C340_verifyalldataremembered</b><br>Test class: icivics_testcases.EducatorRegistration2_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>17</td>
+<td>icivics_testcases.EducatorRegistration2_Test@2698dc7</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1classcode_Test.C434_verifyinvaliderrormsg2()'><b>C434_verifyinvaliderrormsg2</b><br>Test class: icivics_testcases.StudentRegistration1classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>9</td>
+<td>icivics_testcases.StudentRegistration1classcode_Test@27fe3806</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration3classcode_Test.C456_verifyusernametextddisplay()'><b>C456_verifyusernametextddisplay</b><br>Test class: icivics_testcases.StudentRegistration3classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>16</td>
+<td>icivics_testcases.StudentRegistration3classcode_Test@1e4a7dd4</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderMyicivicsMisc_Test.C41_verifyselectpageisunderlined()'><b>C41_verifyselectpageisunderlined</b><br>Test class: icivics_testcases.HP_5HeaderMyicivicsMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>51</td>
+<td>icivics_testcases.HP_5HeaderMyicivicsMisc_Test@1cab0bfb</td></tr>
+<tr>
+<td title='icivics_testcases.HP_1Header_Test.C1538_Verifydonationpopup()'><b>C1538_Verifydonationpopup</b><br>Test class: icivics_testcases.HP_1Header_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>7</td>
+<td>icivics_testcases.HP_1Header_Test@4b9e255</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2classcode_Test.C412_verifyenterinvaliddata()'><b>C412_verifyenterinvaliddata</b><br>Test class: icivics_testcases.StudentRegistration2classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>20</td>
+<td>icivics_testcases.StudentRegistration2classcode_Test@1d7acb34</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration3classcode_Test.C458_verifyemailtextddisplay()'><b>C458_verifyemailtextddisplay</b><br>Test class: icivics_testcases.StudentRegistration3classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>17</td>
+<td>icivics_testcases.StudentRegistration3classcode_Test@1e4a7dd4</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration_Test.C325_Verifyerrormsg()'><b>C325_Verifyerrormsg</b><br>Test class: icivics_testcases.EducatorRegistration_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>6</td>
+<td>icivics_testcases.EducatorRegistration_Test@73d4cc9e</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2Email_Test.C410_VerifyPasswordindicatormatch()'><b>C410_VerifyPasswordindicatormatch</b><br>Test class: icivics_testcases.StudentRegistration2Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>8</td>
+<td>icivics_testcases.StudentRegistration2Email_Test@48a242ce</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderSigninMisc_Test.C31_Verifyshopbutton()'><b>C31_Verifyshopbutton</b><br>Test class: icivics_testcases.HP_5HeaderSigninMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>3</td>
+<td>icivics_testcases.HP_5HeaderSigninMisc_Test@5e955596</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1Email_Test.C387_verifytextfields()'><b>C387_verifytextfields</b><br>Test class: icivics_testcases.StudentRegistration1Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>5</td>
+<td>icivics_testcases.StudentRegistration1Email_Test@5f71c76a</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2Email_Test.C399_Clickbackbutton()'><b>C399_Clickbackbutton</b><br>Test class: icivics_testcases.StudentRegistration2Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>13</td>
+<td>icivics_testcases.StudentRegistration2Email_Test@48a242ce</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderMyicivicsMisc_Test.C36_VerifyIcivicssubmenu()'><b>C36_VerifyIcivicssubmenu</b><br>Test class: icivics_testcases.HP_5HeaderMyicivicsMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>12</td>
+<td>icivics_testcases.HP_5HeaderMyicivicsMisc_Test@1cab0bfb</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1classcode_Test.C426_verifyemailtooltips()'><b>C426_verifyemailtooltips</b><br>Test class: icivics_testcases.StudentRegistration1classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>4</td>
+<td>icivics_testcases.StudentRegistration1classcode_Test@27fe3806</td></tr>
+<tr>
+<td title='icivics_testcases.HP_2Headerplay_Test.C12_Verifypageisunderlined()'><b>C12_Verifypageisunderlined</b><br>Test class: icivics_testcases.HP_2Headerplay_Test<br>Parameters: https://staging.d9.icivics.org/games</td>
+<td></td>
+<td>278</td>
+<td>icivics_testcases.HP_2Headerplay_Test@133e16fd</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1Email_Test.C396_verifyvalidregistration()'><b>C396_verifyvalidregistration</b><br>Test class: icivics_testcases.StudentRegistration1Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>14</td>
+<td>icivics_testcases.StudentRegistration1Email_Test@5f71c76a</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration4_Test.C365_verifypasswordtooltips()'><b>C365_verifypasswordtooltips</b><br>Test class: icivics_testcases.EducatorRegistration4_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>24</td>
+<td>icivics_testcases.EducatorRegistration4_Test@17baae6e</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderMyicivicsMisc_Test.C29_Verifydonatebutton()'><b>C29_Verifydonatebutton</b><br>Test class: icivics_testcases.HP_5HeaderMyicivicsMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>9</td>
+<td>icivics_testcases.HP_5HeaderMyicivicsMisc_Test@1cab0bfb</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration5_Test.C375_verifyconfirmationemail()'><b>C375_verifyconfirmationemail</b><br>Test class: icivics_testcases.EducatorRegistration5_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>25</td>
+<td>icivics_testcases.EducatorRegistration5_Test@69379752</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration_Test.C321_VerifyallpageElements()'><b>C321_VerifyallpageElements</b><br>Test class: icivics_testcases.EducatorRegistration_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>19</td>
+<td>icivics_testcases.EducatorRegistration_Test@73d4cc9e</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1Email_Test.C394_verifyblankerrormsg()'><b>C394_verifyblankerrormsg</b><br>Test class: icivics_testcases.StudentRegistration1Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>40</td>
+<td>icivics_testcases.StudentRegistration1Email_Test@5f71c76a</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration3Email_Test.C372_verifypagecount3()'><b>C372_verifypagecount3</b><br>Test class: icivics_testcases.StudentRegistration3Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>16</td>
+<td>icivics_testcases.StudentRegistration3Email_Test@4f51b3e0</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderMyicivicsMisc_Test.C35_Verifytheavatar()'><b>C35_Verifytheavatar</b><br>Test class: icivics_testcases.HP_5HeaderMyicivicsMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>11</td>
+<td>icivics_testcases.HP_5HeaderMyicivicsMisc_Test@1cab0bfb</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration2_Test.C345_verifyblankerrormsg()'><b>C345_verifyblankerrormsg</b><br>Test class: icivics_testcases.EducatorRegistration2_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>44</td>
+<td>icivics_testcases.EducatorRegistration2_Test@2698dc7</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration1_Test.C327_verifybreadcrumbspage1()'><b>C327_verifybreadcrumbspage1</b><br>Test class: icivics_testcases.EducatorRegistration1_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>2</td>
+<td>icivics_testcases.EducatorRegistration1_Test@44f75083</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration_Test.C326_Verifybreadcrumbs()'><b>C326_Verifybreadcrumbs</b><br>Test class: icivics_testcases.EducatorRegistration_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>6</td>
+<td>icivics_testcases.EducatorRegistration_Test@73d4cc9e</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2Email_Test.C412_verifyenterinvaliddata()'><b>C412_verifyenterinvaliddata</b><br>Test class: icivics_testcases.StudentRegistration2Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>13</td>
+<td>icivics_testcases.StudentRegistration2Email_Test@48a242ce</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2classcode_Test.C413_verifyblankerrormsg()'><b>C413_verifyblankerrormsg</b><br>Test class: icivics_testcases.StudentRegistration2classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>17</td>
+<td>icivics_testcases.StudentRegistration2classcode_Test@1d7acb34</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration3Email_Test.C373_verifycheckmsgdisplay()'><b>C373_verifycheckmsgdisplay</b><br>Test class: icivics_testcases.StudentRegistration3Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>15</td>
+<td>icivics_testcases.StudentRegistration3Email_Test@4f51b3e0</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration4_Test.C364_verifyallfieldasterisk()'><b>C364_verifyallfieldasterisk</b><br>Test class: icivics_testcases.EducatorRegistration4_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>24</td>
+<td>icivics_testcases.EducatorRegistration4_Test@17baae6e</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2Email_Test.C409_VerifyPasswordstrengthmeter()'><b>C409_VerifyPasswordstrengthmeter</b><br>Test class: icivics_testcases.StudentRegistration2Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>10</td>
+<td>icivics_testcases.StudentRegistration2Email_Test@48a242ce</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderMyicivicsMisc_Test.C42_Verifymyicivicsbuttonsubmenuclose()'><b>C42_Verifymyicivicsbuttonsubmenuclose</b><br>Test class: icivics_testcases.HP_5HeaderMyicivicsMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>9</td>
+<td>icivics_testcases.HP_5HeaderMyicivicsMisc_Test@1cab0bfb</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderMyicivicsMisc_Test.C30_Verifydonatebuttonclick()'><b>C30_Verifydonatebuttonclick</b><br>Test class: icivics_testcases.HP_5HeaderMyicivicsMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>16</td>
+<td>icivics_testcases.HP_5HeaderMyicivicsMisc_Test@1cab0bfb</td></tr>
+<tr>
+<td title='icivics_testcases.HP_2Headerplay_Test.C10_Verifyplaybuttonelements()'><b>C10_Verifyplaybuttonelements</b><br>Test class: icivics_testcases.HP_2Headerplay_Test<br>Parameters: https://staging.d9.icivics.org/games</td>
+<td></td>
+<td>128</td>
+<td>icivics_testcases.HP_2Headerplay_Test@133e16fd</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration3_Test.C349_verifypreviouspage()'><b>C349_verifypreviouspage</b><br>Test class: icivics_testcases.EducatorRegistration3_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>19</td>
+<td>icivics_testcases.EducatorRegistration3_Test@43d7741f</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2Email_Test.C404_clickprivacypolicy()'><b>C404_clickprivacypolicy</b><br>Test class: icivics_testcases.StudentRegistration2Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>18</td>
+<td>icivics_testcases.StudentRegistration2Email_Test@48a242ce</td></tr>
+<tr>
+<td title='icivics_testcases.HP_3HeaderTeach_Test.C20_verifyclickteachbuttonagain()'><b>C20_verifyclickteachbuttonagain</b><br>Test class: icivics_testcases.HP_3HeaderTeach_Test<br>Parameters: https://staging.d9.icivics.org/about</td>
+<td></td>
+<td>8</td>
+<td>icivics_testcases.HP_3HeaderTeach_Test@51b279c9</td></tr>
+<tr>
+<td title='icivics_testcases.HP_4HeaderAbout_Test.C24_VerifysubmenuElement()'><b>C24_VerifysubmenuElement</b><br>Test class: icivics_testcases.HP_4HeaderAbout_Test<br>Parameters: https://staging.d9.icivics.org/teachers</td>
+<td></td>
+<td>52</td>
+<td>icivics_testcases.HP_4HeaderAbout_Test@7f416310</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2Email_Test.C400_verifyfieldsisremembered()'><b>C400_verifyfieldsisremembered</b><br>Test class: icivics_testcases.StudentRegistration2Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>16</td>
+<td>icivics_testcases.StudentRegistration2Email_Test@48a242ce</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderMyicivicsMisc_Test.C34_VerifyIcivicsbutton()'><b>C34_VerifyIcivicsbutton</b><br>Test class: icivics_testcases.HP_5HeaderMyicivicsMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>7</td>
+<td>icivics_testcases.HP_5HeaderMyicivicsMisc_Test@1cab0bfb</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration2_Test.C343_verifyotheradditionalfield()'><b>C343_verifyotheradditionalfield</b><br>Test class: icivics_testcases.EducatorRegistration2_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>10</td>
+<td>icivics_testcases.EducatorRegistration2_Test@2698dc7</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration1_Test.C332_verifyfieldsmarkedwithanasterisk()'><b>C332_verifyfieldsmarkedwithanasterisk</b><br>Test class: icivics_testcases.EducatorRegistration1_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>3</td>
+<td>icivics_testcases.EducatorRegistration1_Test@44f75083</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2Email_Test.C414_verifypage3loaded()'><b>C414_verifypage3loaded</b><br>Test class: icivics_testcases.StudentRegistration2Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>16</td>
+<td>icivics_testcases.StudentRegistration2Email_Test@48a242ce</td></tr>
+<tr>
+<td title='icivics_testcases.HP_4HeaderAbout_Test.C27_Verifyclickaboutbuttonagain()'><b>C27_Verifyclickaboutbuttonagain</b><br>Test class: icivics_testcases.HP_4HeaderAbout_Test<br>Parameters: https://staging.d9.icivics.org/teachers</td>
+<td></td>
+<td>8</td>
+<td>icivics_testcases.HP_4HeaderAbout_Test@7f416310</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration1_Test.C335_verifyblankerrormsg()'><b>C335_verifyblankerrormsg</b><br>Test class: icivics_testcases.EducatorRegistration1_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>40</td>
+<td>icivics_testcases.EducatorRegistration1_Test@44f75083</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2Email_Test.C413_verifyblankerrormsg()'><b>C413_verifyblankerrormsg</b><br>Test class: icivics_testcases.StudentRegistration2Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>15</td>
+<td>icivics_testcases.StudentRegistration2Email_Test@48a242ce</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2Email_Test.C405_verifypage2SignUpforEmailsfield()'><b>C405_verifypage2SignUpforEmailsfield</b><br>Test class: icivics_testcases.StudentRegistration2Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>7</td>
+<td>icivics_testcases.StudentRegistration2Email_Test@48a242ce</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration3classcode_Test.C459_clickcontinuetomyassignmentbutton()'><b>C459_clickcontinuetomyassignmentbutton</b><br>Test class: icivics_testcases.StudentRegistration3classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>22</td>
+<td>icivics_testcases.StudentRegistration3classcode_Test@1e4a7dd4</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderMyicivicsMisc_Test.C31_Verifyshopbutton()'><b>C31_Verifyshopbutton</b><br>Test class: icivics_testcases.HP_5HeaderMyicivicsMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>8</td>
+<td>icivics_testcases.HP_5HeaderMyicivicsMisc_Test@1cab0bfb</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1Email_Test.C384_Verifybreadcrumbspage()'><b>C384_Verifybreadcrumbspage</b><br>Test class: icivics_testcases.StudentRegistration1Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>3</td>
+<td>icivics_testcases.StudentRegistration1Email_Test@5f71c76a</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2classcode_Test.C400_verifyfieldsisremembered()'><b>C400_verifyfieldsisremembered</b><br>Test class: icivics_testcases.StudentRegistration2classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>12</td>
+<td>icivics_testcases.StudentRegistration2classcode_Test@1d7acb34</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2Email_Test.C398_verifypagecount2()'><b>C398_verifypagecount2</b><br>Test class: icivics_testcases.StudentRegistration2Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>7</td>
+<td>icivics_testcases.StudentRegistration2Email_Test@48a242ce</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration1_Test.C334_verifyemailerrormsg()'><b>C334_verifyemailerrormsg</b><br>Test class: icivics_testcases.EducatorRegistration1_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>11</td>
+<td>icivics_testcases.EducatorRegistration1_Test@44f75083</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1classcode_Test.C428_verifyusernamepregenerated()'><b>C428_verifyusernamepregenerated</b><br>Test class: icivics_testcases.StudentRegistration1classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>8</td>
+<td>icivics_testcases.StudentRegistration1classcode_Test@27fe3806</td></tr>
+<tr>
+<td title='icivics_testcases.HP_1TeacherHeader_Test.C3_Verifyheaderbuttonsforauthenticateduser()'><b>C3_Verifyheaderbuttonsforauthenticateduser</b><br>Test class: icivics_testcases.HP_1TeacherHeader_Test<br>Parameters: https://staging.d9.icivics.org/teachers</td>
+<td></td>
+<td>15</td>
+<td>icivics_testcases.HP_1TeacherHeader_Test@5e57643e</td></tr>
+<tr>
+<td title='icivics_testcases.HP_3HeaderTeach_Test.C15_Verifyteachsubmenu()'><b>C15_Verifyteachsubmenu</b><br>Test class: icivics_testcases.HP_3HeaderTeach_Test<br>Parameters: https://staging.d9.icivics.org/about</td>
+<td></td>
+<td>3</td>
+<td>icivics_testcases.HP_3HeaderTeach_Test@51b279c9</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderSigninMisc_Test.C33_Verifysigninbuttonforanonymoususer()'><b>C33_Verifysigninbuttonforanonymoususer</b><br>Test class: icivics_testcases.HP_5HeaderSigninMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>3</td>
+<td>icivics_testcases.HP_5HeaderSigninMisc_Test@5e955596</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2classcode_Test.C409_VerifyPasswordstrengthmeter()'><b>C409_VerifyPasswordstrengthmeter</b><br>Test class: icivics_testcases.StudentRegistration2classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>14</td>
+<td>icivics_testcases.StudentRegistration2classcode_Test@1d7acb34</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1Email_Test.C388_verifyusernamepregenerated()'><b>C388_verifyusernamepregenerated</b><br>Test class: icivics_testcases.StudentRegistration1Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>8</td>
+<td>icivics_testcases.StudentRegistration1Email_Test@5f71c76a</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration3Email_Test.C374_verifycheckmsgdisplay()'><b>C374_verifycheckmsgdisplay</b><br>Test class: icivics_testcases.StudentRegistration3Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>16</td>
+<td>icivics_testcases.StudentRegistration3Email_Test@4f51b3e0</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2classcode_Test.C403_clickontermsofuselink()'><b>C403_clickontermsofuselink</b><br>Test class: icivics_testcases.StudentRegistration2classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>25</td>
+<td>icivics_testcases.StudentRegistration2classcode_Test@1d7acb34</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration1_Test.C337_verifyvalidregistration()'><b>C337_verifyvalidregistration</b><br>Test class: icivics_testcases.EducatorRegistration1_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>14</td>
+<td>icivics_testcases.EducatorRegistration1_Test@44f75083</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1Email_Test.C383_Verifybreadcrumbs()'><b>C383_Verifybreadcrumbs</b><br>Test class: icivics_testcases.StudentRegistration1Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>3</td>
+<td>icivics_testcases.StudentRegistration1Email_Test@5f71c76a</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration2_Test.C347_verifyvalidsubmission()'><b>C347_verifyvalidsubmission</b><br>Test class: icivics_testcases.EducatorRegistration2_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>20</td>
+<td>icivics_testcases.EducatorRegistration2_Test@2698dc7</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration5_Test.C374_verifyconfirmationemail()'><b>C374_verifyconfirmationemail</b><br>Test class: icivics_testcases.EducatorRegistration5_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>32</td>
+<td>icivics_testcases.EducatorRegistration5_Test@69379752</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2classcode_Test.C408_hoveronpwdfield()'><b>C408_hoveronpwdfield</b><br>Test class: icivics_testcases.StudentRegistration2classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>15</td>
+<td>icivics_testcases.StudentRegistration2classcode_Test@1d7acb34</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderMyicivicsMisc_Test.C35_Verifythenoavatar()'><b>C35_Verifythenoavatar</b><br>Test class: icivics_testcases.HP_5HeaderMyicivicsMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>7</td>
+<td>icivics_testcases.HP_5HeaderMyicivicsMisc_Test@1cab0bfb</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2Email_Test.C403_clickontermsofuselink()'><b>C403_clickontermsofuselink</b><br>Test class: icivics_testcases.StudentRegistration2Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>31</td>
+<td>icivics_testcases.StudentRegistration2Email_Test@48a242ce</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1Email_Test.C389_verifyusernamepregeneratedrandomly()'><b>C389_verifyusernamepregeneratedrandomly</b><br>Test class: icivics_testcases.StudentRegistration1Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>15</td>
+<td>icivics_testcases.StudentRegistration1Email_Test@5f71c76a</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration1_Test.C328_verifytextfields()'><b>C328_verifytextfields</b><br>Test class: icivics_testcases.EducatorRegistration1_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>5</td>
+<td>icivics_testcases.EducatorRegistration1_Test@44f75083</td></tr>
+<tr>
+<td title='icivics_testcases.HP_1Header_Test.C2_VerifyHeaderbuttonforauthenticateduser()'><b>C2_VerifyHeaderbuttonforauthenticateduser</b><br>Test class: icivics_testcases.HP_1Header_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>12</td>
+<td>icivics_testcases.HP_1Header_Test@4b9e255</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration1_Test.C330_verifyusernamepregeneratedrandomly()'><b>C330_verifyusernamepregeneratedrandomly</b><br>Test class: icivics_testcases.EducatorRegistration1_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>15</td>
+<td>icivics_testcases.EducatorRegistration1_Test@44f75083</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration3classcode_Test.C454_verifypagecount3()'><b>C454_verifypagecount3</b><br>Test class: icivics_testcases.StudentRegistration3classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>17</td>
+<td>icivics_testcases.StudentRegistration3classcode_Test@1e4a7dd4</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration_Test.C324_WindowResize()'><b>C324_WindowResize</b><br>Test class: icivics_testcases.EducatorRegistration_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>13</td>
+<td>icivics_testcases.EducatorRegistration_Test@73d4cc9e</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2classcode_Test.C398_verifypagecount2()'><b>C398_verifypagecount2</b><br>Test class: icivics_testcases.StudentRegistration2classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>8</td>
+<td>icivics_testcases.StudentRegistration2classcode_Test@1d7acb34</td></tr>
+<tr>
+<td title='icivics_testcases.HP_3HeaderTeach_Test.C16_Verifysubmenucount()'><b>C16_Verifysubmenucount</b><br>Test class: icivics_testcases.HP_3HeaderTeach_Test<br>Parameters: https://staging.d9.icivics.org/about</td>
+<td></td>
+<td>4</td>
+<td>icivics_testcases.HP_3HeaderTeach_Test@51b279c9</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderMyicivicsMisc_Test.C39_Myicivicsbuttonelementsverification()'><b>C39_Myicivicsbuttonelementsverification</b><br>Test class: icivics_testcases.HP_5HeaderMyicivicsMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>26</td>
+<td>icivics_testcases.HP_5HeaderMyicivicsMisc_Test@1cab0bfb</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration2_Test.C344_verifyasterisk()'><b>C344_verifyasterisk</b><br>Test class: icivics_testcases.EducatorRegistration2_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>7</td>
+<td>icivics_testcases.EducatorRegistration2_Test@2698dc7</td></tr>
+<tr>
+<td title='icivics_testcases.HP_4HeaderAbout_Test.C22_Verifyaboutsubmenu()'><b>C22_Verifyaboutsubmenu</b><br>Test class: icivics_testcases.HP_4HeaderAbout_Test<br>Parameters: https://staging.d9.icivics.org/teachers</td>
+<td></td>
+<td>10</td>
+<td>icivics_testcases.HP_4HeaderAbout_Test@7f416310</td></tr>
+<tr>
+<td title='icivics_testcases.HP_2Headerplay_Test.C9_Verifyplaybuttonlist()'><b>C9_Verifyplaybuttonlist</b><br>Test class: icivics_testcases.HP_2Headerplay_Test<br>Parameters: https://staging.d9.icivics.org/games</td>
+<td></td>
+<td>7</td>
+<td>icivics_testcases.HP_2Headerplay_Test@133e16fd</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration2_Test.C341_verifyRoleandGradeLevel()'><b>C341_verifyRoleandGradeLevel</b><br>Test class: icivics_testcases.EducatorRegistration2_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>18</td>
+<td>icivics_testcases.EducatorRegistration2_Test@2698dc7</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration2_Test.C346_verifyerrormsgboxcolor()'><b>C346_verifyerrormsgboxcolor</b><br>Test class: icivics_testcases.EducatorRegistration2_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>10</td>
+<td>icivics_testcases.EducatorRegistration2_Test@2698dc7</td></tr>
+<tr>
+<td title='icivics_testcases.HP_3HeaderTeach_Test.C17_Verifyteachbuttonelements()'><b>C17_Verifyteachbuttonelements</b><br>Test class: icivics_testcases.HP_3HeaderTeach_Test<br>Parameters: https://staging.d9.icivics.org/about</td>
+<td></td>
+<td>34</td>
+<td>icivics_testcases.HP_3HeaderTeach_Test@51b279c9</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration4_Test.C359_verifypreviouspage()'><b>C359_verifypreviouspage</b><br>Test class: icivics_testcases.EducatorRegistration4_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>27</td>
+<td>icivics_testcases.EducatorRegistration4_Test@17baae6e</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration3Email_Test.C377_verifyconfirmationemail()'><b>C377_verifyconfirmationemail</b><br>Test class: icivics_testcases.StudentRegistration3Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>21</td>
+<td>icivics_testcases.StudentRegistration3Email_Test@4f51b3e0</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderSigninMisc_Test.C38_Verifysigninbuttonsubmenu()'><b>C38_Verifysigninbuttonsubmenu</b><br>Test class: icivics_testcases.HP_5HeaderSigninMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>13</td>
+<td>icivics_testcases.HP_5HeaderSigninMisc_Test@5e955596</td></tr>
+<tr>
+<td title='icivics_testcases.HP_1TeacherHeader_Test.C4_Verifyheaderelemets()'><b>C4_Verifyheaderelemets</b><br>Test class: icivics_testcases.HP_1TeacherHeader_Test<br>Parameters: https://staging.d9.icivics.org/teachers</td>
+<td></td>
+<td>154</td>
+<td>icivics_testcases.HP_1TeacherHeader_Test@5e57643e</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration1_Test.C333_verifyemailtooltips()'><b>C333_verifyemailtooltips</b><br>Test class: icivics_testcases.EducatorRegistration1_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>3</td>
+<td>icivics_testcases.EducatorRegistration1_Test@44f75083</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration1_Test.C331_verifyentertextinallfields()'><b>C331_verifyentertextinallfields</b><br>Test class: icivics_testcases.EducatorRegistration1_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>4</td>
+<td>icivics_testcases.EducatorRegistration1_Test@44f75083</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderSigninMisc_Test.C41_Verifysubmenuoptionisunderlined()'><b>C41_Verifysubmenuoptionisunderlined</b><br>Test class: icivics_testcases.HP_5HeaderSigninMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>45</td>
+<td>icivics_testcases.HP_5HeaderSigninMisc_Test@5e955596</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration4_Test.C362_verifySignUpischecked()'><b>C362_verifySignUpischecked</b><br>Test class: icivics_testcases.EducatorRegistration4_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>28</td>
+<td>icivics_testcases.EducatorRegistration4_Test@17baae6e</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration_Test.C323_Verifyallbuttonlinks()'><b>C323_Verifyallbuttonlinks</b><br>Test class: icivics_testcases.EducatorRegistration_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>207</td>
+<td>icivics_testcases.EducatorRegistration_Test@73d4cc9e</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration_Test.C322_ButtonHover()'><b>C322_ButtonHover</b><br>Test class: icivics_testcases.EducatorRegistration_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>29</td>
+<td>icivics_testcases.EducatorRegistration_Test@73d4cc9e</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration4_Test.C371_verifyvalidsubmission()'><b>C371_verifyvalidsubmission</b><br>Test class: icivics_testcases.EducatorRegistration4_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>27</td>
+<td>icivics_testcases.EducatorRegistration4_Test@17baae6e</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2classcode_Test.C404_clickprivacypolicy()'><b>C404_clickprivacypolicy</b><br>Test class: icivics_testcases.StudentRegistration2classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>19</td>
+<td>icivics_testcases.StudentRegistration2classcode_Test@1d7acb34</td></tr>
+<tr>
+<td title='icivics_testcases.HP_1Header_Test.C2_VerifyHeaderbuttonforanonymoususer()'><b>C2_VerifyHeaderbuttonforanonymoususer</b><br>Test class: icivics_testcases.HP_1Header_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>13</td>
+<td>icivics_testcases.HP_1Header_Test@4b9e255</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration3classcode_Test.C457_verifyemailddisplay()'><b>C457_verifyemailddisplay</b><br>Test class: icivics_testcases.StudentRegistration3classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>20</td>
+<td>icivics_testcases.StudentRegistration3classcode_Test@1e4a7dd4</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1Email_Test.C391_verifyfieldsmarkedwithanasterisk()'><b>C391_verifyfieldsmarkedwithanasterisk</b><br>Test class: icivics_testcases.StudentRegistration1Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>4</td>
+<td>icivics_testcases.StudentRegistration1Email_Test@5f71c76a</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration4_Test.C358_verifybreadcrumbspage4()'><b>C358_verifybreadcrumbspage4</b><br>Test class: icivics_testcases.EducatorRegistration4_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>23</td>
+<td>icivics_testcases.EducatorRegistration4_Test@17baae6e</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration4_Test.C366_verifypasswordstrengthIndicator()'><b>C366_verifypasswordstrengthIndicator</b><br>Test class: icivics_testcases.EducatorRegistration4_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>23</td>
+<td>icivics_testcases.EducatorRegistration4_Test@17baae6e</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration1_Test.C329_verifyusernamepregenerated()'><b>C329_verifyusernamepregenerated</b><br>Test class: icivics_testcases.EducatorRegistration1_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>8</td>
+<td>icivics_testcases.EducatorRegistration1_Test@44f75083</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration3classcode_Test.C455_verifyusernamegenerateddisplay()'><b>C455_verifyusernamegenerateddisplay</b><br>Test class: icivics_testcases.StudentRegistration3classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>20</td>
+<td>icivics_testcases.StudentRegistration3classcode_Test@1e4a7dd4</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1Email_Test.C393_verifyemailerrormsg()'><b>C393_verifyemailerrormsg</b><br>Test class: icivics_testcases.StudentRegistration1Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>11</td>
+<td>icivics_testcases.StudentRegistration1Email_Test@5f71c76a</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2Email_Test.C412_verifytermsofuseandprivacycheckbox()'><b>C412_verifytermsofuseandprivacycheckbox</b><br>Test class: icivics_testcases.StudentRegistration2Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>11</td>
+<td>icivics_testcases.StudentRegistration2Email_Test@48a242ce</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderMyicivicsMisc_Test.C32_Verifyshopbuttonclick()'><b>C32_Verifyshopbuttonclick</b><br>Test class: icivics_testcases.HP_5HeaderMyicivicsMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>11</td>
+<td>icivics_testcases.HP_5HeaderMyicivicsMisc_Test@1cab0bfb</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderSigninMisc_Test.C37_Verifysigninbuttonsubmenu()'><b>C37_Verifysigninbuttonsubmenu</b><br>Test class: icivics_testcases.HP_5HeaderSigninMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>4</td>
+<td>icivics_testcases.HP_5HeaderSigninMisc_Test@5e955596</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1Email_Test.C390_verifyentertextinallfields()'><b>C390_verifyentertextinallfields</b><br>Test class: icivics_testcases.StudentRegistration1Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>6</td>
+<td>icivics_testcases.StudentRegistration1Email_Test@5f71c76a</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration2classcode_Test.C399_Clickbackbutton()'><b>C399_Clickbackbutton</b><br>Test class: icivics_testcases.StudentRegistration2classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>15</td>
+<td>icivics_testcases.StudentRegistration2classcode_Test@1d7acb34</td></tr>
+<tr>
+<td title='icivics_testcases.HP_1TeacherHeader_Test.C6_Verifyheaderbuttonhoverforanonymoususer()'><b>C6_Verifyheaderbuttonhoverforanonymoususer</b><br>Test class: icivics_testcases.HP_1TeacherHeader_Test<br>Parameters: https://staging.d9.icivics.org/teachers</td>
+<td></td>
+<td>70</td>
+<td>icivics_testcases.HP_1TeacherHeader_Test@5e57643e</td></tr>
+<tr>
+<td title='icivics_testcases.HP_4HeaderAbout_Test.C23_Verifysubmenucount()'><b>C23_Verifysubmenucount</b><br>Test class: icivics_testcases.HP_4HeaderAbout_Test<br>Parameters: https://staging.d9.icivics.org/teachers</td>
+<td></td>
+<td>6</td>
+<td>icivics_testcases.HP_4HeaderAbout_Test@7f416310</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderSigninMisc_Test.C29_Verifydonatebutton()'><b>C29_Verifydonatebutton</b><br>Test class: icivics_testcases.HP_5HeaderSigninMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>3</td>
+<td>icivics_testcases.HP_5HeaderSigninMisc_Test@5e955596</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration3_Test.C351_verifyallpage3fields()'><b>C351_verifyallpage3fields</b><br>Test class: icivics_testcases.EducatorRegistration3_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>30</td>
+<td>icivics_testcases.EducatorRegistration3_Test@43d7741f</td></tr>
+<tr>
+<td title='icivics_testcases.HP_1TeacherHeader_Test.C3_Verifyheaderbuttonsforanonymoususer()'><b>C3_Verifyheaderbuttonsforanonymoususer</b><br>Test class: icivics_testcases.HP_1TeacherHeader_Test<br>Parameters: https://staging.d9.icivics.org/teachers</td>
+<td></td>
+<td>11</td>
+<td>icivics_testcases.HP_1TeacherHeader_Test@5e57643e</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderSigninMisc_Test.C30_Verifydonatebuttonclick()'><b>C30_Verifydonatebuttonclick</b><br>Test class: icivics_testcases.HP_5HeaderSigninMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>12</td>
+<td>icivics_testcases.HP_5HeaderSigninMisc_Test@5e955596</td></tr>
+<tr>
+<td title='icivics_testcases.HP_1Header_Test.C1_VerifyLogo()'><b>C1_VerifyLogo</b><br>Test class: icivics_testcases.HP_1Header_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>8</td>
+<td>icivics_testcases.HP_1Header_Test@4b9e255</td></tr>
+<tr>
+<td title='icivics_testcases.HP_5HeaderSigninMisc_Test.C42_Verifysubmenuoptionisunderlined()'><b>C42_Verifysubmenuoptionisunderlined</b><br>Test class: icivics_testcases.HP_5HeaderSigninMisc_Test<br>Parameters: https://staging.d9.icivics.org</td>
+<td></td>
+<td>4</td>
+<td>icivics_testcases.HP_5HeaderSigninMisc_Test@5e955596</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1Email_Test.C392_verifyemailtooltips()'><b>C392_verifyemailtooltips</b><br>Test class: icivics_testcases.StudentRegistration1Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>3</td>
+<td>icivics_testcases.StudentRegistration1Email_Test@5f71c76a</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration1classcode_Test.C429_usernamegeneratedrandomly()'><b>C429_usernamegeneratedrandomly</b><br>Test class: icivics_testcases.StudentRegistration1classcode_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student</td>
+<td></td>
+<td>15</td>
+<td>icivics_testcases.StudentRegistration1classcode_Test@27fe3806</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration4_Test.C361_verifyallpage3fields()'><b>C361_verifyallpage3fields</b><br>Test class: icivics_testcases.EducatorRegistration4_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>25</td>
+<td>icivics_testcases.EducatorRegistration4_Test@17baae6e</td></tr>
+<tr>
+<td title='icivics_testcases.StudentRegistration3Email_Test.C375_verifyregisteredemaildisplay()'><b>C375_verifyregisteredemaildisplay</b><br>Test class: icivics_testcases.StudentRegistration3Email_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=student&email=1</td>
+<td></td>
+<td>15</td>
+<td>icivics_testcases.StudentRegistration3Email_Test@4f51b3e0</td></tr>
+<tr>
+<td title='icivics_testcases.EducatorRegistration3_Test.C355_verifyallfieldswithblankfield()'><b>C355_verifyallfieldswithblankfield</b><br>Test class: icivics_testcases.EducatorRegistration3_Test<br>Parameters: https://staging.d9.icivics.org/user/register?role=teacher</td>
+<td></td>
+<td>21</td>
+<td>icivics_testcases.EducatorRegistration3_Test@43d7741f</td></tr>
+<tr>
+<td title='icivics_testcases.HP_1TeacherHeader_Test.C6_verifyaheaderbuttonhoverforauthenticateduser()'><b>C6_verifyaheaderbuttonhoverforauthenticateduser</b><br>Test class: icivics_testcases.HP_1TeacherHeader_Test<br>Parameters: https://staging.d9.icivics.org/teachers</td>
+<td></td>
+<td>69</td>
+<td>icivics_testcases.HP_1TeacherHeader_Test@5e57643e</td></tr>
+</table><p>
+</body>
+</html>
