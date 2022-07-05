@@ -307,7 +307,8 @@ public class StudentReg1Email extends ProjectSpecificMethods {
 		WebElement verifyemail = propElement(getPropfile(gpropname, "VerifyEmailaddress"));
 		clearAndType(verifyemail, email1);
 		scrollToTheGivenWebElement(getPropfile(gpropname, "Emailaddresslabel"));
-		click(propElement(getPropfile(gpropname, "nextbutton")));
+		clickWithNoSnap(propElement(getPropfile(gpropname, "nextbutton")));
+		waitTime(3000);
 		return this;
 	}
 
@@ -462,6 +463,7 @@ public class StudentReg1Email extends ProjectSpecificMethods {
 	public StudentReg1Email clicknextbutton() {
 		scrollToTheGivenWebElement(getPropfile(gpropname, "Emailaddresslabel"));
 		clickOn(getPropfile(gpropname, "nextbutton"));
+		waitTime(3000);
 		return this;
 	}
 
@@ -511,7 +513,7 @@ public class StudentReg1Email extends ProjectSpecificMethods {
 		scrollToTheGivenWebElement(getPropfile(gpropname, "nextbutton"));
 
 		clickOn(getPropfile(gpropname, "nextbutton"));
-
+		waitTime(3000);
 		WebElement firstnamealertmsg = propElement(getPropfile(gpropname, "firstnamealertmsg1"));
 
 		verifyExactText(firstnamealertmsg, "Field First Name is required");
@@ -567,7 +569,7 @@ public class StudentReg1Email extends ProjectSpecificMethods {
 		scrollToTheGivenWebElement(getPropfile(gpropname, "nextbutton"));
 
 		clickOn(getPropfile(gpropname, "nextbutton"));
-
+		waitTime(3000);
 		WebElement firstnamealertmsg = propElement(getPropfile(gpropname, "alertpopup1"));
 
 		verifyExactText(firstnamealertmsg, "Field First Name is required");
@@ -768,7 +770,7 @@ public class StudentReg1Email extends ProjectSpecificMethods {
 
 		reportStep("Next Button is clicked", "Pass");
 
-		click(propElement(getPropfile(gpropname, "nextbutton")));
+		clickWithNoSnap(propElement(getPropfile(gpropname, "nextbutton")));
 
 		waitTime(3000);
 
@@ -794,11 +796,13 @@ public class StudentReg1Email extends ProjectSpecificMethods {
 		WebElement classcodelink = propElement(getPropfile(gpropname, "classcodelink"));
 		if (classcodelink.isDisplayed()) {
 			reportStep("class code link is displayed and clicked, opened in the same tab", "Pass");
+			waitTime(3000);
 			classcodelink.click();
 			WebElement classcodelabel = propElement(getPropfile(gpropname, "classcodelabel"));
 			waitTime(3000);
 			if (classcodelabel.isDisplayed()) {
 				reportStep("class code page is displayed", "Pass");
+				waitTime(3000);
 			} else {
 				reportStep("class code page is not displayed", "Fail");
 			}

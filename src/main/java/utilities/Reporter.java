@@ -85,7 +85,6 @@ public abstract class Reporter extends AbstractTestNGCucumberTests{
     }
 
 	public WebElement getProp(String propname, String locatorType, String value) throws FileNotFoundException, IOException {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }

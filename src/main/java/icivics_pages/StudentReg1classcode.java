@@ -46,9 +46,11 @@ public class StudentReg1classcode extends ProjectSpecificMethods {
 	}
 
 	public StudentReg1classcode clickOptionallink() {
-		scrollToTheGivenWebElement(getPropfile(gpropname2, "Link"));
-		WebElement link = propElement(getPropfile(gpropname2, "Link"));
-		link.click();
+		scrollToTheGivenWebElement(getPropfile(gpropname2, "Link1"));
+		waitTime(3000);
+		clickWithNoSnap(propElement(getPropfile(gpropname2, "Link1")));
+		//propElement(getPropfile(gpropname2, "Link1")).click();
+		waitTime(5000);
 		return this;
 	}
 
@@ -120,12 +122,14 @@ public class StudentReg1classcode extends ProjectSpecificMethods {
 	public StudentReg1classcode clickonremovelink() {
 		WebElement link = propElement(getPropfile(gpropname2, "Link"));
 		link.click();
+		waitTime(3000);
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "Emailaddresslabel"));
 		waitTime(3000);
-		WebElement linkdisappear = propElement(getPropfile(gpropname2, "Link1"));
-		linkdisappear.click();
+		//WebElement linkdisappear = propElement(getPropfile(gpropname2, "Link"));
+		clickWithNoSnap(propElement(getPropfile(gpropname2, "Link")));
 		waitTime(3000);
 		reportStep("Emailaddress/Verify EmailAddress label and Field is not displayed", "Pass");
+		waitTime(5000);
 		return this;
 	}
 
@@ -231,7 +235,7 @@ public class StudentReg1classcode extends ProjectSpecificMethods {
 	@And("Click on Next Button")
 	public StudentReg1classcode clicknext() throws InterruptedException, IOException {
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
-		click(propElement(getPropfile(gpropname2, "nextbutton")));
+		clickWithNoSnap(propElement(getPropfile(gpropname2, "nextbutton")));
 		waitTime(3000);
 
 		WebElement page2 = propElement(getPropfile(gpropname2, "passwordlabel"));
@@ -359,7 +363,7 @@ public class StudentReg1classcode extends ProjectSpecificMethods {
 
 		WebElement nextbutton = propElement(getPropfile(gpropname2, "nextbutton"));
 		nextbutton.click();
-
+		waitTime(3000);
 		WebElement alertmsg = propElement(getPropfile(gpropname2, "alertpopup1"));
 		String Actualerrmsg = alertmsg.getText();
 		String Expectederrmsg = "The classcode isn't linked to a class.";
@@ -414,6 +418,7 @@ public class StudentReg1classcode extends ProjectSpecificMethods {
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
 
 		clickOn(getPropfile(gpropname2, "nextbutton"));
+		waitTime(3000);
 		WebElement firstnamealertmsg1 = propElement(getPropfile(gpropname2, "firstnamealertmsg1"));
 
 		verifyExactText(firstnamealertmsg1, "The classcode isn't linked to a class.");
@@ -475,7 +480,7 @@ public class StudentReg1classcode extends ProjectSpecificMethods {
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
 
 		clickOn(getPropfile(gpropname2, "nextbutton"));
-
+		waitTime(3000);
 		WebElement codeclassalertmsg = propElement(getPropfile(gpropname2, "alertpopup1"));
 
 		verifyExactText(codeclassalertmsg, "The classcode isn't linked to a class.");
@@ -520,7 +525,7 @@ public class StudentReg1classcode extends ProjectSpecificMethods {
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
 
 		clickOn(getPropfile(gpropname2, "nextbutton"));
-
+		waitTime(5000);
 		WebElement firstnamealertmsg = propElement(getPropfile(gpropname2, "alertpopup6"));
 
 		verifyExactText(firstnamealertmsg, "Field First Name is required");
@@ -562,7 +567,7 @@ public class StudentReg1classcode extends ProjectSpecificMethods {
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
 
 		clickOn(getPropfile(gpropname2, "nextbutton"));
-
+		waitTime(3000);
 		WebElement lastnamealertmsg = propElement(getPropfile(gpropname2, "alertpopup7"));
 
 		verifyExactText(lastnamealertmsg, "Field Last Name is required");
@@ -702,7 +707,7 @@ public class StudentReg1classcode extends ProjectSpecificMethods {
 
 		WebElement nextbutton = propElement(getPropfile(gpropname2, "nextbutton"));
 		nextbutton.click();
-
+		waitTime(5000);
 		WebElement alertmsg = propElement(getPropfile(gpropname2, "alertpopup1"));
 		String Actualerrmsg = alertmsg.getText();
 		String Expectederrmsg = "The classcode isn't linked to a class.";
@@ -745,8 +750,8 @@ public class StudentReg1classcode extends ProjectSpecificMethods {
 	@Given("Enter valid firstname, lastname, email, verifyemail and click on next and verify page 2 is loaded")
 	public StudentReg1classcode verifyregistrationwithvalidvalue() throws InterruptedException, IOException {
 		waitTime(5000);
-
-		click(propElement(getPropfile(gpropname2, "Link")));
+		clickWithNoSnap(propElement(getPropfile(gpropname2, "Link")));
+		waitTime(5000);
 		WebElement classcode = propElement(getPropfile(gpropname2, "classcode"));
 		classcode.clear();
 		classcode.sendKeys(getPropfile(gpropname2, "ClassCode"));
@@ -779,7 +784,7 @@ public class StudentReg1classcode extends ProjectSpecificMethods {
 
 		scrollToTheGivenWebElement(getPropfile(gpropname2, "nextbutton"));
 		reportStep("Next Button is clicked", "Pass");
-		click(propElement(getPropfile(gpropname2, "nextbutton")));
+		clickWithNoSnap(propElement(getPropfile(gpropname2, "nextbutton")));
 		waitTime(3000);
 
 		WebElement page2 = propElement(getPropfile(gpropname1, "Page2StudentReglabel"));

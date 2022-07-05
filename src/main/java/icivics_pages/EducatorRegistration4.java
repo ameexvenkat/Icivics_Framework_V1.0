@@ -93,7 +93,7 @@ public class EducatorRegistration4 extends ProjectSpecificMethods {
 		selectDropDownUsingValue(roleDropDown, dropdownvalue);
 		waitTime(3000);
 
-		click(propElement(getPropfile(propname2, "Nextbutton")));
+		clickWithNoSnap(propElement(getPropfile(propname2, "Nextbutton")));
 		waitTime(3000);
 		
 		String SchoolName = getPropfile(propname3, "Checkboxvalue");
@@ -110,7 +110,7 @@ public class EducatorRegistration4 extends ProjectSpecificMethods {
 		selectDropDownUsingText(teachingstate, Teachstatevalue);
 		waitTime(3000);
 
-		click(propElement(getPropfile(propname3, "NextButton")));
+		clickWithNoSnap(propElement(getPropfile(propname3, "NextButton")));
 		waitTime(3000);
 		
 		return this;

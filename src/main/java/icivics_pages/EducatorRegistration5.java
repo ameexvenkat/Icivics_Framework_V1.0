@@ -91,7 +91,9 @@ public EducatorRegistration5 verifywithvaliddata() throws InterruptedException, 
 		selectDropDownUsingValue(roleDropDown, dropdownvalue);
 		waitTime(3000);
 
-		propElement(getPropfile(propname2, "Nextbutton")).click();
+		WebElement nextbutton1 = propElement(getPropfile(gpropname, "nextbutton"));
+		scrollToTheGivenWebElement(getPropfile(gpropname, "nextbutton"));
+		nextbutton1.click();
 		waitTime(3000);
 		
 		String SchoolName = getPropfile(propname3, "Checkboxvalue");

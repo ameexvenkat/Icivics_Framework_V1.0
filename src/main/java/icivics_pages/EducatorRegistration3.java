@@ -91,7 +91,7 @@ public class EducatorRegistration3 extends ProjectSpecificMethods {
 		selectDropDownUsingValue(roleDropDown, dropdownvalue);
 		waitTime(3000);
 
-		click(propElement(getPropfile(propname2, "Nextbutton")));
+		clickWithNoSnap(propElement(getPropfile(propname2, "Nextbutton")));
 		waitTime(3000);
 		
 		return this;
@@ -147,7 +147,7 @@ public class EducatorRegistration3 extends ProjectSpecificMethods {
 	public EducatorRegistration3 verifygradelevelremembered() throws IOException {
 		WebElement backbutton = propElement(getPropfile(gpropname, "backbutton"));
 		backbutton.click();
-		
+		waitTime(3000);
 		String value = getPropfile(propname2, "Checkboxvalue");
 		List<WebElement> chkBox = propElement1(getPropfile(propname2, "checkboxlist1"));
 		int Size = chkBox.size();
@@ -279,6 +279,7 @@ public class EducatorRegistration3 extends ProjectSpecificMethods {
 		selectDropDownUsingText(teachingstate, Teachstatevalue);
 		waitTime(3000);
 		propElement(getPropfile(propname3, "NextButton")).click();
+		waitTime(3000);
 		return this;
 	}
 	
@@ -332,8 +333,8 @@ public class EducatorRegistration3 extends ProjectSpecificMethods {
 		selectDropDownUsingIndex(teachingstate, 0);
 		waitTime(3000);
 		
-		click(propElement(getPropfile(propname3, "NextButton")));
-		
+		clickWithNoSnap(propElement(getPropfile(propname3, "NextButton")));
+		waitTime(3000);
 		WebElement TeachstateError = propElement(getPropfile(propname3, "TeachstateError"));
 		WebElement zipcodeerror = propElement(getPropfile(propname3, "zipcodeerror"));
 		if (TeachstateError.isDisplayed()&&zipcodeerror.isDisplayed()) {
@@ -351,8 +352,8 @@ public class EducatorRegistration3 extends ProjectSpecificMethods {
 		propElement(getPropfile(propname3, "zipcodefieldtextbox")).clear();
 		WebElement teachingstate = propElement(getPropfile(propname3, "teachingstate"));
 		selectDropDownUsingIndex(teachingstate, 0);
-		click(propElement(getPropfile(propname3, "NextButton")));
-		
+		clickWithNoSnap(propElement(getPropfile(propname3, "NextButton")));
+		waitTime(3000);
 		WebElement TeachstateError = propElement(getPropfile(propname3, "TeachstateError"));
 		WebElement schoolError = propElement(getPropfile(propname3, "schoolError1"));
 		WebElement zipcodeerror = propElement(getPropfile(propname3, "zipcodeerror1"));
@@ -382,7 +383,7 @@ public class EducatorRegistration3 extends ProjectSpecificMethods {
 		selectDropDownUsingText(teachingstate, Teachstatevalue);
 		waitTime(3000);
 
-		click(propElement(getPropfile(propname3, "NextButton")));
+		clickWithNoSnap(propElement(getPropfile(propname3, "NextButton")));
 		waitTime(3000);
 		return this;
 	}

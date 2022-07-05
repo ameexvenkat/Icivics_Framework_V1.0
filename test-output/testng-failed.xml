@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Suite]]]]]]]]]]">
+  <test thread-count="5" name="Regression_TestScripts(failed)(failed)(failed)(failed)(failed)(failed)(failed)(failed)(failed)(failed)">
     <classes>
-      <class name="icivics_testcases.EducatorRegistration2_Test">
+      <class name="icivics_testcases.StudentRegistration1classcode_Test">
         <methods>
+          <include name="C430_verifyregistrationwithvaliddata" invocation-numbers="0"/>
           <include name="afterMethod"/>
           <include name="setUpClass"/>
           <include name="stopReport"/>
           <include name="beforeMethod"/>
           <include name="report"/>
           <include name="tearDownClass"/>
-          <include name="setValues"/>
-          <include name="C345_verifyblankerrormsg" invocation-numbers="0"/>
+          <include name="C427_verifyemailfieldsdisappear" invocation-numbers="0"/>
           <include name="startReport"/>
+          <include name="setValues"/>
         </methods>
-      </class> <!-- icivics_testcases.EducatorRegistration2_Test -->
+      </class> <!-- icivics_testcases.StudentRegistration1classcode_Test -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Regression_TestScripts(failed)(failed)(failed)(failed)(failed)(failed)(failed)(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Suite]]]]]]]]]] -->
